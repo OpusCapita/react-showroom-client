@@ -1,5 +1,4 @@
 import markdownToAst from 'markdown-to-ast';
-let components = require('../server/tmp/npm-components');
 
 function getSectionIndexRange(ast, headerName) {
   let targetHeaderIndex = ast.children.reduce((result, branch, index) => {
@@ -39,7 +38,7 @@ function parseDocumentation(markdown) {
   };
 }
 
-export default function getComponents() {
+export default function parseComponents(components) {
   return components.map(component => {
     let parsedDocumentation = parseDocumentation(component.readme);
     return {
