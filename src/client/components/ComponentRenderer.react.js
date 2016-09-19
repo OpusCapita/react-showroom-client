@@ -77,8 +77,9 @@ class ComponentRenderer extends Component {
 
   render() {
     let { component } = this.props;
-    window[component.name] = component.componentClass;
-    console.log('comp', component);
+    let componentName = component.name || component.componentClass.name;
+    console.log(componentName);
+    window[componentName] = component.componentClass;
     let element;
     try {
       element = eval(this.state.compiledCode); // eslint-disable-line no-eval
