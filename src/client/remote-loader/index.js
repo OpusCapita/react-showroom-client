@@ -1,0 +1,1 @@
+import { getPackagesInfo } from './config';
