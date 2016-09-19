@@ -26,7 +26,8 @@ class ComponentRenderer extends Component {
       this.context.i18n = new I18nManager('en', null, formatPatterns);
     }
     return {
-      i18n: this.context.i18n
+      i18n: this.context.i18n,
+      serviceRegistry: serviceName => ({ url: 'http://localhost:3000' })
     };
   }
 
@@ -137,6 +138,7 @@ ComponentRenderer.contextTypes = {
   i18n: PropTypes.object
 };
 ComponentRenderer.childContextTypes = {
-  i18n: PropTypes.object
+  i18n: PropTypes.object,
+  serviceRegistry: PropTypes.func
 };
 
