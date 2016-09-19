@@ -1,0 +1,20 @@
+.documentation {
+  padding: 6px 12px;
+  overflow: auto;
+  & *:first-child {
+    margin-top: 0;
+  }
+}
+
+.documentation table {
+  width: 100%;
+  max-width: 100%;
+  & td, & th {
+    padding: 8px;
+    line-height: 1.42857143;
+    border-top: 1px solid #ddd;
+  }
+  & tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+}
