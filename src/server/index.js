@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const app = express();
 
-const port = process.env.PORT ? process.env.PORT : 3001;
+const port = process.env.PORT ? process.env.PORT : 3888;
 const host = process.env.HOST ? process.env.HOST : 'localhost';
 
 const npmLoader = require('./npm-installer/loader');

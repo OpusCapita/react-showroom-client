@@ -2,12 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import DemoPage from './DemoPage.react';
 import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less';
 import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less';
-let logo = require('../img/logo.svg');
+let logoUrl = require('../img/logo.svg');
 
 export default
 class DemoPageIndex extends Component {
   render() {
-    console.log('logo:', logo);
     return (
       <div className="container-fluid">
         <div className="row">
@@ -15,7 +14,7 @@ class DemoPageIndex extends Component {
             <br/>
             <div className="row">
               <div className="col-md-6">
-                <img style={{ width: '200px' }} src={logo} alt="OpusCapita logo" />
+                <img style={{ width: '200px' }} src={logoUrl} alt="OpusCapita logo" />
               </div>
               <div className="col-md-6 text-right">
                 <div>
@@ -29,8 +28,6 @@ class DemoPageIndex extends Component {
                 <div>
                   <strong>Contacts: </strong>
                   <span>Kirill Volkovich, </span>
-                  <span>Sergey Tamkov, </span>
-                  <span>Alexey Sergeev</span>
                 </div>
               </div>
             </div>

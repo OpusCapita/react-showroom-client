@@ -15,7 +15,7 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.HOST': JSON.stringify(process.env.HOST ? process.env.HOST : 'localhost'),
-      'process.env.PORT': JSON.stringify(process.env.PORT ? process.env.PORT : 3001)
+      'process.env.PORT': JSON.stringify(process.env.PORT ? process.env.PORT : 3888)
     }),
   ],
 

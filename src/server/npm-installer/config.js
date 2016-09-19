@@ -1,14 +1,17 @@
 'use strict';
 
 let libPath = require('path');
+let semver = require('semver');
 
 module.exports = {
   packages: [
     {
-      name: 'react-slider'
+      name: 'react-slider',
+      versionsFilter: version => semver.gt(version, '0.5.0')
     },
     {
-      name: 'react-button'
+      name: 'react-button',
+      versionsFilter: version => semver.gt(version, '1.1.0')
     }
   ],
   installationRoot: libPath.resolve(libPath.join(__dirname, '../tmp/npm-installer/packages')),
