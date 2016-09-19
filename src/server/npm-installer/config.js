@@ -6,14 +6,14 @@ let semver = require('semver');
 module.exports = {
   packages: [
     {
-      name: 'react-slider',
-      versionsFilter: version => semver.gt(version, '0.5.0')
+      name: 'react-button',
+      versionsFilter: version => semver.gt(version, '1.1.1')
     },
     {
-      name: 'react-button',
-      versionsFilter: version => semver.gt(version, '1.1.0')
+      name: 'react-slick',
+      versionsFilter: (version, index, arr) => index > (arr.length - 3)
     }
   ],
   installationRoot: libPath.resolve(libPath.join(__dirname, '../tmp/npm-installer/packages')),
-  infosFilePath: libPath.resolve(libPath.join(__dirname, '../tmp/npm-installer/infos.js'))
+  packagesInfoPath: libPath.resolve(libPath.join(__dirname, '../tmp/npm-installer/packages-info.js'))
 };

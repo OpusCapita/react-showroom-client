@@ -11,6 +11,7 @@ const host = process.env.HOST ? process.env.HOST : 'localhost';
 
 const npmLoader = require('./npm-installer/loader');
 const npmInstallerConfig = require('./npm-installer/config');
+const npmScannerConig = require('./npm-scanner/config');
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -29,7 +30,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/packages-info', function(req, res) {
-  res.send(require(npmInstallerConfig.infosFilePath));
+  res.send(require(npmInstallerConfig.packagesInfoPath));
+});
+
+app.get('/versions-info', function(req, res) {
+  res.send(require(npmScannerConig.versionsInfoPath));
 });
 
 app.get('/packages/*', function(req, res) {
