@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import DemoPage from './DemoPage.react';
 import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less';
 import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less';
+let logo = require('../img/logo.svg');
 
 export default
 class DemoPageIndex extends Component {
@@ -13,7 +14,7 @@ class DemoPageIndex extends Component {
             <br/>
             <div className="row">
               <div className="col-md-6">
-                <img style={{ width: '200px' }} src="img/oc-logo-rgb.svg" alt="OpusCapita logo" />
+                <img style={{ width: '200px' }} src={logo} alt="OpusCapita logo" />
               </div>
               <div className="col-md-6 text-right">
                 <div>

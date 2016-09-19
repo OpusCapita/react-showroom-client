@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DemoPageIndex from './components/DemoPageIndex.react';
-import getComponents from './getComponents';
+import parseComponents from './parseComponents';
 
 let rootElement = document.getElementById('main');
-let demoPageIndex = React.createElement(DemoPageIndex, { getComponents });
+let demoPageIndex = React.createElement(DemoPageIndex, { getComponents: () => parseComponents([]) });
 
 ReactDOM.render(demoPageIndex, rootElement);
