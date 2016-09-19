@@ -17,7 +17,7 @@ function getPackagesInfos(packages) {
   log('Get packages info.');
   return packages.map(pkg => {
     log(`\tGet packages info of "${pkg.name}".`);
-    let info = execSync(`npm show ${pkg.name} --json`, {encoding: 'utf-8'});
+    let info = execSync(`npm show ${pkg.name} --json`, { encoding: 'utf-8' });
     return ({
       name: pkg.name,
       versionsFilter: pkg.versionsFilter || (v => v),
@@ -39,8 +39,9 @@ function installPackages(packagesInfo, installationRoot) {
         let packageJSONPath = libPath.join(versionRoot, 'package.json');
         execSync(`sleep 1`, {cwd: versionRoot}); // Problem on OSX. On random iter process has stopped;
         libFs.writeFileSync(packageJSONPath, packageJSONTemplate);
-        execSync(`npm install --save -E ${packageInfo.name}@${version}`, {cwd: versionRoot});
-        removeConflictPackages(libPath.join(versionRoot, 'node_modules', packageInfo.name));
+        execSync(`npm install --save -E ${packageInfo.name}@${version}`, { cwd: versionRoot });
+        let installedVersionDir = libPath.join(versionRoot, 'node_modules', packageInfo.name);
+        removeConflictPackages(installedVersionDir);
         log(`\nInstalled ${versionIndex + 1}/${versions.length} version of "${packageInfo.name}" into:`);
         log(`\t${versionRoot}`);
         log(`Currently installed ${packageIndex}/${packagesInfo.length} packages.`);

@@ -9,10 +9,7 @@ function getPackage(installationRoot, packageName, packageVersion) {
       installationRoot,
       packageName,
       packageVersion,
-      'node_modules',
-      packageName,
-      'lib',
-      'index.js'
+      'bundle.js'
     )
   );
   let packageIndexFileContent;
