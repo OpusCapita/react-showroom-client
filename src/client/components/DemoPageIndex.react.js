@@ -7,6 +7,7 @@ let logo = require('../img/logo.svg');
 export default
 class DemoPageIndex extends Component {
   render() {
+    console.log('logo:', logo);
     return (
       <div className="container-fluid">
         <div className="row">
