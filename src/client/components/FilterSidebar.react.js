@@ -56,7 +56,7 @@ class FilterSidebar extends Component {
                 key={index}
                 className={
                   `filter-sidebar__components-list-item ` +
-                  `${component.id === this.props.currentComponent ?
+                  `${component.id === this.props.currentComponentId ?
                     'filter-sidebar__components-list-item--current' : ''
                     }`
                 }
@@ -73,7 +73,7 @@ class FilterSidebar extends Component {
 }
 
 FilterSidebar.propTypes = {
-  currentComponent: PropTypes.string,
+  currentComponentId: PropTypes.string,
   componentsInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
   onComponentChange: PropTypes.func,
   onHide: PropTypes.func

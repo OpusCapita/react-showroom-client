@@ -5,5 +5,6 @@ let componentsInfoUrl = hostUrl + '/components-info';
 export default {
   hostUrl,
   packagesInfoUrl,
-  componentsInfoUrl
+  componentsInfoUrl,
+  getPackageUrl: (packageName, version) => `${hostUrl}/packages/${packageName}/${version}`
 }
