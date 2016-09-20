@@ -2,7 +2,7 @@
 *.iml
 .idea
 tmp
-/npm-debug.log
+npm-debug.log
 /static
 /build
 /coverage

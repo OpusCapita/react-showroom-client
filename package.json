@@ -6,7 +6,11 @@
     "lint": "eslint src",
     "start": "nodemon --watch src/server src/server/index --exec babel-node",
     "build": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --plugins transform-object-assign,transform-decorators-legacy --ignore __tests__,*.spec.js src/client --out-dir lib",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "npm-packages-install": "node ./src/server/npm-installer/make-install.js",
+    "npm-packages-bundle": "node ./src/server/npm-bundler/make-bundles.js",
+    "npm-packages-scan": "node ./src/server/npm-scanner/make-scan.js",
+    "make-npm-packages": "npm run npm-packages-install & npm run npm-packages-bundle & npm run npm-packages-scan"
   },
   "author": {
     "name": "Kirill Volkovich",

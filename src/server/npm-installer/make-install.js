@@ -41,6 +41,7 @@ function installPackages(packagesInfo, installationRoot) {
         libFs.writeFileSync(packageJSONPath, packageJSONTemplate);
         execSync(`npm install --save -E ${packageInfo.name}@${version}`, { cwd: versionRoot });
         let installedVersionDir = libPath.join(versionRoot, 'node_modules', packageInfo.name);
+        removeConflictPackages(versionRoot);
         removeConflictPackages(installedVersionDir);
         log(`\nInstalled ${versionIndex + 1}/${versions.length} version of "${packageInfo.name}" into:`);
         log(`\t${versionRoot}`);
