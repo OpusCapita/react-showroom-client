@@ -8,15 +8,18 @@ class DemoPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showSidebar: false,
+      packagesInfo: [],
+      componentsInfo: [],
       preparedComponents: [],
-      currentComponent: null,
-      showSidebar: false
+      currentComponent: null
     };
     this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   componentDidMount() {
-    this.initComponentsList();
+    this.getComponentsInfo();
+    this.getPackagesInfo();
     document.documentElement.addEventListener('keyup', this.handleKeyUp);
   }
 
@@ -24,20 +27,27 @@ class DemoPage extends Component {
     document.documentElement.removeEventListener('keyup', this.handleKeyUp);
   }
 
-  initComponentsList() {
-    let components = this.props.getComponents();
-    let preparedComponents = this.prepareComponents(components);
-    this.setState({
-      currentComponent: preparedComponents[0] ? preparedComponents[0].id : 0,
-      preparedComponents
+  getComponentsInfo() {
+    this.props.loader.getComponentsInfo(data => {
+      this.setState({ componentsInfo: this.initComponentsList(data) });
     });
   }
 
-  prepareComponents(components) {
-    return components.map(component => ({
+  getPackagesInfo() {
+    this.props.loader.getPackagesInfo(data => {
+      this.setState({ packagesInfo: data });
+    });
+  }
+
+  initComponentsList(components) {
+    let preparedComponents = components.map(component => ({
       ...component,
-      id: `${component.group}/${component.name}`
+      id: `${component.package}/${component.version}/${component.name}`
     }));
+    this.setState({
+      currentComponent: preparedComponents[0] ? preparedComponents[0].id : 0
+    });
+    return preparedComponents;
   }
 
   toggleSidebar() {
@@ -63,9 +73,10 @@ class DemoPage extends Component {
       component.id === this.state.currentComponent
     )[0];
 
-    let componentRenderer = component ? (
-      <ReferenceSearchRender label={component.name} component={component} />
-    ) : null;
+    // let componentRenderer = component ? (
+    //   <ReferenceSearchRender label={component.name} component={component} />
+    // ) : null;
+    let componentRenderer = null;
 
     let sidebar = this.state.showSidebar ? (
       <div className="demo-page__filter-sidebar">
@@ -76,7 +87,7 @@ class DemoPage extends Component {
           &times;
         </div>
         <FilterSidebar
-          components={this.state.preparedComponents}
+          components={this.state.componentsInfo}
           currentComponent={this.state.currentComponent}
           onComponentChange={this.handleComponentSelection.bind(this)}
         />
@@ -103,5 +114,5 @@ class DemoPage extends Component {
 }
 
 DemoPage.propTypes = {
-  getComponents: PropTypes.func.isRequired
+  loader: PropTypes.object.isRequired
 };

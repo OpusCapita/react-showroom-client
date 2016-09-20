@@ -10,7 +10,7 @@
     "npm-packages-install": "node ./src/server/npm-installer/make-install.js",
     "npm-packages-bundle": "node ./src/server/npm-bundler/make-bundles.js",
     "npm-packages-scan": "node ./src/server/npm-scanner/make-scan.js",
-    "make-npm-packages": "npm run npm-packages-install & npm run npm-packages-bundle & npm run npm-packages-scan"
+    "npm-packages-init": "npm run npm-packages-install & npm run npm-packages-bundle & npm run npm-packages-scan"
   },
   "author": {
     "name": "Kirill Volkovich",

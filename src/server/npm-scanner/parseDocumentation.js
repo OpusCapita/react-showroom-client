@@ -31,9 +31,9 @@ function parseDocumentation(markdown) {
     componentName:
       ast.children[getSectionIndexRange(ast, 'Component Name')[0]] &&
       ast.children[getSectionIndexRange(ast, 'Component Name')[0]].children[0].value,
-    group:
-      ast.children[getSectionIndexRange(ast, 'Component Group')[0]] &&
-      ast.children[getSectionIndexRange(ast, 'Component Group')[0]].children[0].value,
+    tags:
+      ast.children[getSectionIndexRange(ast, 'Tags')[0]] &&
+      ast.children[getSectionIndexRange(ast, 'Tags')[0]].children[0].value,
     demoProps:
       ast.children[getSectionIndexRange(ast, 'Code Example')[0]] &&
       ast.children[getSectionIndexRange(ast, 'Code Example')[0]].value

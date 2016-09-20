@@ -6,52 +6,49 @@ let config = require('./config');
 let findFiles = require('./utils').findFiles;
 let parseDocumentation = require('./parseDocumentation');
 
-function getComponentsInfo(version, versionRoot, componentsMasks) {
+function getComponentsInfo(packageName, version, versionRoot, componentsMasks) {
   let findedFiles = componentsMasks.reduce((result, mask) => result.concat(findFiles(versionRoot, mask)), []);
   return findedFiles.map(file => {
     let fileContent = libFs.readFileSync(file, 'utf-8');
     let parsedDocumentation = parseDocumentation(fileContent);
     return {
-      componentName: parsedDocumentation.componentName,
+      "package": packageName,
+      name: parsedDocumentation.componentName,
       version,
-      group: parsedDocumentation.group || null,
-      demoProps: parsedDocumentation.demoProps
+      tags: parsedDocumentation.tags || ''
     };
   });
 }
 
 function getPackageVersions(packageRoot, packageName) {
-  return libFs.readdirSync(packageRoot).map(version => ({
-    version: version,
-    // versionRoot: libPath.join(packageRoot, version),
-    // packageJSONRoot: libPath.join(packageRoot, version, 'node_modules', packageName, 'package.json'),
-    components: getComponentsInfo(
+  return libFs.readdirSync(packageRoot).reduce((result, version) =>
+    result.concat(getComponentsInfo(
+      packageName,
       version,
       libPath.join(packageRoot, version, 'node_modules', packageName),
-      config.readmeFiles.components
-    )
-  }))
+       config.readmeFiles.components
+    )), []
+  )
 }
 
 function scanInstalledPackages(installationRoot) {
   let packages = libFs.readdirSync(installationRoot);
-  return packages.map(packageName => ({
-    name: packageName,
-    versions: getPackageVersions(libPath.join(installationRoot, packageName), packageName)
-  }));
+  return packages.reduce((result, packageName) =>
+    result.concat(getPackageVersions(libPath.join(installationRoot, packageName), packageName))
+  , []);
 }
 
 // ----------------------------------------------------------------------------------
 console.log('Scanning started.');
 
-let versionsInfo = scanInstalledPackages(config.installationRoot);
-let stringifiedVersionsInfo = JSON.stringify(versionsInfo, null, 2);
-let versionsInfoFileContent = `module.exports = ${stringifiedVersionsInfo}`;
+let componentsInfo = scanInstalledPackages(config.installationRoot);
+let stringifiedVersionsInfo = JSON.stringify(componentsInfo, null, 2);
+let componentsInfoFileContent = `module.exports = ${stringifiedVersionsInfo}`;
 
 console.log(stringifiedVersionsInfo);
 
-libFs.writeFileSync(config.versionsInfoPath, versionsInfoFileContent);
+libFs.writeFileSync(config.componentsInfoPath, componentsInfoFileContent);
 
-console.log('Scanning complete.')
+console.log('Scanning complete.');
 console.log('Results writed to:');
-console.log('\t', config.versionsInfoPath);
+console.log('\t', config.componentsInfoPath);

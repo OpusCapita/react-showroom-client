@@ -34,7 +34,7 @@ class DemoPageIndex extends Component {
             <hr />
           </div>
           <div className="col-xs-12">
-            <DemoPage getComponents={this.props.getComponents}/>
+            <DemoPage loader={this.props.loader} />
           </div>
         </div>
       </div>
@@ -43,5 +43,5 @@ class DemoPageIndex extends Component {
 }
 
 DemoPageIndex.propTypes = {
-  getComponents: PropTypes.func.isRequired
+  loader: PropTypes.object.isRequired
 };

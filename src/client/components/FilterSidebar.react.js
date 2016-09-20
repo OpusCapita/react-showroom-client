@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import fuzzysearch from 'fuzzysearch';
 import './FilterSidebar.less';
 
@@ -21,25 +21,10 @@ class FilterSidebar extends Component {
     document.documentElement.removeEventListener('keyup', this.handleKeyUp);
   }
 
-  getComponentsGroups(components) {
-    return components.reduce((result, component) =>
-      result.indexOf(component.group) === -1 ? result.concat([component.group]) : result, []);
-  }
-
-  prepareComponentsListByGroupName(components, groupName) {
-    return {
-      group: groupName,
-      components: components.filter(component => component.group === groupName)
-    }
-  }
-
-  filterComponentsLists(componentsLists, filterText) {
-    return componentsLists.map(componentsList => ({
-      ...componentsList,
-      components: componentsList.components.filter(component =>
-        fuzzysearch(filterText.toLowerCase(), component.name.toLowerCase())
-      )
-    }))
+  filterComponentsLists(componentsInfo, filterText) {
+    return componentsInfo.filter(component => {
+      return fuzzysearch(filterText.toLowerCase(), component.name.toLowerCase())
+    })
   }
 
   handleKeyUp() {
@@ -47,15 +32,11 @@ class FilterSidebar extends Component {
   }
 
   handleFilterInputChange(e) {
-    this.setState({ filterInputValue: e.target.value })
+    this.setState({filterInputValue: e.target.value})
   }
 
   render() {
-    let groups = this.getComponentsGroups(this.props.components);
-    let componentsLists = groups.map(group =>
-      this.prepareComponentsListByGroupName(this.props.components, group)
-    );
-    let filteredComponentsLists = this.filterComponentsLists(componentsLists, this.state.filterInputValue);
+    let filteredComponentsLists = this.filterComponentsLists(this.props.components, this.state.filterInputValue);
 
     return (
       <div className="filter-sidebar">
@@ -69,28 +50,22 @@ class FilterSidebar extends Component {
           />
         </div>
         <div className="filter-sidebar__components-list-wrapper">
-          {filteredComponentsLists.map((componentsList, index) => (
-            <div key={index}>
-              <h5>{`${componentsList.group} (${componentsList.components.length})`}</h5>
-              <ul className="filter-sidebar__components-list"> {
-                componentsList.components.map((component, index) =>
-                  <li
-                    key={index}
-                    className={
-                      `filter-sidebar__components-list-item ` +
-                      `${component.id === this.props.currentComponent ?
-                        'filter-sidebar__components-list-item--current' : ''
-                      }`
-                    }
-                    onClick={() => this.props.onComponentChange(component.id)}
-                  >
-                    <div className="filter-sidebar__components-list-item-name">{component.name}</div>
-                  </li>
-                )
-              }
-              </ul>
-            </div>
-          ))}
+          <ul className="filter-sidebar__components-list">
+            {filteredComponentsLists.map((component, index) => (
+              <li
+                key={index}
+                className={
+                  `filter-sidebar__components-list-item ` +
+                  `${component.id === this.props.currentComponent ?
+                    'filter-sidebar__components-list-item--current' : ''
+                    }`
+                }
+                onClick={() => this.props.onComponentChange(component.id)}
+              >
+                <div className="filter-sidebar__components-list-item-name">{component.name}</div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     )
@@ -99,7 +74,10 @@ class FilterSidebar extends Component {
 
 FilterSidebar.propTypes = {
   currentComponent: PropTypes.string,
-  components: PropTypes.arrayOf(PropTypes.object).isRequired,
+  componentsInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
   onComponentChange: PropTypes.func,
   onHide: PropTypes.func
+};
+FilterSidebar.defaultProps = {
+  componentsInfo: []
 };

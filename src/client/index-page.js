@@ -5,6 +5,6 @@ import parseComponents from './parseComponents';
 import remoteLoader from './remote-loader/index';
 
 let rootElement = document.getElementById('main');
-let demoPageIndex = React.createElement(DemoPageIndex, { getComponents: () => parseComponents([]) });
+let demoPageIndex = React.createElement(DemoPageIndex, { loader: remoteLoader });
 
 ReactDOM.render(demoPageIndex, rootElement);

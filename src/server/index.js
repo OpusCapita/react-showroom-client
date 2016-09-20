@@ -34,9 +34,9 @@ app.get('/packages-info', function(req, res) {
   res.send(require(npmInstallerConfig.packagesInfoPath));
 });
 
-app.get('/versions-info', function(req, res) {
-  console.log('Requested versions info');
-  res.send(require(npmScannerConig.versionsInfoPath));
+app.get('/components-info', function(req, res) {
+  console.log('Requested components info');
+  res.send(require(npmScannerConig.componentsInfoPath));
 });
 
 app.get('/packages/*', function(req, res) {

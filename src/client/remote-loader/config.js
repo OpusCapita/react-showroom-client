@@ -1,10 +1,9 @@
-import agent from 'superagent';
-
-let hostUrl =  'localhost:3888';
+let hostUrl =  'http://localhost:3888';
 let packagesInfoUrl = hostUrl + '/packages-info';
-let versionsUrl = hostUrl + '/versions-info';
+let componentsInfoUrl = hostUrl + '/components-info';
 
 export default {
-  getPackagesInfo: () => agent.get(packagesInfoUrl),
-  getPackage: () => {}
+  hostUrl,
+  packagesInfoUrl,
+  componentsInfoUrl
 }
