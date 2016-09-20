@@ -3,8 +3,8 @@
 let libPath = require('path');
 let libFs = require('fs');
 
-function getPackage(installationRoot, packageName, packageVersion) {
-  let packageIndexPath = libPath.resolve(
+function getPackage(installationRoot, packageName, packageVersion, onRead) {
+  let packageBundlePath = libPath.resolve(
     libPath.join(
       installationRoot,
       packageName,
@@ -14,9 +14,9 @@ function getPackage(installationRoot, packageName, packageVersion) {
   );
   let packageIndexFileContent;
   try {
-    packageIndexFileContent = libFs.readFileSync(packageIndexPath, 'utf-8');
+    packageIndexFileContent = libFs.readFile(packageBundlePath, 'utf-8', onRead);
   } catch (err) {
-    console.log('There is no package on this path:', packageIndexPath);
+    console.log('There is no package on this path:', packageBundlePath);
     console.log(err);
   }
   return packageIndexFileContent;

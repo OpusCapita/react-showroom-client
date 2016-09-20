@@ -30,10 +30,12 @@ app.get('/', function(req, res) {
 });
 
 app.get('/packages-info', function(req, res) {
+  console.log('Requested packages info');
   res.send(require(npmInstallerConfig.packagesInfoPath));
 });
 
 app.get('/versions-info', function(req, res) {
+  console.log('Requested versions info');
   res.send(require(npmScannerConig.versionsInfoPath));
 });
 
@@ -41,11 +43,13 @@ app.get('/packages/*', function(req, res) {
   let pathParts = req.path.split('\/');
   let packageName = pathParts[2];
   let packageVersion = pathParts[3];
-  let componentName = pathParts[4] || 'default';
-  let responseData = npmLoader.getPackage(
-    npmInstallerConfig.installationRoot, packageName, packageVersion, componentName
+  console.log('Request package:', packageName, packageVersion);
+  npmLoader.getPackage(
+    npmInstallerConfig.installationRoot,
+    packageName,
+    packageVersion,
+    (err, fileData) => res.send(fileData)
   );
-  res.send(responseData);
 });
 
 app.listen(port, host, (err) => {
