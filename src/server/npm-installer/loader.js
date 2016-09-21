@@ -4,7 +4,7 @@ let libPath = require('path');
 let libFs = require('fs');
 
 function getPackage(installationRoot, packageName, packageVersion, onRead) {
-  let packageBundlePath = libPath.resolve(
+  let bundlePath = libPath.resolve(
     libPath.join(
       installationRoot,
       packageName,
@@ -12,16 +12,35 @@ function getPackage(installationRoot, packageName, packageVersion, onRead) {
       'bundle.js'
     )
   );
-  let packageIndexFileContent;
   try {
-    packageIndexFileContent = libFs.readFile(packageBundlePath, 'utf-8', onRead);
+    libFs.readFile(bundlePath, 'utf-8', onRead);
   } catch (err) {
-    console.log('There is no package on this path:', packageBundlePath);
+    console.log('There is no package on this path:', bundlePath);
     console.log(err);
   }
-  return packageIndexFileContent;
+}
+
+function getRelatedFile(installationRoot, packageName, packageVersion, relativePath, onRead) {
+  let relateFilePath = libPath.resolve(
+    libPath.join(
+      installationRoot,
+      packageName,
+      packageVersion,
+      'node_modules',
+      packageName,
+      relativePath
+    )
+  );
+  console.log(relateFilePath);
+  try {
+    libFs.readFile(relateFilePath, 'utf-8', onRead);
+  } catch (err) {
+    console.log('There is no package on this path:', relateFilePath);
+    console.log(err);
+  }
 }
 
 module.exports = {
-  getPackage
+  getPackage,
+  getRelatedFile
 };

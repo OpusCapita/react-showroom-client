@@ -11,11 +11,16 @@ function getComponentsInfo(packageName, version, versionRoot, componentsMasks) {
   return findedFiles.map(file => {
     let fileContent = libFs.readFileSync(file, 'utf-8');
     let parsedDocumentation = parseDocumentation(fileContent);
+    let relativeReadmePath = libPath.relative(versionRoot, file);
     return {
       "package": packageName,
       name: parsedDocumentation.componentName,
       version,
-      tags: parsedDocumentation.tags || ''
+      tags: parsedDocumentation.tags || '',
+      relatedFiles: [{
+        name: 'readme',
+        path: relativeReadmePath
+      }]
     };
   });
 }

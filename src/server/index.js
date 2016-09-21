@@ -52,6 +52,21 @@ app.get('/packages/*', function(req, res) {
   );
 });
 
+app.get('/package-related-files/*', function(req, res) {
+  let pathParts = req.path.split('\/');
+  let packageName = pathParts[2];
+  let packageVersion = pathParts[3];
+  let relativePath = pathParts.slice(4, pathParts.length).join('/');
+  console.log('Request related file:', packageName, packageVersion, relativePath);
+  npmLoader.getRelatedFile(
+    npmInstallerConfig.installationRoot,
+    packageName,
+    packageVersion,
+    relativePath,
+    (err, fileData) => res.send(fileData)
+  );
+});
+
 app.listen(port, host, (err) => {
   if (err) {
     console.log(err);

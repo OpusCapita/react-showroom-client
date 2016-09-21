@@ -35,8 +35,11 @@ class DemoPage extends Component {
     });
   }
 
-  getComponent(componentName, version, packageName) {
-    this.props.loader.getComponent(componentName, this.onComponentReady.bind(this), version, packageName);
+  getComponent(component) {
+    this.props.loader.getComponent(
+      component,
+      this.onComponentReady.bind(this)
+    );
   }
 
   getPackagesInfo() {
@@ -69,7 +72,7 @@ class DemoPage extends Component {
   handleComponentSelection(id) {
     if(!this.state.components.filter(component => component.id === id).length) {
       let componentInfo = this.state.componentsInfo.filter(info => info.id == id)[0];
-      this.getComponent(componentInfo.name, componentInfo.version, componentInfo.package);
+      this.getComponent(componentInfo);
     }
     this.setState({ currentComponentId: id });
   }

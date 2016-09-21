@@ -6,5 +6,8 @@ export default {
   hostUrl,
   packagesInfoUrl,
   componentsInfoUrl,
-  getPackageUrl: (packageName, version) => `${hostUrl}/packages/${packageName}/${version}`
+  getPackageUrl: (packageName, version) =>
+    `${hostUrl}/packages/${packageName}/${version}`,
+  getRelatedFileUrl: (packageName, version, relativePath) =>
+    `${hostUrl}/package-related-files/${packageName}/${version}/${relativePath}`
 }
