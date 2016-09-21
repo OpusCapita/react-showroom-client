@@ -38,8 +38,8 @@ class ComponentRenderer extends Component {
     this.updateCompiledCode(parsedDocumentation.demoProps);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.component !== nextProps.component) {
+  componentDidUpdate(prevProps) {
+    if (this.props.component !== prevProps.component) {
       this.initDefaultCode();
     }
   }
@@ -96,8 +96,6 @@ class ComponentRenderer extends Component {
     let componentDocumentation = component.relatedFiles.filter(
       relatedFile => relatedFile.name === 'readme'
     )[0].content;
-    console.log('class:', component.componentClass);
-    console.log('code', this.state.compiledCode);
     window[componentName] = component.componentClass;
     let element;
     try {
@@ -107,7 +105,6 @@ class ComponentRenderer extends Component {
       element = null;
     }
 
-    console.log('element', element);
     return (
       <div className="row component-renderer">
         <div className="col-xs-12 component-renderer__element-container-outer">
