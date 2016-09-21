@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import DemoPage from './DemoPage.react';
+import './DemoPageIndex.less';
 import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less';
 import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less';
 let logoUrl = require('../img/logo.svg');
@@ -10,19 +11,19 @@ class DemoPageIndex extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-xs-12">
-            <br/>
+          <div className="col-xs-12 demo-page-index__header">
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-6 demo-page-index__title-container">
                 <img style={{ width: '200px' }} src={logoUrl} alt="OpusCapita logo" />
+                <h1 className="demo-page-index__title">showroom</h1>
               </div>
               <div className="col-md-6 text-right">
                 <div>
                   <a
                     target="_blank"
-                    href="http://buildserver.jcatalog.com/gitweb/?p=activity.git;a=summary"
+                    href="http://buildserver.jcatalog.com/gitweb/?p=showroom.git"
                   >
-                    GOTO git repository
+                    To git repository
                   </a>
                 </div>
                 <div>
@@ -31,7 +32,7 @@ class DemoPageIndex extends Component {
                 </div>
               </div>
             </div>
-            <hr />
+            <hr className="demo-page-index__hr"/>
           </div>
           <div className="col-xs-12">
             <DemoPage loader={this.props.loader} />
