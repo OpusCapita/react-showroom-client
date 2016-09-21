@@ -8,6 +8,7 @@ import 'react-codemirror/node_modules/codemirror/theme/material.css';
 import 'react-codemirror/node_modules/codemirror/mode/jsx/jsx';
 import { formatPatterns } from '../i18n/config';
 import { transform } from 'babel-standalone';
+import { parseDocumentation } from '../parseComponents';
 
 window.React = React;
 
@@ -32,13 +33,14 @@ class ComponentRenderer extends Component {
   }
 
   componentWillMount() {
-    this.initDefaultCode(this.props.component.demoProps);
-    this.updateCompiledCode(this.props.component.demoProps);
+    this.initDefaultCode();
+    let parsedDocumentation = this.getParsedDocumentation();
+    this.updateCompiledCode(parsedDocumentation.demoProps);
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.component !== nextProps.component) {
-      this.initDefaultCode(nextProps.component.demoProps);
+      this.initDefaultCode();
     }
   }
 
@@ -46,7 +48,19 @@ class ComponentRenderer extends Component {
     this.initDefaultCode(this.props.component.demoProps);
   }
 
-  initDefaultCode(code) {
+  getDocumentation() {
+    return this.props.component.relatedFiles.filter(
+      relatedFile => relatedFile.name === 'readme'
+    )[0].content;
+  }
+
+  getParsedDocumentation() {
+    let parsedDocumentation = this.getDocumentation();
+    return parseDocumentation(parsedDocumentation);
+  }
+
+  initDefaultCode() {
+    let code = this.getParsedDocumentation().demoProps;
     this.setState({ code });
     this.updateCompiledCode(code);
   }
@@ -77,9 +91,13 @@ class ComponentRenderer extends Component {
   }
 
   render() {
-    let { component } = this.props;
-    let componentName = component.name || component.componentClass.name;
-    console.log(componentName);
+    let { component, componentInfo } = this.props;
+    let componentName = componentInfo.name || component.componentClass.name;
+    let componentDocumentation = component.relatedFiles.filter(
+      relatedFile => relatedFile.name === 'readme'
+    )[0].content;
+    console.log('class:', component.componentClass);
+    console.log('code', this.state.compiledCode);
     window[componentName] = component.componentClass;
     let element;
     try {
@@ -120,7 +138,7 @@ class ComponentRenderer extends Component {
               </div>
             </div>
             <div className="col-md-6">
-              <Documentation markdown={component.documentation}/>
+              <Documentation markdown={componentDocumentation}/>
             </div>
 
           </div>
@@ -132,7 +150,7 @@ class ComponentRenderer extends Component {
 
 ComponentRenderer.propTypes = {
   component: PropTypes.object,
-  label: PropTypes.string
+  componentInfo: PropTypes.object
 };
 ComponentRenderer.contextTypes = {
   i18n: PropTypes.object

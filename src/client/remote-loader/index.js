@@ -106,12 +106,12 @@ export default (function() {
               component.name,
               component.relatedFiles,
               relatedFilesContent =>
-                onComponentReady({componentClass: compiledComponent, relatedFilesContent: relatedFilesContent })
+                onComponentReady({componentClass: compiledComponent, relatedFiles: relatedFilesContent })
             );
           });
       } else {
         let packageBundleContent = loadedPackages.filter(
-          loadedPackage => loadedPackage.name === packageName && loadedPackage.version === component.version
+          loadedPackage => loadedPackage.name === component.package && loadedPackage.version === component.version
         )[0].content;
         let compiledComponent = compileComponent(packageBundleContent, component.name);
         getRelatedFiles(
@@ -120,7 +120,7 @@ export default (function() {
           component.name,
           component.relatedFiles,
           relatedFilesContent =>
-            onComponentReady({componentClass: compiledComponent, relatedFilesContent: relatedFilesContent })
+            onComponentReady({componentClass: compiledComponent, relatedFiles: relatedFilesContent })
         );
       }
 

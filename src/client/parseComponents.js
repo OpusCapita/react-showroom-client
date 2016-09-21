@@ -23,7 +23,7 @@ function getSectionIndexRange(ast, headerName) {
   return [];
 }
 
-function parseDocumentation(markdown) {
+export function parseDocumentation(markdown) {
   let ast = markdownToAst.parse(markdown);
   return {
     componentName:
