@@ -11,7 +11,7 @@ module.exports = {
     },
     {
       name: 'test-showroom-jcatalog-react-reference-search',
-      versionsFilter: version => version === '2.3.4'
+      versionsFilter: version => semver.gt(version, '2.3.3')
     },
     // {
     //   name: 'test-showroom-jcatalog-react-reference-search',

@@ -25,9 +25,32 @@ class FilterSidebar extends Component {
     this.setState({filterInputValue: e.target.value})
   }
 
-  render() {
-    let filteredComponentsLists = this.filterComponentsLists(this.props.components, this.state.filterInputValue);
+  collapseBy(list, by) {
+    return list.reduce((results, current) => {
+      return results.some(result => result[by] === current[by]) ? results : results.concat([current]);
+    }, []);
+  }
 
+  getComponentVersions(componentPackage, componentName, componentsInfo) {
+    return componentsInfo.reduce((results, current) => {
+      return (current.package === componentPackage && current.name === componentName) ?
+        results.concat([current.version]) :
+        results
+    }, []);
+  }
+
+  handleVersionChange(component, version, componentsInfo) {
+    let componentId = componentsInfo.filter(componentInfo =>
+      componentInfo.package === component.package &&
+      componentInfo.name === component.name &&
+      componentInfo.version === component.version
+    )[0].id;
+    this.props.onComponentChange(componentId);
+  }
+
+  render() {
+    let preparedComponentsList = this.filterComponentsLists(this.props.components, this.state.filterInputValue);
+        preparedComponentsList = this.collapseBy(preparedComponentsList, 'name');
     return (
       <div className="filter-sidebar">
         <div className="filter-sidebar__filter-input-wrapper">
@@ -41,7 +64,7 @@ class FilterSidebar extends Component {
         </div>
         <div className="filter-sidebar__components-list-wrapper">
           <ul className="filter-sidebar__components-list">
-            {filteredComponentsLists.map((component, index) => (
+            {preparedComponentsList.map((component, index) => (
               <li
                 key={index}
                 className={
@@ -53,6 +76,27 @@ class FilterSidebar extends Component {
                 onClick={() => this.props.onComponentChange(component.id)}
               >
                 <div className="filter-sidebar__components-list-item-name">{component.name}</div>
+                <div
+                  className="filter-sidebar__components-list-item-version"
+                  onClick={event => event.stopPropagation()}
+                >
+                  <select
+                    className="filter-sidebar__components-list-item-version-select"
+                    onChange={(event) => this.handleVersionChange(component, event.target.value, this.props.components)}
+                  >
+                    {this.getComponentVersions(
+                        component.package, component.name, this.props.components
+                      ).map((version, index) =>
+                        <option
+                          key={index}
+                          value={version}
+                        >
+                          {version}
+                        </option>
+                      )
+                    }
+                  </select>
+                </div>
               </li>
             ))}
           </ul>

@@ -33,6 +33,8 @@
 .filter-sidebar__components-list-item {
   font-size: 16px;
   padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
   &:hover {
     cursor: pointer;
     color: #fff;
@@ -43,4 +45,19 @@
 .filter-sidebar__components-list-item--current {
   color: #fff;
   background-color: #e70;
+}
+
+.filter-sidebar__components-list-item-version {
+  margin-left: 24px;
+  display: flex;
+}
+
+.filter-sidebar__components-list-item-version-select {
+  border: none;
+  color: initial;
+  padding: 0 8px;
+  appearance: none;
+  &:hover {
+    cursor: pointer;
+  }
 }

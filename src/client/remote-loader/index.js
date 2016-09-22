@@ -74,8 +74,6 @@ function compileComponent(packageBundleContent, componentName) {
   } catch(err) {
     console.log('Remote loader component compilation error:', err);
   }
-  console.log('compiledPackage', compiledPackage);
-  console.log('componentName', componentName);
   if(!compiledPackage) {
     return 1;
   }

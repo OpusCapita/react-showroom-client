@@ -43,6 +43,10 @@ module.exports = {
     'react-dom': 'ReactDOM'
   },
 
+  postcss: function () {
+        return [require('autoprefixer')];
+  },
+
   module: {
     loaders: [
       {
@@ -57,10 +61,10 @@ module.exports = {
         test: /\.md$/,
         loader: 'raw-loader'
       },
-      { test: /\.less$/, loader: 'style!css!less'},
+      { test: /\.less$/, loader: 'style!css!postcss-loader!less'},
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader"
+        loader: "style-loader!css-loader!postcss-loader"
       },
       {
         test: /.jsx?$/,

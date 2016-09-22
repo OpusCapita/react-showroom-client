@@ -24,6 +24,7 @@
   "license": "jCatalog",
   "readme": "README.md",
   "dependencies": {
+    "autoprefixer": "^6.4.1",
     "babel-cli": "6.5.1",
     "babel-core": "6.4.0",
     "babel-eslint": "6.0.4",
@@ -54,6 +55,7 @@
     "markdown-to-ast": "3.4.0",
     "mkdirp": "0.5.1",
     "nodemon": "1.9.1",
+    "postcss-loader": "^0.13.0",
     "raw-loader": "0.5.1",
     "react": "0.14.8",
     "react-addons-test-utils": "0.14.7",
