@@ -45,7 +45,6 @@ class FilterSidebar extends Component {
       componentInfo.name === component.name &&
       componentInfo.version === version
     )[0].id;
-    console.log('kid', componentId);
     this.props.onComponentChange(componentId);
   }
 

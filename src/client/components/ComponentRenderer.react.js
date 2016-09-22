@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { I18nManager } from 'jcatalog-i18n';
+import ComponentRendererElement from './ComponentRendererElement.react';
 import Documentation from './Documentation.react';
 import CodeMirror from 'react-codemirror';
 import './ComponentRendered.less';
@@ -39,7 +40,7 @@ class ComponentRenderer extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.component !== prevProps.component) {
+    if (this.props.component.componentClass !== prevProps.component.componentClass) {
       this.initDefaultCode();
     }
   }
@@ -105,10 +106,14 @@ class ComponentRenderer extends Component {
       element = null;
     }
 
+    console.log('element', element);
     return (
       <div className="row component-renderer">
         <div className="col-xs-12 component-renderer__element-container-outer">
-          {element}
+          <ComponentRendererElement
+            element={element}
+            componentId={this.props.componentInfo.id}
+          />
         </div>
         <div className="col-xs-12">
           <hr />

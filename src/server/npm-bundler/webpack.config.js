@@ -15,7 +15,7 @@ module.exports = {
         loader: 'json-loader'
       },
       {
-        test: /\.css$/, loader: "style-loader!css-loader"
+        test: /\.css$/, loader: "style!css-loader"
       },
       { test: /\.less$/, loader: 'style!css!less'},
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import ReferenceSearchRender from './ComponentRenderer.react';
+import ComponentRenderer from './ComponentRenderer.react';
 import FilterSidebar from './FilterSidebar.react';
 import DemoPageComponentShortInfo from './DemoPageComponentShortInfo.react';
 import './DemoPage.less';
@@ -51,12 +51,10 @@ class DemoPage extends Component {
   }
 
   getComponent(componentInfo) {
-    console.log('kinfo', componentInfo);
     this.props.loader.getComponent(componentInfo, this.onComponentReady.bind(this));
   }
 
   onComponentReady(componentData) {
-    console.log('kdata', componentData);
     this.setState({ currentComponent: componentData });
   }
 
@@ -67,7 +65,6 @@ class DemoPage extends Component {
   }
 
   handleComponentSelection(id) {
-    console.log(id);
     let componentInfo = this.state.componentsInfo.filter(info => info.id == id)[0];
     this.getComponent(componentInfo);
     this.setState({ currentComponentId: id });
@@ -75,9 +72,8 @@ class DemoPage extends Component {
 
   render() {
     let currentComponentInfo = this.getCurrentComponentInfo();
-
     let componentRenderer = this.state.currentComponent ? (
-      <ReferenceSearchRender component={this.state.currentComponent} componentInfo={currentComponentInfo} />
+      <ComponentRenderer component={this.state.currentComponent} componentInfo={currentComponentInfo} />
     ) : null;
 
     let sidebar = this.state.showSidebar ? (
