@@ -98,9 +98,8 @@ class DemoPage extends Component {
         <div className="col-xs-12">
           <div className="demo-page__main-menu-container">
             <button
-              className="btn btn-primary"
+              className="btn btn-primary demo-page__primary-btn"
               onClick={this.toggleSidebar.bind(this)}
-              style={{background: '#e70', borderColor: '#e70', boxShadow: 'none'}}
             >
               Show Filter
             </button>
