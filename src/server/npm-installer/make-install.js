@@ -32,7 +32,9 @@ function installPackages(packagesInfo, installationRoot) {
     let packageRoot = libPath.join(installationRoot, packageInfo.name);
     log(`\tCreated "${packageInfo.name}" package root dir.`);
     mkdirp(packageRoot);
-    let versions = packageInfo.info.versions.filter(packageInfo.versionsFilter);
+    let versions = typeof packageInfo.info.versions === 'string' ?
+      [packageInfo.info.versions].filter(packageInfo.versionsFilter):
+      packageInfo.info.versions.filter(packageInfo.versionsFilter);
     versions.map((version, versionIndex) => {
         let versionRoot = libPath.join(packageRoot, version);
         mkdirp(versionRoot);

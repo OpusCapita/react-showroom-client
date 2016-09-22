@@ -8,7 +8,7 @@ let log = console.log;
 
 function makeBundle(input, output) {
   log('Bundling:\n\t', input);
-  execSync(`webpack ${input} ${output}`);
+  execSync(`webpack ${input} ${output} --config ${config.webpackConfigPath}`);
   log('Bundle created at:\n\t', output);
 }
 

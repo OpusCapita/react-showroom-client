@@ -104,6 +104,7 @@ class ComponentRenderer extends Component {
       console.log('ComponentRenderer - render error:', err);
       element = null;
     }
+    console.log('element:', element);
 
     return (
       <div className="row component-renderer">
