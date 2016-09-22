@@ -51,10 +51,12 @@ class DemoPage extends Component {
   }
 
   getComponent(componentInfo) {
+    console.log('kinfo', componentInfo);
     this.props.loader.getComponent(componentInfo, this.onComponentReady.bind(this));
   }
 
   onComponentReady(componentData) {
+    console.log('kdata', componentData);
     this.setState({ currentComponent: componentData });
   }
 
@@ -65,6 +67,7 @@ class DemoPage extends Component {
   }
 
   handleComponentSelection(id) {
+    console.log(id);
     let componentInfo = this.state.componentsInfo.filter(info => info.id == id)[0];
     this.getComponent(componentInfo);
     this.setState({ currentComponentId: id });
