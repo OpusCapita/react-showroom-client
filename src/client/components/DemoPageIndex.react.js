@@ -28,6 +28,8 @@ class DemoPageIndex extends Component {
                 </div>
                 <div>
                   <strong>Contacts: </strong>
+                  <span>Alexey Sergeev</span>
+                  <span>, </span>
                   <span>Kirill Volkovich</span>
                 </div>
               </div>
