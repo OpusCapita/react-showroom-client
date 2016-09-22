@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReferenceSearchRender from './ComponentRenderer.react';
 import FilterSidebar from './FilterSidebar.react';
+import DemoPageComponentShortInfo from './DemoPageComponentShortInfo.react';
 import './DemoPage.less';
 
 export default
@@ -25,6 +26,12 @@ class DemoPage extends Component {
     this.props.loader.getPackagesInfo(data => {
       this.setState({ packagesInfo: data });
     });
+  }
+
+  getCurrentComponentInfo() {
+    return this.state.componentsInfo.filter(componentInfo =>
+      componentInfo.id === this.state.currentComponentId
+    )[0]
   }
 
   getComponentsInfo() {
@@ -64,9 +71,7 @@ class DemoPage extends Component {
   }
 
   render() {
-    let currentComponentInfo = this.state.componentsInfo.filter(
-      componentInfo => componentInfo.id === this.state.currentComponentId
-    )[0];
+    let currentComponentInfo = this.getCurrentComponentInfo();
 
     let componentRenderer = this.state.currentComponent ? (
       <ReferenceSearchRender component={this.state.currentComponent} componentInfo={currentComponentInfo} />
@@ -81,7 +86,7 @@ class DemoPage extends Component {
           &times;
         </div>
         <FilterSidebar
-          components={this.state.componentsInfo}
+          componentsInfo={this.state.componentsInfo}
           currentComponentId={this.state.currentComponentId}
           onComponentChange={this.handleComponentSelection.bind(this)}
         />
@@ -91,16 +96,25 @@ class DemoPage extends Component {
     return (
       <div className="row">
         <div className="col-xs-12">
-          <div
-            className="btn btn-primary"
-            onClick={this.toggleSidebar.bind(this)}
-            style={{background: '#e70', borderColor: '#e70', boxShadow: 'none'}}
-          >
-            Show Filter
+          <div className="demo-page__main-menu-container">
+            <button
+              className="btn btn-primary"
+              onClick={this.toggleSidebar.bind(this)}
+              style={{background: '#e70', borderColor: '#e70', boxShadow: 'none'}}
+            >
+              Show Filter
+            </button>
+            <DemoPageComponentShortInfo
+              packageName={currentComponentInfo && currentComponentInfo.package}
+              componentName={currentComponentInfo && currentComponentInfo.name}
+              version={currentComponentInfo && currentComponentInfo.version}
+            />
+          </div>
+          <hr />
+          <div className="demo-page__component-render-container">
+            {componentRenderer}
           </div>
           {sidebar}
-          <hr />
-          {componentRenderer}
         </div>
       </div>
     )

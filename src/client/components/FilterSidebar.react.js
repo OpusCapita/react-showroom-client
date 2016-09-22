@@ -49,7 +49,7 @@ class FilterSidebar extends Component {
   }
 
   render() {
-    let preparedComponentsList = this.filterComponentsLists(this.props.components, this.state.filterInputValue);
+    let preparedComponentsList = this.filterComponentsLists(this.props.componentsInfo, this.state.filterInputValue);
         preparedComponentsList = this.collapseBy(preparedComponentsList, 'name');
     return (
       <div className="filter-sidebar">
@@ -82,10 +82,10 @@ class FilterSidebar extends Component {
                 >
                   <select
                     className="filter-sidebar__components-list-item-version-select"
-                    onChange={(event) => this.handleVersionChange(component, event.target.value, this.props.components)}
+                    onChange={(event) => this.handleVersionChange(component, event.target.value, this.props.componentsInfo)}
                   >
                     {this.getComponentVersions(
-                        component.package, component.name, this.props.components
+                        component.package, component.name, this.props.componentsInfo
                       ).map((version, index) =>
                         <option
                           key={index}
