@@ -9,26 +9,16 @@ class FilterSidebar extends Component {
     this.state = {
       filterInputValue: ''
     };
-    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   componentDidMount() {
     this.refs.searchInput.focus();
-    document.documentElement.addEventListener('keyup', this.handleKeyUp);
-  }
-
-  componentWillUnmount() {
-    document.documentElement.removeEventListener('keyup', this.handleKeyUp);
   }
 
   filterComponentsLists(componentsInfo, filterText) {
     return componentsInfo.filter(component => {
       return fuzzysearch(filterText.toLowerCase(), component.name.toLowerCase())
     })
-  }
-
-  handleKeyUp() {
-    //Dummy
   }
 
   handleFilterInputChange(e) {
