@@ -94,7 +94,7 @@ class ComponentRenderer extends Component {
       console.log('ComponentRenderer - updateCompiledCode error:', err);
     }
     this.setState({ compiledCode });
-    this.createReactElement.call(this, compiledCode)
+    this.createReactElement.call(this, compiledCode);
   }
 
   createReactElement(compiledCode) {
