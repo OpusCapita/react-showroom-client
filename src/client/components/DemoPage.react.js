@@ -103,7 +103,7 @@ class DemoPage extends Component {
               className="btn btn-primary demo-page__primary-btn"
               onClick={this.toggleSidebar.bind(this)}
             >
-              Show Filter
+              Change component
             </button>
             <DemoPageComponentShortInfo
               packageName={currentComponentInfo && currentComponentInfo.package}

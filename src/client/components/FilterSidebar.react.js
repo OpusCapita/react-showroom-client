@@ -35,6 +35,9 @@ class FilterSidebar extends Component {
   render() {
     let preparedComponentsList = this.filterComponentsLists(this.props.componentsInfo, this.state.filterInputValue);
         preparedComponentsList = this.collapseBy(preparedComponentsList, 'name');
+        preparedComponentsList = preparedComponentsList.sort(
+          (component1, component2) => component1.name > component2.name ? 1 : -1
+        );
     return (
       <div className="filter-sidebar">
         <div className="filter-sidebar__filter-input-wrapper">

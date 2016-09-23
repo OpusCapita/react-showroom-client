@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import './FilterSidebarComponentItem.less';
+import semver from 'semver';
 
 export default
 class FilterSidebarComponentItem extends Component {
@@ -17,7 +18,8 @@ class FilterSidebarComponentItem extends Component {
 
   initComponentVersions() {
     let { component } = this.props;
-    let versions = this.getComponentVersions(component.package, component.name, this.props.componentsInfo);
+    let versions = this.getComponentVersions(component.package, component.name, this.props.componentsInfo)
+      .sort((version1, version2) => semver.lt(version1, version2) ? 1 : -1);
     this.setState({ versions });
     this.changeCurrentVersion(versions[0]);
   }
