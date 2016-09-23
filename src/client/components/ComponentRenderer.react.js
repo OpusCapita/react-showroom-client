@@ -19,7 +19,8 @@ class ComponentRenderer extends Component {
     super(props);
     this.state = {
       code: '{}',
-      compiledCode: '() => return null'
+      compiledCode: '() => return null',
+      reactElement: null
     };
   }
 
@@ -34,9 +35,16 @@ class ComponentRenderer extends Component {
   }
 
   componentWillMount() {
+    this.setReactClassGlobally(this.props);
     this.initDefaultCode();
     let parsedDocumentation = this.getParsedDocumentation();
     this.updateCompiledCode(parsedDocumentation.demoProps);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(this.props.component !== nextProps.component) {
+      this.setReactClassGlobally(nextProps);
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -86,27 +94,34 @@ class ComponentRenderer extends Component {
       console.log('ComponentRenderer - updateCompiledCode error:', err);
     }
     this.setState({ compiledCode });
+    this.createReactElement.call(this, compiledCode)
+  }
+
+  createReactElement(compiledCode) {
+    let element;
+    try {
+      element = eval(compiledCode); // eslint-disable-line no-eval
+    } catch (err) {
+      console.log('ComponentRenderer - render error:', err);
+      element = null;
+    }
+    this.setState({ reactElement: element });
+  }
+
+  setReactClassGlobally(props) {
+    let componentName = props.componentInfo.name || props.component.componentClass.name;
+    window[componentName] = props.component.componentClass;
   }
 
   render() {
-    let { component, componentInfo, showContainerBorders } = this.props;
-    let componentName = componentInfo.name || component.componentClass.name;
-    let containerBordersClassName = showContainerBorders ?
+    let { component, componentInfo, options } = this.props;
+    let containerBordersClassName = options.showContainerBorders ?
       'component-renderer__element-container-inner--with-borders' :
       ' ';
     let componentDocumentation = component.relatedFiles.filter(
       relatedFile => relatedFile.name === 'readme'
     )[0].content;
-    window[componentName] = component.componentClass;
-    let element;
-    try {
-      element = eval(this.state.compiledCode); // eslint-disable-line no-eval
-    } catch (err) {
-      console.log('ComponentRenderer - render error:', err);
-      element = null;
-    }
 
-    console.log('element', element);
     return (
       <div className="row component-renderer">
         <div
@@ -115,7 +130,7 @@ class ComponentRenderer extends Component {
         >
           <div className="component-renderer__element-container-inner">
             <ComponentRendererElement
-              element={element}
+              element={this.state.reactElement}
               componentId={this.props.componentInfo.id}
             />
           </div>
@@ -159,7 +174,7 @@ ComponentRenderer.propTypes = {
   component: PropTypes.object,
   componentInfo: PropTypes.object,
   maxContainerWidth: PropTypes.string,
-  showContainerBorders: PropTypes.bool
+  options: PropTypes.object
 };
 ComponentRenderer.defaultProps = {
   maxContainerWidth: '100%'

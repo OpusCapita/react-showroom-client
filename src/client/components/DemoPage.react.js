@@ -17,7 +17,8 @@ class DemoPage extends Component {
       currentComponent: null,
       options: {
         maxContainerWidth: '100%',
-        sliderHovered: false
+        showContainerBorders: false,
+        containerCentering: false
       }
     };
   }
@@ -95,7 +96,7 @@ class DemoPage extends Component {
         component={this.state.currentComponent}
         componentInfo={currentComponentInfo}
         maxContainerWidth={options.maxContainerWidth}
-        showContainerBorders={options.sliderHovered}
+        options={options}
       />
     ) : null;
 
@@ -126,22 +127,31 @@ class DemoPage extends Component {
               >
                 Change component
               </button>
-              <div
-                className="demo-page__max-container-width-slider-group"
-                onMouseEnter={() => this.changeOption.call(this, 'sliderHovered', true)}
-                onMouseLeave={() => this.changeOption.call(this, 'sliderHovered', false)}
-              >
-                <div className="demo-page__max-container-width-slider-group-title">
-                  Max width:
+              <div className="demo-page__options-group">
+                <div className="demo-page__options-group">
+                  <button
+                    className="demo-page__options-item-btn"
+                    onClick={() => this.changeOption.call(this, 'containerCentering', !this.state.containerCentering)}
+                  >
+                  </button>
                 </div>
-                <Rcslider
-                  className="demo-page__max-container-width-slider"
-                  onChange={value => this.changeOption.call(this, 'maxContainerWidth', `${value}%`)}
-                  defaultValue={parseInt(options.maxContainerWidth, 10)}
-                  tipFormatter={null}
-                />
-                <div className="demo-page__max-container-width-slider-group-value">
-                  {options.maxContainerWidth}
+                <div
+                  className="demo-page__max-container-width-slider-group"
+                  onMouseEnter={() => this.changeOption.call(this, 'showContainerBorders', true)}
+                  onMouseLeave={() => this.changeOption.call(this, 'showContainerBorders', false)}
+                >
+                  <div className="demo-page__max-container-width-slider-group-title">
+                    Max width:
+                  </div>
+                  <Rcslider
+                    className="demo-page__max-container-width-slider"
+                    onChange={value => this.changeOption.call(this, 'maxContainerWidth', `${value}%`)}
+                    defaultValue={parseInt(options.maxContainerWidth, 10)}
+                    tipFormatter={null}
+                  />
+                  <div className="demo-page__max-container-width-slider-group-value">
+                    {options.maxContainerWidth}
+                  </div>
                 </div>
               </div>
             </div>
