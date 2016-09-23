@@ -125,15 +125,17 @@ class DemoPage extends Component {
                 className="btn btn-primary demo-page__primary-btn"
                 onClick={this.toggleSidebar.bind(this)}
               >
-                Change component
+                Choose component
               </button>
               <div className="demo-page__options-group">
                 <div className="demo-page__options-group">
+                  {/*
                   <button
                     className="demo-page__options-item-btn"
                     onClick={() => this.changeOption.call(this, 'containerCentering', !this.state.containerCentering)}
                   >
                   </button>
+                  */}
                 </div>
                 <div
                   className="demo-page__max-container-width-slider-group"
