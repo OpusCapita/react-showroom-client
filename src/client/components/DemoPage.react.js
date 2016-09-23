@@ -55,7 +55,10 @@ class DemoPage extends Component {
   }
 
   onComponentReady(componentData) {
-    this.setState({ currentComponent: componentData });
+    let componentInfo = this.state.componentsInfo.filter(
+      componentInfo => componentInfo.id === this.state.currentComponentId
+    )[0];
+    this.setState({ currentComponent: { ...componentData, componentInfo } });
   }
 
   toggleSidebar() {
@@ -86,7 +89,7 @@ class DemoPage extends Component {
         </div>
         <FilterSidebar
           componentsInfo={this.state.componentsInfo}
-          currentComponentId={this.state.currentComponentId}
+          currentComponent={this.state.currentComponent}
           onComponentChange={this.handleComponentSelection.bind(this)}
         />
       </div>

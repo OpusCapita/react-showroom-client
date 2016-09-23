@@ -1,0 +1,36 @@
+.filter-sidebar-component-item {
+  font-size: 16px;
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: lighten(#e70, 20%);
+  }
+}
+
+.filter-sidebar-component-item--current {
+  color: #fff;
+  background-color: #e70;
+}
+
+.filter-sidebar-component-item__version {
+  margin-left: 24px;
+  display: flex;
+}
+
+.filter-sidebar-component-item__version-select {
+  border: none;
+  color: initial;
+  padding: 0 8px;
+  text-align-last: right;
+  appearance: none;
+  &:active,
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
