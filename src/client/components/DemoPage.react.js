@@ -15,7 +15,10 @@ class DemoPage extends Component {
       componentsInfo: [],
       currentComponentId: '',
       currentComponent: null,
-      maxContainerWidth: '100%'
+      options: {
+        maxContainerWidth: '100%',
+        sliderHovered: false
+      }
     };
   }
 
@@ -69,8 +72,13 @@ class DemoPage extends Component {
     })
   }
 
-  handleMaxContainerWidthChange(value) {
-   this.setState({ maxContainerWidth: `${value}%` });
+  changeOption(optionName, value) {
+   this.setState({
+     options: {
+       ...this.state.options,
+       [optionName]: value
+     }
+   });
   }
 
   handleComponentSelection(id) {
@@ -80,12 +88,14 @@ class DemoPage extends Component {
   }
 
   render() {
+    let { options } = this.state;
     let currentComponentInfo = this.getCurrentComponentInfo();
     let componentRenderer = this.state.currentComponent ? (
       <ComponentRenderer
         component={this.state.currentComponent}
         componentInfo={currentComponentInfo}
-        maxContainerWidth={this.state.maxContainerWidth}
+        maxContainerWidth={options.maxContainerWidth}
+        showContainerBorders={options.sliderHovered}
       />
     ) : null;
 
@@ -116,18 +126,22 @@ class DemoPage extends Component {
               >
                 Change component
               </button>
-              <div className="demo-page__max-container-width-slider-group">
+              <div
+                className="demo-page__max-container-width-slider-group"
+                onMouseEnter={() => this.changeOption.call(this, 'sliderHovered', true)}
+                onMouseLeave={() => this.changeOption.call(this, 'sliderHovered', false)}
+              >
                 <div className="demo-page__max-container-width-slider-group-title">
                   Max width:
                 </div>
                 <Rcslider
                   className="demo-page__max-container-width-slider"
-                  onChange={value => this.handleMaxContainerWidthChange.call(this, value)}
-                  defaultValue={parseInt(this.state.maxContainerWidth, 10)}
+                  onChange={value => this.changeOption.call(this, 'maxContainerWidth', `${value}%`)}
+                  defaultValue={parseInt(options.maxContainerWidth, 10)}
                   tipFormatter={null}
                 />
                 <div className="demo-page__max-container-width-slider-group-value">
-                  {this.state.maxContainerWidth}
+                  {options.maxContainerWidth}
                 </div>
               </div>
             </div>

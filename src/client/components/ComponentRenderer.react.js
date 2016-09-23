@@ -81,10 +81,7 @@ class ComponentRenderer extends Component {
   updateCompiledCode(code) {
     let compiledCode;
     try {
-      compiledCode = transform(
-        `<div className="component-renderer__element-container-inner">\n${code}\n</div>`,
-        { presets: ['es2015', 'react', 'stage-0'] }
-      ).code;
+      compiledCode = transform(`${code}`, { presets: ['es2015', 'react', 'stage-0'] }).code;
     } catch (err) {
       console.log('ComponentRenderer - updateCompiledCode error:', err);
     }
@@ -92,8 +89,11 @@ class ComponentRenderer extends Component {
   }
 
   render() {
-    let { component, componentInfo } = this.props;
+    let { component, componentInfo, showContainerBorders } = this.props;
     let componentName = componentInfo.name || component.componentClass.name;
+    let containerBordersClassName = showContainerBorders ?
+      'component-renderer__element-container-inner--with-borders' :
+      ' ';
     let componentDocumentation = component.relatedFiles.filter(
       relatedFile => relatedFile.name === 'readme'
     )[0].content;
@@ -110,13 +110,15 @@ class ComponentRenderer extends Component {
     return (
       <div className="row component-renderer">
         <div
-          className="col-xs-12 component-renderer__element-container-outer"
+          className={`col-xs-12 component-renderer__element-container-outer ${containerBordersClassName}`}
           style={{ maxWidth: this.props.maxContainerWidth }}
         >
-          <ComponentRendererElement
-            element={element}
-            componentId={this.props.componentInfo.id}
-          />
+          <div className="component-renderer__element-container-inner">
+            <ComponentRendererElement
+              element={element}
+              componentId={this.props.componentInfo.id}
+            />
+          </div>
         </div>
         <div className="col-xs-12">
           <hr />
@@ -156,7 +158,8 @@ class ComponentRenderer extends Component {
 ComponentRenderer.propTypes = {
   component: PropTypes.object,
   componentInfo: PropTypes.object,
-  maxContainerWidth: PropTypes.string
+  maxContainerWidth: PropTypes.string,
+  showContainerBorders: PropTypes.bool
 };
 ComponentRenderer.defaultProps = {
   maxContainerWidth: '100%'
