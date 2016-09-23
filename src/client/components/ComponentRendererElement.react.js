@@ -21,7 +21,6 @@ class ComponentRendererElement extends Component {
   }
 
   render() {
-    console.log(this.props.element);
     this._newStyles = Array.from(document.head.getElementsByTagName('style'));
     return this.props.element || null;
   }

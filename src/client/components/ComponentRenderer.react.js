@@ -89,7 +89,7 @@ class ComponentRenderer extends Component {
   updateCompiledCode(code) {
     let compiledCode;
     try {
-      compiledCode = transform(`${code}`, { presets: ['es2015', 'react', 'stage-0'] }).code;
+      compiledCode = transform(`<div>${code}</div>`, { presets: ['es2015', 'react', 'stage-0'] }).code;
     } catch (err) {
       console.log('ComponentRenderer - updateCompiledCode error:', err);
     }
