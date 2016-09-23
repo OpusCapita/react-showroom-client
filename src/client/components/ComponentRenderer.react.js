@@ -109,7 +109,10 @@ class ComponentRenderer extends Component {
     console.log('element', element);
     return (
       <div className="row component-renderer">
-        <div className="col-xs-12 component-renderer__element-container-outer">
+        <div
+          className="col-xs-12 component-renderer__element-container-outer"
+          style={{ maxWidth: this.props.maxContainerWidth }}
+        >
           <ComponentRendererElement
             element={element}
             componentId={this.props.componentInfo.id}
@@ -152,7 +155,11 @@ class ComponentRenderer extends Component {
 
 ComponentRenderer.propTypes = {
   component: PropTypes.object,
-  componentInfo: PropTypes.object
+  componentInfo: PropTypes.object,
+  maxContainerWidth: PropTypes.string
+};
+ComponentRenderer.defaultProps = {
+  maxContainerWidth: '100%'
 };
 ComponentRenderer.contextTypes = {
   i18n: PropTypes.object

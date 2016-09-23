@@ -80,7 +80,7 @@ class FilterSidebarComponentItem extends Component {
 }
 
 FilterSidebarComponentItem.propTypes = {
-  currentComponent: PropTypes.string,
+  currentComponent: PropTypes.object,
   component: PropTypes.object,
   componentsInfo: PropTypes.array,
   onComponentChange: PropTypes.func

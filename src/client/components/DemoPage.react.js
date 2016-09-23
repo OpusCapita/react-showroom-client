@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ComponentRenderer from './ComponentRenderer.react';
 import FilterSidebar from './FilterSidebar.react';
 import DemoPageComponentShortInfo from './DemoPageComponentShortInfo.react';
+import Rcslider from 'rc-slider';
 import './DemoPage.less';
 
 export default
@@ -14,6 +15,7 @@ class DemoPage extends Component {
       componentsInfo: [],
       currentComponentId: '',
       currentComponent: null,
+      maxContainerWidth: '100%'
     };
   }
 
@@ -67,6 +69,10 @@ class DemoPage extends Component {
     })
   }
 
+  handleMaxContainerWidthChange(value) {
+   this.setState({ maxContainerWidth: `${value}%` });
+  }
+
   handleComponentSelection(id) {
     let componentInfo = this.state.componentsInfo.filter(info => info.id == id)[0];
     this.getComponent(componentInfo);
@@ -76,7 +82,11 @@ class DemoPage extends Component {
   render() {
     let currentComponentInfo = this.getCurrentComponentInfo();
     let componentRenderer = this.state.currentComponent ? (
-      <ComponentRenderer component={this.state.currentComponent} componentInfo={currentComponentInfo} />
+      <ComponentRenderer
+        component={this.state.currentComponent}
+        componentInfo={currentComponentInfo}
+        maxContainerWidth={this.state.maxContainerWidth}
+      />
     ) : null;
 
     let sidebar = this.state.showSidebar ? (
@@ -99,12 +109,28 @@ class DemoPage extends Component {
       <div className="row">
         <div className="col-xs-12">
           <div className="demo-page__main-menu-container">
-            <button
-              className="btn btn-primary demo-page__primary-btn"
-              onClick={this.toggleSidebar.bind(this)}
-            >
-              Change component
-            </button>
+            <div className="demo-page__main-menu-container-group">
+              <button
+                className="btn btn-primary demo-page__primary-btn"
+                onClick={this.toggleSidebar.bind(this)}
+              >
+                Change component
+              </button>
+              <div className="demo-page__max-container-width-slider-group">
+                <div className="demo-page__max-container-width-slider-group-title">
+                  Max width:
+                </div>
+                <Rcslider
+                  className="demo-page__max-container-width-slider"
+                  onChange={value => this.handleMaxContainerWidthChange.call(this, value)}
+                  defaultValue={parseInt(this.state.maxContainerWidth, 10)}
+                  tipFormatter={null}
+                />
+                <div className="demo-page__max-container-width-slider-group-value">
+                  {this.state.maxContainerWidth}
+                </div>
+              </div>
+            </div>
             <DemoPageComponentShortInfo
               packageName={currentComponentInfo && currentComponentInfo.package}
               componentName={currentComponentInfo && currentComponentInfo.name}
