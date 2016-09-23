@@ -26,7 +26,7 @@ function getIODirs(installationRoot) {
       );
       let packageJSONFile = libPath.join(installedVersionDir, 'package.json');
       let packageJSONContent = require(packageJSONFile);
-      let packageMainFile = libPath.join(installedVersionDir, packageJSONContent.main);
+      let packageMainFile = libPath.join(installedVersionDir, packageJSONContent.main || 'index.js');
       return ({
         input: packageMainFile,
         output: libPath.join(installationRoot, packageName, version, 'bundle.js'),
