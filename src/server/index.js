@@ -67,7 +67,7 @@ app.get('/package-related-files/*', function(req, res) {
   );
 });
 
-app.listen(port, host, (err) => {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   }
