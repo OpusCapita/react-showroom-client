@@ -58,7 +58,7 @@ class FilterSidebarComponentItem extends Component {
           `filter-sidebar-component-item
           ${isCurrent ? ' ' + currentClassName : ''}`
         }
-        onClick={() => !isCurrent && this.props.onComponentChange(component.id)}
+        onClick={() => !isCurrent && this.handleVersionChange(this.state.currentVersion)}
       >
         <div className="filter-sidebar-component-item__name">{component.name}</div>
         <div
