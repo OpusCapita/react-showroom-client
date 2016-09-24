@@ -115,8 +115,11 @@ class ComponentRenderer extends Component {
 
   render() {
     let { component, componentInfo, options } = this.props;
-    let containerBordersClassName = options.showContainerBorders ?
+    let containerBordersClassName = options.isShowContainerBorders ?
       'component-renderer__element-container-inner--with-borders' :
+      ' ';
+    let contentCenteredClassName = options.isContentCentered ?
+      'component-renderer__element-container-inner--content-centered' :
       ' ';
     let componentDocumentation = component.relatedFiles.filter(
       relatedFile => relatedFile.name === 'readme'
@@ -125,10 +128,16 @@ class ComponentRenderer extends Component {
     return (
       <div className="row component-renderer">
         <div
-          className={`col-xs-12 component-renderer__element-container-outer ${containerBordersClassName}`}
+          className={`
+            col-xs-12 component-renderer__element-container-outer
+            ${containerBordersClassName}
+          `}
           style={{ maxWidth: this.props.maxContainerWidth }}
         >
-          <div className="component-renderer__element-container-inner">
+          <div className={`
+            component-renderer__element-container-inner
+            ${contentCenteredClassName}
+          `}>
             <ComponentRendererElement
               element={this.state.reactElement}
               componentId={this.props.componentInfo.id}

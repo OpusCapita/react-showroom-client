@@ -17,8 +17,8 @@ class DemoPage extends Component {
       currentComponent: null,
       options: {
         maxContainerWidth: '100%',
-        showContainerBorders: false,
-        containerCentering: false
+        isShowContainerBorders: false,
+        isContentCentered: true
       }
     };
   }
@@ -73,11 +73,11 @@ class DemoPage extends Component {
     })
   }
 
-  changeOption(optionName, value) {
+  setOption(name, value) {
    this.setState({
      options: {
        ...this.state.options,
-       [optionName]: value
+       [name]: value
      }
    });
   }
@@ -127,33 +127,36 @@ class DemoPage extends Component {
               >
                 Choose component
               </button>
-              <div className="demo-page__options-group">
-                <div className="demo-page__options-group">
-                  {/*
-                  <button
-                    className="demo-page__options-item-btn"
-                    onClick={() => this.changeOption.call(this, 'containerCentering', !this.state.containerCentering)}
-                  >
-                  </button>
-                  */}
-                </div>
+              <div
+                className="demo-page__options-group"
+                onMouseEnter={() => this.setOption.call(this, 'isShowContainerBorders', true)}
+                onMouseLeave={() => this.setOption.call(this, 'isShowContainerBorders', false)}
+              >
                 <div
                   className="demo-page__max-container-width-slider-group"
-                  onMouseEnter={() => this.changeOption.call(this, 'showContainerBorders', true)}
-                  onMouseLeave={() => this.changeOption.call(this, 'showContainerBorders', false)}
                 >
                   <div className="demo-page__max-container-width-slider-group-title">
                     Max width:
                   </div>
                   <Rcslider
                     className="demo-page__max-container-width-slider"
-                    onChange={value => this.changeOption.call(this, 'maxContainerWidth', `${value}%`)}
+                    onChange={value => this.setOption.call(this, 'maxContainerWidth', `${value}%`)}
                     defaultValue={parseInt(options.maxContainerWidth, 10)}
                     tipFormatter={null}
                   />
                   <div className="demo-page__max-container-width-slider-group-value">
                     {options.maxContainerWidth}
                   </div>
+
+                </div>
+                <div
+                  className={`
+                    demo-page__options-item-btn
+                    ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
+                  `}
+                  onClick={() => this.setOption.call(this, 'isContentCentered', !options.isContentCentered)}
+                >
+                  Force Centering
                 </div>
               </div>
             </div>

@@ -37,8 +37,7 @@
 
 .demo-page__main-menu-container-group {
   display: flex;
-  align-items: flex-end;
-  flex: 1;
+  align-items: center;
   justify-content: flex-start;
 }
 
@@ -91,4 +90,25 @@
     background-color: #e70;
     height: 100%;
   }
+}
+
+.demo-page__options-item-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #aaa;
+  height: 22px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 12px;
+  cursor: pointer;
+  line-height: 1.4;
+  &:hover {
+    text-decoration: underline;
+    color: #e70;
+  }
+}
+
+.demo-page__options-item-btn--active {
+  color: #e70;
 }
