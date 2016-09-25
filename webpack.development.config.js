@@ -9,22 +9,22 @@ module.exports = {
     library: 'demopage',
     libraryTarget: 'umd'
   },
-  // devtool: 'source-map',
+  devtool: 'source-map',
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
-    // new webpack.DefinePlugin({
-    //   'process.env.HOST': JSON.stringify(process.env.HOST ? process.env.HOST : 'localhost'),
-    //   'process.env.PORT': JSON.stringify(process.env.PORT ? process.env.PORT : 3888)
-    // }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compressor: {
-    //     // don't show unreachable variables etc
-    //     warnings: false,
-    //     drop_console: true,
-    //     unsafe: true
-    //   }
-    // })
+    new webpack.DefinePlugin({
+      'process.env.HOST': JSON.stringify(process.env.HOST ? process.env.HOST : 'localhost'),
+      'process.env.PORT': JSON.stringify(process.env.PORT ? process.env.PORT : 3888)
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        // don't show unreachable variables etc
+        warnings: false,
+        drop_console: true,
+        unsafe: true
+      }
+    })
   ],
 
   resolve: {
