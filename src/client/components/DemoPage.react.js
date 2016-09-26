@@ -18,7 +18,7 @@ class DemoPage extends Component {
       options: {
         maxContainerWidth: '100%',
         isShowContainerBorders: false,
-        isContentCentered: true
+        isContentCentered: false
       }
     };
   }
