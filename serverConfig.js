@@ -1,3 +1,4 @@
+'use strict';
 let process = require('process');
 
 module.exports = {

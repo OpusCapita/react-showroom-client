@@ -1,3 +1,4 @@
+'use strict';
 const path = require('path');
 const webpack = require('webpack');
 const WriteFilePlugin = require('write-file-webpack-plugin');
@@ -33,20 +34,17 @@ module.exports = {
   ],
 
   resolve: {
+    fallback: [path.join(__dirname, 'node_modules')],
     modulesDirectories: ['node_modules'],
     extensions: ['', '.json', '.js']
   },
 
   resolveLoader: {
+    fallback: [path.join(__dirname, 'node_modules')],
     modulesDirectories: ['node_modules'],
     moduleTemplates: ['*-loader', '*'],
     extensions: ['', '.js']
   },
-
-  // externals: {
-  //   'react': 'React',
-  //   'react-dom': 'ReactDOM'
-  // },
 
   postcss: function () {
         return [require('autoprefixer')];
@@ -54,6 +52,9 @@ module.exports = {
 
   module: {
     loaders: [
+      {
+        test: require.resolve("react-dom"), loader: "expose?$!expose?ReactDOM"
+      },
       {
         test   : /\.(png|jpg|jpeg|gif|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader : 'file-loader'
