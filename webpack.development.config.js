@@ -1,11 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const WriteFilePlugin = require('write-file-webpack-plugin');
+let host = require('./serverConfig').host;
+let port = require('./serverConfig').port;
 
 module.exports = {
-  entry: path.resolve(path.join(__dirname, './src/client/index.js')),
+  entry: path.resolve(path.join(__dirname, './src/client/index-page.js')),
   output: {
     path: path.resolve(__dirname, 'lib'),
+    publicPath: `http://${host}:${port}/`,
     filename: `bundle.js`,
     library: 'demopage',
     libraryTarget: 'umd'
@@ -15,8 +18,8 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
-      'process.env.HOST': JSON.stringify(process.env.HOST ? process.env.HOST : 'localhost'),
-      'process.env.PORT': JSON.stringify(process.env.PORT ? process.env.PORT : 3888)
+      'process.env.HOST': JSON.stringify(host),
+      'process.env.PORT': JSON.stringify(port)
     }),
     new WriteFilePlugin()
     // new webpack.optimize.UglifyJsPlugin({

@@ -3,6 +3,7 @@ import DemoPage from './DemoPage.react';
 import './DemoPageIndex.less';
 import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less';
 import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less';
+import localLoader from '../local-loader/index';
 let logoUrl = require('../img/logo.svg');
 
 export default
@@ -37,7 +38,7 @@ class DemoPageIndex extends Component {
             <hr className="demo-page-index__hr"/>
           </div>
           <div className="col-xs-12">
-            <DemoPage loader={this.props.loader} />
+            <DemoPage loader={this.props.loader.init(this.props.loaderOptions)} />
           </div>
         </div>
       </div>
@@ -46,5 +47,11 @@ class DemoPageIndex extends Component {
 }
 
 DemoPageIndex.propTypes = {
-  loader: PropTypes.object.isRequired
+  loader: PropTypes.object.isRequired,
+  loaderProps: PropTypes.object
+};
+
+DemoPageIndex.defaultProps = {
+  loader: localLoader,
+  loaderOptions: {}
 };
