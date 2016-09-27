@@ -22,7 +22,13 @@ app.use(function(req, res, next) {
 app.use(express.static(path.normalize(__dirname + '/../client/')));
 app.use(webpackMiddleware(webpack(require('../../webpack.development.config.js')), {
   publicPath: '/',
-  noInfo: true
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: true
+  },
+  stats: {
+    colors: true
+  }
 }));
 
 app.get('/', function(req, res) {

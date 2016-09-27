@@ -16,7 +16,7 @@
     "name": "Kirill Volkovich",
     "email": "volkovich@scand.com"
   },
-  "main": "lib/index.js",
+  "main": "lib/bundle.js",
   "files": [
     "lib",
     "README.md"
@@ -79,6 +79,7 @@
     "url-loader": "0.5.7",
     "validate.js": "0.9.0",
     "webpack": "1.12.2",
-    "webpack-dev-middleware": "1.5.1"
+    "webpack-dev-middleware": "1.5.1",
+    "write-file-webpack-plugin": "^3.3.0"
   }
 }
