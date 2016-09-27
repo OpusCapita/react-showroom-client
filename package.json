@@ -7,6 +7,7 @@
     "start": "nodemon --watch src/server src/server/index --exec babel-node",
     "build": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --plugins transform-object-assign,transform-decorators-legacy --ignore __tests__,*.spec.js src/client --out-dir lib",
     "prepublish": "npm run build",
+    "link": "webpack --config ./webpack.development.config.js --watch",
     "npm-packages-install": "node ./src/server/npm-installer/make-install.js",
     "npm-packages-bundle": "node ./src/server/npm-bundler/make-bundles.js",
     "npm-packages-scan": "node ./src/server/npm-scanner/make-scan.js",

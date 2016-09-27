@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(path.join(__dirname, './src/client/index-page.js')),
+  entry: path.resolve(path.join(__dirname, './src/client/index.js')),
   output: {
     path: path.resolve(__dirname, 'lib'),
     filename: `bundle.js`,
