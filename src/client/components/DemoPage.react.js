@@ -41,6 +41,7 @@ class DemoPage extends Component {
   }
 
   getComponentsInfo() {
+    console.log('locader', this.props.loader);
     this.props.loader.getComponentsInfo(data => {
       let preparedComponentsInfo = this.prepareComponentsInfo(data);
       this.setState({ componentsInfo: preparedComponentsInfo });

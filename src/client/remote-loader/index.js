@@ -80,7 +80,7 @@ function compileComponent(packageBundleContent, componentName) {
   return compiledPackage[componentName] || compiledPackage.default || compiledPackage;
 }
 
-let loaderInstance = (function() {
+let loaderInstance = function() {
   let loadedPackages = [];
   let loadedRelatedFiles = [];
   return {
@@ -143,8 +143,8 @@ let loaderInstance = (function() {
       // }
     }
   }
-}());
+};
 
 export default {
-  init: loaderOptions => loaderInstance
+  init: loaderOptions => loaderInstance()
 };

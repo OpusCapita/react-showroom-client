@@ -1,2 +1,4 @@
-module.exports = require('./components/DemoPageIndex.react.js').default;
+import Showroom from './components/DemoPageIndex.react';
+
+export default Showroom;
 

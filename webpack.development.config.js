@@ -6,7 +6,7 @@ let host = require('./serverConfig').host;
 let port = require('./serverConfig').port;
 
 module.exports = {
-  entry: path.resolve(path.join(__dirname, './src/client/index-page.js')),
+  entry: path.resolve(path.join(__dirname, './src/client/index.js')),
   output: {
     path: path.resolve(__dirname, 'lib'),
     publicPath: `http://${host}:${port}/`,
@@ -34,16 +34,22 @@ module.exports = {
   ],
 
   resolve: {
-    fallback: [path.join(__dirname, 'node_modules')],
+    root: path.join(__dirname, "node_modules"),
+    fallback: [path.join(__dirname, "node_modules")],
     modulesDirectories: ['node_modules'],
     extensions: ['', '.json', '.js']
   },
 
   resolveLoader: {
-    fallback: [path.join(__dirname, 'node_modules')],
+    fallback: [path.join(__dirname, "node_modules")],
     modulesDirectories: ['node_modules'],
     moduleTemplates: ['*-loader', '*'],
     extensions: ['', '.js']
+  },
+
+  externals: {
+    'react': 'React',
+    // 'react-dom': 'ReactDOM'
   },
 
   postcss: function () {
@@ -52,9 +58,9 @@ module.exports = {
 
   module: {
     loaders: [
-      {
-        test: require.resolve("react-dom"), loader: "expose?$!expose?ReactDOM"
-      },
+      // {
+      //   test: require.resolve("react-dom"), loader: "expose?$!expose?ReactDOM"
+      // },
       {
         test   : /\.(png|jpg|jpeg|gif|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader : 'file-loader'

@@ -1,5 +1,4 @@
 import agent from 'superagent';
-import config from './config';
 let packageInfo = require('../../../package.json');
 
 function getPackage(packageName, componentVersion, onData) {
@@ -52,17 +51,19 @@ function compileComponent(packageBundleContent, componentName) {
   }
   return compiledPackage[componentName] || compiledPackage.default || compiledPackage;
 }
-//
-// (function(packagesInfo, componentsInfo) {
-//   let pkgInfo = packagesInfo;
-//   let cmpInfo = componentsInfo;
-//   return {
-//     getPackagesInfo: onData => onData(pkgInfo),
-//     getComponentsInfo: onData => onData(cmpInfo),
-//     getPackage,
-//     getComponent: (component, onComponentReady) =>
-//       onComponentReady({componentClass: compiledComponent, relatedFiles: relatedFilesContent })
-//   }
-// }())
 
-export default {}
+let loaderInstance = function(loaderOptions) {
+  let pkgInfo = loaderOptions.packagesInfo;
+  let cmpInfo = loaderOptions.componentsInfo;
+  return {
+    getPackagesInfo: onData => onData(pkgInfo),
+    getComponentsInfo: onData => onData(cmpInfo),
+    getPackage,
+    getComponent: (component, onComponentReady) =>
+      onComponentReady({componentClass: compiledComponent, relatedFiles: relatedFilesContent })
+  }
+};
+
+export default {
+  init: loaderOptions => loaderInstance(loaderOptions)
+}
