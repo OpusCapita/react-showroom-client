@@ -7,7 +7,7 @@
     "start": "nodemon --watch src/server src/server/index --exec babel-node",
     "build": "rimraf lib && webpack --config ./webpack.link.config.js",
     "prepublish": "npm run build",
-    "link-mode": "webpack --watch --config ./webpack.link.config.js",
+    "link-mode": "webpack --watch --config ./webpack.development.config.js",
     "npm-packages-install": "node ./src/server/npm-installer/make-install.js",
     "npm-packages-bundle": "node ./src/server/npm-bundler/make-bundles.js",
     "npm-packages-scan": "node ./src/server/npm-scanner/make-scan.js",
