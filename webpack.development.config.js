@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'lib'),
     publicPath: `http://${host}:${port}/`,
-    filename: `bundle.js`,
+    filename: `index.js`,
     library: 'demopage',
     libraryTarget: 'umd'
   },
