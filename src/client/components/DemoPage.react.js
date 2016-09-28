@@ -28,6 +28,15 @@ class DemoPage extends Component {
     this.getPackagesInfo();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(this.state.componentsInfo !== prevState.componentsInfo) {
+      this.handleComponentSelection(
+        this.state.componentsInfo,
+        (this.state.componentsInfo[0] ? this.state.componentsInfo[0].id : 0)
+      );
+    }
+  }
+
   getPackagesInfo() {
     this.props.loader.getPackagesInfo(data => {
       this.setState({ packagesInfo: data });
@@ -41,11 +50,10 @@ class DemoPage extends Component {
   }
 
   getComponentsInfo() {
-    console.log('locader', this.props.loader);
     this.props.loader.getComponentsInfo(data => {
       let preparedComponentsInfo = this.prepareComponentsInfo(data);
+      this.handleComponentSelection(preparedComponentsInfo, preparedComponentsInfo[0].id);
       this.setState({ componentsInfo: preparedComponentsInfo });
-      this.handleComponentSelection(preparedComponentsInfo[0] ? preparedComponentsInfo[0].id : 0);
     });
   }
 
@@ -83,8 +91,8 @@ class DemoPage extends Component {
    });
   }
 
-  handleComponentSelection(id) {
-    let componentInfo = this.state.componentsInfo.filter(info => info.id == id)[0];
+  handleComponentSelection(componentsInfo, id) {
+    let componentInfo = componentsInfo.filter(info => info.id == id)[0];
     this.getComponent(componentInfo);
     this.setState({ currentComponentId: id });
   }
@@ -112,7 +120,7 @@ class DemoPage extends Component {
         <FilterSidebar
           componentsInfo={this.state.componentsInfo}
           currentComponent={this.state.currentComponent}
-          onComponentChange={this.handleComponentSelection.bind(this)}
+          onComponentChange={this.handleComponentSelection.bind(this, this.state.componentsInfo)}
         />
       </div>
     ) : null;

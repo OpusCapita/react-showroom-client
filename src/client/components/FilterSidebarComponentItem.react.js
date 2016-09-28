@@ -49,8 +49,7 @@ class FilterSidebarComponentItem extends Component {
   render() {
     let { component, currentComponent } = this.props;
     let currentClassName = 'filter-sidebar-component-item--current';
-    let isCurrent =
-      (component.package === currentComponent.componentInfo.package) &&
+    let isCurrent = (component.package === currentComponent.componentInfo.package) &&
       (component.name === currentComponent.componentInfo.name);
     return (
       <li

@@ -1,55 +1,17 @@
-import agent from 'superagent';
-let packageInfo = require('../../../package.json');
+import parseDocumentation from './parseDocumentation';
 
-function getPackage(packageName, componentVersion, onData) {
-  let packageUrl = config.getPackageUrl(packageName, componentVersion);
-  agent.get(packageUrl)
-    .end((err, res) => {
-      err && console.log('Error. Remote loader - getPackage.', err);
-      onData((res.body || res.text));
-    });
-}
-
-function getRelatedFile(packageName, packageVersion, relativePath, onData) {
-  let relateFileUrl = config.getRelatedFileUrl(packageName, packageVersion, relativePath);
-  agent.get(relateFileUrl)
-    .end((err, res) => {
-      err && console.log('Error. Remote loader - getRelatedFile.', err);
-      onData((res.body || res.text));
-    });
-}
-
-function getRelatedFiles(packageName, packageVersion, componentName, relatedFiles, onReady) {
-  let loadedFiles = [];
-  relatedFiles.map(relatedFile => {
-    getRelatedFile(
-      packageName,
-      packageVersion,
-      relatedFile.path,
-      content => {
-        loadedFiles = loadedFiles.concat([{
-          name: relatedFile.name,
-          content,
-          componentName,
-          componentVersion: packageVersion
-        }]);
-        relatedFiles.length === loadedFiles.length && onReady(loadedFiles);
-      }
-    );
+function getComponentsInfo(componentns) {
+  return componentns.map(component => {
+    let readmeContent = component.relatedFiles.filter(relatedFile => relatedFile.name === 'readme')[0].content;
+    let parsedDocumentation = parseDocumentation(readmeContent);
+    return {
+      ...component,
+      'package': component.package,
+      'name': parsedDocumentation.componentName,
+      'version': component.version,
+      tags: parsedDocumentation.tags || ''
+    };
   });
-}
-
-function compileComponent(packageBundleContent, componentName) {
-  let compiledPackage;
-  try {
-    compiledPackage = eval(packageBundleContent);
-  } catch(err) {
-    console.log('Remote loader component compilation error:', err);
-  }
-  if(!compiledPackage) {
-    return 1;
-  }
-  return compiledPackage[componentName] || compiledPackage.default || compiledPackage;
 }
 
 let loaderInstance = function(loaderOptions) {
@@ -57,10 +19,16 @@ let loaderInstance = function(loaderOptions) {
   let cmpInfo = loaderOptions.componentsInfo;
   return {
     getPackagesInfo: onData => onData(pkgInfo),
-    getComponentsInfo: onData => onData(cmpInfo),
-    getPackage,
-    getComponent: (component, onComponentReady) =>
-      onComponentReady({componentClass: compiledComponent, relatedFiles: relatedFilesContent })
+    getComponentsInfo: onData => {
+      let preparedComponentsInfo = getComponentsInfo(getComponentsInfo(cmpInfo));
+      onData(preparedComponentsInfo)
+    },
+    getComponent: (component, onComponentReady) => {
+      onComponentReady({
+        componentClass: component.componentClass,
+        relatedFiles: component.relatedFiles
+      });
+    }
   }
 };
 
