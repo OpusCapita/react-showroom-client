@@ -1,13 +1,13 @@
 {
   "name": "jcatalog-showroom",
-  "version": "0.0.23",
+  "version": "0.0.20",
   "description": "React components catalog component.",
   "scripts": {
     "lint": "eslint src",
     "start": "nodemon --watch src/server src/server/index --exec babel-node",
-    "build": "rimraf lib && webpack --config ./webpack.link.config.js",
+    "build": "rimraf lib && babel --copy-files --no-babelrc --presets es2015,stage-0,react --plugins transform-object-assign,transform-decorators-legacy --ignore __tests__,*.spec.js src/client --out-dir lib",
     "prepublish": "npm run build",
-    "link-mode": "webpack --watch --config ./webpack.development.config.js",
+    "link-mode": "webpack --watch --config ./webpack.link.config.js",
     "npm-packages-install": "node ./src/server/npm-installer/make-install.js",
     "npm-packages-bundle": "node ./src/server/npm-bundler/make-bundles.js",
     "npm-packages-scan": "node ./src/server/npm-scanner/make-scan.js",
