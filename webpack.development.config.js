@@ -55,7 +55,10 @@ module.exports = {
         test: /\.md$/,
         loader: 'raw-loader'
       },
-      { test: /\.less$/, loader: 'style!css!postcss-loader!less?sourceMap'},
+      {
+        test: /\.less$/,
+        loader: 'style!css!postcss-loader!less?sourceMap'
+      },
       {
         test: /\.css$/,
         loader: "style!css-loader!postcss-loader"
