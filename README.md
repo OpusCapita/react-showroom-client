@@ -1,4 +1,6 @@
-### Integration with Existing Package Example:
+# Integration with Existing Package Example:
+
+**index-page.js**
 
 ```
 import React, { Component } from 'react';
@@ -40,10 +42,11 @@ ReactDOM.render(showroom, element);
 
 You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git;a=blob;f=example.DOCUMENTATION.md;h=45ff5ff52ab1540f9e2d7b2ebb60f6dc412bf311;hb=8f060bd0cad2c1c34c8ff10fd0de8f2b2a25cea2)
 
-### Dont't forget edit your webpack config:
+## Dont't forget edit your webpack config:
 
-##### Add and make 'npm install' these loaders: 
+#### Add and make 'npm install' these loaders: 
 
+**webpack.development.config.js**
 ```
 {
   test   : /\.(png|jpg|jpeg|gif|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
@@ -59,13 +62,14 @@ You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git
 }
 ```
 
-##### Also you should add public path where your  (express/koa/etc) http server serve static resources
+#### Also you should add public path where your  (express/koa/etc) http server serve static resources
 
+**webpack.development.config.js**
 ```
 output.publicPath: `http://localhost:3000/static/`
 ```
 
-### Contacts:
+## Contacts:
 
 * Alexey Sergeev - [sab@scand.com](sab@scand.com)
 * Kirill Volkovich - [kirill.volkovich@jcatalog.com](kirill.volkovich@jcatalog.com)
