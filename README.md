@@ -39,4 +39,4 @@ ReactDOM.render(showroom, element);
 
 ### Documentation File Example
 
-See **example.DOCUMENTATION.md** file at root of the package.
+See[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git;a=blob;f=example.DOCUMENTATION.md;h=45ff5ff52ab1540f9e2d7b2ebb60f6dc412bf311;hb=8f060bd0cad2c1c34c8ff10fd0de8f2b2a25cea2)
