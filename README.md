@@ -5,8 +5,6 @@
 ```
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import lodash from 'lodash';
-import { I18nManager } from 'jcatalog-i18n';
 import Showroom from 'jcatalog-showroom';
 
 let packageInfo = require('../../../package.json');
