@@ -17,7 +17,7 @@
     "name": "Kirill Volkovich",
     "email": "volkovich@scand.com"
   },
-  "main": "lib/bundle.js",
+  "main": "lib/index.js",
   "files": [
     "lib",
     "README.md"
