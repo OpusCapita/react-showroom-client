@@ -1,6 +1,6 @@
 {
   "name": "jcatalog-showroom",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "React components catalog component.",
   "scripts": {
     "lint": "eslint src",
