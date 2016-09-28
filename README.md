@@ -44,7 +44,7 @@ You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git
 
 ## Dont't forget edit your webpack config:
 
-#### Add and make 'npm install' these loaders: 
+#### Add to config and install these loaders: 
 
 **webpack.development.config.js**
 ```
