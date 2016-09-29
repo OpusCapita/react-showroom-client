@@ -59,7 +59,6 @@
     "postcss-loader": "^0.13.0",
     "raw-loader": "0.5.1",
     "rc-slider": "^5.1.1",
-    "react-bootstrap": "0.28.3",
     "react-codemirror": "0.2.6",
     "react-remarkable": "1.1.1",
     "rimraf": "2.5.2",
