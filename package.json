@@ -1,6 +1,6 @@
 {
   "name": "jcatalog-showroom",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "React components catalog component.",
   "scripts": {
     "lint": "eslint src",
@@ -24,8 +24,7 @@
   ],
   "license": "jCatalog",
   "readme": "README.md",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "fuzzysearch": "^1.0.3",
     "jcatalog-bootstrap": "0.1.2",
@@ -38,9 +37,6 @@
     "react-dom": "0.14.8",
     "react-remarkable": "1.1.1",
     "semver": "5.3.0",
-
-
-
     "autoprefixer": "^6.4.1",
     "babel-cli": "6.5.1",
     "babel-core": "6.4.0",
