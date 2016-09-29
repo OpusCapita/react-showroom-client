@@ -100,6 +100,7 @@ class ComponentRenderer extends Component {
   createReactElement(compiledCode) {
     let element;
     try {
+      console.log(compiledCode);
       element = eval(compiledCode); // eslint-disable-line no-eval
     } catch (err) {
       console.log('ComponentRenderer - render error:', err);
