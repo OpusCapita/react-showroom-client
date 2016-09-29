@@ -10,10 +10,16 @@ class FilterSidebar extends Component {
     this.state = {
       filterInputValue: ''
     };
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
   componentDidMount() {
     this.refs.searchInput.focus();
+    document.body.addEventListener('click', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.body.removeEventListener('click', this.handleClickOutside);
   }
 
   filterComponentsLists(componentsInfo, filterText) {
@@ -32,6 +38,19 @@ class FilterSidebar extends Component {
     }, []);
   }
 
+  handleClickOutside(event) {
+    event.preventDefault();
+    let hasParent = (node, parent) => {
+      if(node.parentNode) {
+        return node.parentNode === parent || hasParent(node.parentNode, parent);
+      }
+      return false;
+    }
+    if(!hasParent(event.target, this._container)) {
+      this.props.onHide();
+    }
+  }
+
   render() {
     let preparedComponentsList = this.filterComponentsLists(this.props.componentsInfo, this.state.filterInputValue);
         preparedComponentsList = this.collapseBy(preparedComponentsList, 'name');
@@ -39,7 +58,10 @@ class FilterSidebar extends Component {
           (component1, component2) => component1.name > component2.name ? 1 : -1
         );
     return (
-      <div className="filter-sidebar">
+      <div
+        ref={container => this._container = container}
+        className="filter-sidebar"
+      >
         <div className="filter-sidebar__filter-input-wrapper">
           <input
             className="filter-sidebar__filter-input form-control"

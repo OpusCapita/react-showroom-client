@@ -121,6 +121,7 @@ class DemoPage extends Component {
           componentsInfo={this.state.componentsInfo}
           currentComponent={this.state.currentComponent}
           onComponentChange={this.handleComponentSelection.bind(this, this.state.componentsInfo)}
+          onHide={this.toggleSidebar.bind(this)}
         />
       </div>
     ) : null;

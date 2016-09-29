@@ -1,5 +1,12 @@
 # Integration with Existing Package Example:
 
+**index.html**
+
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.8/react-with-addons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.8/react-dom.js"></script>
+```
+
 **index-page.js**
 
 ```
