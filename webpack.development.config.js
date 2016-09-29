@@ -15,7 +15,6 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.HOST': JSON.stringify(host),
@@ -65,7 +64,7 @@ module.exports = {
       },
       {
         test: /.jsx?$/,
-        loader: 'babel-loader',
+        loader: 'babel',
         include: [
           path.join(__dirname, 'src')
         ]

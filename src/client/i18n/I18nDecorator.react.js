@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import _ from 'lodash';
 
 function injectI18NToContextTypes(DecoratedComponent) {
   if (DecoratedComponent.contextTypes === undefined) {
@@ -33,7 +32,7 @@ function injectI18NToContextTypes(DecoratedComponent) {
  */
 export default function i18n(options) {
   // if it's called via @i18n, options === DecoratedComponent
-  if (_.isFunction(options)) {
+  if (typeof options === 'function') {
     const DecoratedComponent = options;
 
     injectI18NToContextTypes(DecoratedComponent);

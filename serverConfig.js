@@ -1,5 +1,4 @@
 'use strict';
-let process = require('process');
 
 module.exports = {
     host: process.env.HOST ? process.env.HOST : 'localhost',
