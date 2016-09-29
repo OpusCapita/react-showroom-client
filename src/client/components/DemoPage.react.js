@@ -28,17 +28,17 @@ class DemoPage extends Component {
     this.getPackagesInfo();
   }
 
-  componentWillUnmount() {
-    clearTimeout(this._getComponentTimeout);
-  }
-
   componentDidUpdate(prevProps, prevState) {
-    if(this.state.componentsInfo !== prevState.componentsInfo) {
+    if (this.state.componentsInfo !== prevState.componentsInfo) {
       this.handleComponentSelection(
         this.state.componentsInfo,
         (this.state.componentsInfo[0] ? this.state.componentsInfo[0].id : 0)
       );
     }
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._getComponentTimeout);
   }
 
   getPackagesInfo() {
@@ -87,21 +87,21 @@ class DemoPage extends Component {
   }
 
   setOption(name, value) {
-   this.setState({
-     options: {
-       ...this.state.options,
-       [name]: value
-     }
-   });
+    this.setState({
+      options: {
+        ...this.state.options,
+        [name]: value
+      }
+    });
   }
 
   handleComponentSelection(componentsInfo, id) {
-    let componentInfo = componentsInfo.filter(info => info.id == id)[0];
+    let componentInfo = componentsInfo.filter(info => info.id === id)[0];
     this.setState({ currentComponentId: id });
     /* this._getComponentTimeout: ugly hack to resolve problems with component selection with synchronous loaders.
     *   if you fix it in normal way, don't forget to remove timeout clear within componentWillUnmount.
     *   Not 0 because IE */
-    this._getComponentTimeout = setTimeout(() => this.getComponent(componentInfo) , 16);
+    this._getComponentTimeout = setTimeout(() => this.getComponent(componentInfo), 16);
   }
 
   render() {

@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import fuzzysearch from 'fuzzysearch';
 import './FilterSidebar.less';
 import FilterSidebarComponentItem from './FilterSidebarComponentItem.react';
@@ -29,7 +29,7 @@ class FilterSidebar extends Component {
   }
 
   handleFilterInputChange(e) {
-    this.setState({filterInputValue: e.target.value})
+    this.setState({ filterInputValue: e.target.value })
   }
 
   collapseBy(list, by) {
@@ -41,25 +41,25 @@ class FilterSidebar extends Component {
   handleClickOutside(event) {
     event.preventDefault();
     let hasParent = (node, parent) => {
-      if(node.parentNode) {
+      if (node.parentNode) {
         return node.parentNode === parent || hasParent(node.parentNode, parent);
       }
       return false;
     }
-    if(event.target !== this._container && !hasParent(event.target, this._container)) {
+    if (event.target !== this._container && !hasParent(event.target, this._container)) {
       this.props.onHide();
     }
   }
 
   render() {
     let preparedComponentsList = this.filterComponentsLists(this.props.componentsInfo, this.state.filterInputValue);
-        preparedComponentsList = this.collapseBy(preparedComponentsList, 'name');
-        preparedComponentsList = preparedComponentsList.sort(
-          (component1, component2) => component1.name > component2.name ? 1 : -1
-        );
+    preparedComponentsList = this.collapseBy(preparedComponentsList, 'name');
+    preparedComponentsList = preparedComponentsList.sort(
+      (component1, component2) => component1.name > component2.name ? 1 : -1
+    );
     return (
       <div
-        ref={container => this._container = container}
+        ref={container => { this._container = container }}
         className="filter-sidebar"
       >
         <div

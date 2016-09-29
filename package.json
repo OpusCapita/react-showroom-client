@@ -3,7 +3,7 @@
   "version": "0.0.40",
   "description": "React components catalog component.",
   "scripts": {
-    "lint": "eslint src",
+    "lint": "eslint src/client",
     "start": "nodemon --watch src/server src/server/index --exec babel-node",
     "build": "rimraf lib && webpack --config ./webpack.production.config",
     "prepublish": "npm run build",

@@ -42,7 +42,7 @@ class ComponentRenderer extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(this.props.component !== nextProps.component) {
+    if (this.props.component !== nextProps.component) {
       this.setReactClassGlobally(nextProps);
     }
   }
@@ -100,7 +100,6 @@ class ComponentRenderer extends Component {
   createReactElement(compiledCode) {
     let element;
     try {
-      console.log(compiledCode);
       element = eval(compiledCode); // eslint-disable-line no-eval
     } catch (err) {
       console.log('ComponentRenderer - render error:', err);
@@ -115,7 +114,7 @@ class ComponentRenderer extends Component {
   }
 
   render() {
-    let { component, componentInfo, options } = this.props;
+    let { component, options } = this.props;
     let containerBordersClassName = options.isShowContainerBorders ?
       'component-renderer__element-container-inner--with-borders' :
       ' ';
@@ -135,10 +134,9 @@ class ComponentRenderer extends Component {
           `}
           style={{ maxWidth: this.props.maxContainerWidth }}
         >
-          <div className={`
-            component-renderer__element-container-inner
-            ${contentCenteredClassName}
-          `}>
+          <div
+            className={` component-renderer__element-container-inner ${contentCenteredClassName} `}
+          >
             <ComponentRendererElement
               element={this.state.reactElement}
               componentId={this.props.componentInfo.id}

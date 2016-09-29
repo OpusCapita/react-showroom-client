@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import { Component, PropTypes } from 'react';
 
 export default
 class ComponentRendererElement extends Component {
@@ -7,7 +7,7 @@ class ComponentRendererElement extends Component {
   }
 
   componentWillUpdate(nextProps) {
-    if(this.props.componentId !== nextProps.componentId) {
+    if (this.props.componentId !== nextProps.componentId) {
       this.flushComponentSpecificStyles();
     }
   }

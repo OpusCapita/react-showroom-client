@@ -46,7 +46,7 @@ class DemoPageIndex extends Component {
 
 DemoPageIndex.propTypes = {
   loader: PropTypes.object.isRequired,
-  loaderProps: PropTypes.object
+  loaderOptions: PropTypes.object
 };
 
 DemoPageIndex.defaultProps = {

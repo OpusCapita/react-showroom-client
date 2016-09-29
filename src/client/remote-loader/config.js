@@ -1,5 +1,5 @@
 import { host, port } from '../../../serverConfig';
-let hostUrl =  `http://${host}:${port}`;
+let hostUrl = `http://${host}:${port}`;
 let packagesInfoUrl = hostUrl + '/packages-info';
 let componentsInfoUrl = hostUrl + '/components-info';
 
