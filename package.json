@@ -1,6 +1,6 @@
 {
   "name": "jcatalog-showroom",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "React components catalog component.",
   "scripts": {
     "lint": "eslint src",
@@ -24,8 +24,7 @@
   ],
   "license": "jCatalog",
   "readme": "README.md",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "react": "0.14.8",
     "fuzzysearch": "^1.0.3",
