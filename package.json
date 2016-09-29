@@ -24,14 +24,15 @@
   ],
   "license": "jCatalog",
   "readme": "README.md",
-  "dependencies": {},
+  "dependencies": {
+    "react": "0.14.8"
+  },
   "devDependencies": {
     "fuzzysearch": "^1.0.3",
     "jcatalog-bootstrap": "0.1.2",
     "jcatalog-i18n": "1.0.0",
     "markdown-to-ast": "3.4.0",
     "rc-slider": "^5.1.1",
-    "react": "0.14.8",
     "react-bootstrap": "0.28.3",
     "react-codemirror": "0.2.6",
     "react-dom": "0.14.8",
