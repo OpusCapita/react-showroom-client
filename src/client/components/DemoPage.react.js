@@ -99,8 +99,9 @@ class DemoPage extends Component {
     let componentInfo = componentsInfo.filter(info => info.id == id)[0];
     this.setState({ currentComponentId: id });
     /* this._getComponentTimeout: ugly hack to resolve problems with component selection with synchronous loaders.
-    *   if you fix it in normal way, don't forget to remove timeout clear within componentWillUnmount */
-    this._getComponentTimeout = setTimeout(() => this.getComponent(componentInfo) , 0);
+    *   if you fix it in normal way, don't forget to remove timeout clear within componentWillUnmount.
+    *   Not 0 because IE */
+    this._getComponentTimeout = setTimeout(() => this.getComponent(componentInfo) , 16);
   }
 
   render() {

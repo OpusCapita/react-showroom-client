@@ -17,7 +17,7 @@ class ComponentRendererElement extends Component {
     let stylesDiff = this._newStyles.filter(newStyle =>
       !this._oldStyles.some(oldStyle => oldStyle === newStyle)
     );
-    stylesDiff.map(style => style.remove());
+    stylesDiff.map(style => style.parentNode.removeChild(style));
   }
 
   render() {
