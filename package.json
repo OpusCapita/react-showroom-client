@@ -25,9 +25,9 @@
   "license": "jCatalog",
   "readme": "README.md",
   "dependencies": {
-    "react": "0.14.8"
   },
   "devDependencies": {
+    "react": "0.14.8",
     "fuzzysearch": "^1.0.3",
     "jcatalog-bootstrap": "0.1.2",
     "jcatalog-i18n": "1.0.0",
