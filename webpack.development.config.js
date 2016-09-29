@@ -8,7 +8,7 @@ module.exports = {
   entry: path.resolve(path.join(__dirname, './src/client/index-page.js')),
   output: {
     path: path.resolve(__dirname, 'lib'),
-    publicPath: `http://${host}:${port}/`,
+    // publicPath: `http://${host}:${port}/`,
     filename: `index.js`,
     library: 'demopage',
     libraryTarget: 'umd'
