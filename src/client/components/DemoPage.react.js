@@ -111,12 +111,6 @@ class DemoPage extends Component {
 
     let sidebar = this.state.showSidebar ? (
       <div className="demo-page__filter-sidebar">
-        <div
-          onClick={this.toggleSidebar.bind(this)}
-          className="demo-page__filter-sidebar-close-btn"
-        >
-          &times;
-        </div>
         <FilterSidebar
           componentsInfo={this.state.componentsInfo}
           currentComponent={this.state.currentComponent}

@@ -46,7 +46,7 @@ class FilterSidebar extends Component {
       }
       return false;
     }
-    if(!hasParent(event.target, this._container)) {
+    if(event.target !== this._container && !hasParent(event.target, this._container)) {
       this.props.onHide();
     }
   }
@@ -62,6 +62,12 @@ class FilterSidebar extends Component {
         ref={container => this._container = container}
         className="filter-sidebar"
       >
+        <div
+          onClick={this.props.onHide}
+          className="filter-sidebar-close-btn"
+        >
+          &times;
+        </div>
         <div className="filter-sidebar__filter-input-wrapper">
           <input
             className="filter-sidebar__filter-input form-control"
