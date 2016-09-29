@@ -8,7 +8,7 @@ module.exports = {
   entry: path.resolve(path.join(__dirname, './src/client/index-page.js')),
   output: {
     path: path.resolve(__dirname, 'lib'),
-    // publicPath: `http://${host}:${port}/`,
+    publicPath: `http://${host}:${port}/`,
     filename: `index.js`,
     library: 'demopage',
     libraryTarget: 'umd'
@@ -21,25 +21,35 @@ module.exports = {
       'process.env.PORT': JSON.stringify(port)
     }),
   ],
-
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    },
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom',
+      amd: 'react-dom'
+    }
+  },
   resolve: {
     root: path.join(__dirname, "node_modules"),
     fallback: [path.join(__dirname, "node_modules")],
     modulesDirectories: ['node_modules'],
     extensions: ['', '.json', '.js']
   },
-
   resolveLoader: {
     fallback: [path.join(__dirname, "node_modules")],
     modulesDirectories: ['node_modules'],
     moduleTemplates: ['*-loader', '*'],
     extensions: ['', '.js']
   },
-
   postcss: function () {
         return [require('autoprefixer')];
   },
-
   module: {
     loaders: [
       {

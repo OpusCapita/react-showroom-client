@@ -18,7 +18,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(express.static(path.normalize(__dirname + '/../client/')));
+app.use(express.static(path.normalize(__dirname + '/../lib/')));
 app.use(webpackMiddleware(webpack(require('../../webpack.development.config.js')), {
   publicPath: '/',
   watchOptions: {
