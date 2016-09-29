@@ -4,9 +4,6 @@ const webpack = require('webpack');
 
 let config = require('./webpack.development.config');
 config.entry = path.resolve(path.join(__dirname, './src/client/index.js'));
-config.externals = {
-  'react': 'React'
-};
 delete config.devtool;
 config.plugins = config.plugins.concat([
   new webpack.DefinePlugin({
