@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import DemoPage from './DemoPage.react';
 import './DemoPageIndex.less';
-import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less';
-import 'jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less';
 import localLoader from '../local-loader/index';
 let logoUrl = require('../img/logo.svg');
 
