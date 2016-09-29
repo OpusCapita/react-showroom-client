@@ -7,7 +7,7 @@ let port = require('./serverConfig').port;
 module.exports = {
   entry: path.resolve(path.join(__dirname, './src/client/index-page.js')),
   output: {
-    publicPath: `http://${host}:${port}/`,
+    publicPath: `/`,
     path: path.resolve(__dirname, 'lib'),
     filename: `index.js`,
     library: 'demopage',
