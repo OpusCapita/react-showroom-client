@@ -28,6 +28,10 @@ class DemoPage extends Component {
     this.getPackagesInfo();
   }
 
+  componentWillUnmount() {
+    clearTimeout(this._getComponentTimeout);
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if(this.state.componentsInfo !== prevState.componentsInfo) {
       this.handleComponentSelection(
@@ -93,8 +97,10 @@ class DemoPage extends Component {
 
   handleComponentSelection(componentsInfo, id) {
     let componentInfo = componentsInfo.filter(info => info.id == id)[0];
-    this.getComponent(componentInfo);
     this.setState({ currentComponentId: id });
+    /* this._getComponentTimeout: ugly hack to resolve problems with component selection with synchronous loaders.
+    *   if you fix it in normal way, don't forget to remove timeout clear within componentWillUnmount */
+    this._getComponentTimeout = setTimeout(() => this.getComponent(componentInfo) , 0);
   }
 
   render() {
