@@ -23,7 +23,7 @@
 .filter-sidebar-component-item__version-select {
   border: none;
   border-radius: 2px;
-  color: initial;
+  color: #000;
   padding: 0 8px;
   text-align-last: center;
   appearance: none;
@@ -34,5 +34,8 @@
   }
   &:hover {
     cursor: pointer;
+  }
+  &::-ms-expand {
+    display: none;
   }
 }
