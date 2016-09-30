@@ -14,8 +14,8 @@ class DemoPageIndex extends Component {
             <div className="row">
               <div className="col-md-6 demo-page-index__title-container">
                 <div
-                  style={{ width: '200px' }}
                   title="OpusCapita logo"
+                  className="demo-page-index__company-logo"
                   dangerouslySetInnerHTML={{ __html: svgLogoContent }}
                 >
                 </div>
