@@ -25,10 +25,6 @@ class FilterSidebarComponentItem extends Component {
     this.changeCurrentVersion(versions[0]);
   }
 
-  changeCurrentVersion(version) {
-    this.setState({ currentVersion: version });
-  }
-
   getComponentVersions(componentPackage, componentName, componentsInfo) {
     return componentsInfo.reduce((results, current) => {
       return (current.package === componentPackage && current.name === componentName) ?
@@ -37,7 +33,12 @@ class FilterSidebarComponentItem extends Component {
     }, []);
   }
 
+  changeCurrentVersion(version) {
+    this.setState({ currentVersion: version });
+  }
+
   handleVersionChange(version) {
+    this.changeCurrentVersion(version);
     let componentId = this.props.componentsInfo.filter(componentInfo =>
       componentInfo.package === this.props.component.package &&
       componentInfo.name === this.props.component.name &&
@@ -66,7 +67,7 @@ class FilterSidebarComponentItem extends Component {
         >
           <select
             className="filter-sidebar-component-item__version-select"
-            onChange={(event) => this.handleVersionChange(event.target.value)}
+            onChange={event => this.handleVersionChange(event.target.value)}
           >{
             this.state.versions.map((version, index) =>
               <option key={index} value={version}>{version}</option>
