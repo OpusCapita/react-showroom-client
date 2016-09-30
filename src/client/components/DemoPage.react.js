@@ -140,8 +140,8 @@ class DemoPage extends Component {
               </button>
               <div
                 className="demo-page__options-group"
-                onMouseEnter={() => this.setOption.call(this, 'isShowContainerBorders', true)}
-                onMouseLeave={() => this.setOption.call(this, 'isShowContainerBorders', false)}
+                onMouseEnter={() => this.setOption('isShowContainerBorders', true)}
+                onMouseLeave={() => this.setOption('isShowContainerBorders', false)}
               >
                 <div
                   className="demo-page__max-container-width-slider-group"
@@ -151,7 +151,7 @@ class DemoPage extends Component {
                   </div>
                   <Rcslider
                     className="demo-page__max-container-width-slider"
-                    onChange={value => this.setOption.call(this, 'maxContainerWidth', `${value}%`)}
+                    onChange={value => this.setOption('maxContainerWidth', `${value}%`)}
                     defaultValue={parseInt(options.maxContainerWidth, 10)}
                     tipFormatter={null}
                   />
@@ -165,7 +165,7 @@ class DemoPage extends Component {
                     demo-page__options-item-btn
                     ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
                   `}
-                  onClick={() => this.setOption.call(this, 'isContentCentered', !options.isContentCentered)}
+                  onClick={() => this.setOption('isContentCentered', !options.isContentCentered)}
                 >
                   Force Centering
                 </div>

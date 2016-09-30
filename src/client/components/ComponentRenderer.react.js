@@ -19,7 +19,7 @@ class ComponentRenderer extends Component {
     super(props);
     this.state = {
       code: '{}',
-      compiledCode: '() => return null',
+      transpiledCode: '() => return null',
       reactElement: null
     };
   }
@@ -38,7 +38,7 @@ class ComponentRenderer extends Component {
     this.setReactClassGlobally(this.props);
     this.initDefaultCode();
     let parsedDocumentation = this.getParsedDocumentation();
-    this.updateCompiledCode(parsedDocumentation.demoProps);
+    this.updateTranspiledCode(parsedDocumentation.demoProps);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -71,7 +71,7 @@ class ComponentRenderer extends Component {
   initDefaultCode() {
     let code = this.getParsedDocumentation().demoProps;
     this.setState({ code });
-    this.updateCompiledCode(code);
+    this.updateTranspiledCode(code);
   }
 
   updateCode(newCode) {
@@ -79,28 +79,28 @@ class ComponentRenderer extends Component {
       clearTimeout(this.isCodeTypingStoppedTimeout);
     }
     this.isCodeTypingStoppedTimeout = setTimeout(() => {
-      this.updateCompiledCode(this.state.code);
+      this.updateTranspiledCode(this.state.code);
     }, 150);
     this.setState({
       code: newCode
     });
   }
 
-  updateCompiledCode(code) {
-    let compiledCode;
+  updateTranspiledCode(code) {
+    let transpiledCode;
     try {
-      compiledCode = transform(`<div>${code}</div>`, { presets: ['es2015', 'react', 'stage-0'] }).code;
+      transpiledCode = transform(`<div>${code}</div>`, { presets: ['es2015', 'react', 'stage-0'] }).code;
     } catch (err) {
-      console.log('ComponentRenderer - updateCompiledCode error:', err);
+      console.log('ComponentRenderer - updateTranspiledCode error:', err);
     }
-    this.setState({ compiledCode });
-    this.createReactElement.call(this, compiledCode);
+    this.setState({ transpiledCode });
+    this.createReactElement(transpiledCode);
   }
 
-  createReactElement(compiledCode) {
+  createReactElement(transpiledCode) {
     let element;
     try {
-      element = eval(compiledCode); // eslint-disable-line no-eval
+      element = eval(transpiledCode); // eslint-disable-line no-eval
     } catch (err) {
       console.log('ComponentRenderer - render error:', err);
       element = null;
