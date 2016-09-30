@@ -12,7 +12,7 @@
     "npm-packages-scan": "node ./src/server/npm-scanner/make-scan.js",
     "postversion": "git push",
     "prepublish": "npm run build",
-    "start": "nodemon --watch src/server src/server/index --exec babel-node",
+    "start": "nodemon --watch src/server src/server/index --exec babel-node"
   },
   "author": {
     "name": "Kirill Volkovich",
