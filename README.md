@@ -68,13 +68,6 @@ You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git
 }
 ```
 
-#### Also you should add public path where your  (express/koa/etc) http server serve static resources
-
-**webpack.development.config.js**
-
-```
-output.publicPath: `http://localhost:3000/static/`
-```
 #### We highly recommend to include 'autoprefixer' to your project:
 
 PostCSS plugin to parse CSS and add vendor prefixes to CSS rules using values from Can I Use. It is recommended by Google and used in Twitter, and Taobao.
