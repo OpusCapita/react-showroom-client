@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react';
-import { I18nManager } from 'jcatalog-i18n';
-import ComponentRendererElement from './ComponentRendererElement.react';
-import Documentation from './Documentation.react';
-import CodeMirror from 'react-codemirror';
 import './ComponentRendered.less';
+import ComponentRendererElement from '../ComponentRendererElement';
+import Documentation from '../Documentation';
+import CodeMirror from 'react-codemirror';
+import { I18nManager } from 'jcatalog-i18n';
 import 'react-codemirror/node_modules/codemirror/lib/codemirror.css';
 import 'react-codemirror/node_modules/codemirror/theme/material.css';
 import 'react-codemirror/node_modules/codemirror/mode/jsx/jsx';
-import { formatPatterns } from '../i18n/config';
+import { formatPatterns } from '../../i18n/config';
 import { transform } from 'babel-standalone';
-import { parseDocumentation } from '../parseComponents';
+import { parseDocumentation } from '../../parseComponents';
 
 window.React = React;
 

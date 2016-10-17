@@ -1,4 +1,5 @@
 import { Component, PropTypes } from 'react';
+import './ComponentRendererElement.less';
 
 export default
 class ComponentRendererElement extends Component {

@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import DemoPage from './DemoPage.react';
 import './DemoPageIndex.less';
-import ToolApplicationHeader from './ToolApplicationHeader';
-import localLoader from '../local-loader/index';
+import DemoPage from '../DemoPage';
+import ToolApplicationHeader from '../ToolApplicationHeader';
+import localLoader from '../../local-loader/index';
 
 export default
 class DemoPageIndex extends Component {

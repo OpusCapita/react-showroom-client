@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import fuzzysearch from 'fuzzysearch';
 import './FilterSidebar.less';
-import FilterSidebarComponentItem from './FilterSidebarComponentItem.react';
+import fuzzysearch from 'fuzzysearch';
+import FilterSidebarComponentItem from '../FilterSidebarComponentItem';
 
 export default
 class FilterSidebar extends Component {
@@ -45,7 +45,7 @@ class FilterSidebar extends Component {
         return node.parentNode === parent || hasParent(node.parentNode, parent);
       }
       return false;
-    }
+    };
     if (event.target !== this._container && !hasParent(event.target, this._container)) {
       this.props.onHide();
     }

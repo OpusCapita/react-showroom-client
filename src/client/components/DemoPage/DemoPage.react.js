@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import ComponentRenderer from './ComponentRenderer.react';
-import FilterSidebar from './FilterSidebar.react';
-import DemoPageComponentShortInfo from './DemoPageComponentShortInfo.react';
-import Rcslider from 'rc-slider';
 import './DemoPage.less';
+import ComponentRenderer from '../ComponentRenderer';
+import FilterSidebar from '../FilterSidebar';
+import DemoPageComponentShortInfo from '../DemoPageComponentShortInfo';
+import Rcslider from 'rc-slider';
 
 export default
 class DemoPage extends Component {
