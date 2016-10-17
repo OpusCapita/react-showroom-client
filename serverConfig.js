@@ -2,5 +2,5 @@
 
 module.exports = {
     host: process.env.HOST ? process.env.HOST : 'localhost',
-    port: process.env.PORT ? process.env.PORT : 3888
+    port: process.env.PORT ? process.env.PORT : 3889
 };
