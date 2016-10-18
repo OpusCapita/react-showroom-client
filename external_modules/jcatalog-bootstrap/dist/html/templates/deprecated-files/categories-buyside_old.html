@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OPC 8 Buyside Categories</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		
+		
+	</head>
+	<body>
+			<div class="navbar navbar-default navbar-main-menu"><!-- main nav -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="../../../img/jc-logo-rgb.svg" style="height: 1.5em; margin-top: -.25em; margin-bottom: -.25em;">
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Categories</a></li>
+						<li><a href="#">External Shops</a></li>
+						<li><a href="#">Quick Entry</a></li>
+						<li><a href="#">Suppliers</a></li>
+						<li><a href="#">Contracts</a></li>
+						<li><a href="#">Product Suggestion</a></li>
+						<li><a href="#">Quick Quote</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-nav-item" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+								<span class="badge">7</span>
+							</a>
+							<ul class="dropdown-menu">
+								*preview cart here*
+							</ul>
+						</li>	
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Martin Hallmann <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">User Details</a></li>
+								<li><a href="#">Language</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Shopping Lists</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Help</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>	
+						<li class="dropdown">
+							<a href="#" class="icon-nav-item dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>  <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Change customer assignment</a></li>
+								<li><a href="#">System Administration</a></li>
+								<li><a href="#">Customer Administration</a></li>
+								<li><a href="#">Setup</a></li>
+							</ul>
+						</li>	
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!-- /main nav -->
+
+		<div class="container">
+
+
+			<!-- Searchbar -->
+			<form class="search-bar form-inline" role="form">
+				<div class="form-group">
+					<label class="sr-only" for="searchClassGrpSelectInst1">Select Category</label>
+					<div class="btn-group" id="searchClassGrpSelectInst1">
+						<button type="button" class="btn btn-default btn-lg dropdown-toggle btn-2rows" data-toggle="dropdown">
+							<small>Search in</small><br><b>Category</b> <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-wide" role="menu">
+							<li><a href="#">Search in all Categories</a></li>
+							<li class="wide">
+								<div class="row">
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Machine, device (for special applications)</a></li>
+											<li><a href="#">Equipment f. mining, metallurgical plant, rolling mill a. foundry</a></li>
+											<li><a href="#">Information, communication and media technology</a></li>
+											<li><a href="#">Packing material</a></li>
+											<li><a href="#">Tool</a></li>
+											<li><a href="#">Construction technology</a></li>
+											<li><a href="#">Machine element, fixing, mounting</a></li>
+											<li><a href="#">Office products, facilities and technics, papeterie</a></li>
+											<li><a href="#">Service</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Energy, extraction product, secondary raw materials and residues</a></li>
+											<li><a href="#">Electric engineering, automation, process control engineering</a></li>
+											<li><a href="#">Automotive technology</a></li>
+											<li><a href="#">Home economics, Home technolology</a></li>
+											<li><a href="#">Auxiliary supply, additive, formulation</a></li>
+											<li><a href="#">Polymers</a></li>
+											<li><a href="#">Laboratory material, Labatory technology</a></li>
+											<li><a href="#">Installation (complete)</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Medicine, medical technology, life sience</a></li>
+											<li><a href="#">Semifinished products,materials</a></li>
+											<li><a href="#">Machine, apparatus</a></li>
+											<li><a href="#">Industrial piping</a></li>
+											<li><a href="#">Inorganic Chemicals</a></li>
+											<li><a href="#">Organic Chemicals</a></li>
+											<li><a href="#">Occupational safety, accident prevention</a></li>
+											<li><a href="#">Marketing</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li><a href="#" class="text-right"><b>Browse Categories <span class="glyphicon glyphicon-forward"></span></b></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form-group" style="width: 67%;">
+					<label class="sr-only" for="searchInputInst1">Search Catalog for</label>
+					<input type="search" class="form-control input-lg" id="searchInputInst1" placeholder="Search for..">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="searchSubmitButtonInst1">Submit Search Query</label>
+					<button type="button" class="btn btn-primary btn-lg" id="searchSubmitButtonInst1"><span class="glyphicon glyphicon-search"></span> Search</button>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="searchExtendedSearchButtonInst1">Use Extendend Search</label>
+					<button type="button" class="btn btn-link" id="searchExtendedSearchButtonInst1">Extended Search</button>
+				</div>
+			</form>
+		
+		<!-- #### Categories ########################################################## -->
+
+<br>
+		<div class="row">
+			<div class="col-xs-12 text-center well text-justify">
+				<big>
+					<div class="btn-group">
+						<label class="sr-only" for="classificationPicker1">Select Classification</label>
+						<button type="button" id="classificationPicker1" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							Active.Classification <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Classification1</a></li>
+							<li><a href="#">Classification2</a></li>
+							<li><a href="#">Classification3</a></li>
+						</ul>
+					</div>
+					 &nbsp; <a href="#"><b>A</b></a> &nbsp; <a href="#"><b>B</b></a> &nbsp; <a href="#"><b>C</b></a> &nbsp; <a href="#"><b>D</b></a> &nbsp; <a href="#"><b>E</b></a> &nbsp; F &nbsp; <a href="#"><b>G</b></a> &nbsp; <a href="#"><b>H</b></a> &nbsp; I &nbsp; <a href="#"><b>J</b></a> &nbsp; K &nbsp; L &nbsp; <a href="#"><b>M</b></a> &nbsp; N &nbsp; O &nbsp; <a href="#"><b>P</b></a> &nbsp; Q &nbsp; <a href="#"><b>R</b></a> &nbsp; <a href="#"><b>S</b></a> &nbsp; <a href="#"><b>T</b></a> &nbsp; U &nbsp; <a href="#"><b>V</b></a> &nbsp; W &nbsp; X &nbsp; Y &nbsp; Z
+				</big>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>A</h3>
+				<h4><a href="#">Antiques</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Antiquities</a><br>
+				<a href="#">Architectural &amp; Garden</a><br>
+				<a href="#">Asian Antiques</a><br>
+				<a href="#">Books &amp; Manuscripts</a><br>
+				<a href="#">Decorative Arts</a><br>
+				<a href="#">Ethnographic</a><br>
+				<a href="#">Furniture</a><br>
+				<a href="#">Home &amp; Hearth</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Linens &amp; Textiles (Pre-1930)</a><br>
+				<a href="#">Maps, Atlases &amp; Globes</a><br>
+				<a href="#">Maritime</a><br>
+				<a href="#">Mercantile, Trades &amp; Factories</a><br>
+				<a href="#">Musical Instruments (Pre-1930)</a><br>
+				<a href="#">Periods &amp; Styles</a><br>
+				<a href="#">Primitives</a><br>
+				<a href="#">Restoration &amp; Care</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Rugs &amp; Carpets</a><br>
+				<a href="#">Science &amp; Medicine (Pre-1930)</a><br>
+				<a href="#">Sewing (Pre-1930)</a><br>
+				<a href="#">Silver</a><br>
+				<a href="#">Reproduction Antiques</a><br>
+				<a href="#">Other</a>
+			</div>
+		</div>
+
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h4><a href="#">Art</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Direct from the Artist</a><br>
+				<a href="#">Art from Dealers &amp; Resellers</a><br>
+				<a href="#">Wholesale Lots</a>
+			</div>
+		</div>
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h3>B</h3>
+				<h4><a href="#">Baby</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Baby Gear</a><br>
+				<a href="#">Baby Safety &amp; Health</a><br>
+				<a href="#">Bathing &amp; Grooming</a><br>
+				<a href="#">Car Safety Seats</a><br>
+				<a href="#">Diapering</a><br>
+				<a href="#">Feeding</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Keepsakes &amp; Baby Announcements</a><br>
+				<a href="#">Nursery Bedding</a><br>
+				<a href="#">Nursery Decor</a><br>
+				<a href="#">Nursery Furniture</a><br>
+				<a href="#">Potty Training</a><br>
+				<a href="#">Strollers</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Stroller Accessories</a><br>
+				<a href="#">Toys for Baby</a><br>
+				<a href="#">Other</a><br>
+				<a href="#">Wholesale Lots</a>
+			</div>
+		</div>
+
+
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h4><a href="#">Books</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Accessories</a><br>
+				<a href="#">Antiquarian &amp; Collectible</a><br>
+				<a href="#">Audiobooks</a><br>
+				<a href="#">Catalogs</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Children &amp; Young Adults</a><br>
+				<a href="#">Cookbooks</a><br>
+				<a href="#">Fiction &amp; Literature</a><br>
+				<a href="#">Magazine Back Issues</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Nonfiction</a><br>
+				<a href="#">Textbooks, Education</a><br>
+				<a href="#">Wholesale &amp; Bulk Lots</a><br>
+				<a href="#">Other</a>
+			</div>
+		</div>
+
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h4><a href="#">Business &amp; Industrial</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Agriculture &amp; Forestry</a><br>
+				<a href="#">Construction</a><br>
+				<a href="#">Electrical &amp; Test Equipment</a><br>
+				<a href="#">Fuel &amp; Energy</a><br>
+				<a href="#">Healthcare, Lab &amp; Life Science</a><br>
+				<a href="#">Heavy Equipment</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Heavy Equipment Attachments</a><br>
+				<a href="#">Heavy Equipment Parts &amp; Accs</a><br>
+				<a href="#">Light Equipment &amp; Tools</a><br>
+				<a href="#">Manufacturing &amp; Metalworking</a><br>
+				<a href="#">MRO &amp; Industrial Supply</a><br>
+				<a href="#">Office</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Packing &amp; Shipping</a><br>
+				<a href="#">Printing &amp; Graphic Arts</a><br>
+				<a href="#">Restaurant &amp; Catering</a><br>
+				<a href="#">Retail &amp; Services</a><br>
+				<a href="#">Websites &amp; Businesses for Sale</a><br>
+				<a href="#">Other</a>
+			</div>
+		</div>
+
+
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h3>C</h3>
+				<h4><a href="#">Cameras &amp; Photo</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Binoculars &amp; Telescopes</a><br>
+				<a href="#">Camcorders</a><br>
+				<a href="#">Digital Cameras</a><br>
+				<a href="#">Camera &amp; Photo Accessories</a><br>
+				<a href="#">Digital Photo Frames</a><br>
+				<a href="#">Film Photography</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Flashes &amp; Flash Accessories</a><br>
+				<a href="#">Lenses &amp; Filters</a><br>
+				<a href="#">Lighting &amp; Studio</a><br>
+				<a href="#">Manuals &amp; Guides</a><br>
+				<a href="#">Replacement Parts &amp; Tools</a><br>
+				<a href="#">Tripods &amp; Supports</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Video Production &amp; Editing</a><br>
+				<a href="#">Vintage Movie &amp; Photography</a><br>
+				<a href="#">Wholesale Lots</a><br>
+				<a href="#">Other</a>
+			</div>
+		</div>
+
+
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h4><a href="#">Cell Phones &amp; Accessories</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Cell Phones &amp; Smartphones</a><br>
+				<a href="#">Smart Watches</a><br>
+				<a href="#">Cell Phone Accessories</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Display Phones</a><br>
+				<a href="#">Phone Cards &amp; SIM Cards</a><br>
+				<a href="#">Replacement Parts &amp; Tools</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Wholesale Lots</a><br>
+				<a href="#">Other</a>
+			</div>
+		</div>
+
+
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h4><a href="#">Clothing, Shoes &amp; Accessories</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Baby &amp; Toddler Clothing</a><br>
+				<a href="#">Kids' Clothing, Shoes &amp; Accs</a><br>
+				<a href="#">Costumes, Reenactment, Theater</a><br>
+				<a href="#">Cultural &amp; Ethnic Clothing</a><br>
+				<a href="#">Dancewear</a><br>
+				<a href="#">Men's Accessories</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Men's Clothing</a><br>
+				<a href="#">Men's Shoes</a><br>
+				<a href="#">Uniforms &amp; Work Clothing</a><br>
+				<a href="#">Unisex Clothing, Shoes &amp; Accs</a><br>
+				<a href="#">Wedding &amp; Formal Occasion</a><br>
+				<a href="#">Women's Accessories</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Women's Clothing</a><br>
+				<a href="#">Women's Handbags &amp; Bags</a><br>
+				<a href="#">Women's Shoes</a><br>
+				<a href="#">Vintage</a><br>
+				<a href="#">Wholesale, Large &amp; Small Lots</a>
+			</div>
+		</div>
+
+
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h4><a href="#">Coins &amp; Paper Money</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Bullion</a><br>
+				<a href="#">Coins: US</a><br>
+				<a href="#">Coins: Canada</a><br>
+				<a href="#">Coins: Ancient</a><br>
+				<a href="#">Coins: Medieval</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Coins: World</a><br>
+				<a href="#">Exonumia</a><br>
+				<a href="#">Paper Money: US</a><br>
+				<a href="#">Paper Money: World</a><br>
+				<a href="#">Publications &amp; Supplies</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Stocks &amp; Bonds, Scripophily</a><br>
+				<a href="#">Virtual Currency</a><br>
+				<a href="#">Other</a>
+			</div>
+		</div>
+
+
+
+
+
+		<hr>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<br><h4><a href="#">Collectibles</a></h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="#">Advertising</a><br>
+				<a href="#">Animals</a><br>
+				<a href="#">Animation Art &amp; Characters</a><br>
+				<a href="#">Arcade, Jukeboxes &amp; Pinball</a><br>
+				<a href="#">Autographs</a><br>
+				<a href="#">Banks, Registers &amp; Vending</a><br>
+				<a href="#">Barware</a><br>
+				<a href="#">Beads</a><br>
+				<a href="#">Bottles &amp; Insulators</a><br>
+				<a href="#">Breweriana, Beer</a><br>
+				<a href="#">Casino</a><br>
+				<a href="#">Clocks</a><br>
+				<a href="#">Comics</a><br>
+				<a href="#">Cultures &amp; Ethnicities</a><br>
+				<a href="#">Decorative Collectibles</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Disneyana</a><br>
+				<a href="#">Fantasy, Mythical &amp; Magic</a><br>
+				<a href="#">Historical Memorabilia</a><br>
+				<a href="#">Holiday &amp; Seasonal</a><br>
+				<a href="#">Kitchen &amp; Home</a><br>
+				<a href="#">Knives, Swords &amp; Blades</a><br>
+				<a href="#">Lamps, Lighting</a><br>
+				<a href="#">Linens &amp; Textiles (1930-Now)</a><br>
+				<a href="#">Metalware</a><br>
+				<a href="#">Militaria</a><br>
+				<a href="#">Paper</a><br>
+				<a href="#">Pens &amp; Writing Instruments</a><br>
+				<a href="#">Pez, Keychains, Promo Glasses</a><br>
+				<a href="#">Photographic Images</a><br>
+				<a href="#">Pinbacks, Bobbles, Lunchboxes</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#">Postcards</a><br>
+				<a href="#">Radio, Phonograph, TV, Phone</a><br>
+				<a href="#">Religion &amp; Spirituality</a><br>
+				<a href="#">Rocks, Fossils &amp; Minerals</a><br>
+				<a href="#">Science Fiction &amp; Horror</a><br>
+				<a href="#">Science &amp; Medicine (1930-Now)</a><br>
+				<a href="#">Sewing (1930-Now)</a><br>
+				<a href="#">Souvenirs &amp; Travel Memorabilia</a><br>
+				<a href="#">Tobacciana</a><br>
+				<a href="#">Tools, Hardware &amp; Locks</a><br>
+				<a href="#">Trading Cards</a><br>
+				<a href="#">Transportation</a><br>
+				<a href="#">Vanity, Perfume &amp; Shaving</a><br>
+				<a href="#">Vintage, Retro, Mid-Century</a><br>
+				<a href="#">Wholesale Lots</a>
+			</div>
+		</div>
+		<hr>
+
+		<!-- #### /Categories ########################################################## -->
+
+
+
+
+		
+		<!-- #### Dev Notes ########################################################## -->
+		<div class="alert alert-danger">
+			<h4>##DEVNOTE## ClassGrp Select Box populated with eClass L1 Grps</h4>
+			<p>This is for demo purposes, and obviously breaks the layout. &rarr; If select box is populated with more than xx options, display centered popup window instead of dropdown list.</p>
+		</div>
+
+		<div class="alert alert-danger">
+			<h4>##DEVNOTE## No Extended Search Yet!</h4>
+		</div>
+		<!-- #### /Dev Notes ########################################################## -->
+	</div> <!-- /container -->
+
+
+	<footer>
+		<div class="container copyright text-center">&copy; 2001 &mdash; 2014 <a href="http://www.jcatalog.com/">jCatalog Software AG</a></div>
+	</footer>
+
+
+	</body>
+</html>

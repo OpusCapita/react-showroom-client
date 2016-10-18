@@ -1,0 +1,132 @@
+/*!
+ * jQuery UI Bootstrap v1.0 Alpha
+ *
+ * jQuery UI Menu 1.10.3
+ * http://docs.jquery.com/UI/Menu#theming
+ *
+ * Portions copyright Addy Osmani, jQuery UI & Twitter, Inc.
+ * Created the LESS version by @dharapvj
+ * Released under MIT
+ */
+.ui-menu {
+	list-style: none;
+	padding: 2px;
+	margin: 0;
+	display: block;
+	outline: none;
+	.ui-menu{
+		margin-top: -3px;
+		position: absolute;
+		list-style:none;
+	}
+}
+
+/*
+* Bug inline with IE sub menu
+*/
+/* IE9, IE10 */
+@media screen and (min-width:~"0\0") {
+	.ui-menu li {
+	  list-style-type: none;
+	  display: inline;
+	  line-height: 0;
+	}
+
+	li.ui-menu-item { 
+	  /* This fixes the IE10 issue (jQuery UI Issue #8844)*/
+	  list-style-type: none;
+	}
+}
+
+.ui-menu{
+	.ui-menu-item {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		list-style:none;
+		/* support: IE10, see #8844 */
+		list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+	}
+	.ui-menu-divider {
+		margin: 5px -2px 5px -2px;
+		height: 0;
+		font-size: 0;
+		line-height: 0;
+		border-width: 1px 0 0 0;
+	}
+	.ui-menu-item a {
+		text-decoration: none;
+		display: block;
+		padding: 2px .4em;
+		line-height: 1.5;
+		min-height: 0; /* support: IE7 */
+		font-weight: normal;
+
+		background-color: @ui-menu-item-a-bg;
+		border-color: @ui-menu-item-a-border;
+		color: @ui-menu-item-a-color;
+		
+		&.ui-corner-all{
+			border-radius: 0px;
+		}
+		
+		&.ui-state-focus, &.ui-state-active, &.ui-widget-content{
+			font-weight: bold;
+			margin: 0;
+			display: block;
+			white-space: nowrap;
+		}
+
+		&.ui-state-active, &.ui-widget-content {
+			background-color: @ui-menu-item-a-active-bg;
+			border-color: @ui-menu-item-a-active-border;
+			color: @ui-menu-item-a-active-color;
+		}
+
+		&.ui-state-focus {
+			background-color: @ui-menu-item-a-focus-bg;
+			border-color: @ui-menu-item-a-focus-border;
+			color: @ui-menu-item-a-focus-color;
+		}
+		
+		/* Fix problem with border in ui-state-active */
+		.ui-state-active {
+			padding: 1px .4em;
+		}
+	}
+}
+
+.ui-menu .ui-state-disabled {
+	font-weight: normal;
+	margin: .4em 0 .2em;
+	line-height: 1.5;
+	a {
+		cursor: default;
+	}
+}
+
+/* icon support */
+.ui-menu-icons {
+	position: relative;
+	.ui-menu-item a {
+		position: relative;
+		padding-left: 2em;
+	}
+}
+
+.ui-menu{
+	width: 200px;
+	margin-bottom: 2em;
+	/* left-aligned */
+	.ui-icon {
+		position: absolute;
+		top: .2em;
+		left: .2em;
+	}
+
+	/* right-aligned */
+	.ui-menu-icon {
+		position: static;
+		float: right;
+	}
+}

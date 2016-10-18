@@ -1,0 +1,70 @@
+/*
+ * jQuery UI Slider 1.10.3
+ * http://docs.jquery.com/UI/Slider#theming
+ *
+ * Portions copyright Addy Osmani, jQuery UI & Twitter, Inc.
+ * Created the LESS version by @dharapvj
+ * Released under MIT
+ */
+.ui-slider { 
+	position: relative; 
+	text-align: left; 
+	/* For IE8 - See #6727 */
+	.ui-state-disabled .ui-slider-handle,
+	.ui-state-disabled .ui-slider-range {
+		filter: inherit;
+	}
+	.ui-slider-handle { 
+		position: absolute; 
+		z-index: 2; 
+		width: 1.2em; 
+		height: 1.2em; 
+		cursor: default; 
+	}
+	.ui-slider-range { 
+		position: absolute; 
+		z-index: 1; 
+		font-size: .7em; 
+		display: block; 
+		border: 0; 
+		background-position: 0 0;
+
+		color: @ui-white;
+		#ui-gradient > .vertical ( @ui-link-color, @ui-link-hover-color );	// FIXME - Need to fix the colors
+		.ui-box-shadow( 0 -1px 0 rgba(0, 0, 0, 0.15) );
+		.ui-box-sizing( border-box );
+		.ui-transition( width 0.6s ease);
+		/*border-color: @ui-blue-dark @ui-blue-dark @ui-blue;
+		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); */
+	}
+}
+
+.ui-slider-horizontal {
+	height: .8em;
+	.ui-slider-handle { 
+		top: -.3em; 
+		margin-left: -.6em; 
+	}
+	.ui-slider-range { 
+		top: 0; 
+		height: 100%; 
+	}
+	.ui-slider-range-min { left: 0; }
+	.ui-slider-range-max { right: 0; }
+}
+
+.ui-slider-vertical { 
+	width: .8em;
+	height: 100px; 
+	.ui-slider-handle { 
+		left: -.3em; 
+		margin-left: 0; 
+		margin-bottom: -.6em; 
+	}
+	.ui-slider-range { 
+		left: 0; 
+		width: 100%; 
+	}
+	.ui-slider-range-min { bottom: 0; }
+	.ui-slider-range-max { top: 0; }
+}

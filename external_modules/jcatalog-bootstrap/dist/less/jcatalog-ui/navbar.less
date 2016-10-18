@@ -1,0 +1,162 @@
+
+.navbar-default {
+  background-image: none;
+  border-radius: @navbar-border-radius;
+  border: 0;
+  border-bottom: @navbar-default-border;
+  border-top: @navbar-default-border;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.navbar-main-menu {
+	border-top: 0;
+	background: @navbar-main-menu-bg;
+    border-bottom: @navbar-main-menu-border;
+}
+
+.navbar-main-menu .navbar-brand img {
+  height: 1.5em; margin-bottom: -0.25em; margin-top: -0.25em;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ebebeb), to(#f3f3f3));
+  background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
+  background-image: -moz-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
+  background-image: linear-gradient(to bottom, #ebebeb 0%, #f3f3f3 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#fff3f3f3', GradientType=0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar-brand,
+.navbar-nav > li > a {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  padding-top:     @navbar-padding-vertical;
+  padding-bottom:  @navbar-padding-vertical;
+}
+
+.navbar-inverse {
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3c3c3c), to(#222222));
+  background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background-image: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background-image: linear-gradient(to bottom, #3c3c3c 0%, #222222 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#222222), to(#282828));
+  background-image: -webkit-linear-gradient(top, #222222 0%, #282828 100%);
+  background-image: -moz-linear-gradient(top, #222222 0%, #282828 100%);
+  background-image: linear-gradient(to bottom, #222222 0%, #282828 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff282828', GradientType=0);
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  border-radius: 0;
+}
+
+.navbar.navbar-sm .navbar-form {
+	padding: 0;
+	margin: 0;
+}
+
+.navbar.navbar-sm {
+	min-height: 30px;
+}
+
+.navbar.navbar-sm .navbar-collapse {
+	padding: 0;
+}
+
+nav + table.table {
+	margin-top: -20px;
+}
+
+.navbar.navbar-sm a.dropdown-toggle {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.navbar.navbar-sm .navbar-nav.navbar-right:last-child {
+	margin-right: 0;
+}
+
+.navbar-no-collapse.navbar-nav {
+	
+	@media (max-width: @grid-float-breakpoint-max) {
+		margin: 0;
+		
+		> li {
+			float: left;
+		}
+
+		> li ul.dropdown-menu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 1000;
+		}
+	}
+}
+
+.navbar-no-collapse.navbar-nav.navbar-right {
+	margin-right: 15px;
+	@media (max-width: @grid-float-breakpoint-max) {
+		margin: 0;
+	  
+		> li {
+			float: left;
+		}
+		
+		> li ul.dropdown-menu {
+			position: absolute;
+			top: 100%;
+			left: auto;
+			right: 0;
+			z-index: 1000;
+			background: #fff;
+			border: 1px solid #ccc;
+		    @shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+		    .box-shadow(@shadow);
+		}
+	}
+}
+
+.navbar-popover {
+	float: left;
+	@media (max-width: @grid-float-breakpoint-max) {
+		background: #fff;
+		border: 1px solid #ccc;
+		position: absolute;
+		left: -1px;
+		top: 55px;
+		right: 100px;
+		z-index: 900;
+		overflow: hidden;
+	    @shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
+	    .box-shadow(@shadow);
+		
+		.nav.navbar-nav {
+			margin: 0;
+		}
+	}
+	@media (min-width: @grid-float-breakpoint) {
+		display: block;
+	}
+
+
+}

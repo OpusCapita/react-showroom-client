@@ -50,7 +50,6 @@
     "express": "4.13.4",
     "file-loader": "^0.9.0",
     "fuzzysearch": "^1.0.3",
-    "jcatalog-bootstrap": "0.1.2",
     "jcatalog-i18n": "1.0.0",
     "json-loader": "0.5.4",
     "less-loader": "2.2.2",

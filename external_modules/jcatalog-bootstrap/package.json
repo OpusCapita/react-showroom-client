@@ -1,0 +1,29 @@
+{
+  "name": "jcatalog-bootstrap",
+  "version": "0.1.2",
+  "description": "Bootstrap npm module customized for jCatalog.",
+  "main": "dist/js/bootstrap.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublish": "rm -rf dist && mkdir dist && cp -r web-app/* dist",
+    "postpublish": "rm -rf dist"
+  },
+  "author": {
+    "name": "volkovich"
+  },
+  "readmeFilename": "README.md",
+  "_id": "jcatalog-bootstrap@0.1.2",
+  "_shasum": "f1da8cb698f3bbd560544922e15fa3f8237342e2",
+  "_from": "jcatalog-bootstrap@0.1.2",
+  "_npmVersion": "2.14.20",
+  "_nodeVersion": "4.4.1",
+  "_npmUser": {},
+  "dist": {
+    "shasum": "f1da8cb698f3bbd560544922e15fa3f8237342e2",
+    "tarball": "http://leon.scand:4873/jcatalog-bootstrap/-/jcatalog-bootstrap-0.1.2.tgz"
+  },
+  "_resolved": "http://leon.scand:4873/jcatalog-bootstrap/-/jcatalog-bootstrap-0.1.2.tgz",
+  "readme": "ERROR: No README data found!"
+}
