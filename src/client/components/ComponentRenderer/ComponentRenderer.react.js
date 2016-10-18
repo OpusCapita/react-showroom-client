@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import './ComponentRendered.less';
 import ComponentRendererElement from '../ComponentRendererElement';
 import Documentation from '../Documentation';
+import DefaultScopeComponent from '../DefaultScopeComponent';
 import CodeMirror from 'react-codemirror';
 import { I18nManager } from 'jcatalog-i18n';
 import 'react-codemirror/node_modules/codemirror/lib/codemirror.css';
@@ -11,23 +12,6 @@ import { formatPatterns } from '../../i18n/config';
 import { parseDocumentation } from '../../parseComponents';
 
 window.React = React;
-
-@showroomScopeDecorator
-class ParentComponentMock extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { a: 2, b: 20 };
-  }
-  render() {
-    return (
-      <div className="demo-page__parent-component">
-        <button onClick={() => this.setState({a: this.state.a + 1})}>Click me</button>
-        {this._renderChildren()}
-      </div>
-    );
-  }
-}
-
 
 export default
 class ComponentRenderer extends Component {
@@ -103,7 +87,7 @@ class ComponentRenderer extends Component {
   createReactElement(code) {
     let childElement;
     try {
-      childElement = React.createElement(ParentComponentMock, { _childrenCode: code })
+      childElement = React.createElement(this.props.scopeComponentReactClass, { _childrenCode: code })
     } catch (err) {
       console.log('ComponentRenderer - render error:', err);
       childElement = null;
@@ -185,10 +169,12 @@ ComponentRenderer.propTypes = {
   component: PropTypes.object,
   componentInfo: PropTypes.object,
   maxContainerWidth: PropTypes.string,
-  options: PropTypes.object
+  options: PropTypes.object,
+  scopeComponentReactClass: PropTypes.func
 };
 ComponentRenderer.defaultProps = {
-  maxContainerWidth: '100%'
+  maxContainerWidth: '100%',
+  scopeComponentReactClass: DefaultScopeComponent
 };
 ComponentRenderer.contextTypes = {
   i18n: PropTypes.object
