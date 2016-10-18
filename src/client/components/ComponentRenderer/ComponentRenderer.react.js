@@ -21,7 +21,7 @@ class ParentComponentMock extends Component {
   _renderChildren() {
     let transpiledCode;
     try {
-      transpiledCode = transform(`{${this.props._childrenCode}}`, { presets: ['es2015', 'react', 'stage-0'] }).code;
+      transpiledCode = transform(`{<div>${this.props._childrenCode}</div>}`, { presets: ['es2015', 'react', 'stage-0'] }).code;
     } catch (err) {
       console.log('ComponentRenderer - updateTranspiledCode error:', err);
     }
@@ -63,9 +63,6 @@ class ComponentRenderer extends Component {
   componentWillMount() {
     this.setReactClassGlobally(this.props);
     this.initDefaultCode();
-    let parsedDocumentation = this.getParsedDocumentation();
-    this.createReactElement();
-    // this.updateTranspiledCode(parsedDocumentation.demoProps);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -98,8 +95,7 @@ class ComponentRenderer extends Component {
   initDefaultCode() {
     let code = this.getParsedDocumentation().demoProps;
     this.setState({ code });
-    this.createReactElement();
-    // this.updateTranspiledCode(code);
+    this.createReactElement(code);
   }
 
   updateCode(newCode) {
@@ -107,18 +103,17 @@ class ComponentRenderer extends Component {
       clearTimeout(this.isCodeTypingStoppedTimeout);
     }
     this.isCodeTypingStoppedTimeout = setTimeout(() => {
-      // this.updateTranspiledCode(this.state.code);
-      this.createReactElement();
+      this.createReactElement(newCode);
     }, 150);
     this.setState({
       code: newCode
     });
   }
 
-  createReactElement() {
+  createReactElement(code) {
     let childElement;
     try {
-      childElement = React.createElement(ParentComponentMock, { _childrenCode: this.state.code })
+      childElement = React.createElement(ParentComponentMock, { _childrenCode: code })
     } catch (err) {
       console.log('ComponentRenderer - render error:', err);
       childElement = null;
