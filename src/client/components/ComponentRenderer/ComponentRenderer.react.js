@@ -8,25 +8,15 @@ import 'react-codemirror/node_modules/codemirror/lib/codemirror.css';
 import 'react-codemirror/node_modules/codemirror/theme/material.css';
 import 'react-codemirror/node_modules/codemirror/mode/jsx/jsx';
 import { formatPatterns } from '../../i18n/config';
-import { transform } from 'babel-standalone';
 import { parseDocumentation } from '../../parseComponents';
 
 window.React = React;
 
+@showroomScopeDecorator
 class ParentComponentMock extends Component {
   constructor(props) {
     super(props);
     this.state = { a: 2, b: 20 };
-  }
-  _renderChildren() {
-    let transpiledCode;
-    try {
-      transpiledCode = transform(`{<div>${this.props._childrenCode}</div>}`, { presets: ['es2015', 'react', 'stage-0'] }).code;
-    } catch (err) {
-      console.log('ComponentRenderer - updateTranspiledCode error:', err);
-    }
-    transpiledCode = transpiledCode.replace(/_scope/g, 'this');
-    return eval(transpiledCode)
   }
   render() {
     return (
