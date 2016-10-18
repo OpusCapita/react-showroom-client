@@ -86,8 +86,9 @@ class ComponentRenderer extends Component {
 
   createReactElement(code) {
     let childElement;
+    let ScopeComponentClass = this.props.component.scopeClass || DefaultScopeComponent;
     try {
-      childElement = React.createElement(this.props.scopeComponentReactClass, { _childrenCode: code })
+      childElement = React.createElement(ScopeComponentClass, { _childrenCode: code })
     } catch (err) {
       console.log('ComponentRenderer - render error:', err);
       childElement = null;
@@ -169,12 +170,10 @@ ComponentRenderer.propTypes = {
   component: PropTypes.object,
   componentInfo: PropTypes.object,
   maxContainerWidth: PropTypes.string,
-  options: PropTypes.object,
-  scopeComponentReactClass: PropTypes.func
+  options: PropTypes.object
 };
 ComponentRenderer.defaultProps = {
-  maxContainerWidth: '100%',
-  scopeComponentReactClass: DefaultScopeComponent
+  maxContainerWidth: '100%'
 };
 ComponentRenderer.contextTypes = {
   i18n: PropTypes.object

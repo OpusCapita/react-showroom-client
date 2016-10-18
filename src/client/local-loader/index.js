@@ -24,10 +24,7 @@ let loaderInstance = function(loaderOptions) {
       onData(preparedComponentsInfo)
     },
     getComponent: (component, onComponentReady) => {
-      onComponentReady({
-        componentClass: component.componentClass,
-        relatedFiles: component.relatedFiles
-      });
+      onComponentReady({ ...component });
     }
   }
 };
