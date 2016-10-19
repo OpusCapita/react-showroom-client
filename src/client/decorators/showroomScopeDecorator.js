@@ -2,7 +2,7 @@ import { transform } from 'babel-standalone';
 
 export default
 target => {
-  target.prototype._renderChildren = function() {
+  target.prototype._renderChildren = function() { // eslint-disable-line no-param-reassign
     let transpiledCode;
     try {
       transpiledCode = transform(
@@ -13,7 +13,7 @@ target => {
       console.log('Showroom scope decorator - transpiling code error:', err);
     }
     transpiledCode = transpiledCode.replace(/_scope/g, 'this');
-    let compiledCode = eval(transpiledCode);
+    let compiledCode = eval(transpiledCode); // eslint-disable-line no-eval
     return compiledCode;
   }
 };
