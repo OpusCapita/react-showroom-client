@@ -55,10 +55,6 @@ You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git
 **webpack.development.config.js**
 ```
 {
-  test   : /\.(png|jpg|jpeg|gif|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-  loader : 'file-loader'
-},
-{
   test: /\.md$/,
   loader: 'raw-loader'
 },
@@ -84,7 +80,6 @@ postcss: function () {
 }
 ```
 
-
 ```
 // modify module.loaders
 { 
@@ -96,6 +91,138 @@ postcss: function () {
   loader: "style!css-loader!postcss-loader"
 }
 ```
+
+## SCOPE Component
+
+In some situations you need a wrapper component. 
+
+#### For example you want:
+
+##### Use specific *contextTypes*.
+##### Pass to props some value from parent state. 
+
+**Container.react.js:**
+```
+// Render method return value:
+<div className="container">
+  <ModalContainer showModal={this.state.showModal}>
+</div>
+```
+
+##### Use complex object value in property
+
+**Container.react.js:**
+```
+// Top of file:
+//
+import UltraCell from '../cells/UltraCell.react';
+//
+// Render method return value:
+//
+<div className="container">
+  <Table cellType={UltraCell}>
+</div>
+```
+
+#### To do this in SHOWROOM you need:
+
+Create a 'ComponentName'.SCOPE.react.js file. SCOPE file is just a wrapper component.
+
+**ComponentName.SCOPE.react.js** **simple** example:
+
+```
+import React from 'react';
+import { showroomScopeDecorator } from 'jcatalog-showroom';
+
+// This @decorator add this._renderChildren() method.
+@showroomScopeDecorator
+class ComponentNameScope extends React.Component {
+  render() {
+    return (
+      <div>
+        {this._renderChildren()} {/* You should call this method somewhere in your JSX. */}
+      </div>
+    );
+  }
+}
+
+export default ComponentNameScope;
+```
+
+**ComponentName.SCOPE.react.js** **complex** example:
+
+```
+import React from 'react';
+import { I18nManager } from 'jcatalog-react-i18n';
+import UltraCell from '../cells/UltraCell.react';
+import { showroomScopeDecorator } from 'jcatalog-showroom';
+
+// This @decorator add this._renderChildren() method.
+@showroomScopeDecorator
+class ComponentNameScope extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      UltraCell,
+      showModal: false
+    }
+  }
+
+  getChildContext() {
+    return {
+      i18n: new I18nManager(this.props.locale)
+    };
+  }
+  
+  toggleModal() {
+    this.setState({
+      showModal: !this.state.toggleModal
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.toggleModal.bind(this)}>
+          Toggle modal
+        </button>
+        {this._renderChildren()} {/* You should call this method somewhere in your JSX. */}
+      </div>
+    );
+  }
+}
+
+ComponentNameScope.childContextTypes = {
+  i18n: React.PropTypes.object.isRequired
+};
+
+export default ComponentNameScope;
+```
+
+#### demo.react.js
+
+In you components config add `scopeClass` after `componentClass`
+
+```
+'componentClass': require('../components/ComponentName/ComponentName.react').default,
+'scopeClass': require('../components/ComponentName/ComponentName.SCOPE.react').default
+```
+
+Now you can use contextTypes in your **Component**.
+If you want access to `this` in documentation code examples, use keyword `_scope` instead of `this`.
+
+**ComponentName.DOCUMENTATION.react.js**
+
+#### Code examples:
+
+```
+<ComponentName showModal={_scope.state.showModal}/>
+```
+
+```
+<ComponentName cellType={_scope.state.UltraCell}/>
+```
+
 
 ## Contacts:
 
