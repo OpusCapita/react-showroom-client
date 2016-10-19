@@ -223,6 +223,7 @@ If you want access to `this` in documentation code examples, use keyword `_scope
 <ComponentName cellType={_scope.state.UltraCell}/>
 ```
 
+We **STRONGLY** recomend to create only **one** scope file per package. In most cases it should be enough.
 
 ## Contacts:
 
