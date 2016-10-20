@@ -24,7 +24,7 @@ class ToolApplicationHeader extends Component {
               <div className="tool-application-header__contacts-items">
                 {
                   this.props.contacts.map((contact, index) => (
-                    <a href={contact.email} key={index}>{contact.name}</a>
+                    <a href={`mailto:${contact.email}`} key={index}>{contact.name}</a>
                   ))
                 }
               </div>
