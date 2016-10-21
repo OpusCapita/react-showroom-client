@@ -1,0 +1,53 @@
+{
+  "name": "jcatalog-showroom-server",
+  "version": "0.2.4",
+  "description": "Server and tools for jcatalog-showroom.",
+  "scripts": {
+    "init-packages": "node ./src/init-packages.js",
+    "lint": "eslint src",
+    "postversion": "git push",
+    "start": "nodemon --watch src src/index --exec babel-node"
+  },
+  "author": {
+    "name": "Kirill Volkovich",
+    "email": "volkovich@scand.com"
+  },
+  "main": "index.js",
+  "license": "jCatalog",
+  "readme": "README.md",
+  "dependencies": {
+    "autoprefixer": "6.4.1",
+    "babel-cli": "6.5.1",
+    "babel-core": "6.4.0",
+    "babel-eslint": "6.0.4",
+    "babel-loader": "6.2.1",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-object-assign": "6.8.0",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "babel-register": "6.5.2",
+    "babel-standalone": "6.14.0",
+    "cross-env": "1.0.7",
+    "css-loader": "0.21.0",
+    "eslint": "2.11.0",
+    "eslint-config-jcatalog": "1.0.2",
+    "eslint-plugin-react": "5.1.1",
+    "express": "4.13.4",
+    "file-loader": "^0.9.0",
+    "json-loader": "0.5.4",
+    "less-loader": "2.2.2",
+    "mkdirp": "0.5.1",
+    "nodemon": "1.9.1",
+    "postcss-loader": "0.13.0",
+    "raw-loader": "0.5.1",
+    "rimraf": "2.5.2",
+    "semver": "5.3.0",
+    "source-map-loader": "0.1.5",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7",
+    "webpack": "1.12.2",
+    "webpack-dev-middleware": "1.5.1",
+    "write-file-webpack-plugin": "3.3.0"
+  }
+}

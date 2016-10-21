@@ -5,8 +5,8 @@ const express = require('express');
 const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
 const app = express();
-const host = require('../../client/serverConfig').host;
-const port = require('../../client/serverConfig').port;
+const host = require('../../../commons/serverConfig').host;
+const port = require('../../../commons/serverConfig').port;
 
 const npmLoader = require('./tools/npm-installer/loader');
 const npmInstallerConfig = require('./tools/npm-installer/config');
@@ -31,7 +31,7 @@ app.use(webpackMiddleware(webpack(require('../../client/webpack.development.conf
 }));
 
 app.get('/', function(req, res) {
-  res.sendFile(path.normalize(__dirname + '/../client/index.html'));
+  res.sendFile(path.normalize(__dirname + '/index.html'));
 });
 
 app.get('/packages-info', function(req, res) {
