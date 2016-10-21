@@ -10,7 +10,7 @@ const port = require('../../serverConfig').port;
 
 const npmLoader = require('./npm-installer/loader');
 const npmInstallerConfig = require('./npm-installer/config');
-const npmScannerConig = require('./npm-scanner/config');
+const npmScannerConfig = require('./npm-scanner/config');
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -41,7 +41,7 @@ app.get('/packages-info', function(req, res) {
 
 app.get('/components-info', function(req, res) {
   console.log('Requested components info');
-  res.send(require(npmScannerConig.componentsInfoPath));
+  res.send(require(npmScannerConfig.componentsInfoPath));
 });
 
 app.get('/packages/*', function(req, res) {

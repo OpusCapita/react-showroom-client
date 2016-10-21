@@ -2,13 +2,12 @@
 
 let libFs = require('fs');
 let libPath = require('path');
-let config = require('./config');
 let execSync = require('child_process').execSync;
 let log = console.log;
 
-function makeBundle(input, output) {
+function makeBundle(input, output, webpackConfigPath) {
   log('Bundling:\n\t', input);
-  execSync(`webpack ${input} ${output} --config ${config.webpackConfigPath}`);
+  execSync(`webpack ${input} ${output} --config ${webpackConfigPath}`);
   log('Bundle created at:\n\t', output);
 }
 
@@ -36,7 +35,9 @@ function getIODirs(installationRoot) {
   }, []);
 }
 
-log('Started bundling.');
-let dirs = getIODirs(config.installationRoot);
-dirs.map(dir => makeBundle(dir.input, dir.output));
-log('Bundling complete.');
+module.exports = function makeBundles(config) {
+  log('Started bundling.');
+  let dirs = getIODirs(config.installationRoot);
+  dirs.map(dir => makeBundle(dir.input, dir.output, config.webpackConfigPath));
+  log('Bundling complete.');
+};

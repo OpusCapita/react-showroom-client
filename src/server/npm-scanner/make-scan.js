@@ -2,7 +2,6 @@
 
 let libPath = require('path');
 let libFs = require('fs');
-let config = require('./config');
 let findFiles = require('./utils').findFiles;
 let parseDocumentation = require('./parseDocumentation');
 
@@ -25,7 +24,7 @@ function getComponentsInfo(packageName, version, versionRoot, componentsMasks) {
   });
 }
 
-function getPackageVersions(packageRoot, packageName) {
+function getPackageVersions(packageRoot, packageName, config) {
   return libFs.readdirSync(packageRoot).reduce((result, version) =>
     result.concat(getComponentsInfo(
       packageName,
@@ -36,24 +35,26 @@ function getPackageVersions(packageRoot, packageName) {
   )
 }
 
-function scanInstalledPackages(installationRoot) {
+function scanInstalledPackages(config) {
+  let installationRoot = config.installationRoot;
   let packages = libFs.readdirSync(installationRoot);
   return packages.reduce((result, packageName) =>
-    result.concat(getPackageVersions(libPath.join(installationRoot, packageName), packageName))
+    result.concat(getPackageVersions(libPath.join(installationRoot, packageName), packageName, config))
   , []);
 }
 
-// ----------------------------------------------------------------------------------
-console.log('Scanning started.');
+module.exports = function makeScan(config) {
+  console.log('Scanning started.');
 
-let componentsInfo = scanInstalledPackages(config.installationRoot);
-let stringifiedVersionsInfo = JSON.stringify(componentsInfo, null, 2);
-let componentsInfoFileContent = `module.exports = ${stringifiedVersionsInfo}`;
+  let componentsInfo = scanInstalledPackages(config);
+  let stringifiedVersionsInfo = JSON.stringify(componentsInfo, null, 2);
+  let componentsInfoFileContent = `module.exports = ${stringifiedVersionsInfo}`;
 
-console.log(stringifiedVersionsInfo);
+  console.log(stringifiedVersionsInfo);
 
-libFs.writeFileSync(config.componentsInfoPath, componentsInfoFileContent);
+  libFs.writeFileSync(config.componentsInfoPath, componentsInfoFileContent);
 
-console.log('Scanning complete.');
-console.log('Results writed to:');
-console.log('\t', config.componentsInfoPath);
+  console.log('Scanning complete.');
+  console.log('Results writed to:');
+  console.log('\t', config.componentsInfoPath);
+}

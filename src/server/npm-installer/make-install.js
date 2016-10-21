@@ -5,10 +5,6 @@ let libFs = require('fs');
 let execSync = require('child_process').execSync;
 let mkdirp = require('mkdirp').sync;
 let rimraf = require('rimraf').sync;
-let config = require('./config.js');
-let packages = config.packages;
-let packagesInfoPath = config.packagesInfoPath;
-let installationRoot = config.installationRoot;
 let packageJSONTemplatePath = libPath.resolve(libPath.join(__dirname, './package.json.template'));
 let packageJSONTemplate = libFs.readFileSync(packageJSONTemplatePath, 'utf-8');
 let log = console.log;
@@ -60,18 +56,22 @@ function removeConflictPackages(packagePath) {
   rimraf(libPath.join(packagePath, 'node_modules', 'react-dom'));
 }
 
-// -----------------------------------------------------------------
-log('Started npm-installer.\n');
+module.exports = function makeInstall(config) {
+  let installationRoot = config.installationRoot;
+  let packagesInfoPath = config.packagesInfoPath;
+  let packagesToInstall = config.packages;
+  log('Started npm-installer.\n');
 
-mkdirp(installationRoot);
-log('Created installation root dir.');
+  mkdirp(installationRoot);
+  log('Created installation root dir.');
 
-rimraf(installationRoot + '/*');
-log('Cleaned up previous installation.\n');
+  rimraf(installationRoot + '/*');
+  log('Cleaned up previous installation.\n');
 
-log('root:', config.installationRoot);
-mkdirp(config.installationRoot);
-let packagesInfos = getPackagesInfos(packages);
-libFs.writeFileSync(packagesInfoPath, `module.exports = ${JSON.stringify(packagesInfos, null, 4)}`);
-installPackages(packagesInfos, installationRoot);
-log(`Installation complete!`);
+  log('root:', installationRoot);
+  mkdirp(installationRoot);
+  let packagesInfos = getPackagesInfos(packagesToInstall);
+  libFs.writeFileSync(packagesInfoPath, `module.exports = ${JSON.stringify(packagesInfos, null, 4)}`);
+  installPackages(packagesInfos, installationRoot);
+  log(`Installation complete!`);
+};
