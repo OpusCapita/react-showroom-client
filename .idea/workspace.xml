@@ -1,0 +1,1717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="820dcd46-9133-470a-be16-bc971ec00811" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/src/init-packages.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/init-packages.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/installers/fs-loader/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/installers/fs-loader/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/installers/lib.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/installers/npm-loader/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/installers/npm-loader/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/server/installers/npm-loader/lib.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.babelrc" afterPath="$PROJECT_DIR$/client/.babelrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="$PROJECT_DIR$/client/.editorconfig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.eslintignore" afterPath="$PROJECT_DIR$/client/.eslintignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.eslintrc" afterPath="$PROJECT_DIR$/client/.eslintrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/client/.gitattributes" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/client/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/client/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/example.DOCUMENTATION.md" afterPath="$PROJECT_DIR$/client/example.DOCUMENTATION.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/CHANGES.txt" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/CHANGES.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/README.md" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/css/bootstrapErrors.css" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/css/bootstrapErrors.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/css/docs.min.css" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/css/docs.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/css/empty.css" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/css/empty.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Black.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Black.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-BlackItalic.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-BlackItalic.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Bold.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Bold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-BoldItalic.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-BoldItalic.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Hairline.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Hairline.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-HairlineItalic.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-HairlineItalic.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Italic.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Italic.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Light.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Light.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-LightItalic.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-LightItalic.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Regular.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/Lato-Regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/font-awesome/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/font-awesome/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/font-awesome/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/font-awesome/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/font-awesome/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/font-awesome/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/font-awesome/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/font-awesome/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/components.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/components.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/css.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/css.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/font-awesome/font-awesome-examples.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/font-awesome/font-awesome-examples.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/font-awesome/font-awesome-icons.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/font-awesome/font-awesome-icons.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/javascript.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/javascript.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-blank.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-blank.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-callout.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-callout.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-collapse.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-collapse.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-datepicker.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-datepicker.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-footer.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-footer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-login.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-menu.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-menu.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-table.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage-examples/jcui8-table.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/jcui-collage.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/jcui-collage.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/questionnaire-create.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/questionnaire-create.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.award-page.v2.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.award-page.v2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.award-page.v3.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.award-page.v3.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.award-page.v4.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.award-page.v4.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.award-summary.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.award-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.dnd-table.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.dnd-table.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.overview.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.overview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-attachments.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-attachments.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-header-details.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-header-details.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-item-details-product-info.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-item-details-product-info.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-item-list.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-item-list.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-item-list.v2.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-item-list.v2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-summary.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-supplier-selection.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/RfQ/rfq.rfq-supplier-selection.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/rfq.rfq-summary.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/rfq.rfq-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.overview.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.overview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.overview.v2.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.overview.v2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v2.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v3.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v3.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v4.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v4.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v5.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v5.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v6.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v6.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v7.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/SDP/sdp.supplier-quote.v7.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/automotive-compatibilities.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/automotive-compatibilities.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/categories-buyside.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/categories-buyside.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/categories-sellside.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/categories-sellside.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/category-dropdown.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/category-dropdown.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/classgrp-navigation/categories-sellside-b.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/classgrp-navigation/categories-sellside-b.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/classgrp-navigation/categories-sellside-c.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/classgrp-navigation/categories-sellside-c.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/classgrp-navigation/ext-shops-b.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/classgrp-navigation/ext-shops-b.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/comparison-page.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/comparison-page.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/customer-administration.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/customer-administration.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/carousel-product-images.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/carousel-product-images.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-buyside.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-buyside.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-buyside_old.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-buyside_old.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-sellside-b.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-sellside-b.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-sellside-c.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-sellside-c.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-sellside.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/categories-sellside.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/external-shops-2.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/external-shops-2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/external-shops-buyside.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/external-shops-buyside.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/external-shops.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/external-shops.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/search-results-buyside-proc.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/search-results-buyside-proc.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/search-results-meyle.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/search-results-meyle.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/search-results-sellside.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/deprecated-files/search-results-sellside.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/details.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/details.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/doc.search-page.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/doc.search-page.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/external-shops.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/external-shops.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/index-automotive-meyle.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/index-automotive-meyle.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/index-automotive.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/index-automotive.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/index-buyside-admin.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/index-buyside-admin.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/index-buyside-proc-admin.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/index-buyside-proc-admin.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/index-sellside-admin.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/index-sellside-admin.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/login.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/modals.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/modals.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/news-item.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/news-item.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/news-overview.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/news-overview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-all-product-types-grid-view.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-all-product-types-grid-view.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-all-product-types.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-all-product-types.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-automotive.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-automotive.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-buyside.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-buyside.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-empty.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/search-results-empty.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/shopping-cart-buyside-proc.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/shopping-cart-buyside-proc.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/shopping-cart-single-product.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/shopping-cart-single-product.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/shopping-cart.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/shopping-cart.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/supplier-directory-detail-page.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/supplier-directory-detail-page.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/supplier-directory.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/supplier-directory.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/system-administration.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/system-administration.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/components.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/components.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/css.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/css.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/customize.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/customize.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/docs.min.css" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/docs.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/docs.min.js" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/docs.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/javascript.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/ui-overview/javascript.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/weceem-pages/contact.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/weceem-pages/contact.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/weceem-pages/service.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/weceem-pages/service.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/work-in-progress/gadgets.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/work-in-progress/gadgets.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/html/templates/work-in-progress/jcui-collage.html" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/html/templates/work-in-progress/jcui-collage.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/car-icon.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/car-icon.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-new-small.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-new-small.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-new.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-new.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-new.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-new.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-old-small.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-old-small.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-old.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-old.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-old.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/key-number-old.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/logos/audi-logo.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/logos/audi-logo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/automotive/logos/mercedes-benz-logo.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/automotive/logos/mercedes-benz-logo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/1.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/2.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/3.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/4.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/5.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/6.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/6.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/automotive-1.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/automotive-1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/1.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/2.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/3.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/4.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/4.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/5.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/carousel-img/products/5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-antiques.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-antiques.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-art.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-art.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-baby.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-baby.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-books.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-books.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-business-industrial.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-business-industrial.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-camera.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-camera.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-cellphone.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/classgrp-cellphone.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/martin-mugshot-140.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/martin-mugshot-140.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-asusx-large.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-asusx-large.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-b100-large.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-b100-large.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-jjdub-large.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-jjdub-large.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-mbpro-large.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-mbpro-large.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-mbpro-large.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-mbpro-large.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-mbpro-small.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-mbpro-small.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-mskeyb600-large.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-mskeyb600-large.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-tplink-large.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/demo-data/product-img-tplink-large.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/Business-3.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/Business-3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/eReady.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/eReady.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/europcar-lkw-sprinter.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/europcar-lkw-sprinter.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/europcar-pkw-passat.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/europcar-pkw-passat.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-bademode.jpeg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-bademode.jpeg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-damen.jpeg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-damen.jpeg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-herren.jpeg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-herren.jpeg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-kinder.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-kinder.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-sport.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-sport.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-wm.jpeg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/otto-wm.jpeg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/partners.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-categories/partners.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/amazon.com.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/amazon.com.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/amazon.de.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/amazon.de.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/europcar.en.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/europcar.en.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/hardware.de.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/hardware.de.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/hertz.de.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/hertz.de.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/hr.service.en.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/hr.service.en.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/ims.de.gif" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/ims.de.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/ims.gif" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/ims.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/office-depot.en.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/office-depot.en.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/otto.de.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/otto.de.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/rs.de.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/rs.de.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/sixt.en.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/sixt.en.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/trivago.de.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/ext-shop-logos/trivago.de.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/icon-placeholder.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/icon-placeholder.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-11878907-young-woman-enjoying-winter.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-11878907-young-woman-enjoying-winter.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-13846956-call-center-executive-wearing-a-headset-with-copyspace Kopie.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-13846956-call-center-executive-wearing-a-headset-with-copyspace Kopie.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-13846956-call-center-executive-wearing-a-headset-with-copyspace.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-13846956-call-center-executive-wearing-a-headset-with-copyspace.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-15859900-mountainbike-couple-outdoors.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-15859900-mountainbike-couple-outdoors.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-16108517-happy-couple-camping.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-16108517-happy-couple-camping.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-16521182-support.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-16521182-support.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-18547790-confused-woman Kopie.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-18547790-confused-woman Kopie.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-18547790-confused-woman.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-18547790-confused-woman.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-20478056-customer-giving-car-keys-to-mechanic.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-20478056-customer-giving-car-keys-to-mechanic.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-21749889-sealing-the-perfect-deal.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-21749889-sealing-the-perfect-deal.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-21813602-nothing-beats-living-a-healthy-lifestyle.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-21813602-nothing-beats-living-a-healthy-lifestyle.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-21875114-using-smart-phone-xxl.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-21875114-using-smart-phone-xxl.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-22156135-man-working-with-modern-devices.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-22156135-man-working-with-modern-devices.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-24565863-sailing-crew-beating-to-windward-on-sailboat.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-24565863-sailing-crew-beating-to-windward-on-sailboat.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-4023633-request-for-quote.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-4023633-request-for-quote.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-4338337-couple-talking-on-tennis-court.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-4338337-couple-talking-on-tennis-court.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-7229515-riding-girl.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-7229515-riding-girl.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-7501868-golfing.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/istockphoto-no-license/stock-photo-7501868-golfing.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jc-logo-black.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jc-logo-black.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jc-logo-rgb.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jc-logo-rgb.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jc-logo-white.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jc-logo-white.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jcui-collage/jc-logo.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jcui-collage/jc-logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_flat_0_999999_40x100.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_flat_0_999999_40x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_75_ffffff_1x400.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_glass_75_ffffff_1x400.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_inset-soft_95_fef1ec_1x100.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-bg_inset-soft_95_fef1ec_1x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_222222_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_2e83ff_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_428bca_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_428bca_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_454545_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_555555_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_555555_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_888888_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_999999_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_999999_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_f0ad4e_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_f0ad4e_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_f6cf3b_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_f6cf3b_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/jquery-ui/custom-theme/images/ui-icons_ffffff_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/meyle-logo.jpg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/meyle-logo.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/sprites/flags.png" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/sprites/flags.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/buttons-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/buttons-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/colors-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/colors-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/components-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/components-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/elements-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/elements-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/forms-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/forms-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/images-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/images-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/modules-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/modules-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/sections-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/sections-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/tables-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/tables-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/templates-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/templates-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/img/webbicons/typography-w.svg" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/img/webbicons/typography-w.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/js/bootstrap-switch.min.js" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/js/bootstrap-switch.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/js/bootstrap.file-input.js" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/js/bootstrap.file-input.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/js/bootstrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/js/bootstrap.noConflict.js" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/js/bootstrap.noConflict.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/js/docs.min.js" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/js/docs.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/colorpicker.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/colorpicker.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/alerts.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/alerts.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/badges.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/badges.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/bootstrap.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/bootstrap.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/breadcrumbs.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/breadcrumbs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/button-groups.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/button-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/buttons.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/buttons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/carousel.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/carousel.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/close.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/close.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/code.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/code.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/component-animations.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/component-animations.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/dropdowns.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/dropdowns.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/forms.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/glyphicons.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/glyphicons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/grid.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/grid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/input-groups.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/input-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/jumbotron.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/jumbotron.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/labels.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/labels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/list-group.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/list-group.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/media.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/media.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/mixins.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/modals.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/modals.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/navbar.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/navbar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/navs.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/navs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/normalize.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/normalize.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/pager.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/pager.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/pagination.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/pagination.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/panels.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/panels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/popovers.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/popovers.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/print.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/print.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/progress-bars.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/progress-bars.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/responsive-utilities.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/responsive-utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/scaffolding.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/scaffolding.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/tables.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/tables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/theme.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/theme.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/thumbnails.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/thumbnails.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/tooltip.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/tooltip.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/type.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/type.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/utilities.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/variables.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/core/wells.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/core/wells.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/buttons.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/buttons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/callouts.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/callouts.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/carousel.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/carousel.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/datepicker.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/datepicker.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/dropdowns.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/dropdowns.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/fileupload.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/fileupload.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/bordered-pulled.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/bordered-pulled.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/core.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/core.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/extras.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/extras.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/fixed-width.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/fixed-width.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/icons.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/icons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/larger.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/larger.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/list.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/list.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/mixins.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/path.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/path.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/rotated-flipped.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/rotated-flipped.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/spinning.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/spinning.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/stacked.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/stacked.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/variables.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/font-awesome/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/forms.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/jcatalog-extensions.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/jcatalog-extensions.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/labels.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/labels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/navs.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/navs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/pagination.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/pagination.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/tables.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/tables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/utilities.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions/utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/button-groups.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/button-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/buttons.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/buttons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/code.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/code.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/extended-search.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/extended-search.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/flags.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/flags.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/footer.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/footer.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/forms.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/jcatalog-ui.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/jcatalog-ui.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/labels.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/labels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/list-group.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/list-group.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/navbar.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/navbar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/navs.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/navs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/old.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/old.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/panels.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/panels.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/progress-bars.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/progress-bars.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/scaffolding.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/scaffolding.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/tables.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/tables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/type.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/type.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/uniques.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/uniques.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/utilities.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/utilities.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/variables.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/wells.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/wells.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/xs.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jcatalog-ui/xs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jqgrid-bundle.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jqgrid-bundle.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jqgrid/jqgrid-base.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jqgrid/jqgrid-base.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jqgrid/jqgrid-bootstrap.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jqgrid/jqgrid-bootstrap.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jqgrid/jqgrid.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jqgrid/jqgrid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui-bundle.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui-bundle.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/accordion.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/accordion.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/autocomplete.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/autocomplete.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/base.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/base.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/button.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/button.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/core.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/core.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/datepicker.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/datepicker.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/dialog.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/dialog.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/icons.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/icons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/jq-ui-bootstrap-mixin-adapter.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/jq-ui-bootstrap-mixin-adapter.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/jq-ui-bootstrap-variable-adapter.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/jq-ui-bootstrap-variable-adapter.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/jq-ui-bootstrap.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/jq-ui-bootstrap.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/menu.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/menu.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/misc.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/misc.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/progressbar.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/progressbar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/resizable.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/resizable.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/selectable.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/selectable.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/slider.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/slider.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/spinner.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/spinner.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/tabs.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/tabs.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/toolbar.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/toolbar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/tooltip.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/jquery-ui/tooltip.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/mixins.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/automotive.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/automotive.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/badges.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/badges.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/class-groups.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/class-groups.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/dropdowns.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/dropdowns.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/forms.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/forms.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/gadgets.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/gadgets.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/grid.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/grid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/list-group.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/list-group.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/product-grid.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/product-grid.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/searchbar-responsive.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/searchbar-responsive.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/type.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/type.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/opc/wells.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/opc/wells.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/select2.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/select2.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/switch.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/switch.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/test.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/test.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/theme/variables.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/theme/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/dist/less/variables.less" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/less/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/external_modules/jcatalog-bootstrap/package.json" afterPath="$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/serverConfig.js" afterPath="$PROJECT_DIR$/client/serverConfig.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ComponentRenderer/ComponentRendered.less" afterPath="$PROJECT_DIR$/client/src/components/ComponentRenderer/ComponentRendered.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ComponentRenderer/ComponentRenderer.react.js" afterPath="$PROJECT_DIR$/client/src/components/ComponentRenderer/ComponentRenderer.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ComponentRenderer/index.js" afterPath="$PROJECT_DIR$/client/src/components/ComponentRenderer/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ComponentRendererElement/ComponentRendererElement.less" afterPath="$PROJECT_DIR$/client/src/components/ComponentRendererElement/ComponentRendererElement.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ComponentRendererElement/ComponentRendererElement.react.js" afterPath="$PROJECT_DIR$/client/src/components/ComponentRendererElement/ComponentRendererElement.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ComponentRendererElement/index.js" afterPath="$PROJECT_DIR$/client/src/components/ComponentRendererElement/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DefaultScopeComponent/DefaultScopeComponent.react.js" afterPath="$PROJECT_DIR$/client/src/components/DefaultScopeComponent/DefaultScopeComponent.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DefaultScopeComponent/index.js" afterPath="$PROJECT_DIR$/client/src/components/DefaultScopeComponent/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPage/DemoPage.less" afterPath="$PROJECT_DIR$/client/src/components/DemoPage/DemoPage.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPage/DemoPage.react.js" afterPath="$PROJECT_DIR$/client/src/components/DemoPage/DemoPage.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPage/index.js" afterPath="$PROJECT_DIR$/client/src/components/DemoPage/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPageComponentShortInfo/DemoPageComponentShortInfo.less" afterPath="$PROJECT_DIR$/client/src/components/DemoPageComponentShortInfo/DemoPageComponentShortInfo.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPageComponentShortInfo/DemoPageComponentShortInfo.react.js" afterPath="$PROJECT_DIR$/client/src/components/DemoPageComponentShortInfo/DemoPageComponentShortInfo.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPageComponentShortInfo/index.js" afterPath="$PROJECT_DIR$/client/src/components/DemoPageComponentShortInfo/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPageIndex/DemoPageIndex.less" afterPath="$PROJECT_DIR$/client/src/components/DemoPageIndex/DemoPageIndex.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPageIndex/DemoPageIndex.react.js" afterPath="$PROJECT_DIR$/client/src/components/DemoPageIndex/DemoPageIndex.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/DemoPageIndex/index.js" afterPath="$PROJECT_DIR$/client/src/components/DemoPageIndex/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/Documentation/Documentation.less" afterPath="$PROJECT_DIR$/client/src/components/Documentation/Documentation.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/Documentation/Documentation.react.js" afterPath="$PROJECT_DIR$/client/src/components/Documentation/Documentation.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/Documentation/index.js" afterPath="$PROJECT_DIR$/client/src/components/Documentation/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/FilterSidebar/FilterSidebar.less" afterPath="$PROJECT_DIR$/client/src/components/FilterSidebar/FilterSidebar.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/FilterSidebar/FilterSidebar.react.js" afterPath="$PROJECT_DIR$/client/src/components/FilterSidebar/FilterSidebar.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/FilterSidebar/index.js" afterPath="$PROJECT_DIR$/client/src/components/FilterSidebar/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/FilterSidebarComponentItem/FilterSidebarComponentItem.less" afterPath="$PROJECT_DIR$/client/src/components/FilterSidebarComponentItem/FilterSidebarComponentItem.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/FilterSidebarComponentItem/FilterSidebarComponentItem.react.js" afterPath="$PROJECT_DIR$/client/src/components/FilterSidebarComponentItem/FilterSidebarComponentItem.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/FilterSidebarComponentItem/index.js" afterPath="$PROJECT_DIR$/client/src/components/FilterSidebarComponentItem/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ToolApplicationHeader/ToolApplicationHeader.less" afterPath="$PROJECT_DIR$/client/src/components/ToolApplicationHeader/ToolApplicationHeader.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ToolApplicationHeader/ToolApplicationHeader.react.js" afterPath="$PROJECT_DIR$/client/src/components/ToolApplicationHeader/ToolApplicationHeader.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ToolApplicationHeader/git-logo.svg" afterPath="$PROJECT_DIR$/client/src/components/ToolApplicationHeader/git-logo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ToolApplicationHeader/index.js" afterPath="$PROJECT_DIR$/client/src/components/ToolApplicationHeader/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/components/ToolApplicationHeader/logo.svg" afterPath="$PROJECT_DIR$/client/src/components/ToolApplicationHeader/logo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/config.js" afterPath="$PROJECT_DIR$/client/src/config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/decorators/showroomScopeDecorator.js" afterPath="$PROJECT_DIR$/client/src/decorators/showroomScopeDecorator.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/i18n/I18nDecorator.react.js" afterPath="$PROJECT_DIR$/client/src/i18n/I18nDecorator.react.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/i18n/config.js" afterPath="$PROJECT_DIR$/client/src/i18n/config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/img/git-logo.svg" afterPath="$PROJECT_DIR$/client/src/img/git-logo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/img/logo.svg" afterPath="$PROJECT_DIR$/client/src/img/logo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/index-page.js" afterPath="$PROJECT_DIR$/client/src/index-page.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/index.html" afterPath="$PROJECT_DIR$/client/src/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/index.js" afterPath="$PROJECT_DIR$/client/src/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/local-loader/index.js" afterPath="$PROJECT_DIR$/client/src/local-loader/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/local-loader/parseDocumentation.js" afterPath="$PROJECT_DIR$/client/src/local-loader/parseDocumentation.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/parseComponents.js" afterPath="$PROJECT_DIR$/client/src/parseComponents.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/remote-loader/config.js" afterPath="$PROJECT_DIR$/client/src/remote-loader/config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/client/remote-loader/index.js" afterPath="$PROJECT_DIR$/client/src/remote-loader/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/index.js" afterPath="$PROJECT_DIR$/server/src/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-bundler/.babelrc" afterPath="$PROJECT_DIR$/server/src/tools/npm-bundler/.babelrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-bundler/config.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-bundler/config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-bundler/make-bundles.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-bundler/make-bundles.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-bundler/webpack.config.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-bundler/webpack.config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-installer/config.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-installer/config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-installer/loader.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-installer/loader.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-installer/make-install.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-installer/make-install.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-installer/package.json.template" afterPath="$PROJECT_DIR$/server/src/tools/npm-installer/package.json.template" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-scanner/config.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-scanner/config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-scanner/make-scan.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-scanner/make-scan.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-scanner/parseDocumentation.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-scanner/parseDocumentation.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/server/npm-scanner/utils.js" afterPath="$PROJECT_DIR$/server/src/tools/npm-scanner/utils.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/webpack.development.config.js" afterPath="$PROJECT_DIR$/client/webpack.development.config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/webpack.link.config.js" afterPath="$PROJECT_DIR$/client/webpack.link.config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/webpack.production.config.js" afterPath="$PROJECT_DIR$/client/webpack.production.config.js" />
+    </list>
+    <ignored path="showroom.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="showroom" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="213">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/tools/npm-bundler/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/tools/npm-installer/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make-install.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/tools/npm-installer/make-install.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="890">
+              <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/src/tools/npm-scanner/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init-packages.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/init-packages.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="663">
+                <caret line="225" column="46" selection-start-line="225" selection-start-column="46" selection-end-line="225" selection-end-column="46" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../product-editor-reserve-1" value="2937771965835" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/client/components/FilterSidebarComponentItem.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/FilterSidebarComponentItem.less" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRendererElement.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPage.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRenderer.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/FilterSidebar.react.js" />
+        <option value="$PROJECT_DIR$/serverConfig.js" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPageIndex.less" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPage.less" />
+        <option value="$PROJECT_DIR$/src/client/index.html" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPageIndex.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/FilterSidebarComponentItem/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/FilterSidebar/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/Documentation/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPageIndex/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPageComponentShortInfo/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPage/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRendererElement/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRendererElement/ComponentRendererElement.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRenderer/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/Documentation/Documentation.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/FilterSidebar/FilterSidebar.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPageIndex/DemoPageIndex.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/DemoPage/DemoPage.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRenderer/showroomScope.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRenderer/showroomScopeDecorator.js" />
+        <option value="$PROJECT_DIR$/src/server/tmp/npm-installer/packages/test-showroom-activity/1.0.3/node_modules/test-showroom-activity/build/Activity.DOCUMENTATION.md" />
+        <option value="$PROJECT_DIR$/src/server/tmp/npm-installer/packages/test-showroom-jcatalog-react-user-profile/1.0.10/node_modules/test-showroom-jcatalog-react-user-profile/lib/components/ColumnPicker/ColumnPicker.DOCUMENTATION.md" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRenderer/DefaultScopeComponent.react.js" />
+        <option value="$PROJECT_DIR$/src/client/components/DefaultScopeComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/client/local-loader/index.js" />
+        <option value="$PROJECT_DIR$/src/client/components/ComponentRenderer/ComponentRenderer.react.js" />
+        <option value="$PROJECT_DIR$/src/client/index-page.js" />
+        <option value="$PROJECT_DIR$/src/client/decorators/showroomScopeDecorator.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/client/components/ToolApplicationHeader/ToolApplicationHeader.react.js" />
+        <option value="$PROJECT_DIR$/src/server/index.js" />
+        <option value="$PROJECT_DIR$/src/server/install-and-init-packages.js" />
+        <option value="$PROJECT_DIR$/src/server/npm-bundler/make-bundles.js" />
+        <option value="$PROJECT_DIR$/src/server/npm-installer/make-install.js" />
+        <option value="$PROJECT_DIR$/src/server/npm-scanner/utils.js" />
+        <option value="$PROJECT_DIR$/src/server/npm-scanner/make-scan.js" />
+        <option value="$PROJECT_DIR$/src/server/init-packages.js" />
+        <option value="$PROJECT_DIR$/src/client/index.js" />
+        <option value="$PROJECT_DIR$/webpack.development.config.js" />
+        <option value="$PROJECT_DIR$/scripts/build.js" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/server/tools/npm-bundler/config.js" />
+        <option value="$PROJECT_DIR$/src/server/tools/npm-installer/config.js" />
+        <option value="$PROJECT_DIR$/src/server/tools/npm-scanner/config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1928" />
+    <option name="height" value="1060" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="showroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="showroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="showroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="showroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="showroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="showroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="showroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../generator-jcatalog-react-webpack" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\showroom\client" />
+      <recent name="D:\work\showroom\server\src" />
+      <recent name="D:\work\showroom\server" />
+      <recent name="D:\work\showroom" />
+      <recent name="D:\work\showroom\client\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\showroom\external_modules" />
+      <recent name="D:\work\showroom\src\client\components\DefaultScopeComponent" />
+      <recent name="D:\work\showroom\src\client\components\ComponentRenderer" />
+      <recent name="D:\work\showroom\src\client\components\ComponentRendererElement" />
+      <recent name="D:\work\showroom\src\client\components\DemoPage" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="showroom" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="820dcd46-9133-470a-be16-bc971ec00811" name="Default" comment="" />
+      <created>1474878218257</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1474878218257</updated>
+      <workItem from="1474878220313" duration="10753000" />
+      <workItem from="1474891425997" duration="5134000" />
+      <workItem from="1474973569274" duration="3571000" />
+      <workItem from="1474984711972" duration="34067000" />
+      <workItem from="1475069525569" duration="12646000" />
+      <workItem from="1475130333006" duration="9935000" />
+      <workItem from="1475147152430" duration="2608000" />
+      <workItem from="1475151431476" duration="8976000" />
+      <workItem from="1475228459746" duration="312000" />
+      <workItem from="1475229812499" duration="9970000" />
+      <workItem from="1475244982590" duration="675000" />
+      <workItem from="1475245792258" duration="299000" />
+      <workItem from="1475488948954" duration="2189000" />
+      <workItem from="1475566784974" duration="3546000" />
+      <workItem from="1476192421399" duration="28000" />
+      <workItem from="1476200479939" duration="7762000" />
+      <workItem from="1476431260717" duration="10065000" />
+      <workItem from="1476698838341" duration="1118000" />
+      <workItem from="1476700949151" duration="1594000" />
+      <workItem from="1476703940079" duration="3625000" />
+      <workItem from="1476712148612" duration="27119000" />
+      <workItem from="1476784794140" duration="8270000" />
+      <workItem from="1476796895361" duration="4260000" />
+      <workItem from="1476862418261" duration="13019000" />
+      <workItem from="1476885740525" duration="973000" />
+      <workItem from="1476886962424" duration="76000" />
+      <workItem from="1476942074948" duration="297000" />
+      <workItem from="1476944955114" duration="939000" />
+      <workItem from="1477039690620" duration="26000" />
+      <workItem from="1477039758038" duration="3477000" />
+      <workItem from="1477056223647" duration="11314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="198643000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4" y="-4" width="1928" height="1060" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16080937" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/client/src/decorators">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/tmp/npm-installer/packages/test-showroom-activity/1.0.3/node_modules/test-showroom-activity/build/Activity.DOCUMENTATION.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/tmp/npm-installer/packages/test-showroom-jcatalog-react-user-profile/1.0.10/node_modules/test-showroom-jcatalog-react-user-profile/lib/components/ColumnPicker/ColumnPicker.DOCUMENTATION.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="629">
+            <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Documentation/Documentation.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/DefaultScopeComponent/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="53" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ComponentRenderer/ComponentRendered.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/tmp/npm-installer/packages/test-showroom-activity/1.0.3/node_modules/test-showroom-activity/build/ActivityLogger.DOCUMENTATION.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/dist/js/docs.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/decorators/showroomScopeDecorator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/external_modules/jcatalog-bootstrap/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/DemoPageIndex/DemoPageIndex.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ToolApplicationHeader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ComponentRendererElement/ComponentRendererElement.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ComponentRenderer/ComponentRenderer.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/DefaultScopeComponent/DefaultScopeComponent.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/ToolApplicationHeader/ToolApplicationHeader.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/DemoPage/DemoPage.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1476778020968" expanded="true" signature="3284:3465" ph="..." />
+            <marker date="1476778020968" expanded="true" signature="3575:3879" ph="..." />
+            <marker date="1476778020968" expanded="true" signature="3599:3866" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/tools/npm-bundler/make-bundles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/local-loader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/local-loader/parseDocumentation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="84" selection-start-line="32" selection-start-column="84" selection-end-line="32" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/remote-loader/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/remote-loader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-589">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/parseComponents.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/tools/npm-scanner/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/tools/npm-scanner/make-scan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index-page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/serverConfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/webpack.link.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/webpack.development.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/webpack.production.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/webpack-bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="663">
+            <caret line="225" column="46" selection-start-line="225" selection-start-column="46" selection-end-line="225" selection-end-column="46" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/installers/fs-loader/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/installers/fs-loader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/installers/npm-loader/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/installers/npm-loader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/installers/npm-loader/lib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/installers/lib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/init-packages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/tools/npm-bundler/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/tools/npm-installer/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/tools/npm-installer/make-install.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/tools/npm-scanner/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

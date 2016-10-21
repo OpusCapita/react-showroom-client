@@ -1,0 +1,14 @@
+*.log
+../.idea/showroom.iml
+.idea
+tmp
+npm-debug.log
+/static
+/build
+/coverage
+/dist
+/docs
+/lib
+/library
+/node_modules
+/target
