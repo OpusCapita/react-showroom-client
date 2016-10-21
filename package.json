@@ -4,12 +4,9 @@
   "description": "React components catalog component.",
   "scripts": {
     "build": "rimraf lib && webpack --config ./webpack.production.config",
+    "init-packages": "node ./src/server/init-packages.js",
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
     "lint": "eslint src/client",
-    "npm-packages-bundle": "node ./src/server/npm-bundler/make-bundles.js",
-    "npm-packages-init": "npm run npm-packages-install & npm run npm-packages-bundle & npm run npm-packages-scan",
-    "npm-packages-install": "node ./src/server/npm-installer/make-install.js",
-    "npm-packages-scan": "node ./src/server/npm-scanner/make-scan.js",
     "postversion": "git push",
     "prepublish": "npm run build",
     "start": "nodemon --watch src/server src/server/index --exec babel-node"
