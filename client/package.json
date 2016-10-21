@@ -4,12 +4,11 @@
   "description": "React components catalog component.",
   "scripts": {
     "build": "rimraf lib && webpack --config ./webpack.production.config",
-    "init-packages": "node ./src/server/init-packages.js",
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
     "lint": "eslint src/client",
     "postversion": "git push",
     "prepublish": "npm run build",
-    "start": "nodemon --watch src/server src/server/index --exec babel-node"
+    "start": "nodemon --watch www www/index --exec babel-node"
   },
   "author": {
     "name": "Kirill Volkovich",

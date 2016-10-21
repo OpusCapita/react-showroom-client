@@ -4,6 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/client/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/server/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/src/server/tmp" />
     </content>
     <orderEntry type="inheritedJdk" />

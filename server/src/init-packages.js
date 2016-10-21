@@ -8,7 +8,7 @@ let installConfig = require('./tools/npm-installer/config');
 let bundlerConfig = require('./tools/npm-bundler/config');
 let scannerConfig = require('./tools/npm-scanner/config');
 
-makeInstall(installConfig);
+// makeInstall(installConfig);
 makeBundles(bundlerConfig);
 makeScan(scannerConfig);
 

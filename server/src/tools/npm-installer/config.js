@@ -18,6 +18,6 @@ module.exports = {
       versionsFilter: version => semver.gt(version, '1.0.7')
     }
   ],
-  installationRoot: libPath.resolve(libPath.join(__dirname, '../../tmp/npm-installer/packages')),
-  packagesInfoPath: libPath.resolve(libPath.join(__dirname, '../../tmp/npm-installer/packages-info.js'))
+  installationRoot: libPath.resolve(libPath.join(__dirname, '../../../tmp/npm-installer/packages')),
+  packagesInfoPath: libPath.resolve(libPath.join(__dirname, '../../../tmp/npm-installer/packages-info.js'))
 };
