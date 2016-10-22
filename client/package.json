@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rimraf lib && webpack --config ./webpack.production.config",
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
-    "lint": "eslint src/client",
+    "lint": "eslint src",
     "postversion": "git push",
     "prepublish": "npm run build",
     "start": "nodemon --watch www www/index --exec babel-node"
