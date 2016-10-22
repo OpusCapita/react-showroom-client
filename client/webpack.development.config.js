@@ -6,14 +6,16 @@ let port = require('./serverConfig').port;
 
 module.exports = {
   entry: path.resolve(path.join(__dirname, 'www', 'index-page.js')),
+  context: path.resolve(__dirname),
   output: {
-    publicPath: `/`,
+    publicPath: '/',
     path: path.resolve(__dirname, 'lib'),
     filename: `index.js`,
     library: 'demopage',
     libraryTarget: 'umd'
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
+  watch: true,
   plugins: [
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({

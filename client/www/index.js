@@ -1,29 +1,36 @@
 'use strict';
 
+const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const webpack = require('webpack');
-const webpackMiddleware = require('webpack-dev-middleware');
 const app = express();
+const compiler = webpack(require('../webpack.development.config'));
 const host = require('../clientConfig').host;
 const port = require('../clientConfig').port;
 
-app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
+const babelrc = fs.readFileSync(path.join(__dirname, '../.babelrc'));
+let config;
 
-app.use(webpackMiddleware(webpack(require('../webpack.development.config')), {
-  publicPath: '/',
+try {
+  config = JSON.parse(babelrc);
+} catch (err) {
+  console.error('==>     ERROR: Error parsing your .babelrc.');
+  console.error(err);
+}
+
+require('babel-register')(config);
+
+var serverOptions = {
   watchOptions: {
     aggregateTimeout: 300,
     poll: true
   },
-  stats: {
-    colors: true
-  }
-}));
+  headers: {'Access-Control-Allow-Origin': '*'},
+  stats: {colors: true}
+};
+
+app.use(require('webpack-dev-middleware')(compiler, serverOptions));
 
 app.get('/', function(req, res) {
   res.sendFile(path.normalize(__dirname + '/index.html'));
