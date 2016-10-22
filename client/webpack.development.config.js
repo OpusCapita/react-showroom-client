@@ -5,7 +5,7 @@ let host = require('./serverConfig').host;
 let port = require('./serverConfig').port;
 
 module.exports = {
-  entry: path.resolve(path.join(__dirname, 'www/index-page.js')),
+  entry: path.resolve(path.join(__dirname, 'www', 'index-page.js')),
   output: {
     publicPath: `/`,
     path: path.resolve(__dirname, 'lib'),

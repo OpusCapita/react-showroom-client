@@ -54,5 +54,8 @@
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.5.1",
     "write-file-webpack-plugin": "^3.3.0"
+  },
+  "dependencies": {
+    "jcatalog-showroom": "^0.2.5"
   }
 }

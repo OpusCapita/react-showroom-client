@@ -7,7 +7,7 @@ npm-debug.log
 /coverage
 /dist
 /docs
-/lib
+/client/lib
 /library
 /client/**/node_modules
 /server/**/node_modules

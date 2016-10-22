@@ -14,8 +14,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(express.static(path.normalize(__dirname + '/../lib/')));
-app.use(webpackMiddleware(webpack(require('../../client/webpack.development.config.js')), {
+app.use(webpackMiddleware(webpack(require('../webpack.development.config')), {
   publicPath: '/',
   watchOptions: {
     aggregateTimeout: 300,
