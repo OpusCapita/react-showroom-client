@@ -20,22 +20,11 @@ function getPackage(installationRoot, packageName, packageVersion, onRead) {
   }
 }
 
-function getRelatedFile(installationRoot, packageName, packageVersion, relativePath, onRead) {
-  let relateFilePath = libPath.resolve(
-    libPath.join(
-      installationRoot,
-      packageName,
-      packageVersion,
-      'node_modules',
-      packageName,
-      relativePath
-    )
-  );
-  console.log(relateFilePath);
+function getRelatedFile(filePath, onRead) {
   try {
-    libFs.readFile(relateFilePath, 'utf-8', onRead);
+    libFs.readFile(filePath, 'utf-8', onRead);
   } catch (err) {
-    console.log('There is no package on this path:', relateFilePath);
+    console.log('There is no package on this path:', filePath);
     console.log(err);
   }
 }
