@@ -10,13 +10,13 @@ class DemoPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showSidebar: false,
+      showSidebar: !props.isScreenSmall,
       packagesInfo: [],
       componentsInfo: [],
       currentComponentId: '',
       currentComponent: null,
       options: {
-        maxContainerWidth: '50%',
+        maxContainerWidth: '30%',
         isShowContainerBorders: false,
         isContentCentered: false
       }
@@ -112,19 +112,36 @@ class DemoPage extends Component {
         component={this.state.currentComponent}
         componentInfo={currentComponentInfo}
         maxContainerWidth={options.maxContainerWidth}
+        isScreenSmall={this.props.isScreenSmall}
         options={options}
       />
     ) : null;
 
-    let sidebar = this.state.showSidebar ? (
-      <div className="demo-page__filter-sidebar">
+    let sidebar = this.state.showSidebar || !this.props.isScreenSmall ? (
+      <div
+        className="demo-page__filter-sidebar"
+        style={{
+          zIndex: this.props.isScreenSmall ? '9999' : 1,
+          boxShadow: this.props.isScreenSmall ? '0 0 12px rgba(0, 0, 0, 0.65)' : ''
+        }}
+      >
         <FilterSidebar
           componentsInfo={this.state.componentsInfo}
           currentComponent={this.state.currentComponent}
           onComponentChange={this.handleComponentSelection.bind(this, this.state.componentsInfo)}
+          hideOnOutsideClick={this.props.isScreenSmall}
           onHide={this.toggleSidebar.bind(this)}
         />
       </div>
+    ) : null;
+
+    let toggleSidebarBtn = this.props.isScreenSmall ? (
+      <button
+        className="btn btn-primary demo-page__primary-btn"
+        onClick={this.toggleSidebar.bind(this)}
+      >
+        Toggle sidebar
+      </button>
     ) : null;
 
     let componentPackage = packagesInfo.find(packageInfo =>
@@ -137,12 +154,7 @@ class DemoPage extends Component {
         <div className="col-xs-12">
           <div className="demo-page__main-menu-container">
             <div className="demo-page__main-menu-container-group">
-              <button
-                className="btn btn-primary demo-page__primary-btn"
-                onClick={this.toggleSidebar.bind(this)}
-              >
-                Choose component
-              </button>
+              {toggleSidebarBtn}
               <div
                 className="demo-page__options-group"
                 onMouseEnter={() => this.setOption('isShowContainerBorders', true)}
@@ -195,5 +207,6 @@ class DemoPage extends Component {
 }
 
 DemoPage.propTypes = {
-  loader: PropTypes.object.isRequired
+  loader: PropTypes.object.isRequired,
+  isScreenSmall: PropTypes.bool
 };

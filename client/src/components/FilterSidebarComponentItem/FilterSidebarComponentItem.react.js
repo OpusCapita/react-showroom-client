@@ -50,6 +50,11 @@ class FilterSidebarComponentItem extends Component {
   render() {
     let { component, currentComponent } = this.props;
     let currentClassName = 'filter-sidebar-component-item--current';
+
+    if(!this.props.currentComponent) {
+      return null;
+    }
+
     let isCurrent = (component.package === currentComponent.componentInfo.package) &&
       (component.name === currentComponent.componentInfo.name);
     return (
@@ -60,7 +65,12 @@ class FilterSidebarComponentItem extends Component {
         }
         onClick={() => !isCurrent && this.handleVersionChange(this.state.currentVersion)}
       >
-        <div className="filter-sidebar-component-item__name">{component.name}</div>
+        <div
+          className="filter-sidebar-component-item__name"
+          title={component.name}
+        >
+          {component.name}
+        </div>
         <div
           className="filter-sidebar-component-item__version"
           onClick={event => event.stopPropagation()}

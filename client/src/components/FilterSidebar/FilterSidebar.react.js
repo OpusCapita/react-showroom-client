@@ -14,8 +14,8 @@ class FilterSidebar extends Component {
   }
 
   componentDidMount() {
-    this.refs.searchInput.focus();
     document.body.addEventListener('click', this.handleClickOutside);
+    this.refs.searchInput.focus();
   }
 
   componentWillUnmount() {
@@ -39,6 +39,10 @@ class FilterSidebar extends Component {
   }
 
   handleClickOutside(event) {
+    if(!this.props.hideOnOutsideClick) {
+      return false;
+    }
+    console.log('hoco', this.props.hideOnOutsideClick);
     event.preventDefault();
     let hasParent = (node, parent) => {
       if (node.parentNode) {
@@ -62,12 +66,6 @@ class FilterSidebar extends Component {
         ref={container => { this._container = container }}
         className="filter-sidebar"
       >
-        <div
-          onClick={this.props.onHide}
-          className="filter-sidebar-close-btn"
-        >
-          &times;
-        </div>
         <div className="filter-sidebar__filter-input-wrapper">
           <input
             className="filter-sidebar__filter-input form-control"
@@ -99,8 +97,11 @@ FilterSidebar.propTypes = {
   currentComponent: PropTypes.object,
   componentsInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
   onComponentChange: PropTypes.func,
-  onHide: PropTypes.func
+  onHide: PropTypes.func,
+  hideOnOutsideClick: PropTypes.bool
 };
 FilterSidebar.defaultProps = {
-  componentsInfo: []
+  currentComponent: {},
+  componentsInfo: [],
+  hideOnOutsideClick: false
 };

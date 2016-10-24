@@ -103,7 +103,8 @@ class ComponentRenderer extends Component {
 
   render() {
     let { component, options } = this.props;
-    let isHorizontalLayout = parseInt(this.props.maxContainerWidth, 10) <= 50;
+    let isHorizontalLayout = (!this.props.isScreenSmall) && (parseInt(this.props.maxContainerWidth, 10) <= 50);
+    let isMobileScreen = window.innerWidth <= 800;
     let containerBordersClassName = options.isShowContainerBorders ?
       'component-renderer__element-container-inner--with-borders' :
       ' ';
@@ -114,6 +115,7 @@ class ComponentRenderer extends Component {
       relatedFile => relatedFile.name === 'readme'
     )[0].content;
 
+    console.log(isHorizontalLayout);
     return (
       <div
         className="row component-renderer"
@@ -137,23 +139,19 @@ class ComponentRenderer extends Component {
             />
           </div>
         </div>
-        <div
-          className="component-renderer__code-and-docs"
-          style={{
-            width: isHorizontalLayout ? '50%' : '100%'
-          }}
-        >
+        <div className="component-renderer__code-and-docs">
           {isHorizontalLayout ? null : (<hr />)}
           <div
             style={{
               display: isHorizontalLayout ? 'block' : 'flex',
               height: isHorizontalLayout ? 'calc(100vh - 180px)' : 'auto',
-              overflow: 'auto'
+              overflow: 'auto',
+              flexDirection: isMobileScreen ? 'column' : 'row'
             }}
           >
             <div
               className="component-renderer__code-editor-container"
-              style={{ width: isHorizontalLayout ? '100%' : '50%' }}
+              style={{ width: (isHorizontalLayout || isMobileScreen) ? '100%' : '50%' }}
             >
               <CodeMirror
                 className="component-renderer__code-editor"
@@ -177,7 +175,7 @@ class ComponentRenderer extends Component {
               </div>
             </div>
             <div
-              style={{ width: isHorizontalLayout ? '100%' : '50%' }}
+              style={{ width: (isHorizontalLayout || isMobileScreen) ? '100%' : '50%' }}
             >
               <Documentation markdown={componentDocumentation}/>
             </div>
@@ -193,7 +191,8 @@ ComponentRenderer.propTypes = {
   component: PropTypes.object,
   componentInfo: PropTypes.object,
   maxContainerWidth: PropTypes.string,
-  options: PropTypes.object
+  options: PropTypes.object,
+  isScreenSmall: PropTypes.bool
 };
 ComponentRenderer.defaultProps = {
   maxContainerWidth: '100%'
