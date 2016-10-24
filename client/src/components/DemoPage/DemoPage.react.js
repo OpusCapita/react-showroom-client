@@ -16,7 +16,7 @@ class DemoPage extends Component {
       currentComponentId: '',
       currentComponent: null,
       options: {
-        maxContainerWidth: '30%',
+        maxContainerWidth: '40%',
         isShowContainerBorders: false,
         isContentCentered: false
       }
@@ -43,6 +43,7 @@ class DemoPage extends Component {
 
   getPackagesInfo() {
     this.props.loader.getPackagesInfo(data => {
+      console.log('data', data);
       this.setState({ packagesInfo: data });
     });
   }

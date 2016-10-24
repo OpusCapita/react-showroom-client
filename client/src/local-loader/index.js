@@ -15,7 +15,7 @@ function getComponentsInfo(componentns) {
 }
 
 let loaderInstance = function(loaderOptions) {
-  let pkgInfo = loaderOptions.packagesInfo;
+  let pkgInfo = [{ info: loaderOptions.packageInfo }];
   let cmpInfo = loaderOptions.componentsInfo;
   return {
     getPackagesInfo: onData => onData(pkgInfo),
