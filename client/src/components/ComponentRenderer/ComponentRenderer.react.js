@@ -115,7 +115,6 @@ class ComponentRenderer extends Component {
       relatedFile => relatedFile.name === 'readme'
     )[0].content;
 
-    console.log(isHorizontalLayout);
     return (
       <div
         className="row component-renderer"
@@ -128,7 +127,7 @@ class ComponentRenderer extends Component {
             component-renderer__element-container-outer
             ${containerBordersClassName}
           `}
-          style={{ maxWidth: this.props.maxContainerWidth }}
+          style={{ maxWidth: isMobileScreen ? '100%' : this.props.maxContainerWidth }}
         >
           <div
             className={` component-renderer__element-container-inner ${contentCenteredClassName} `}
@@ -139,7 +138,10 @@ class ComponentRenderer extends Component {
             />
           </div>
         </div>
-        <div className="component-renderer__code-and-docs">
+        <div
+          className="component-renderer__code-and-docs"
+          style={{ padding: isMobileScreen ? '0' : '12px' }}
+        >
           {isHorizontalLayout ? null : (<hr />)}
           <div
             style={{
@@ -177,7 +179,10 @@ class ComponentRenderer extends Component {
             <div
               style={{ width: (isHorizontalLayout || isMobileScreen) ? '100%' : '50%' }}
             >
-              <Documentation markdown={componentDocumentation}/>
+              <Documentation
+                markdown={componentDocumentation}
+                isMobileScreen={isMobileScreen}
+              />
             </div>
 
           </div>

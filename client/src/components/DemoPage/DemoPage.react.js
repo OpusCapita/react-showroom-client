@@ -106,6 +106,7 @@ class DemoPage extends Component {
 
   render() {
     let { options, packagesInfo } = this.state;
+    let isMobileScreen = window.innerWidth <= 800;
     let currentComponentInfo = this.getCurrentComponentInfo();
     let componentRenderer = this.state.currentComponent ? (
       <ComponentRenderer
@@ -144,6 +145,26 @@ class DemoPage extends Component {
       </button>
     ) : null;
 
+    let maxWidthSlider = !isMobileScreen ? (
+      <div
+        className="demo-page__max-container-width-slider-group"
+      >
+        <div className="demo-page__max-container-width-slider-group-title">
+          Max width:
+        </div>
+        <Rcslider
+          className="demo-page__max-container-width-slider"
+          onChange={value => this.setOption('maxContainerWidth', `${value}%`)}
+          defaultValue={parseInt(options.maxContainerWidth, 10)}
+          tipFormatter={null}
+        />
+        <div className="demo-page__max-container-width-slider-group-value">
+          {options.maxContainerWidth}
+        </div>
+
+      </div>
+    ) : null;
+
     let componentPackage = packagesInfo.find(packageInfo =>
       packageInfo.info.name === currentComponentInfo.package &&
       packageInfo.info.version === currentComponentInfo.version
@@ -160,23 +181,7 @@ class DemoPage extends Component {
                 onMouseEnter={() => this.setOption('isShowContainerBorders', true)}
                 onMouseLeave={() => this.setOption('isShowContainerBorders', false)}
               >
-                <div
-                  className="demo-page__max-container-width-slider-group"
-                >
-                  <div className="demo-page__max-container-width-slider-group-title">
-                    Max width:
-                  </div>
-                  <Rcslider
-                    className="demo-page__max-container-width-slider"
-                    onChange={value => this.setOption('maxContainerWidth', `${value}%`)}
-                    defaultValue={parseInt(options.maxContainerWidth, 10)}
-                    tipFormatter={null}
-                  />
-                  <div className="demo-page__max-container-width-slider-group-value">
-                    {options.maxContainerWidth}
-                  </div>
-
-                </div>
+                {maxWidthSlider}
                 <div
                   className={`
                     demo-page__options-item-btn
