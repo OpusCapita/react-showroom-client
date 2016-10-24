@@ -5,6 +5,7 @@ const webpack = require('webpack');
 let config = require('./webpack.development.config.js');
 config.entry = path.resolve(path.join(__dirname, 'src', 'index.js'));
 delete config.devtool;
+delete config.watch;
 delete config.output.publicPath;
 config.plugins = config.plugins.concat([
   new webpack.DefinePlugin({
