@@ -12,6 +12,7 @@ class DemoPageComponentShortInfo extends Component {
   }
 
   render() {
+    let repositoryUrl = this.props.repositoryUrl || '';
     return (
       <div
         className="demo-page-component-short-info"
@@ -33,7 +34,7 @@ class DemoPageComponentShortInfo extends Component {
               className="demo-page-component-short-info__git-logo"
               dangerouslySetInnerHTML={{ __html: svgGitLogoContent }}
               target="_blank"
-              href={this.prepareGitRepoUrl(this.props.repositoryUrl)}
+              href={this.prepareGitRepoUrl(repositoryUrl)}
             ></a>
           </div>
         </div>

@@ -183,7 +183,7 @@ class DemoPage extends Component {
               repositoryUrl={componentPackage && componentPackage.info.repository.url}
             />
           </div>
-          <hr />
+          <hr className="demo-page__main-menu-container-bottom-hr"/>
           <div className="demo-page__component-render-container">
             {componentRenderer}
           </div>
