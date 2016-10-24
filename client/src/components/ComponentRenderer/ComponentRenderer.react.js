@@ -140,7 +140,7 @@ class ComponentRenderer extends Component {
         </div>
         <div
           className="component-renderer__code-and-docs"
-          style={{ padding: isMobileScreen ? '0' : '12px' }}
+          style={{ padding: isMobileScreen ? '0' : '0 0 0 12px' }}
         >
           {isHorizontalLayout ? null : (<hr />)}
           <div
