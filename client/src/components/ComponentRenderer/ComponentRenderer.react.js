@@ -140,12 +140,17 @@ class ComponentRenderer extends Component {
         <div
           className="component-renderer__code-and-docs"
           style={{
-            width: isHorizontalLayout ? '50%' : '100%',
-            height: isHorizontalLayout ? 'calc(100vh - 180px)' : 'auto'
+            width: isHorizontalLayout ? '50%' : '100%'
           }}
         >
           {isHorizontalLayout ? null : (<hr />)}
-          <div style={{ display: isHorizontalLayout ? 'block' : 'flex' }}>
+          <div
+            style={{
+              display: isHorizontalLayout ? 'block' : 'flex',
+              height: isHorizontalLayout ? 'calc(100vh - 180px)' : 'auto',
+              overflow: 'auto'
+            }}
+          >
             <div
               className="component-renderer__code-editor-container"
               style={{ width: isHorizontalLayout ? '100%' : '50%' }}

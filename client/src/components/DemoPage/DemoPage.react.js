@@ -105,7 +105,7 @@ class DemoPage extends Component {
   }
 
   render() {
-    let { options } = this.state;
+    let { options, packagesInfo } = this.state;
     let currentComponentInfo = this.getCurrentComponentInfo();
     let componentRenderer = this.state.currentComponent ? (
       <ComponentRenderer
@@ -126,6 +126,11 @@ class DemoPage extends Component {
         />
       </div>
     ) : null;
+
+    let componentPackage = packagesInfo.find(packageInfo =>
+      packageInfo.info.name === currentComponentInfo.package &&
+      packageInfo.info.version === currentComponentInfo.version
+    );
 
     return (
       <div className="row">
@@ -175,6 +180,7 @@ class DemoPage extends Component {
               packageName={currentComponentInfo && currentComponentInfo.package}
               componentName={currentComponentInfo && currentComponentInfo.name}
               version={currentComponentInfo && currentComponentInfo.version}
+              repositoryUrl={componentPackage && componentPackage.info.repository.url}
             />
           </div>
           <hr />

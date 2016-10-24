@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import './ToolApplicationHeader.less';
-let svgLogoContent = require('!!raw-loader!../ToolApplicationHeader/logo.svg');
-let svgGitLogoContent = require('!!raw-loader!../ToolApplicationHeader/git-logo.svg');
+let svgLogoContent = require('!!raw-loader!./logo.svg');
 
 export default
 class ToolApplicationHeader extends Component {
@@ -29,13 +28,6 @@ class ToolApplicationHeader extends Component {
                 }
               </div>
             </div>
-            <a
-              title="Go to project repository"
-              className="tool-application-header__git-logo"
-              dangerouslySetInnerHTML={{ __html: svgGitLogoContent }}
-              target="_blank"
-              href={this.props.repositoryUrl}
-            ></a>
           </div>
         </div>
         <hr className="tool-application-header__hr"/>
