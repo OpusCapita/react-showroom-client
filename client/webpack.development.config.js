@@ -50,7 +50,7 @@ module.exports = {
     extensions: ['', '.js']
   },
   postcss: function () {
-        return [require('autoprefixer')];
+    return [require('autoprefixer')];
   },
   module: {
     loaders: [

@@ -103,6 +103,7 @@ class ComponentRenderer extends Component {
 
   render() {
     let { component, options } = this.props;
+    let isHorizontalLayout = parseInt(this.props.maxContainerWidth, 10) <= 50;
     let containerBordersClassName = options.isShowContainerBorders ?
       'component-renderer__element-container-inner--with-borders' :
       ' ';
@@ -114,10 +115,15 @@ class ComponentRenderer extends Component {
     )[0].content;
 
     return (
-      <div className="row component-renderer">
+      <div
+        className="row component-renderer"
+        style={{
+          flexDirection: isHorizontalLayout ? 'row-reverse' : 'column'
+        }}
+      >
         <div
           className={`
-            col-xs-12 component-renderer__element-container-outer
+            component-renderer__element-container-outer
             ${containerBordersClassName}
           `}
           style={{ maxWidth: this.props.maxContainerWidth }}
@@ -131,10 +137,19 @@ class ComponentRenderer extends Component {
             />
           </div>
         </div>
-        <div className="col-xs-12">
-          <hr />
-          <div className="row">
-            <div className="col-md-6">
+        <div
+          className="component-renderer__code-and-docs"
+          style={{
+            width: isHorizontalLayout ? '50%' : '100%',
+            height: isHorizontalLayout ? 'calc(100vh - 180px)' : 'auto'
+          }}
+        >
+          {isHorizontalLayout ? null : (<hr />)}
+          <div style={{ display: isHorizontalLayout ? 'block' : 'flex' }}>
+            <div
+              className="component-renderer__code-editor-container"
+              style={{ width: isHorizontalLayout ? '100%' : '50%' }}
+            >
               <CodeMirror
                 className="component-renderer__code-editor"
                 value={this.state.code}
@@ -144,6 +159,7 @@ class ComponentRenderer extends Component {
                   mode: { name: 'jsx', json: true },
                   theme: 'material',
                   tabSize: 2,
+                  lineWrapping: true,
                   smartIndent: true,
                   showCursorWhenSelecting: true
                 }}
@@ -155,7 +171,9 @@ class ComponentRenderer extends Component {
                 Reset code
               </div>
             </div>
-            <div className="col-md-6">
+            <div
+              style={{ width: isHorizontalLayout ? '100%' : '50%' }}
+            >
               <Documentation markdown={componentDocumentation}/>
             </div>
 

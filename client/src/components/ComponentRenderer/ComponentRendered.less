@@ -2,6 +2,10 @@
   height: 600px;
 }
 
+.component-renderer__code-editor-container {
+  position: relative;
+}
+
 .component-renderer__code-editor {
   margin-bottom: 30px;
 }
@@ -18,13 +22,24 @@
   }
 }
 
+.component-renderer {
+  display: flex;
+}
+
+.component-renderer__code-and-docs {
+  padding: 0 12px;
+  overflow: auto;
+}
+
 .component-renderer__element-container-outer {
   will-change: max-width;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
-  float: none !important;
+  flex: 1;
+  padding: 0 12px;
+  margin-top: 0;
 }
 
 .component-renderer__element-container-inner {
