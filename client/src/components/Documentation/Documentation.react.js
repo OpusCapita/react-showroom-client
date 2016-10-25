@@ -9,8 +9,15 @@ class Documentation extends Component {
   };
 
   render() {
-    let { isMobileScreen } = this.props;
-    let documentationStyles = isMobileScreen ? { paddingLeft: '6px', paddingRight: '6px' } : {};
+    let { isMobileScreen, isHorizontalLayout } = this.props;
+    let documentationStyles = {};
+    if(isMobileScreen) {
+      documentationStyles = { paddingLeft: '6px', paddingRight: '6px' }
+    }
+    if(isHorizontalLayout) {
+      documentationStyles = { paddingLeft: '0', paddingRight: '6px' }
+    }
+
     return (
       <div
         className="documentation"
@@ -22,5 +29,6 @@ class Documentation extends Component {
 }
 
 Documentation.propTypes = {
-  isMobileScreen: PropTypes.bool
+  isMobileScreen: PropTypes.bool,
+  isHorizontalLayout: PropTypes.bool
 }

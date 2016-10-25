@@ -189,6 +189,7 @@ class DemoPage extends Component {
                     ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
                   `}
                   onClick={() => this.setOption('isContentCentered', !options.isContentCentered)}
+                  style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
                 >
                   Force Centering
                 </div>

@@ -182,6 +182,7 @@ class ComponentRenderer extends Component {
               <Documentation
                 markdown={componentDocumentation}
                 isMobileScreen={isMobileScreen}
+                isHorizontalLayout={isHorizontalLayout}
               />
             </div>
 
