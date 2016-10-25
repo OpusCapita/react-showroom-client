@@ -52,6 +52,7 @@
     "less-loader": "2.2.2",
     "markdown-to-ast": "3.4.0",
     "mkdirp": "0.5.1",
+    "path": "^0.12.7",
     "postcss-loader": "^0.13.0",
     "raw-loader": "0.5.1",
     "rc-slider": "^5.1.1",

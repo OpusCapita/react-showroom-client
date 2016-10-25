@@ -10,7 +10,7 @@ function getComponentsInfo(packageName, version, versionRoot, componentsMasks) {
   return findedFiles.map(file => {
     let fileContent = libFs.readFileSync(file, 'utf-8');
     let parsedDocumentation = parseDocumentation(fileContent);
-    let relativeReadmePath = libPath.relative(versionRoot, file);
+    let readmePath = libPath.resolve(versionRoot, file);
     return {
       "package": packageName,
       name: parsedDocumentation.componentName,
@@ -18,7 +18,7 @@ function getComponentsInfo(packageName, version, versionRoot, componentsMasks) {
       tags: parsedDocumentation.tags || '',
       relatedFiles: [{
         name: 'readme',
-        path: relativeReadmePath
+        path: readmePath
       }]
     };
   });
@@ -43,7 +43,7 @@ function scanInstalledPackages(config) {
   , []);
 }
 
-module.exports = function makeScan(config) {
+function makeScan(config) {
   console.log('Scanning started.');
 
   let componentsInfo = scanInstalledPackages(config);
@@ -58,3 +58,8 @@ module.exports = function makeScan(config) {
   console.log('Results writed to:');
   console.log('\t', config.componentsInfoPath);
 }
+
+module.exports = {
+  default: makeScan,
+  getComponentsInfo: getComponentsInfo
+};
