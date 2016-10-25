@@ -42,7 +42,6 @@ class FilterSidebar extends Component {
     if(!this.props.hideOnOutsideClick) {
       return false;
     }
-    console.log('hoco', this.props.hideOnOutsideClick);
     event.preventDefault();
     let hasParent = (node, parent) => {
       if (node.parentNode) {

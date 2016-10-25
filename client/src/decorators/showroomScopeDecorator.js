@@ -19,6 +19,7 @@ target => {
        Because 'undefined' is an frequently occurring word, we use '_scope' */
     transpiledCode = transpiledCode.replace(/_scope/g, 'this');
     let compiledCode = eval(transpiledCode); // eslint-disable-line no-eval
+    console.log('compiled', compiledCode)
     return compiledCode;
   }
 };

@@ -43,7 +43,6 @@ class DemoPage extends Component {
 
   getPackagesInfo() {
     this.props.loader.getPackagesInfo(data => {
-      console.log('data', data);
       this.setState({ packagesInfo: data });
     });
   }
