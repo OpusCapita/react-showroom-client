@@ -1,6 +1,6 @@
 {
   "name": "jcatalog-showroom-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Server and tools for jcatalog-showroom.",
   "scripts": {
     "init-packages": "node ./src/init-packages.js",
