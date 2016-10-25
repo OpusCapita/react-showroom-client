@@ -34,7 +34,7 @@ class DemoPageIndex extends Component {
       <div className="container-fluid">
         <div
           className="row"
-          style={{ marginLeft: this.state.isScreenSmall ? '-15px' : '288px' }}
+          style={{ marginLeft: this.state.isScreenSmall ? '-15px' : '285px' }}
         >
           <div className="col-xs-12">
             <ToolApplicationHeader
