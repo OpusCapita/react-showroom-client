@@ -5,6 +5,7 @@ const path = require('path');
 const express = require('express');
 const webpack = require('webpack');
 const app = express();
+const compression = require('compression');
 const compiler = webpack(require('../webpack.development.config'));
 const host = require('../clientConfig').host;
 const port = require('../clientConfig').port;
@@ -30,6 +31,7 @@ var serverOptions = {
   stats: {colors: true}
 };
 
+app.use(compression());
 app.use(require('webpack-dev-middleware')(compiler, serverOptions));
 
 app.get('/', function(req, res) {

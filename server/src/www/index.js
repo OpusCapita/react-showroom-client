@@ -2,6 +2,7 @@
 
 const path = require('path');
 const express = require('express');
+const compression = require('compression');
 const app = express();
 const host = require('../../serverConfig').host;
 const port = require('../../serverConfig').port;
@@ -10,6 +11,7 @@ const npmLoader = require('../tools/npm-installer/loader');
 const npmInstallerConfig = require('../tools/npm-installer/config');
 const npmScannerConfig = require('../tools/npm-scanner/config');
 
+app.use(compression());
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');

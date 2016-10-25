@@ -19,7 +19,7 @@ class ComponentRenderer extends Component {
     super(props);
     this.state = {
       code: '{}',
-      transpiledCode: '() => return null',
+      transpiledCode: '() => null',
       reactElement: null
     };
   }
