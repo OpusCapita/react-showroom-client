@@ -107,7 +107,7 @@ class DemoPage extends Component {
 
   render() {
     let { options, packagesInfo } = this.state;
-    let isMobileScreen = window.innerWidth <= 800;
+    let isMobileScreen = window.innerWidth <= 1200;
     let currentComponentInfo = this.getCurrentComponentInfo();
     let componentRenderer = this.state.currentComponent ? (
       <ComponentRenderer

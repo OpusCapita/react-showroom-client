@@ -104,7 +104,7 @@ class ComponentRenderer extends Component {
   render() {
     let { component, options } = this.props;
     let isHorizontalLayout = (!this.props.isScreenSmall) && (parseInt(this.props.maxContainerWidth, 10) <= 50);
-    let isMobileScreen = window.innerWidth <= 800;
+    let isMobileScreen = window.innerWidth <= 1200;
     let containerBordersClassName = options.isShowContainerBorders ?
       'component-renderer__element-container-inner--with-borders' :
       ' ';
