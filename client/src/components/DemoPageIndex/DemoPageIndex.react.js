@@ -13,20 +13,20 @@ class DemoPageIndex extends Component {
     }
   }
 
-  setIsScreenSmall() {
-    this.setState({ isScreenSmall: this.getIsScreenSmall() });
-  }
-
-  getIsScreenSmall() {
-    return window.innerWidth < 1200;
-  }
-
   componentDidMount() {
     window.addEventListener('resize', this.setIsScreenSmall.bind(this));
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.setIsScreenSmall.bind(this));
+  }
+
+  setIsScreenSmall() {
+    this.setState({ isScreenSmall: this.getIsScreenSmall() });
+  }
+
+  getIsScreenSmall() {
+    return window.innerWidth < 1200;
   }
 
   render() {

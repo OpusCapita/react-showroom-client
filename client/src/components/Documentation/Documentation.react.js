@@ -11,17 +11,18 @@ class Documentation extends Component {
   render() {
     let { isMobileScreen, isHorizontalLayout } = this.props;
     let documentationStyles = {};
-    if(isMobileScreen) {
+    if (isMobileScreen) {
       documentationStyles = { paddingLeft: '6px', paddingRight: '6px' }
     }
-    if(isHorizontalLayout) {
+    if (isHorizontalLayout) {
       documentationStyles = { paddingLeft: '0', paddingRight: '6px' }
     }
 
     return (
       <div
         className="documentation"
-        style={documentationStyles}>
+        style={documentationStyles}
+      >
         <Markdown source={this.props.markdown} />
       </div>
     )

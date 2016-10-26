@@ -165,7 +165,8 @@ class DemoPage extends Component {
       </div>
     ) : null;
 
-    let componentPackage = packagesInfo.find(packageInfo => packageInfo.info.name === currentComponentInfo.package);
+    let componentPackage =
+      packagesInfo.find(packageInfo => packageInfo.info.name === currentComponentInfo.package) || {};
 
     return (
       <div className="row">
@@ -195,7 +196,7 @@ class DemoPage extends Component {
               packageName={currentComponentInfo && currentComponentInfo.package}
               componentName={currentComponentInfo && currentComponentInfo.name}
               version={currentComponentInfo && currentComponentInfo.version}
-              repositoryUrl={componentPackage && componentPackage.info.repository.url}
+              repositoryUrl={componentPackage.info && componentPackage.info.repository.url}
             />
           </div>
           <hr className="demo-page__main-menu-container-bottom-hr"/>

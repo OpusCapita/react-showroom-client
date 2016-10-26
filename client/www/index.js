@@ -1,14 +1,15 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const express = require('express');
-const webpack = require('webpack');
-const app = express();
 const compression = require('compression');
-const compiler = webpack(require('../webpack.development.config'));
+const express = require('express');
+const fs = require('fs');
 const host = require('../clientConfig').host;
+const path = require('path');
 const port = require('../clientConfig').port;
+const webpack = require('webpack');
+const compiler = webpack(require('../webpack.development.config'));
+
+const app = express();
 
 const babelrc = fs.readFileSync(path.join(__dirname, '../.babelrc'));
 let config;
