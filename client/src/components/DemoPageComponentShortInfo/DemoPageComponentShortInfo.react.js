@@ -12,7 +12,17 @@ class DemoPageComponentShortInfo extends Component {
   }
 
   render() {
-    let repositoryUrl = this.props.repositoryUrl || '';
+    let { repositoryUrl } = this.props;
+    let repositoryLink = repositoryUrl ? (
+      <a
+        title="Go to project repository"
+        className="demo-page-component-short-info__git-logo"
+        dangerouslySetInnerHTML={{ __html: svgGitLogoContent }}
+        target="_blank"
+        href={this.prepareGitRepoUrl(repositoryUrl)}
+      ></a>
+    ) : null;
+
     return (
       <div
         className="demo-page-component-short-info"
@@ -29,13 +39,7 @@ class DemoPageComponentShortInfo extends Component {
             </div>
           </div>
           <div>
-            <a
-              title="Go to project repository"
-              className="demo-page-component-short-info__git-logo"
-              dangerouslySetInnerHTML={{ __html: svgGitLogoContent }}
-              target="_blank"
-              href={this.prepareGitRepoUrl(repositoryUrl)}
-            ></a>
+            {repositoryLink}
           </div>
         </div>
       </div>

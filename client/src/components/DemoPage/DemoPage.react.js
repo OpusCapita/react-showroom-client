@@ -196,7 +196,11 @@ class DemoPage extends Component {
               packageName={currentComponentInfo && currentComponentInfo.package}
               componentName={currentComponentInfo && currentComponentInfo.name}
               version={currentComponentInfo && currentComponentInfo.version}
-              repositoryUrl={componentPackage.info && componentPackage.info.repository.url}
+              repositoryUrl={
+                componentPackage.info &&
+                componentPackage.info.repository &&
+                componentPackage.info.repository.url
+              }
             />
           </div>
           <hr className="demo-page__main-menu-container-bottom-hr"/>
