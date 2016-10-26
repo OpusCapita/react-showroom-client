@@ -165,10 +165,7 @@ class DemoPage extends Component {
       </div>
     ) : null;
 
-    let componentPackage = packagesInfo.find(packageInfo =>
-      packageInfo.info.name === currentComponentInfo.package &&
-      packageInfo.info.version === currentComponentInfo.version
-    );
+    let componentPackage = packagesInfo.find(packageInfo => packageInfo.info.name === currentComponentInfo.package);
 
     return (
       <div className="row">
