@@ -39,7 +39,7 @@ class FilterSidebar extends Component {
   }
 
   handleClickOutside(event) {
-    if(!this.props.hideOnOutsideClick) {
+    if (!this.props.hideOnOutsideClick) {
       return false;
     }
     event.preventDefault();
@@ -52,6 +52,7 @@ class FilterSidebar extends Component {
     if (event.target !== this._container && !hasParent(event.target, this._container)) {
       this.props.onHide();
     }
+    return false;
   }
 
   render() {

@@ -51,7 +51,7 @@ class FilterSidebarComponentItem extends Component {
     let { component, currentComponent } = this.props;
     let currentClassName = 'filter-sidebar-component-item--current';
 
-    if(!this.props.currentComponent) {
+    if (!this.props.currentComponent) {
       return null;
     }
 

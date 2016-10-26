@@ -5,11 +5,11 @@ let svgGitLogoContent = require('!!raw-loader!./git-logo.svg');
 export default
 class DemoPageComponentShortInfo extends Component {
   prepareGitRepoUrl(url) {
-    return url
-      .replace(/^git[+]/gi, '')
-      .replace(/^git\:\/\//gi, '//')
-      .replace('/git/', '/gitweb/')
-      .replace(/gitweb\/(.*)\.git$/gi, 'gitweb/?p=$1.git;a=summary');
+    return url.
+      replace(/^git[+]/gi, '').
+      replace(/^git\:\/\//gi, '//').
+      replace('/git/', '/gitweb/').
+      replace(/gitweb\/(.*)\.git$/gi, 'gitweb/?p=$1.git;a=summary');
   }
 
   render() {

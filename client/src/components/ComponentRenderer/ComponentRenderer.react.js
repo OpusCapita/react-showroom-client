@@ -4,11 +4,9 @@ import ComponentRendererElement from '../ComponentRendererElement';
 import Documentation from '../Documentation';
 import DefaultScopeComponent from '../DefaultScopeComponent';
 import CodeMirror from 'react-codemirror';
-import { I18nManager } from 'jcatalog-i18n';
 import 'react-codemirror/node_modules/codemirror/lib/codemirror.css';
 import 'react-codemirror/node_modules/codemirror/theme/material.css';
 import 'react-codemirror/node_modules/codemirror/mode/jsx/jsx';
-import { formatPatterns } from '../../i18n/config';
 import { parseDocumentation } from '../../parseComponents';
 
 window.React = React;
@@ -21,16 +19,6 @@ class ComponentRenderer extends Component {
       code: '{}',
       transpiledCode: '() => null',
       reactElement: null
-    };
-  }
-
-  getChildContext() {
-    if (!this.context.i18n) {
-      this.context.i18n = new I18nManager('en', null, formatPatterns);
-    }
-    return {
-      i18n: this.context.i18n,
-      serviceRegistry: serviceName => ({ url: 'http://localhost:3000' })
     };
   }
 
@@ -205,11 +193,3 @@ ComponentRenderer.propTypes = {
 ComponentRenderer.defaultProps = {
   maxContainerWidth: '100%'
 };
-ComponentRenderer.contextTypes = {
-  i18n: PropTypes.object
-};
-ComponentRenderer.childContextTypes = {
-  i18n: PropTypes.object,
-  serviceRegistry: PropTypes.func
-};
-
