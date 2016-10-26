@@ -160,7 +160,7 @@ class ComponentRenderer extends Component {
                 }}
               />
               <div
-                className="btn btn-default component-renderer__default-code-btn"
+                className="component-renderer__default-code-btn"
                 onClick={this.handleDefaultCodeBtnClick.bind(this)}
               >
                 Reset code

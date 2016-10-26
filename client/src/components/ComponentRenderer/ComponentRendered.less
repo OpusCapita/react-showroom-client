@@ -11,15 +11,35 @@
 }
 
 .component-renderer__default-code-btn {
-  position: absolute;
-  top: 6px;
-  right: 12px;
-  padding: 0 6px !important;
-  z-index: 100;
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
+  color: #000;
+  display: inline-flex;
+  flex: 1;
+  font-size: 12px;
+  font-weight: bold;
+  font-weight: bold;
   opacity: 0.5;
-  &:hover {
-    opacity: 1;
+  overflow: visible;
+  padding: 0 6px;
+  position: absolute;
+  right: 8px;
+  text-transform: uppercase;
+  top: 8px;
+  z-index: 100;
+  &:focus {
+    outline: none;
   }
+  &:hover {
+    background-color: #eee;
+    color: #666;
+    opacity: 1;
+    cursor: pointer;
+  }
+
 }
 
 .component-renderer {

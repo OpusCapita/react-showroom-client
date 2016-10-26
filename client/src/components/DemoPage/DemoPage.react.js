@@ -194,6 +194,7 @@ class DemoPage extends Component {
             </div>
             <DemoPageComponentShortInfo
               packageName={currentComponentInfo && currentComponentInfo.package}
+              packageJson={componentPackage.info}
               componentName={currentComponentInfo && currentComponentInfo.name}
               version={currentComponentInfo && currentComponentInfo.version}
               repositoryUrl={
@@ -201,6 +202,7 @@ class DemoPage extends Component {
                 componentPackage.info.repository &&
                 componentPackage.info.repository.url
               }
+              isMobileScreen={isMobileScreen}
             />
           </div>
           <hr className="demo-page__main-menu-container-bottom-hr"/>

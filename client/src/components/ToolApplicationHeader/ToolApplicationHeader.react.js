@@ -43,6 +43,5 @@ ToolApplicationHeader.propTypes = {
       name: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired
     })
-  ),
-  repositoryUrl: PropTypes.string.isRequired,
+  )
 };
