@@ -23,7 +23,14 @@ class Documentation extends Component {
         className="documentation"
         style={documentationStyles}
       >
-        <Markdown source={this.props.markdown} />
+        <Markdown
+          source={this.props.markdown}
+          options={{
+            html: true,
+            linkify: true,
+            breaks: true
+          }}
+        />
       </div>
     )
   }

@@ -108,7 +108,14 @@ class RepositoryInfoFilesViewer extends Component {
           headerLabel={currentFile}
         >
           <div className="repository-info-files-viewer__modal-content">
-            <Markdown source={infoContent} />
+            <Markdown
+              source={infoContent}
+              options={{
+                html: true,
+                linkify: true,
+                breaks: true
+              }}
+            />
           </div>
         </SimpleFullScreenModal>
       </div>
