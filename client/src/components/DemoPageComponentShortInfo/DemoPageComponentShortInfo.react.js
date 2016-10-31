@@ -44,7 +44,8 @@ class DemoPageComponentShortInfo extends Component {
             style={{
               padding: isMobileScreen ? '6px 0 0 0' : '0 12px',
               marginRight: isMobileScreen ? '0' : '24px',
-              justifyContent: isMobileScreen ? 'flex-end' : 'initial'
+              justifyContent: isMobileScreen ? 'flex-end' : 'initial',
+              borderRight: isMobileScreen ? 'none' : '1px solid #eee'
             }}
           >
             <RepositoryInfoFilesViewer
