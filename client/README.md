@@ -37,7 +37,7 @@ ReactDOM.render(showroom, element);
 
 ### Documentation File Example:
 
-You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git;a=blob;f=example.DOCUMENTATION.md;h=45ff5ff52ab1540f9e2d7b2ebb60f6dc412bf311;hb=8f060bd0cad2c1c34c8ff10fd0de8f2b2a25cea2)
+You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git;a=blob_plain;f=client/example.DOCUMENTATION.md;h=8082313ce0836e83e15a4797f7c9319929d50a2a;hb=52c392d8f7abde033690f05f9e8d442a0f65fab2)
 
 ## Dont't forget edit your webpack config:
 
