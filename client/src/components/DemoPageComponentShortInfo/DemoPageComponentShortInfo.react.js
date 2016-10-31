@@ -17,7 +17,7 @@ class DemoPageComponentShortInfo extends Component {
   }
 
   render() {
-    let { packageJson, isMobileScreen } = this.props;
+    let { packageJson, isMobileScreen, gitHead } = this.props;
     let repositoryUrl = this.prepareGitRepoUrl(this.props.repositoryUrl);
     let repositoryLink = repositoryUrl ? (
       <a
@@ -51,9 +51,11 @@ class DemoPageComponentShortInfo extends Component {
               style={{ borderRight: isMobileScreen ? 'none' : '1px solid #eee' }}
               files={{
                 'Readme': ['README.MD', 'README.md', 'readme.md', 'Readme.md'],
-                'Changes': ['CHANGES.txt', 'changes.txt', 'CHANGES.md', 'CHANGELOG.md', 'History.md', 'HISTORY.md']
+                'Changes': ['CHANGES.txt', 'changes.txt', 'CHANGES.md', 'CHANGELOG.md', 'History.md', 'HISTORY.md'],
+                'Contributing': [ 'CONTRIBUTING.md', 'CONTRIBUTING.MD' ]
               }}
               repositoryUrl={repositoryUrl}
+              gitHead={gitHead}
             />
           </div>
           <div className="demo-page-component-short-info__package">
@@ -78,10 +80,11 @@ class DemoPageComponentShortInfo extends Component {
 }
 
 DemoPageComponentShortInfo.propTypes = {
-  packageName: PropTypes.string,
   componentName: PropTypes.string,
-  repositoryUrl: PropTypes.string,
+  gitHead: PropTypes.string,
+  isMobileScreen: PropTypes.bool,
   packageJson: PropTypes.object,
-  version: PropTypes.string,
-  isMobileScreen: PropTypes.bool
+  packageName: PropTypes.string,
+  repositoryUrl: PropTypes.string,
+  version: PropTypes.string
 };

@@ -7,12 +7,21 @@ class SimpleFullScreenModal extends Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.isOpen) {
+      this.register();
+    }
+    if(!nextProps.isOpen) {
+      this.unregister();
+    }
+  }
+
   componentDidMount() {
-    window.addEventListener('keydown', this.handleKeyDown);
+    this.register();
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleKeyDown);
+    this.unregister();
   }
 
   handleKeyDown(event) {
@@ -21,6 +30,16 @@ class SimpleFullScreenModal extends Component {
       this.props.onHide();
     }
     return false;
+  }
+
+  register() {
+    window.addEventListener('keydown', this.handleKeyDown);
+    document.body.style.overflow = 'hidden';
+  }
+
+  unregister() {
+    window.removeEventListener('keydown', this.handleKeyDown);
+    document.body.style.overflow = 'initial';
   }
 
   handleCloseButtonClick() {
@@ -51,7 +70,7 @@ class SimpleFullScreenModal extends Component {
       <div className="simple-full-screen-modal">
         <div className="simple-full-screen-modal__content-container">
           <div className="simple-full-screen-modal__content">
-            { header }
+            {header}
             {children}
           </div>
         </div>
@@ -64,7 +83,7 @@ class SimpleFullScreenModal extends Component {
 SimpleFullScreenModal.propTypes = {
   isOpen: PropTypes.bool,
   onHide: PropTypes.func,
-  headerLabel: PropTypes.string
+  headerLabel: PropTypes.node
 }
 SimpleFullScreenModal.defaultProps = {
   onHide: () => {}

@@ -202,6 +202,7 @@ class DemoPage extends Component {
                 componentPackage.info.repository &&
                 componentPackage.info.repository.url
               }
+              gitHead={componentPackage.info && componentPackage.info.gitHead}
               isMobileScreen={isMobileScreen}
             />
           </div>

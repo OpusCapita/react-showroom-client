@@ -17,7 +17,7 @@ class RepositoryInfoFilesViewer extends Component {
   componentWillReceiveProps(nextProps) {
     clearTimeout(this._timeCompensationTimeout);
     if(nextProps.repositoryUrl && (this.props.repositoryUrl !== nextProps.repositoryUrl)) {
-      this.setState({files: {}});
+      this.setState({ files: {} });
       this._timeCompensationTimeout = setTimeout(() => {
         let {packageJson, repositoryUrl, files} = nextProps;
         this.initFiles(packageJson, repositoryUrl, files);
