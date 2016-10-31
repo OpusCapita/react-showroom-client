@@ -1,5 +1,7 @@
 # Integration with Existing Package Example:
 
+**Copy-Paste it:**
+
 **index.html**
 
 ```
@@ -8,38 +10,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.8/react-dom.js"></script>
 ```
 
+**server.js**
+
+```
+let componentsRoot = path.resolve(__dirname, '../../client/components');
+require('jcatalog-showroom-server').makeLocalScan(componentsRoot);
+```
+
 **index-page.js**
 
 ```
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Showroom from 'jcatalog-showroom';
 
-let packageInfo = require('../../../package.json');
-
-let componentsInfo = [
-  {
-    'relatedFiles': [{
-      'name': 'readme',
-      'content': require('../components/CatalogUserInput/CatalogUserInput.DOCUMENTATION.md')
-    }],
-    'componentClass': require('../components/CatalogUserInput/CatalogUserInput.react').default
-  },
-  {
-    'relatedFiles': [{
-      'name': 'readme',
-      'content': require('../components/ClassificationGroupInput/ClassificationGroupInput.DOCUMENTATION.md')
-    }],
-    'componentClass': require('../components/ClassificationGroupInput/ClassificationGroupInput.react').default
-  }
-].map(component => ({
-  ...component,
-  'package': packageInfo.name,
-  'version': packageInfo.version
-}));
-
 let element = document.getElementById('main');
-let showroom = React.createElement(Showroom, { loaderOptions: { componentsInfo: componentsInfo } });
+let showroom = React.createElement(Showroom, {
+  loaderOptions: {
+    componentsInfo: require('.jcatalog-showroom/componentsInfo'),
+    packagesInfo: require('.jcatalog-showroom/packageInfo')
+  }
+});
 
 ReactDOM.render(showroom, element);
 ```
@@ -53,6 +44,7 @@ You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git
 #### Add to config and install these loaders: 
 
 **webpack.development.config.js**
+
 ```
 {
   test: /\.md$/,
@@ -98,37 +90,31 @@ In some situations you need a wrapper component.
 
 #### For example you want:
 
-##### Use specific *contextTypes*.
-##### Pass to props some value from parent state. 
+* Use specific *contextTypes*.
+* Pass to props some value from parent state. 
+* Use complex object value in property:
 
 **Container.react.js:**
-```
-// Render method return value:
-<div className="container">
-  <ModalContainer showModal={this.state.showModal}>
-</div>
-```
 
-##### Use complex object value in property
-
-**Container.react.js:**
 ```
-// Top of file:
-//
 import UltraCell from '../cells/UltraCell.react';
-//
-// Render method return value:
-//
-<div className="container">
-  <Table cellType={UltraCell}>
-</div>
+
+...
+render() {
+  return (
+    <div className="container">
+      <Table cellType={UltraCell}>
+    </div>
+  );
+}
+...
 ```
 
-#### To do this in SHOWROOM you need:
+#### To do it you need:
 
-Create a 'ComponentName'.SCOPE.react.js file. SCOPE file is just a wrapper component.
+Create a 'Component'.SCOPE.react.js file. SCOPE file is just a wrapper component.
 
-**ComponentName.SCOPE.react.js** **simple** example:
+**Component.SCOPE.react.js** **simple** example:
 
 ```
 import React from 'react';
@@ -140,7 +126,7 @@ class ComponentNameScope extends React.Component {
   render() {
     return (
       <div>
-        {this._renderChildren()} {/* You should call this method somewhere in your JSX. */}
+        {this._renderChildren()} {/* You must call this method in any place of your JSX. */}
       </div>
     );
   }
@@ -149,7 +135,7 @@ class ComponentNameScope extends React.Component {
 export default ComponentNameScope;
 ```
 
-**ComponentName.SCOPE.react.js** **complex** example:
+**Component.SCOPE.react.js** **complex** example:
 
 ```
 import React from 'react';
@@ -199,21 +185,11 @@ ComponentNameScope.childContextTypes = {
 export default ComponentNameScope;
 ```
 
-#### demo.react.js
+If you not specify SCOPE component, by default it provides jcatalog-i18n in context.
 
-In you components config add `scopeClass` after `componentClass`
+#### In documentation `_scope` variable is a ref to your SCOPE component:
 
-```
-'componentClass': require('../components/ComponentName/ComponentName.react').default,
-'scopeClass': require('../components/ComponentName/ComponentName.SCOPE.react').default
-```
-
-Now you can use contextTypes in your **Component**.
-If you want access to `this` in documentation code examples, use keyword `_scope` instead of `this`.
-
-**ComponentName.DOCUMENTATION.react.js**
-
-#### Code examples:
+**Component.DOCUMENTATION.react.js**
 
 ```
 <ComponentName showModal={_scope.state.showModal}/>
@@ -223,11 +199,15 @@ If you want access to `this` in documentation code examples, use keyword `_scope
 <ComponentName cellType={_scope.state.UltraCell}/>
 ```
 
-We **STRONGLY** recomend to create only **one** scope file per package. In most cases it should be enough.
+We **STRONGLY** recommend minimize scope files per package.
+
+**IMPORTANT!!!**:
+If you want to add your components to global **Showroom** installation, 
+your DOCUMENTATION and SCOPE files must be available in package folder. SCOPE files must be transpiled to ES5.
 
 ## Contacts:
 
-* Alexey Sergeev - [sab@scand.com](sab@scand.com)
+* Alexey Sergeev - [alexey.sergeev@jcatalog.com](alexey.sergeev@jcatalog.com)
 * Kirill Volkovich - [kirill.volkovich@jcatalog.com](kirill.volkovich@jcatalog.com)
 
 **Enjoy! =)**

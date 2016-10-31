@@ -3,20 +3,6 @@
 ClassificationGroupInput react component. The part of 
 [**jcatalog-react-reference-search**](http://buildserver.jcatalog.com/gitweb/?p=js-react-reference-search.git)
 
-### Code Example
-
-```
-<ClassificationGroupInput
-  serviceRegistry={serviceName => ({ url: 'http://localhost:3000' })}
-  value={{
-     classificationGroupId: 'EditableProductInformation',
-     classification: {
-       classificationId: 'basic'
-     }
-   }}
-/>
-```
-
 ### Props Reference
 
 | Name                          | Type                  | Description                                                |
@@ -34,6 +20,20 @@ ClassificationGroupInput react component. The part of
 | selectedClassification | object | obj/str?????. |
 | onlyLeafCouldBeSelected | bool | Allows to select only leafs of classifications tree |
 
+### Code Example
+
+```
+<ClassificationGroupInput
+  serviceRegistry={serviceName => ({ url: 'http://localhost:3000' })}
+  value={{
+     classificationGroupId: 'EditableProductInformation',
+     classification: {
+       classificationId: 'basic'
+     }
+   }}
+/>
+```
+
 ### Contributors
 Alexey Sergeev, Dmitry Divin, Daniel Zhitomirsky
 
@@ -42,10 +42,6 @@ Alexey Sergeev, Dmitry Divin, Daniel Zhitomirsky
 ### Component Name
 
 ClassificationGroupInput
-
-### Tags
-
-ReferenceSearches
 
 ### License
 
