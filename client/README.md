@@ -1,5 +1,9 @@
 # Integration with Existing Package Example:
 
+**Install dependencies** 
+
+`npm install --save-dev postcss-loader@0.13.0 raw-loader@0.5.1 jcatalog-showroom@~1.0.0 jcatalog-showroom-server@~1.0.0`
+
 **Copy-Paste it:**
 
 **index.html**
@@ -41,7 +45,7 @@ You can find it[**here**](http://buildserver.jcatalog.com/gitweb/?p=showroom.git
 
 ## Dont't forget edit your webpack config:
 
-#### Add to config and install these loaders: 
+#### Add to config these loaders: 
 
 **webpack.development.config.js**
 
