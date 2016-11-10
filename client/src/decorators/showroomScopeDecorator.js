@@ -2,7 +2,8 @@ import { transform } from 'babel-standalone';
 
 export default
 target => {
-  target.prototype._renderChildren = function() { // eslint-disable-line no-param-reassign
+  target.prototype._renderChildren = function(...arguments) { // eslint-disable-line no-param-reassign
+    window._renderChildrenArguments = arguments;
     let transpiledCode;
     try {
       transpiledCode = transform(
