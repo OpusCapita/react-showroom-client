@@ -77,7 +77,6 @@ class ComponentRenderer extends Component {
     let ScopeComponentClass = this.props.component.scopeClass || DefaultScopeComponent;
     try {
       childElement = React.createElement(ScopeComponentClass, { _childrenCode: code });
-      window._scope = childElement;
     } catch (err) {
       console.log('ComponentRenderer - render error:', err);
       childElement = null;
