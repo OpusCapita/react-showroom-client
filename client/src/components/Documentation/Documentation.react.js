@@ -1,12 +1,28 @@
 import React, { Component, PropTypes } from 'react';
 import './Documentation.less';
 import Markdown from 'react-remarkable';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/atom-one-light.css';
 
 export default
 class Documentation extends Component {
   static propTypes = {
     markdown: PropTypes.string
   };
+
+  highlightCode(str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value;
+      } catch (err) { }
+    }
+
+    try {
+      return hljs.highlightAuto(str).value;
+    } catch (err) { }
+
+    return '';
+  }
 
   render() {
     let { isMobileScreen, isHorizontalLayout } = this.props;
@@ -28,7 +44,8 @@ class Documentation extends Component {
           options={{
             html: true,
             linkify: true,
-            breaks: true
+            breaks: true,
+            highlight: this.highlightCode
           }}
         />
       </div>
