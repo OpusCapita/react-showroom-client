@@ -6,6 +6,7 @@ import DemoPageComponentShortInfo from '../DemoPageComponentShortInfo';
 import Rcslider from 'rc-slider';
 import ToolApplicationHeader from '../ToolApplicationHeader';
 import queryString from 'query-string';
+import { spring, Motion, TransitionMotion } from 'react-motion';
 
 export default
 class DemoPage extends Component {
@@ -108,9 +109,9 @@ class DemoPage extends Component {
     this.setState({ currentComponent: { ...componentData, componentInfo } });
   }
 
-  handleToggleSidebar() {
+  handleToggleSidebar(show) {
     this.setQueryStringParam('showSidebar', !this.state.showSidebar);
-    this.setState({ showSidebar: !this.state.showSidebar });
+    this.setState({ showSidebar: typeof show !== 'undefined' ? show : !this.state.showSidebar });
   }
 
   handleToggleForceCentering() {
@@ -159,28 +160,36 @@ class DemoPage extends Component {
       />
     ) : null;
 
-    let sidebar = this.state.showSidebar ? (
-      <div
-        className="demo-page__filter-sidebar"
-        style={{
-          zIndex: this.props.isScreenSmall ? '9999' : 1,
-          boxShadow: this.props.isScreenSmall ? '0 0 12px rgba(0, 0, 0, 0.65)' : ''
-        }}
+    let sidebar = (
+      <Motion
+        defaultStyle={{ x: this.state.showSidebar ? 0 : 100 }}
+        style={{ x: this.state.showSidebar ? spring(0) : spring(100) }}
       >
-        <FilterSidebar
-          componentsInfo={this.state.componentsInfo}
-          currentComponent={this.state.currentComponent}
-          onComponentChange={this.handleComponentSelection.bind(this, this.state.componentsInfo)}
-          hideOnOutsideClick={this.props.isScreenSmall}
-          onHide={this.handleToggleSidebar.bind(this)}
-        />
-      </div>
-    ) : null;
+        {interpolatedStyle =>
+          <div
+            className="demo-page__filter-sidebar"
+            style={{
+              zIndex: this.props.isScreenSmall ? '9999' : 1,
+              boxShadow: this.props.isScreenSmall ? '0 0 12px rgba(0, 0, 0, 0.65)' : '',
+              transform: `translate(-${interpolatedStyle.x}%, 0)`
+            }}
+          >
+            <FilterSidebar
+              componentsInfo={this.state.componentsInfo}
+              currentComponent={this.state.currentComponent}
+              onComponentChange={this.handleComponentSelection.bind(this, this.state.componentsInfo)}
+              hideOnOutsideClick={this.props.isScreenSmall}
+              onHide={() => this.handleToggleSidebar.call(this, false)}
+            />
+          </div>
+        }
+      </Motion>
+    );
 
     let toggleSidebarBtn = (
       <button
         className="btn btn-primary demo-page__primary-btn"
-        onClick={this.handleToggleSidebar.bind(this)}
+        onClick={() => this.handleToggleSidebar.call(this)}
       >
         Toggle sidebar
       </button>
@@ -210,67 +219,72 @@ class DemoPage extends Component {
       packagesInfo.find(packageInfo => packageInfo.info.name === currentComponentInfo.package) || {};
 
     return (
-      <div
-        className="row demo-page"
-        style={{ marginLeft: (this.state.showSidebar && !isScreenSmall) ? '285px' : '-15px' }}
-      >
-        {sidebar}
-        <div className="col-xs-12">
-          <div className="row">
-            <div className="col-xs-12">
-              <ToolApplicationHeader
-                applicationName="Showroom"
-                repositoryUrl="http://buildserver.jcatalog.com/gitweb/?p=showroom.git"
-                contacts={[
-                  { name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com' },
-                  { name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com' }
-                ]}
-              />
-            </div>
-          </div>
-          <div className="demo-page__main-menu-container">
-            <div className="demo-page__main-menu-container-group">
-              <div className="demo-page__main-menu-sidebar-button">
-                {toggleSidebarBtn}
+      <Motion
+        defaultStyle={{ marginLeft: this.state.showSidebar && !isScreenSmall ? 285 : -15 }}
+        style={{ marginLeft: this.state.showSidebar && !isScreenSmall ? spring(285) : spring(-15) }}
+      >{interpolatedStyle => (
+        <div
+          className="row demo-page"
+          style={{ marginLeft: `${interpolatedStyle.marginLeft}px` }}
+        >
+          {sidebar}
+          <div className="col-xs-12">
+            <div className="row">
+              <div className="col-xs-12">
+                <ToolApplicationHeader
+                  applicationName="Showroom"
+                  repositoryUrl="http://buildserver.jcatalog.com/gitweb/?p=showroom.git"
+                  contacts={[
+                    {name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com'},
+                    {name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com'}
+                  ]}
+                />
               </div>
-              <div
-                className="demo-page__options-group"
-                onMouseEnter={() => this.setOption('isShowContainerBorders', true)}
-                onMouseLeave={() => this.setOption('isShowContainerBorders', false)}
-              >
-                {maxWidthSlider}
+            </div>
+            <div className="demo-page__main-menu-container">
+              <div className="demo-page__main-menu-container-group">
+                <div className="demo-page__main-menu-sidebar-button">
+                  {toggleSidebarBtn}
+                </div>
                 <div
-                  className={`
-                    demo-page__options-item-btn
-                    ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
-                  `}
-                  onClick={this.handleToggleForceCentering.bind(this)}
-                  style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
+                  className="demo-page__options-group"
+                  onMouseEnter={() => this.setOption('isShowContainerBorders', true)}
+                  onMouseLeave={() => this.setOption('isShowContainerBorders', false)}
                 >
-                  Force Centering
+                  {maxWidthSlider}
+                  <div
+                    className={`
+            demo-page__options-item-btn
+              ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
+              `}
+                    onClick={this.handleToggleForceCentering.bind(this)}
+                    style={{paddingLeft: isMobileScreen ? '12px' : '0'}}
+                  >
+                    Force Centering
+                  </div>
                 </div>
               </div>
+              <DemoPageComponentShortInfo
+                packageName={currentComponentInfo && currentComponentInfo.package}
+                packageJson={componentPackage.info}
+                componentName={currentComponentInfo && currentComponentInfo.name}
+                version={currentComponentInfo && currentComponentInfo.version}
+                repositoryUrl={
+                  componentPackage.info &&
+                  componentPackage.info.repository &&
+                  componentPackage.info.repository.url
+                }
+                gitHead={componentPackage.info && componentPackage.info.gitHead}
+                isMobileScreen={isMobileScreen}
+              />
             </div>
-            <DemoPageComponentShortInfo
-              packageName={currentComponentInfo && currentComponentInfo.package}
-              packageJson={componentPackage.info}
-              componentName={currentComponentInfo && currentComponentInfo.name}
-              version={currentComponentInfo && currentComponentInfo.version}
-              repositoryUrl={
-                componentPackage.info &&
-                componentPackage.info.repository &&
-                componentPackage.info.repository.url
-              }
-              gitHead={componentPackage.info && componentPackage.info.gitHead}
-              isMobileScreen={isMobileScreen}
-            />
-          </div>
-          <hr className="demo-page__main-menu-container-bottom-hr"/>
-          <div className="demo-page__component-render-container">
-            {componentRenderer}
+            <hr className="demo-page__main-menu-container-bottom-hr"/>
+            <div className="demo-page__component-render-container">
+              {componentRenderer}
+            </div>
           </div>
         </div>
-      </div>
+      )}</Motion>
     )
   }
 }

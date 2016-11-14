@@ -11,18 +11,15 @@ class FilterSidebar extends Component {
       filterInputValue: ''
     };
     this.handleClickOutside = this.handleClickOutside.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
   componentDidMount() {
     document.body.addEventListener('click', this.handleClickOutside);
-    window.addEventListener('keydown', this.handleKeyDown);
     this.refs.searchInput.focus();
   }
 
   componentWillUnmount() {
     document.body.removeEventListener('click', this.handleClickOutside);
-    window.removeEventListener('keydown', this.handleKeyDown);
   }
 
   filterComponentsLists(componentsInfo, filterText) {
@@ -33,14 +30,6 @@ class FilterSidebar extends Component {
 
   handleFilterInputChange(e) {
     this.setState({ filterInputValue: e.target.value })
-  }
-
-  handleKeyDown(event) {
-    let escKeyCode = 27;
-    if(event.keyCode === escKeyCode ) {
-      this.props.onHide();
-    }
-    return false;
   }
 
   collapseBy(list, by) {
