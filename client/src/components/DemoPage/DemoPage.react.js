@@ -11,14 +11,15 @@ export default
 class DemoPage extends Component {
   constructor(props) {
     super(props);
+    let query = queryString.parse(location.search);
     this.state = {
-      showSidebar: !props.isScreenSmall,
+      showSidebar: (query.showSidebar === 'true') && !props.isScreenSmall,
       packagesInfo: [],
       componentsInfo: [],
       currentComponentId: '',
       currentComponent: null,
       options: {
-        maxContainerWidth: '40%',
+        maxContainerWidth: (query.maxContainerWidth) || '40%',
         isShowContainerBorders: false,
         isContentCentered: false
       }
@@ -53,6 +54,7 @@ class DemoPage extends Component {
 
   handleHistoryPopState(event) {
     this.initCurrentComponentId();
+    this.initOptions();
   }
 
   parseQueryParameters() {
@@ -89,6 +91,12 @@ class DemoPage extends Component {
     return preparedComponentsInfo;
   }
 
+  setQueryStringParam(name, value) {
+    let prevQueryString = this.parseQueryParameters();
+    let nextQueryString = queryString.stringify({ ...prevQueryString, [name]: value });
+    history.pushState({}, '', `${location.origin}${location.path || ''}?${nextQueryString}`);
+  };
+
   getComponent(componentInfo) {
     this.props.loader.getComponent(componentInfo, this.onComponentReady.bind(this));
   }
@@ -101,9 +109,8 @@ class DemoPage extends Component {
   }
 
   toggleSidebar() {
-    this.setState({
-      showSidebar: !this.state.showSidebar
-    })
+    this.setQueryStringParam('showSidebar', !this.state.showSidebar);
+    this.setState({ showSidebar: !this.state.showSidebar });
   }
 
   setOption(name, value) {
@@ -122,10 +129,13 @@ class DemoPage extends Component {
     *   if you fix it in normal way, don't forget to remove timeout clear within componentWillUnmount.
     *   Not 0 because IE */
     this._getComponentTimeout = setTimeout(() => this.getComponent(componentInfo), 16);
+    this.setQueryStringParam('currentComponentId', id);
+  }
 
-    let prevQueryString = this.parseQueryParameters();
-    let nextQueryString = queryString.stringify({ ...prevQueryString, currentComponentId: id });
-    history.pushState({}, '', `${location.origin}${location.path || ''}?${nextQueryString}`);
+  handleContainerWidthChange(value) {
+    let nextMaxContainerWidth = `${value}%`;
+    this.setOption('maxContainerWidth', nextMaxContainerWidth);
+    this.setQueryStringParam('maxContainerWidth', nextMaxContainerWidth);
   }
 
   render() {
@@ -179,7 +189,7 @@ class DemoPage extends Component {
         </div>
         <Rcslider
           className="demo-page__max-container-width-slider"
-          onChange={value => this.setOption('maxContainerWidth', `${value}%`)}
+          onChange={this.handleContainerWidthChange.bind(this)}
           defaultValue={parseInt(options.maxContainerWidth, 10)}
           tipFormatter={null}
         />
