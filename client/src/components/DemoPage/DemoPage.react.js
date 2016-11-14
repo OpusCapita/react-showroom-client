@@ -4,6 +4,7 @@ import ComponentRenderer from '../ComponentRenderer';
 import FilterSidebar from '../FilterSidebar';
 import DemoPageComponentShortInfo from '../DemoPageComponentShortInfo';
 import Rcslider from 'rc-slider';
+import queryString from 'query-string';
 
 export default
 class DemoPage extends Component {
@@ -21,24 +22,40 @@ class DemoPage extends Component {
         isContentCentered: false
       }
     };
+    this.handleHistoryPopState = this.handleHistoryPopState.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.getComponentsInfo();
     this.getPackagesInfo();
+    window.addEventListener('popstate', this.handleHistoryPopState);
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.componentsInfo !== prevState.componentsInfo) {
-      this.handleComponentSelection(
-        this.state.componentsInfo,
-        (this.state.componentsInfo[0] ? this.state.componentsInfo[0].id : 0)
-      );
+      this.initCurrentComponentId();
     }
   }
 
   componentWillUnmount() {
     clearTimeout(this._getComponentTimeout);
+    window.removeEventListener('popstate', this.handleHistoryPopState);
+  }
+
+  initCurrentComponentId() {
+    let idFromQueryString = queryString.parse(location.search).currentComponentId;
+    let id = idFromQueryString ?
+      idFromQueryString :
+      (this.state.componentsInfo[0] && this.state.componentsInfo[0].id);
+    this.handleComponentSelection(this.state.componentsInfo, id || 0);
+  }
+
+  handleHistoryPopState(event) {
+    this.initCurrentComponentId();
+  }
+
+  parseQueryParameters() {
+    return queryString.parse(location.search);
   }
 
   getPackagesInfo() {
@@ -56,7 +73,9 @@ class DemoPage extends Component {
   getComponentsInfo() {
     this.props.loader.getComponentsInfo(data => {
       let preparedComponentsInfo = this.prepareComponentsInfo(data);
-      this.handleComponentSelection(preparedComponentsInfo, preparedComponentsInfo[0].id);
+      let idFromQueryString = queryString.parse(location.search).currentComponentId;
+      let id = idFromQueryString || preparedComponentsInfo[0].id;
+      this.handleComponentSelection(preparedComponentsInfo, id);
       this.setState({ componentsInfo: preparedComponentsInfo });
     });
   }
@@ -102,6 +121,10 @@ class DemoPage extends Component {
     *   if you fix it in normal way, don't forget to remove timeout clear within componentWillUnmount.
     *   Not 0 because IE */
     this._getComponentTimeout = setTimeout(() => this.getComponent(componentInfo), 16);
+
+    let prevQueryString = this.parseQueryParameters();
+    let nextQueryString = queryString.stringify({ ...prevQueryString, currentComponentId: id });
+    history.pushState({}, '', `${location.origin}${location.path || ''}?${nextQueryString}`);
   }
 
   render() {

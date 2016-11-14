@@ -1,6 +1,6 @@
 {
   "name": "jcatalog-showroom",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "React components catalog component.",
   "scripts": {
     "build": "rimraf lib && webpack --config ./webpack.production.config",
@@ -55,6 +55,7 @@
     "mkdirp": "0.5.1",
     "path": "^0.12.7",
     "postcss-loader": "^0.13.0",
+    "query-string": "^4.2.3",
     "raw-loader": "0.5.1",
     "rc-slider": "^5.1.1",
     "react-codemirror": "0.2.6",
