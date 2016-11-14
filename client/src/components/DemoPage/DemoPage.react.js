@@ -21,7 +21,7 @@ class DemoPage extends Component {
       options: {
         maxContainerWidth: (query.maxContainerWidth) || '40%',
         isShowContainerBorders: false,
-        isContentCentered: false
+        isContentCentered: query.forceCentering === 'true'
       }
     };
     this.handleHistoryPopState = this.handleHistoryPopState.bind(this);
@@ -108,9 +108,15 @@ class DemoPage extends Component {
     this.setState({ currentComponent: { ...componentData, componentInfo } });
   }
 
-  toggleSidebar() {
+  handleToggleSidebar() {
     this.setQueryStringParam('showSidebar', !this.state.showSidebar);
     this.setState({ showSidebar: !this.state.showSidebar });
+  }
+
+  handleToggleForceCentering() {
+    let { options } = this.state;
+    this.setOption('isContentCentered', !options.isContentCentered);
+    this.setQueryStringParam('forceCentering', !options.isContentCentered);
   }
 
   setOption(name, value) {
@@ -166,7 +172,7 @@ class DemoPage extends Component {
           currentComponent={this.state.currentComponent}
           onComponentChange={this.handleComponentSelection.bind(this, this.state.componentsInfo)}
           hideOnOutsideClick={this.props.isScreenSmall}
-          onHide={this.toggleSidebar.bind(this)}
+          onHide={this.handleToggleSidebar.bind(this)}
         />
       </div>
     ) : null;
@@ -174,7 +180,7 @@ class DemoPage extends Component {
     let toggleSidebarBtn = (
       <button
         className="btn btn-primary demo-page__primary-btn"
-        onClick={this.toggleSidebar.bind(this)}
+        onClick={this.handleToggleSidebar.bind(this)}
       >
         Toggle sidebar
       </button>
@@ -238,7 +244,7 @@ class DemoPage extends Component {
                     demo-page__options-item-btn
                     ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
                   `}
-                  onClick={() => this.setOption('isContentCentered', !options.isContentCentered)}
+                  onClick={this.handleToggleForceCentering.bind(this)}
                   style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
                 >
                   Force Centering
