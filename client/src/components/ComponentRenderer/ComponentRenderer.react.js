@@ -90,7 +90,7 @@ class ComponentRenderer extends Component {
   }
 
   render() {
-    let { component, options } = this.props;
+    let { component, options, maxContainerWidth } = this.props;
     let isHorizontalLayout = (!this.props.isScreenSmall) && (parseInt(this.props.maxContainerWidth, 10) <= 50);
     let isMobileScreen = window.innerWidth <= 1200;
     let containerBordersClassName = options.isShowContainerBorders ?
@@ -115,7 +115,7 @@ class ComponentRenderer extends Component {
             component-renderer__element-container-outer
             ${containerBordersClassName}
           `}
-          style={{ maxWidth: isMobileScreen ? '100%' : this.props.maxContainerWidth }}
+          style={{ width: isMobileScreen ? '100%' : maxContainerWidth }}
         >
           <div
             className={` component-renderer__element-container-inner ${contentCenteredClassName} `}
