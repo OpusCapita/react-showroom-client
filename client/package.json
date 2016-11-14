@@ -1,6 +1,6 @@
 {
   "name": "jcatalog-showroom",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "React components catalog component.",
   "scripts": {
     "build": "rimraf lib && webpack --config ./webpack.production.config",

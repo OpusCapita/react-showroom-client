@@ -4,6 +4,7 @@ import ComponentRenderer from '../ComponentRenderer';
 import FilterSidebar from '../FilterSidebar';
 import DemoPageComponentShortInfo from '../DemoPageComponentShortInfo';
 import Rcslider from 'rc-slider';
+import ToolApplicationHeader from '../ToolApplicationHeader';
 import queryString from 'query-string';
 
 export default
@@ -128,6 +129,7 @@ class DemoPage extends Component {
   }
 
   render() {
+    let { isScreenSmall } = this.props;
     let { options, packagesInfo } = this.state;
     let isMobileScreen = window.innerWidth <= 1200;
     let currentComponentInfo = this.getCurrentComponentInfo();
@@ -141,7 +143,7 @@ class DemoPage extends Component {
       />
     ) : null;
 
-    let sidebar = this.state.showSidebar || !this.props.isScreenSmall ? (
+    let sidebar = this.state.showSidebar ? (
       <div
         className="demo-page__filter-sidebar"
         style={{
@@ -159,14 +161,14 @@ class DemoPage extends Component {
       </div>
     ) : null;
 
-    let toggleSidebarBtn = this.props.isScreenSmall ? (
+    let toggleSidebarBtn = (
       <button
         className="btn btn-primary demo-page__primary-btn"
         onClick={this.toggleSidebar.bind(this)}
       >
         Toggle sidebar
       </button>
-    ) : null;
+    );
 
     let maxWidthSlider = !isMobileScreen ? (
       <div
@@ -192,11 +194,29 @@ class DemoPage extends Component {
       packagesInfo.find(packageInfo => packageInfo.info.name === currentComponentInfo.package) || {};
 
     return (
-      <div className="row">
+      <div
+        className="row demo-page"
+        style={{ marginLeft: (this.state.showSidebar && !isScreenSmall) ? '285px' : '-15px' }}
+      >
+        {sidebar}
         <div className="col-xs-12">
+          <div className="row">
+            <div className="col-xs-12">
+              <ToolApplicationHeader
+                applicationName="Showroom"
+                repositoryUrl="http://buildserver.jcatalog.com/gitweb/?p=showroom.git"
+                contacts={[
+                  { name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com' },
+                  { name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com' }
+                ]}
+              />
+            </div>
+          </div>
           <div className="demo-page__main-menu-container">
             <div className="demo-page__main-menu-container-group">
-              {toggleSidebarBtn}
+              <div className="demo-page__main-menu-sidebar-button">
+                {toggleSidebarBtn}
+              </div>
               <div
                 className="demo-page__options-group"
                 onMouseEnter={() => this.setOption('isShowContainerBorders', true)}
@@ -233,7 +253,6 @@ class DemoPage extends Component {
           <div className="demo-page__component-render-container">
             {componentRenderer}
           </div>
-          {sidebar}
         </div>
       </div>
     )
