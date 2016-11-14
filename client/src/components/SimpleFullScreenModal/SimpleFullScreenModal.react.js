@@ -16,10 +16,6 @@ class SimpleFullScreenModal extends Component {
     }
   }
 
-  componentDidMount() {
-    this.register();
-  }
-
   componentWillUnmount() {
     this.unregister();
   }
