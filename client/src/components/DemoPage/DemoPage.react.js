@@ -163,13 +163,12 @@ class DemoPage extends Component {
     let sidebar = (
       <Motion
         defaultStyle={{ x: this.state.showSidebar ? 0 : 100 }}
-        style={{ x: this.state.showSidebar ? spring(0) : spring(100) }}
+        style={{ x: this.state.showSidebar ? (isMobileScreen ? spring(0) : 0 ) : (isMobileScreen ? spring(100) : 100) }}
       >
         {interpolatedStyle =>
           <div
             className="demo-page__filter-sidebar"
             style={{
-              zIndex: this.props.isScreenSmall ? '9999' : 1,
               boxShadow: this.props.isScreenSmall ? '0 0 12px rgba(0, 0, 0, 0.65)' : '',
               transform: `translate(-${interpolatedStyle.x}%, 0)`
             }}
@@ -219,72 +218,67 @@ class DemoPage extends Component {
       packagesInfo.find(packageInfo => packageInfo.info.name === currentComponentInfo.package) || {};
 
     return (
-      <Motion
-        defaultStyle={{ marginLeft: this.state.showSidebar && !isScreenSmall ? 285 : -15 }}
-        style={{ marginLeft: this.state.showSidebar && !isScreenSmall ? spring(285) : spring(-15) }}
-      >{interpolatedStyle => (
-        <div
-          className="row demo-page"
-          style={{ marginLeft: `${interpolatedStyle.marginLeft}px` }}
-        >
-          {sidebar}
-          <div className="col-xs-12">
-            <div className="row">
-              <div className="col-xs-12">
-                <ToolApplicationHeader
-                  applicationName="Showroom"
-                  repositoryUrl="http://buildserver.jcatalog.com/gitweb/?p=showroom.git"
-                  contacts={[
-                    {name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com'},
-                    {name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com'}
-                  ]}
-                />
-              </div>
-            </div>
-            <div className="demo-page__main-menu-container">
-              <div className="demo-page__main-menu-container-group">
-                <div className="demo-page__main-menu-sidebar-button">
-                  {toggleSidebarBtn}
-                </div>
-                <div
-                  className="demo-page__options-group"
-                  onMouseEnter={() => this.setOption('isShowContainerBorders', true)}
-                  onMouseLeave={() => this.setOption('isShowContainerBorders', false)}
-                >
-                  {maxWidthSlider}
-                  <div
-                    className={`
-            demo-page__options-item-btn
-              ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
-              `}
-                    onClick={this.handleToggleForceCentering.bind(this)}
-                    style={{paddingLeft: isMobileScreen ? '12px' : '0'}}
-                  >
-                    Force Centering
-                  </div>
-                </div>
-              </div>
-              <DemoPageComponentShortInfo
-                packageName={currentComponentInfo && currentComponentInfo.package}
-                packageJson={componentPackage.info}
-                componentName={currentComponentInfo && currentComponentInfo.name}
-                version={currentComponentInfo && currentComponentInfo.version}
-                repositoryUrl={
-                  componentPackage.info &&
-                  componentPackage.info.repository &&
-                  componentPackage.info.repository.url
-                }
-                gitHead={componentPackage.info && componentPackage.info.gitHead}
-                isMobileScreen={isMobileScreen}
+      <div
+        className="row demo-page"
+        style={{ marginLeft: this.state.showSidebar && !isScreenSmall ? 285 : -15 }}
+      >
+        {sidebar}
+        <div className="col-xs-12">
+          <div className="row">
+            <div className="col-xs-12">
+              <ToolApplicationHeader
+                applicationName="Showroom"
+                repositoryUrl="http://buildserver.jcatalog.com/gitweb/?p=showroom.git"
+                contacts={[
+                  {name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com'},
+                  {name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com'}
+                ]}
               />
             </div>
-            <hr className="demo-page__main-menu-container-bottom-hr"/>
-            <div className="demo-page__component-render-container">
-              {componentRenderer}
+          </div>
+          <div className="demo-page__main-menu-container">
+            <div className="demo-page__main-menu-container-group">
+              <div className="demo-page__main-menu-sidebar-button">
+                {toggleSidebarBtn}
+              </div>
+              <div
+                className="demo-page__options-group"
+                onMouseEnter={() => this.setOption('isShowContainerBorders', true)}
+                onMouseLeave={() => this.setOption('isShowContainerBorders', false)}
+              >
+                {maxWidthSlider}
+                <div
+                  className={`
+          demo-page__options-item-btn
+            ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
+            `}
+                  onClick={this.handleToggleForceCentering.bind(this)}
+                  style={{paddingLeft: isMobileScreen ? '12px' : '0'}}
+                >
+                  Force Centering
+                </div>
+              </div>
             </div>
+            <DemoPageComponentShortInfo
+              packageName={currentComponentInfo && currentComponentInfo.package}
+              packageJson={componentPackage.info}
+              componentName={currentComponentInfo && currentComponentInfo.name}
+              version={currentComponentInfo && currentComponentInfo.version}
+              repositoryUrl={
+                componentPackage.info &&
+                componentPackage.info.repository &&
+                componentPackage.info.repository.url
+              }
+              gitHead={componentPackage.info && componentPackage.info.gitHead}
+              isMobileScreen={isMobileScreen}
+            />
+          </div>
+          <hr className="demo-page__main-menu-container-bottom-hr"/>
+          <div className="demo-page__component-render-container">
+            {componentRenderer}
           </div>
         </div>
-      )}</Motion>
+      </div>
     )
   }
 }
