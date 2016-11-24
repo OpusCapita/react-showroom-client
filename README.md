@@ -1,5 +1,7 @@
 # Showroom
 
+![showroom-demo](./docs/demo.png)
+
 ## Synopsis
 
 React based components catalog which provide a **documentation** and **live examples**.
