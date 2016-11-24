@@ -1,10 +1,12 @@
 # Showroom
 
-Library and realtime for React based components.
+## Synopsis
+
+React based components catalog which provide a **documentation** and **live examples**.
 
 ## Motivation to develop
 
-* 
+* Easilly browsing with examples to pick the most appropriate component for your current task
 * Provide an **always actual documentation**
 
 ## Usage
@@ -14,7 +16,8 @@ There are two variants of usage:
 ### [Embedded](./docs/embedded.md)
 
 * Developer-side variant
-* Write documentation for you components
+* **Always write** the documentation :pencil:
+* Take care about other developers and others take care about you :point_up:
 
 ### [Server application](./docs/server.md)
 
