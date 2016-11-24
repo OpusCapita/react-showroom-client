@@ -25,7 +25,7 @@ React based components catalog which provide a **documentation** and **live exam
 * See usage code examples
 * See **API** documentation
 * Change component properties and see whan happenned **in realtime**
-* Change component **version** and 
+* Change component **version** to see appropriate documentation
 
 ## Contacts:
 
