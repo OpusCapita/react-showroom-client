@@ -15,7 +15,7 @@ React based components catalog which provide a **documentation** and **live exam
 
 * Developer-side variant
 * **Always write** the documentation :pencil:
-* Take care about other developers and others take care about you :point_up:
+* Take care about other developers and others take care about you :tophat:
 
 ### [Server application](./docs/server.md)
 
