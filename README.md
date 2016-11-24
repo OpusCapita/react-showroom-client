@@ -11,8 +11,6 @@ React based components catalog which provide a **documentation** and **live exam
 
 ## Usage
 
-There are two variants of usage:
-
 ### [Embedded](./docs/embedded.md)
 
 * Developer-side variant
