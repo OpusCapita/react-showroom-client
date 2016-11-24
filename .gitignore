@@ -2,13 +2,8 @@
 .idea
 tmp
 npm-debug.log
-/static
 /build
 /coverage
-/dist
-/docs
 /client/lib
-/library
 /client/**/node_modules
 /server/**/node_modules
-/target
