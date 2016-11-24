@@ -18,8 +18,8 @@ You should't rewrite same things every time.
 > As you start to build **large libraries of components**, you'll appreciate this **explicitness** and **modularity**, and with **code reuse**, your lines of code will start to shrink. :)
 
 O.K., **ReactJS creators** :+1: We are sure you are clever men.
-We understand you idea.
-But if we want to have a **large libraries of components** then we must have a **easy way to organize and browse** this library.
+We understand your ideas.
+But if we want to have a **large libraries of components** we must have a **easy way to organize and browse** this library.
 
 * Facebook have [thousands](https://facebook.github.io/react/docs/composition-vs-inheritance.html#so-what-about-inheritance)  of components.
 
