@@ -39,7 +39,8 @@ But if we want to have a **large libraries of components** then we must have a *
 
 * Spent several hours/days for a writing component? Spent a 30-40 minute to put your component in a library and write a simple documentation with code example.
 * Next time you or your teammate should't rewrite it again.
-* Or you can again spent several hours/days :clock10: to `/dev/null`. **The choice is yours**.
+* Or you can again spent several hours/days :clock10: to `/dev/null`. 
+* **The choice is yours**.
 
 ## Usage
 
