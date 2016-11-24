@@ -58,7 +58,7 @@ But if we want to have a **large libraries of components** then we must have a *
 * Change component properties and see whan happenned **in realtime**
 * Change component **version** to see appropriate documentation
 
-## Contacts:
+## Contributors:
 
 * Alexey Sergeev - [alexey.sergeev@jcatalog.com](alexey.sergeev@jcatalog.com)
 * Kirill Volkovich - [kirill.volkovich@jcatalog.com](kirill.volkovich@jcatalog.com)
