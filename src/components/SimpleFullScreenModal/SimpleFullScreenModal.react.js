@@ -8,10 +8,10 @@ class SimpleFullScreenModal extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.isOpen) {
+    if (nextProps.isOpen) {
       this.register();
     }
-    if(!nextProps.isOpen) {
+    if (!nextProps.isOpen) {
       this.unregister();
     }
   }
@@ -22,7 +22,7 @@ class SimpleFullScreenModal extends Component {
 
   handleKeyDown(event) {
     let escKeyCode = 27;
-    if(event.keyCode === escKeyCode ) {
+    if (event.keyCode === escKeyCode) {
       this.props.onHide();
     }
     return false;

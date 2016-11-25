@@ -4,9 +4,9 @@ import ComponentRendererElement from '../ComponentRendererElement';
 import Documentation from '../Documentation';
 import DefaultScopeComponent from '../DefaultScopeComponent';
 import CodeMirror from 'react-codemirror';
-import 'react-codemirror/node_modules/codemirror/lib/codemirror.css';
-import 'react-codemirror/node_modules/codemirror/theme/material.css';
-import 'react-codemirror/node_modules/codemirror/mode/jsx/jsx';
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/theme/material.css';
+import 'codemirror/mode/jsx/jsx';
 import { parseDocumentation } from '../../parseComponents';
 
 window.React = React;

@@ -16,10 +16,10 @@ class RepositoryInfoFilesViewer extends Component {
 
   componentWillReceiveProps(nextProps) {
     clearTimeout(this._timeCompensationTimeout);
-    if(nextProps.repositoryUrl && (this.props.repositoryUrl !== nextProps.repositoryUrl)) {
+    if (nextProps.repositoryUrl && (this.props.repositoryUrl !== nextProps.repositoryUrl)) {
       this.setState({ files: {} });
       this._timeCompensationTimeout = setTimeout(() => {
-        let {packageJson, repositoryUrl, files} = nextProps;
+        let { packageJson, repositoryUrl, files } = nextProps;
         this.initFiles(packageJson, repositoryUrl, files);
       }, 300);
     }
@@ -30,8 +30,8 @@ class RepositoryInfoFilesViewer extends Component {
   }
 
   initFiles(packageJson, repositoryUrl, files) {
-    if(!repositoryUrl) {
-      return false;
+    if (!repositoryUrl) {
+      return;
     }
     Object.keys(files).map(infoName => {
       let fileNames = files[infoName];
@@ -46,13 +46,13 @@ class RepositoryInfoFilesViewer extends Component {
     let prevFiles = this.state.files;
     let nextFiles = Object.assign({}, prevFiles, { [infoName]: content });
     this.setState({ files: nextFiles });
-  };
+  }
 
   tryGetFile(fileUrl, infoName, onContent) {
-    agent.get(fileUrl)
-      .end((error, response) => {
-        if(error || response.statusCode !== 200) {
-          return false;
+    agent.get(fileUrl).
+      end((error, response) => {
+        if (error || response.statusCode !== 200) {
+          return;
         }
         let content = response.text;
         onContent(infoName, content);
@@ -60,11 +60,11 @@ class RepositoryInfoFilesViewer extends Component {
   }
 
   getFileUrl(packageJson, repositoryUrl, fileName) {
-    if(/\/gitweb\//gi.test(repositoryUrl)) {
+    if (/\/gitweb\//gi.test(repositoryUrl)) {
       let rawFileUrl = `${repositoryUrl};;a=blob_plain;f=${fileName}`;
       return rawFileUrl;
     }
-    if(/\/github\//gi) {
+    if (/\/github\//gi) {
       let githubUser = repositoryUrl.replace(/.*github\.com\/(.*)\/.*/gi, '$1');
       let githubRepository = repositoryUrl.
         replace(new RegExp(`.*${githubUser}\/(.*).*`, 'gi'), '$1').
@@ -72,6 +72,7 @@ class RepositoryInfoFilesViewer extends Component {
       let rawFileUrl = `//raw.githubusercontent.com/${githubUser}/${githubRepository}/master/${fileName}`;
       return rawFileUrl;
     }
+    return null;
   }
 
   showFile(fileName) {
@@ -87,7 +88,6 @@ class RepositoryInfoFilesViewer extends Component {
   }
 
   render() {
-    let { packageJson, fileNames, repositoryUrl } = this.props;
     let { files, isShowFile, currentFile } = this.state;
     let infoContent = currentFile ? files[currentFile] : '';
     let buttons = Object.keys(files).map((fileName, index) => (

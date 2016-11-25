@@ -13,8 +13,7 @@ class ToolApplicationHeader extends Component {
               title="OpusCapita logo"
               className="tool-application-header__company-logo"
               dangerouslySetInnerHTML={{ __html: svgLogoContent }}
-            >
-            </div>
+            />
             <h1 className="tool-application-header__title">{this.props.applicationName}</h1>
           </div>
           <div className="col-md-6" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>

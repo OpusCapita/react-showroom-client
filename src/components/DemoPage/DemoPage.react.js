@@ -6,7 +6,7 @@ import DemoPageComponentShortInfo from '../DemoPageComponentShortInfo';
 import Rcslider from 'rc-slider';
 import ToolApplicationHeader from '../ToolApplicationHeader';
 import queryString from 'query-string';
-import { spring, Motion, TransitionMotion } from 'react-motion';
+import { spring, Motion } from 'react-motion';
 
 export default
 class DemoPage extends Component {
@@ -96,7 +96,7 @@ class DemoPage extends Component {
     let prevQueryString = this.parseQueryParameters();
     let nextQueryString = queryString.stringify({ ...prevQueryString, [name]: value });
     history.pushState({}, '', `${location.origin}${location.path || ''}?${nextQueryString}`);
-  };
+  }
 
   getComponent(componentInfo) {
     this.props.loader.getComponent(componentInfo, this.onComponentReady.bind(this));
@@ -163,7 +163,7 @@ class DemoPage extends Component {
     let sidebar = (
       <Motion
         defaultStyle={{ x: this.state.showSidebar ? 0 : 100 }}
-        style={{ x: this.state.showSidebar ? (isMobileScreen ? spring(0) : 0 ) : (isMobileScreen ? spring(100) : 100) }}
+        style={{ x: this.state.showSidebar ? (isMobileScreen ? spring(0) : 0) : (isMobileScreen ? spring(100) : 100) }}
       >
         {interpolatedStyle =>
           <div
@@ -230,8 +230,8 @@ class DemoPage extends Component {
                 applicationName="Showroom"
                 repositoryUrl="https://github.com/OpusCapitaBES/js-react-showroom-client"
                 contacts={[
-                  {name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com'},
-                  {name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com'}
+                  { name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com' },
+                  { name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com' }
                 ]}
               />
             </div>
@@ -253,7 +253,7 @@ class DemoPage extends Component {
             ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
             `}
                   onClick={this.handleToggleForceCentering.bind(this)}
-                  style={{paddingLeft: isMobileScreen ? '12px' : '0'}}
+                  style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
                 >
                   Force Centering
                 </div>
