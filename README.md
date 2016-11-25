@@ -1,4 +1,4 @@
-# Showroom
+# React - Showroom
 
 ## Synopsis
 
