@@ -11,7 +11,7 @@ let addRequiresStrings = require('./utils').addRequiresStrings;
 let walkUpAndFind = (directory, fileName) => {
   let files = fs.readdirSync(directory);
   let isTargetInDirectory = files.find(file => file === fileName);
-  if(typeof isTargetInDirectory !== 'undefined') {
+  if (typeof isTargetInDirectory !== 'undefined') {
     return directory;
   }
   let upperDirectory = path.resolve(directory, '..');
@@ -29,20 +29,20 @@ function isFileExists(packageRoot, relativePath) {
 function getScanResults(componentsRoot, config) {
   let cfg = config || {};
   let readmeMasks = cfg.readmeFileMasks || defaultConfig.readmeFiles.components;
-  let componentClassFileSuffix = cfg.componentClassFileSuffix || '.react.js';
+  // let componentClassFileSuffix = cfg.componentClassFileSuffix || '.react.js';
   let scopeClassSuffix = cfg.scopeClassClassSuffix || '.scope.react.js';
 
   let packageRoot = walkUpAndFind(componentsRoot, 'package.json');
   let packageInfo = require(path.join(packageRoot, 'package.json'));
 
-  let componentsInfo = getComponentsInfo(packageInfo.name, packageInfo.version, componentsRoot, readmeMasks)
-    .map(componentInfo => {
+  let componentsInfo = getComponentsInfo(packageInfo.name, packageInfo.version, componentsRoot, readmeMasks).
+    map(componentInfo => {
       let componentRoot = path.dirname(componentInfo.relatedFiles.find(file => file.name === 'readme').path);
-      let componentClass = path.normalize('../../' +
-        path.relative( packageRoot, path.join(componentRoot, `${componentInfo.name}${componentClassFileSuffix}`)
-      ));
+      // let componentClass = path.normalize('../../' +
+      //   path.relative(packageRoot, path.join(componentRoot, `${componentInfo.name}${componentClassFileSuffix}`)
+      // ));
       let scopeClass = path.normalize('../../' +
-        path.relative( packageRoot, path.join(componentRoot, `${componentInfo.name}${scopeClassSuffix}`)
+        path.relative(packageRoot, path.join(componentRoot, `${componentInfo.name}${scopeClassSuffix}`)
       ));
       let relativedRelatedFiles = componentInfo.relatedFiles.map(relatedFile =>
         Object.assign(
@@ -51,15 +51,15 @@ function getScanResults(componentsRoot, config) {
           { content: path.normalize('../../' + path.relative(packageRoot, relatedFile.path)) }
         )
       );
-      componentInfo = Object.assign({}, componentInfo, { relatedFiles: relativedRelatedFiles });
+      const newComponentInfo = Object.assign({}, componentInfo, { relatedFiles: relativedRelatedFiles });
       let additionalComponentInfo = {};
-      if (isFileExists(packageRoot, componentClass)) {
-        additionalComponentInfo.componentClass = componentClass;
+      if (isFileExists(packageRoot, newComponentInfo)) {
+        additionalComponentInfo.componentClass = newComponentInfo;
       }
       if (isFileExists(packageRoot, scopeClass)) {
         additionalComponentInfo.scopeClass = scopeClass;
       }
-      return Object.assign({}, componentInfo, additionalComponentInfo);
+      return Object.assign({}, newComponentInfo, additionalComponentInfo);
     });
 
   return {
@@ -75,16 +75,16 @@ function makeLocalScan(componentsRoot, destination, config) {
   Object.keys(scanResults).map(scanResult => {
     let fileContent;
     let filePath = path.join(resultsDestination, `${scanResult}.js`);
-    if(scanResult === 'componentsInfo') {
+    if (scanResult === 'componentsInfo') {
       fileContent = addRequiresStrings(scanResults[scanResult])
     } else {
-       fileContent = `module.exports = ${JSON.stringify(scanResults[scanResult], null, 4)}`;
+      fileContent = `module.exports = ${JSON.stringify(scanResults[scanResult], null, 4)}`;
     }
     fse.outputFileSync(filePath, fileContent);
   });
   let packageJsonTemplate = fs.readFileSync(path.resolve(__dirname, './package.json.template'), 'utf-8');
   let packageJsonPath = path.join(resultsDestination, 'package.json');
-  let packageRootInfoPath = path.join(resultsDestination, 'packageRoot');
+  // let packageRootInfoPath = path.join(resultsDestination, 'packageRoot');
   fse.outputFileSync(packageJsonPath, packageJsonTemplate);
 }
 

@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   externals: {
@@ -16,7 +15,7 @@ module.exports = {
       {
         test: /\.css$/, loader: "style!css-loader"
       },
-      { test: /\.less$/, loader: 'style!css!less'},
+      { test: /\.less$/, loader: 'style!css!less' },
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
       {
         test: /.js$/,

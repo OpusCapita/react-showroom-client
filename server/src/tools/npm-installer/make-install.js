@@ -22,6 +22,11 @@ function getPackagesInfos(packages) {
   });
 }
 
+function removeConflictPackages(packagePath) {
+  rimraf(libPath.join(packagePath, 'node_modules', 'react'));
+  rimraf(libPath.join(packagePath, 'node_modules', 'react-dom'));
+}
+
 function installPackages(packagesInfo, installationRoot) {
   log(`\nInstallation started.`);
   packagesInfo.map((packageInfo, packageIndex) => {
@@ -29,31 +34,26 @@ function installPackages(packagesInfo, installationRoot) {
     log(`\tCreated "${packageInfo.name}" package root dir.`);
     mkdirp(packageRoot);
     let versions = typeof packageInfo.info.versions === 'string' ?
-      [packageInfo.info.versions].filter(packageInfo.versionsFilter):
+      [packageInfo.info.versions].filter(packageInfo.versionsFilter) :
       packageInfo.info.versions.filter(packageInfo.versionsFilter);
     versions.map((version, versionIndex) => {
-        let versionRoot = libPath.join(packageRoot, version);
-        mkdirp(versionRoot);
-        let packageJSONPath = libPath.join(versionRoot, 'package.json');
-        execSync(`sleep 1`, {cwd: versionRoot}); // Problem on OSX. On random iter process has stopped;
-        libFs.writeFileSync(packageJSONPath, packageJSONTemplate);
-        execSync(`npm install --save -E ${packageInfo.name}@${version}`, { cwd: versionRoot });
-        let installedVersionDir = libPath.join(versionRoot, 'node_modules', packageInfo.name);
-        removeConflictPackages(versionRoot);
-        removeConflictPackages(installedVersionDir);
-        log(`\nInstalled ${versionIndex + 1}/${versions.length} version of "${packageInfo.name}" into:`);
-        log(`\t${versionRoot}`);
-        log(`Currently installed ${packageIndex}/${packagesInfo.length} packages.`);
-      });
+      let versionRoot = libPath.join(packageRoot, version);
+      mkdirp(versionRoot);
+      let packageJSONPath = libPath.join(versionRoot, 'package.json');
+      execSync(`sleep 1`, { cwd: versionRoot }); // Problem on OSX. On random iter process has stopped;
+      libFs.writeFileSync(packageJSONPath, packageJSONTemplate);
+      execSync(`npm install --save -E ${packageInfo.name}@${version}`, { cwd: versionRoot });
+      let installedVersionDir = libPath.join(versionRoot, 'node_modules', packageInfo.name);
+      removeConflictPackages(versionRoot);
+      removeConflictPackages(installedVersionDir);
+      log(`\nInstalled ${versionIndex + 1}/${versions.length} version of "${packageInfo.name}" into:`);
+      log(`\t${versionRoot}`);
+      log(`Currently installed ${packageIndex}/${packagesInfo.length} packages.`);
+    });
     log(`\n\nPackage "${packageInfo.name}" installed into:`);
     log(`\t${packageRoot}`);
     log(`Currently installed ${packageIndex + 1}/${packagesInfo.length} packages.`);
   });
-}
-
-function removeConflictPackages(packagePath) {
-  rimraf(libPath.join(packagePath, 'node_modules', 'react'));
-  rimraf(libPath.join(packagePath, 'node_modules', 'react-dom'));
 }
 
 module.exports = function makeInstall(config) {
