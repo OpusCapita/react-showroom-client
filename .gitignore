@@ -4,6 +4,5 @@ tmp
 npm-debug.log
 /build
 /coverage
-/client/lib
-/client/**/node_modules
-/server/**/node_modules
+/lib
+/node_modules

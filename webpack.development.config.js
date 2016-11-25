@@ -5,7 +5,7 @@ let host = require('./serverConfig').host;
 let port = require('./serverConfig').port;
 
 module.exports = {
-  entry: path.resolve(path.join(__dirname, 'www', 'index-page.js')),
+  entry: path.resolve(__dirname, 'www/index-page.js')),
   context: path.resolve(__dirname),
   output: {
     publicPath: '/',
@@ -14,7 +14,6 @@ module.exports = {
     library: 'demopage',
     libraryTarget: 'umd'
   },
-  // devtool: 'source-map',
   watch: true,
   plugins: [
     new webpack.NoErrorsPlugin(),
@@ -67,12 +66,16 @@ module.exports = {
         loader: 'raw-loader'
       },
       {
-        test: /\.less$/,
-        loader: 'style!css!postcss-loader!less?sourceMap'
+        test: /\.(css|less)$/,
+        loader: `style!css?modules&importLoaders=1&` +
+        `localIdentName=[name]__[local]__${packageVersion}_[hash:base64:3]` +
+        `!postcss-loader!less?sourceMap`,
+        include: /\.module\.(css|less)$/
       },
       {
-        test: /\.css$/,
-        loader: "style!css-loader!postcss-loader"
+        test: /\.(css|less)$/,
+        loader: `style!css!postcss-loader!less?sourceMap`,
+        exclude: /\.module\.(css|less)$/
       },
       {
         test: /.jsx?$/,

@@ -228,7 +228,7 @@ class DemoPage extends Component {
             <div className="col-xs-12">
               <ToolApplicationHeader
                 applicationName="Showroom"
-                repositoryUrl="http://buildserver.jcatalog.com/gitweb/?p=showroom.git"
+                repositoryUrl="https://github.com/OpusCapitaBES/js-react-showroom-client"
                 contacts={[
                   {name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com'},
                   {name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com'}
