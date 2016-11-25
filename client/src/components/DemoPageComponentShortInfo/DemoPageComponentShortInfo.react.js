@@ -6,7 +6,7 @@ let svgGitLogoContent = require('!!raw-loader!./git-logo.svg');
 export default
 class DemoPageComponentShortInfo extends Component {
   prepareGitRepoUrl(url) {
-    if(!url) {
+    if (!url) {
       return '';
     }
     return url.
@@ -17,7 +17,7 @@ class DemoPageComponentShortInfo extends Component {
   }
 
   render() {
-    let { packageJson, isMobileScreen, gitHead } = this.props;
+    let { isMobileScreen, gitHead } = this.props;
     let repositoryUrl = this.prepareGitRepoUrl(this.props.repositoryUrl);
     let repositoryLink = repositoryUrl ? (
       <a
@@ -26,7 +26,7 @@ class DemoPageComponentShortInfo extends Component {
         dangerouslySetInnerHTML={{ __html: svgGitLogoContent }}
         target="_blank"
         href={repositoryUrl}
-      ></a>
+      />
     ) : null;
 
     return (
@@ -53,7 +53,7 @@ class DemoPageComponentShortInfo extends Component {
               files={{
                 'Readme': ['README.MD', 'README.md', 'readme.md', 'Readme.md'],
                 'Changes': ['CHANGES.txt', 'changes.txt', 'CHANGES.md', 'CHANGELOG.md', 'History.md', 'HISTORY.md'],
-                'Contributing': [ 'CONTRIBUTING.md', 'CONTRIBUTING.MD' ]
+                'Contributing': ['CONTRIBUTING.md', 'CONTRIBUTING.MD']
               }}
               repositoryUrl={repositoryUrl}
               gitHead={gitHead}

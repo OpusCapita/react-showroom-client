@@ -1,35 +1,38 @@
 {
-  "name": "@opuscapita/jcatalog-showroom",
-  "version": "1.2.12",
+  "name": "@opuscapita/showroom",
+  "version": "1.0.0",
   "description": "React components catalog component.",
   "scripts": {
     "build": "rimraf lib && webpack --config ./webpack.production.config",
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
     "lint": "eslint src",
-    "postversion": "git push",
-    "prepublish": "npm run build",
     "start": "node www/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpusCapitaBES/js-react-showroom.git"
   },
   "author": {
     "name": "Kirill Volkovich",
-    "email": "volkovich@scand.com"
+    "email": "kirill.volkovich@jcatalog.com"
   },
   "main": "lib/index.js",
   "files": [
-    "lib",
-    "README.md"
+    "lib"
   ],
-  "license": "jCatalog",
+  "license": "UNLICENSED",
   "readme": "README.md",
   "peerDependencies": {
     "react": "0.14.8",
     "react-dom": "0.14.8"
   },
   "devDependencies": {
+    "@opuscapita/eslint-config": "1.0.0",
+    "@opuscapita/i18n": "1.0.0",
     "autoprefixer": "6.4.1",
     "babel-cli": "6.5.1",
     "babel-core": "6.4.0",
-    "babel-eslint": "6.0.4",
+    "babel-eslint": "7.1.1",
     "babel-loader": "6.2.1",
     "babel-plugin-transform-decorators-legacy": "1.3.4",
     "babel-plugin-transform-object-assign": "6.8.0",
@@ -41,15 +44,14 @@
     "compression": "1.6.2",
     "cross-env": "1.0.7",
     "css-loader": "0.21.0",
-    "eslint": "2.11.0",
-    "eslint-config-jcatalog": "1.0.2",
-    "eslint-plugin-react": "5.1.1",
+    "eslint": "3.10.2",
+    "eslint-plugin-react": "6.7.1",
     "express": "4.13.4",
     "file-loader": "0.9.0",
     "fuzzysearch": "1.0.3",
     "highlight.js": "9.8.0",
-    "jcatalog-i18n": "1.0.0",
     "json-loader": "0.5.4",
+    "less": "2.7.1",
     "less-loader": "2.2.2",
     "markdown-to-ast": "3.4.0",
     "mkdirp": "0.5.1",

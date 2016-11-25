@@ -1,19 +1,22 @@
 {
   "name": "@opuscapita/showroom-server",
-  "version": "1.0.2",
-  "description": "Server and tools for jcatalog-showroom.",
+  "version": "1.0.0",
+  "description": "Server and tools for @opuscapita/showroom.",
   "scripts": {
     "init-packages": "node ./src/init-packages.js",
     "lint": "eslint src",
-    "postversion": "git push",
     "start": "nodemon --watch src src/www/index --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpusCapitaBES/js-react-showroom.git"
   },
   "author": {
     "name": "Kirill Volkovich",
-    "email": "volkovich@scand.com"
+    "email": "kirill.volkovich@jcatalog.com"
   },
   "main": "index.js",
-  "license": "jCatalog",
+  "license": "UNLICENSED",
   "readme": "README.md",
   "peerDependencies": {
     "react": "0.14.8",
@@ -35,7 +38,7 @@
     "cross-env": "1.0.7",
     "css-loader": "0.21.0",
     "eslint": "2.11.0",
-    "eslint-config-jcatalog": "1.0.2",
+    "@opuscapita/eslint-config": "1.0.0",
     "eslint-plugin-react": "5.1.1",
     "express": "4.13.4",
     "file-loader": "0.9.0",
@@ -55,7 +58,7 @@
     "webpack": "1.12.2",
     "webpack-dev-middleware": "1.5.1",
     "write-file-webpack-plugin": "3.3.0",
-    "jcatalog-showroom": "^1.2.12"
+    "@opuscapita/showroom": "1.0.0"
   },
   "dependencies": {
     "glob": "7.1.1",

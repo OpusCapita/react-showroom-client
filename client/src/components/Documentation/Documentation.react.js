@@ -13,12 +13,12 @@ class Documentation extends Component {
     if (lang && hljs.getLanguage(lang)) {
       try {
         return hljs.highlight(lang, str).value;
-      } catch (err) { }
+      } catch (err) {} // eslint-disable-line no-empty
     }
 
     try {
       return hljs.highlightAuto(str).value;
-    } catch (err) { }
+    } catch (err) {} // eslint-disable-line no-empty
 
     return '';
   }

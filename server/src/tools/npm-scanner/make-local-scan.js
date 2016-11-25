@@ -20,7 +20,7 @@ let walkUpAndFind = (directory, fileName) => {
 
 function isFileExists(packageRoot, relativePath) {
   let targetPath = path.resolve(
-    path.join(packageRoot, 'node_modules', '.jcatalog-showroom'),
+    path.join(packageRoot, 'node_modules/@opuscapita', '.showroom'),
     relativePath
   );
   return glob(targetPath).length;
