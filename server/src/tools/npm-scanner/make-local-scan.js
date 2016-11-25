@@ -29,7 +29,7 @@ function isFileExists(packageRoot, relativePath) {
 function getScanResults(componentsRoot, config) {
   let cfg = config || {};
   let readmeMasks = cfg.readmeFileMasks || defaultConfig.readmeFiles.components;
-  // let componentClassFileSuffix = cfg.componentClassFileSuffix || '.react.js';
+  let componentClassFileSuffix = cfg.componentClassFileSuffix || '.react.js';
   let scopeClassSuffix = cfg.scopeClassClassSuffix || '.scope.react.js';
 
   let packageRoot = walkUpAndFind(componentsRoot, 'package.json');
@@ -38,9 +38,9 @@ function getScanResults(componentsRoot, config) {
   let componentsInfo = getComponentsInfo(packageInfo.name, packageInfo.version, componentsRoot, readmeMasks).
     map(componentInfo => {
       let componentRoot = path.dirname(componentInfo.relatedFiles.find(file => file.name === 'readme').path);
-      // let componentClass = path.normalize('../../' +
-      //   path.relative(packageRoot, path.join(componentRoot, `${componentInfo.name}${componentClassFileSuffix}`)
-      // ));
+      let componentClass = path.normalize('../../' +
+        path.relative(packageRoot, path.join(componentRoot, `${componentInfo.name}${componentClassFileSuffix}`)
+      ));
       let scopeClass = path.normalize('../../' +
         path.relative(packageRoot, path.join(componentRoot, `${componentInfo.name}${scopeClassSuffix}`)
       ));
@@ -53,7 +53,7 @@ function getScanResults(componentsRoot, config) {
       );
       const newComponentInfo = Object.assign({}, componentInfo, { relatedFiles: relativedRelatedFiles });
       let additionalComponentInfo = {};
-      if (isFileExists(packageRoot, newComponentInfo)) {
+      if (isFileExists(packageRoot, componentClass)) {
         additionalComponentInfo.componentClass = newComponentInfo;
       }
       if (isFileExists(packageRoot, scopeClass)) {
