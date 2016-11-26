@@ -1,11 +1,12 @@
 'use strict';
 const path = require('path');
 const webpack = require('webpack');
+const packageVersion = require('./package.json').version;
 let host = require('./serverConfig').host;
 let port = require('./serverConfig').port;
 
 module.exports = {
-  entry: path.resolve(__dirname, 'www/index-page.js')),
+  entry: path.resolve(__dirname, 'www/index-page.js'),
   context: path.resolve(__dirname),
   output: {
     publicPath: '/',
