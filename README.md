@@ -55,7 +55,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Browse components catalog
 * See usage code examples
 * See **API** documentation
-* Change component properties and see whan happenned **in realtime**
+* Change component properties and see what happenned **in realtime**
 * Change component **version** to see appropriate documentation
 
 ## Contributors:
