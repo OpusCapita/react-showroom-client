@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OpusCapitaBES/js-react-showroom.git"
+    "url": "https://github.com/OpusCapitaBES/js-react-showroom-client.git"
   },
   "author": {
     "name": "Kirill Volkovich",
@@ -22,10 +22,6 @@
   ],
   "license": "UNLICENSED",
   "readme": "README.md",
-  "peerDependencies": {
-    "react": "0.14.8",
-    "react-dom": "0.14.8"
-  },
   "devDependencies": {
     "@opuscapita/eslint-config": "1.0.0",
     "@opuscapita/i18n": "1.0.0",
@@ -57,6 +53,8 @@
     "mkdirp": "0.5.1",
     "path": "0.12.7",
     "postcss-loader": "0.13.0",
+    "react": "15.4.0",
+    "react-dom": "15.4.0",
     "query-string": "4.2.3",
     "raw-loader": "0.5.1",
     "rc-slider": "5.1.1",

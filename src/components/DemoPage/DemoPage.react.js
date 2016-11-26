@@ -187,10 +187,11 @@ class DemoPage extends Component {
 
     let toggleSidebarBtn = (
       <button
-        className="btn btn-primary demo-page__primary-btn"
+        className="demo-page__primary-btn"
         onClick={() => this.handleToggleSidebar.call(this)}
+        type="button"
       >
-        Toggle sidebar
+        SIDEBAR
       </button>
     );
 
