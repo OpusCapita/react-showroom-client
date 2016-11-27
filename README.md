@@ -57,6 +57,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 * See **API** documentation
 * Change component properties and see what happenned **in realtime**
 * Change component **version** to see appropriate documentation
+* If you run it don't forget configure [this](https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server configuration](https://github.com/OpusCapitaBES/js-react-showroom-server#usage)
 
 ## Contributors
 
