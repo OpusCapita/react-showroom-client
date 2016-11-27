@@ -59,6 +59,11 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Change component **version** to see appropriate documentation
 * If you run it don't forget configure [this file](https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapitaBES/js-react-showroom-server/blob/master/README.md#what-this-goal-do--configuration)
 
+## See also
+
+* [Component documentation format](./docs/example.DOCUMENTATION.md)
+* [Scope component](./docs/scope-component.md)
+
 ## Contributors
 
 * Alexey Sergeev - [alexey.sergeev@jcatalog.com](alexey.sergeev@jcatalog.com)
