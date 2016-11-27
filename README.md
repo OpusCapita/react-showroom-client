@@ -50,7 +50,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 * **Always write** the documentation :pencil:
 * Take care about other developers and others take care about you :tophat:
 
-### [Server application](./docs/server.md)
+### [Server application](https://github.com/OpusCapitaBES/js-react-showroom-server)
 
 * Browse components catalog
 * See usage code examples
