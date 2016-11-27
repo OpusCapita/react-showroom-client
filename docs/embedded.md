@@ -47,7 +47,7 @@ ReactDOM.render(showroom, element);
 
 ### Documentation File Example
 
-You can find it[**here**](./example.DOCUMENTATION.md)
+You can find it [**here**](./example.DOCUMENTATION.md)
 
 ### Edit your webpack config
 
