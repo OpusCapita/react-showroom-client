@@ -44,9 +44,9 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ## Usage
 
-### [Client](./docs/embedded.md)
+### [Embedded](./docs/embedded.md)
 
-* Developer-side variant or as client side of [showroom-server](https://github.com/OpusCapitaBES/js-react-showroom-server)
+* Developer-side variant
 * **Always write** the documentation :pencil:
 * Take care about other developers and others take care about you :tophat:
 
