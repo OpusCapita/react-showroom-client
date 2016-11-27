@@ -1,4 +1,6 @@
-### Synopsis
+# ClassificationGroupInput
+
+## Synopsis
 
 ClassificationGroupInput react component. The part of 
 [**jcatalog-react-reference-search**](http://buildserver.jcatalog.com/gitweb/?p=js-react-reference-search.git)
@@ -20,7 +22,11 @@ ClassificationGroupInput react component. The part of
 | selectedClassification | object | obj/str?????. |
 | onlyLeafCouldBeSelected | bool | Allows to select only leafs of classifications tree |
 
-### Code Example
+## Details
+
+Write this section if needed.
+
+## Code Example
 
 ```
 <ClassificationGroupInput
@@ -34,16 +40,15 @@ ClassificationGroupInput react component. The part of
 />
 ```
 
-### Contributors
+## Contributors
+
 Alexey Sergeev, Dmitry Divin, Daniel Zhitomirsky
 
-[GIT REPOSITORY](http://buildserver.jcatalog.com/gitweb/?p=js-react-reference-search.git)
-
-### Component Name
+## Component Name
 
 ClassificationGroupInput
 
-### License
+## License
 
 Licensed by © 2016 OpusCapita 
 
