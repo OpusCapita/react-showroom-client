@@ -106,11 +106,11 @@ If you not specify SCOPE component, by default it provides **jcatalog-i18n** in 
 **Component.DOCUMENTATION.react.js**
 
 ```js
-<ComponentName showModal={_scope.state.showModal}/>
+<ComponentName showModal={_scope.state.showModal} />
 ```
 
 ```js
-<ComponentName cellType={_scope.state.UltraCell}/>
+<ComponentName cellType={_scope.state.UltraCell} />
 ```
 
 **IMPORTANT!!!**:
