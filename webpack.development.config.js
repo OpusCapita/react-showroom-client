@@ -8,6 +8,7 @@ let port = require('./serverConfig').port;
 module.exports = {
   entry: path.resolve(__dirname, 'www/index-page.js'),
   context: path.resolve(__dirname),
+  devtool: 'eval',
   output: {
     publicPath: '/',
     path: path.resolve(__dirname, 'lib'),

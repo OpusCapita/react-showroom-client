@@ -24,7 +24,8 @@
   "readme": "README.md",
   "devDependencies": {
     "@opuscapita/eslint-config": "1.0.0",
-    "@opuscapita/i18n": "1.0.0",
+    "@opuscapita/i18n": "^1.0.0",
+    "jcatalog-i18n": "^1.1.5",
     "autoprefixer": "6.4.1",
     "babel-cli": "6.5.1",
     "babel-core": "6.4.0",
