@@ -5,7 +5,7 @@
   "scripts": {
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
     "lint": "eslint src",
-    "npm-build": "rimraf lib && webpack --config ./webpack.production.config",
+    "npm-build": "rimraf lib/* && webpack --config ./webpack.production.config",
     "npm-publish": "npm run npm-build && npm-publish",
     "publish-release": "npm run npm-publish -- --release",
     "publish-snapshot": "npm run npm-publish",
