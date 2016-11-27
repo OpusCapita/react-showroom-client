@@ -3,9 +3,12 @@
   "version": "1.2.12",
   "description": "React components catalog component.",
   "scripts": {
-    "build": "rimraf lib && webpack --config ./webpack.production.config",
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
     "lint": "eslint src",
+    "npm-build": "rimraf lib && webpack --config ./webpack.production.config",
+    "npm-publish": "npm run npm-build && npm-publish",
+    "publish-release": "npm run npm-publish -- --release",
+    "publish-snapshot": "npm run npm-publish",
     "start": "node www/index"
   },
   "repository": {
@@ -24,7 +27,8 @@
   "readme": "README.md",
   "devDependencies": {
     "@opuscapita/eslint-config": "1.0.0",
-    "@opuscapita/i18n": "1.0.0",
+    "@opuscapita/i18n": "1.0.1",
+    "@opuscapita/npm-scripts": "1.0.0",
     "autoprefixer": "6.4.1",
     "babel-cli": "6.5.1",
     "babel-core": "6.4.0",
