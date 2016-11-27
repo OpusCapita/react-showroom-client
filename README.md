@@ -52,6 +52,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ### [Server application](https://github.com/OpusCapitaBES/js-react-showroom-server)
 
+* Application running on remote server
 * Browse components catalog
 * See usage code examples
 * See **API** documentation
