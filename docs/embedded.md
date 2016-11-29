@@ -1,6 +1,6 @@
 ## Integration with your React package
 
-**Install required packages** 
+**Install required packages**
 
 `npm install --save-dev -E postcss-loader raw-loader @opuscapita/showroom @opuscapita/showroom-server`
 
@@ -24,7 +24,7 @@
 
 ```js
 let componentsRoot = path.resolve(__dirname, '../../client/components');
-require('jcatalog-showroom-server').makeLocalScan(componentsRoot);
+require('@opuscapita/showroom-server').makeLocalScan(componentsRoot);
 ```
 
 **index-page.js**
@@ -32,13 +32,13 @@ require('jcatalog-showroom-server').makeLocalScan(componentsRoot);
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Showroom from 'jcatalog-showroom';
+import Showroom from '@opuscapita/showroom-client';
 
 let element = document.getElementById('main');
 let showroom = React.createElement(Showroom, {
   loaderOptions: {
-    componentsInfo: require('.jcatalog-showroom/componentsInfo'),
-    packagesInfo: require('.jcatalog-showroom/packageInfo')
+    componentsInfo: require('.@opuscapita/showroom/componentsInfo'),
+    packagesInfo: require('.@opuscapita/showroom/packageInfo')
   }
 });
 
@@ -82,8 +82,8 @@ postcss: function () {
 
 ```js
 // modify module.loaders
-{ 
-  test: /\.less$/, 
+{
+  test: /\.less$/,
   loader: 'style!css!postcss-loader!less?sourceMap'
 },
 {

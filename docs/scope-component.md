@@ -1,11 +1,11 @@
 ## SCOPE Component
 
-In some situations you need a wrapper component. 
+In some situations you need a wrapper component.
 
 ### For example you want:
 
 * Use specific *contextTypes*.
-* Pass to props some value from parent state. 
+* Pass to props some value from parent state.
 * Use complex object value in property:
 
 **Container.react.js:**
@@ -32,7 +32,7 @@ Create a 'Component'.SCOPE.react.js file. SCOPE file is just a wrapper component
 
 ```js
 import React from 'react';
-import { showroomScopeDecorator } from 'jcatalog-showroom';
+import { showroomScopeDecorator } from '@opuscapita/showroom-client';
 
 // This @decorator add this._renderChildren() method.
 @showroomScopeDecorator
@@ -53,16 +53,16 @@ export default ComponentNameScope;
 
 ```js
 import React from 'react';
-import { I18nManager } from 'jcatalog-react-i18n';
+import { I18nManager } from '@opuscapita/react-i18n';
 import UltraCell from '../cells/UltraCell.react';
-import { showroomScopeDecorator } from 'jcatalog-showroom';
+import { showroomScopeDecorator } from '@opuscapita/showroom-client';
 
 // This @decorator add this._renderChildren() method.
 @showroomScopeDecorator
 class ComponentNameScope extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       UltraCell,
       showModal: false
     }
@@ -73,7 +73,7 @@ class ComponentNameScope extends React.Component {
       i18n: new I18nManager(this.props.locale)
     };
   }
-  
+
   toggleModal() {
     this.setState({
       showModal: !this.state.toggleModal
@@ -114,5 +114,5 @@ If you not specify SCOPE component, by default it provides **jcatalog-i18n** in 
 ```
 
 **IMPORTANT!!!**:
-If you want to add your components to global **Showroom** installation, 
+If you want to add your components to global **Showroom** installation,
 your DOCUMENTATION and SCOPE files must be available in package folder. SCOPE files must be transpiled to ES5.
