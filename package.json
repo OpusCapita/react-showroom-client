@@ -27,7 +27,7 @@
   "readme": "README.md",
   "devDependencies": {
     "@opuscapita/eslint-config": "1.0.0",
-    "@opuscapita/i18n": "1.0.1",
+    "@opuscapita/i18n": "1.0.3",
     "@opuscapita/npm-scripts": "1.0.0",
     "autoprefixer": "6.4.1",
     "babel-cli": "6.5.1",
