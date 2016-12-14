@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { I18nManager } from '@opuscapita/i18n';
+import { I18nManager } from 'opuscapita-i18n';
 import showroomScopeDecorator from '../../decorators/showroomScopeDecorator';
 
 const formatPatterns = {

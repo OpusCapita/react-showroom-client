@@ -1,4 +1,4 @@
-# React - Showroom
+# OpusCapita Showroom
 
 ## Synopsis
 
@@ -50,14 +50,14 @@ But if we want to have a **large libraries of components** we must have a **easy
 * **Always write** the documentation :pencil:
 * Take care about other developers and others take care about you :tophat:
 
-### [Server application (on remote server)](https://github.com/OpusCapitaBES/js-react-showroom-server)
+### [Server application (on remote server)](https://github.com/OpusCapitaBES/js-node-showroom-server)
 
 * Browse components catalog
 * See usage code examples
 * See **API** documentation
 * Change component properties and see what happenned **in realtime**
 * Change component **version** to see appropriate documentation
-* If you run it don't forget configure [this file](https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapitaBES/node-showroom-server/blob/master/README.md#what-this-goal-do)
+* If you run it don't forget configure [this file](https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapitaBES/js-node-showroom-server/blob/master/README.md#what-this-goal-do)
 
 ## See also
 
@@ -71,4 +71,4 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ## License
 
-OpusCapita 2016
+**OpusCapita Showroom** is licensed under the Apache License, Version 2.0. See [LICENSE](./LICENSE) for the full license text.

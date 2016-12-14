@@ -2,7 +2,7 @@
 
 **Install required packages**
 
-`npm install --save-dev -E postcss-loader raw-loader @opuscapita/showroom @opuscapita/showroom-server`
+`npm install --save-dev -E postcss-loader raw-loader opuscapita-showroom-client opuscapita-showroom-server`
 
 **Modify files:**
 
@@ -24,7 +24,7 @@
 
 ```js
 let componentsRoot = path.resolve(__dirname, '../../client/components');
-require('@opuscapita/showroom-server').makeLocalScan(componentsRoot);
+require('opuscapita-showroom-server').makeLocalScan(componentsRoot);
 ```
 
 **index-page.js**
@@ -32,13 +32,13 @@ require('@opuscapita/showroom-server').makeLocalScan(componentsRoot);
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Showroom from '@opuscapita/showroom-client';
+import Showroom from 'opuscapita-showroom-client';
 
 let element = document.getElementById('main');
 let showroom = React.createElement(Showroom, {
   loaderOptions: {
-    componentsInfo: require('.@opuscapita/showroom/componentsInfo'),
-    packagesInfo: require('.@opuscapita/showroom/packageInfo')
+    componentsInfo: require('.opuscapita-showroom/componentsInfo'),
+    packagesInfo: require('.opuscapita-showroom/packageInfo')
   }
 });
 

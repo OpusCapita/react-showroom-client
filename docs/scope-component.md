@@ -32,7 +32,7 @@ Create a 'Component'.SCOPE.react.js file. SCOPE file is just a wrapper component
 
 ```js
 import React from 'react';
-import { showroomScopeDecorator } from '@opuscapita/showroom-client';
+import { showroomScopeDecorator } from 'opuscapita-showroom-client';
 
 // This @decorator add this._renderChildren() method.
 @showroomScopeDecorator
@@ -53,9 +53,9 @@ export default ComponentNameScope;
 
 ```js
 import React from 'react';
-import { I18nManager } from '@opuscapita/react-i18n';
+import { I18nManager } from 'opuscapita-i18n';
 import UltraCell from '../cells/UltraCell.react';
-import { showroomScopeDecorator } from '@opuscapita/showroom-client';
+import { showroomScopeDecorator } from 'opuscapita-showroom-client';
 
 // This @decorator add this._renderChildren() method.
 @showroomScopeDecorator

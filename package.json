@@ -1,5 +1,5 @@
 {
-  "name": "@opuscapita/showroom-client",
+  "name": "opuscapita-showroom-client",
   "version": "1.0.9",
   "description": "React components catalog component.",
   "scripts": {
@@ -11,24 +11,21 @@
     "publish-snapshot": "npm run npm-publish",
     "start": "node www/index"
   },
+  "homepage": "https://github.com/OpusCapitaBES/js-react-showroom-client",
+  "files": [
+    "lib"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "readme": "README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/OpusCapitaBES/js-react-showroom-client.git"
   },
-  "author": {
-    "name": "Kirill Volkovich",
-    "email": "kirill.volkovich@jcatalog.com"
-  },
-  "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
-  "license": "UNLICENSED",
-  "readme": "README.md",
   "devDependencies": {
-    "@opuscapita/eslint-config": "1.0.0",
-    "@opuscapita/i18n": "1.0.3",
-    "@opuscapita/npm-scripts": "1.0.0",
     "autoprefixer": "6.4.1",
     "babel-cli": "6.5.1",
     "babel-core": "6.4.0",
@@ -55,14 +52,17 @@
     "less-loader": "2.2.2",
     "markdown-to-ast": "3.4.0",
     "mkdirp": "0.5.1",
+    "eslint-config-opuscapita": "1.0.1",
+    "opuscapita-i18n": "1.0.6",
+    "opuscapita-npm-scripts": "1.0.5",
     "path": "0.12.7",
     "postcss-loader": "0.13.0",
-    "react": "15.4.0",
-    "react-dom": "15.4.0",
     "query-string": "4.2.3",
     "raw-loader": "0.5.1",
     "rc-slider": "5.1.1",
+    "react": "15.4.0",
     "react-codemirror": "0.2.6",
+    "react-dom": "15.4.0",
     "react-motion": "0.4.5",
     "react-remarkable": "1.1.1",
     "rimraf": "2.5.2",
