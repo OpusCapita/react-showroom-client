@@ -1,4 +1,14 @@
 
+Release 1.0.11 Fri Dec 16 2016 16:33:59 GMT+0300 (+03)
+=======================================================
+
+ - Removed uglifying js code for debug purposes (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 16 16:33:12 2016 +0300)
+ - Updating to a version to  1.0.11 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:58:59 2016 +0300)
+ - Fixed npm-package readme (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:58:03 2016 +0300)
+ - Fixed eslint config import (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:50:50 2016 +0300)
+ - Sorted dependencies (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:44:44 2016 +0300)
+ - Updating to a version to  1.0.10 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:33:50 2016 +0300)
+
 Release 1.0.10 Wed Dec 14 2016 18:58:51 GMT+0300 (+03)
 =======================================================
 
