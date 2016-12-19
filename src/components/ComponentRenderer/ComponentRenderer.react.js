@@ -8,6 +8,7 @@ import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
 import 'codemirror/mode/jsx/jsx';
 import { parseDocumentation } from '../../parseComponents';
+import fixIt from 'react-fix-it';
 
 window.React = React;
 
@@ -86,7 +87,7 @@ class ComponentRenderer extends Component {
 
   setReactClassGlobally(props) {
     let componentName = props.componentInfo.name || props.component.componentClass.name;
-    window[componentName] = props.component.componentClass;
+    window[componentName] = fixIt(props.component.componentClass);
   }
 
   render() {
