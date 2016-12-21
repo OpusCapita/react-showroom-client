@@ -1,6 +1,6 @@
 {
   "name": "opuscapita-showroom-client",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "React components catalog component.",
   "scripts": {
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
