@@ -15,6 +15,13 @@ config.plugins = config.plugins.concat([
     }
   }),
   new webpack.optimize.DedupePlugin(),
+  new webpack.optimize.UglifyJsPlugin({
+    compressor: {
+      warnings: false,
+      screw_ie8: true
+    },
+    comments: false
+  }),
   new webpack.optimize.OccurenceOrderPlugin()
 ]);
 
