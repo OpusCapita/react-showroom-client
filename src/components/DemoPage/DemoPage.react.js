@@ -22,7 +22,8 @@ class DemoPage extends Component {
       options: {
         maxContainerWidth: (query.maxContainerWidth) || '40%',
         isShowContainerBorders: false,
-        isContentCentered: query.forceCentering === 'true'
+        isContentCentered: query.forceCentering === 'true',
+        isUseScope: query.isUseScope === 'true'
       }
     };
     this.handleHistoryPopState = this.handleHistoryPopState.bind(this);
@@ -120,6 +121,12 @@ class DemoPage extends Component {
     this.setQueryStringParam('forceCentering', !options.isContentCentered);
   }
 
+  handleToggleUseScope() {
+    let { options } = this.state;
+    this.setOption('isUseScope', !options.isUseScope);
+    this.setQueryStringParam('isUseScope', !options.isUseScope);
+  }
+
   setOption(name, value) {
     this.setState({
       options: {
@@ -156,6 +163,7 @@ class DemoPage extends Component {
         componentInfo={currentComponentInfo}
         maxContainerWidth={options.maxContainerWidth}
         isScreenSmall={this.props.isScreenSmall}
+        isUseScope={options.isUseScope}
         options={options}
       />
     ) : null;
@@ -218,6 +226,32 @@ class DemoPage extends Component {
     let componentPackage =
       packagesInfo.find(packageInfo => packageInfo.info.name === currentComponentInfo.package) || {};
 
+    let forceCenteringToggler = (
+      <div
+        className={`
+          demo-page__options-item-btn
+          ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
+        `}
+         onClick={this.handleToggleForceCentering.bind(this)}
+         style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
+      >
+        Force Centering
+      </div>
+    );
+
+    let useScopeToggler = (
+      <div
+        className={`
+          demo-page__options-item-btn
+          ${options.isUseScope ? 'demo-page__options-item-btn--active' : ' '}
+        `}
+         onClick={this.handleToggleUseScope.bind(this)}
+         style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
+      >
+        Use scope
+      </div>
+    );
+
     return (
       <div
         className="row demo-page"
@@ -248,16 +282,8 @@ class DemoPage extends Component {
                 onMouseLeave={() => this.setOption('isShowContainerBorders', false)}
               >
                 {maxWidthSlider}
-                <div
-                  className={`
-          demo-page__options-item-btn
-            ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
-            `}
-                  onClick={this.handleToggleForceCentering.bind(this)}
-                  style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
-                >
-                  Force Centering
-                </div>
+                {forceCenteringToggler}
+                {useScopeToggler}
               </div>
             </div>
             <DemoPageComponentShortInfo

@@ -3,6 +3,7 @@ import './ComponentRendered.less';
 import ComponentRendererElement from '../ComponentRendererElement';
 import Documentation from '../Documentation';
 import DefaultScopeComponent from '../DefaultScopeComponent';
+import EmptyScopeComponent from '../EmptyScopeComponent';
 import CodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
@@ -75,7 +76,11 @@ class ComponentRenderer extends Component {
 
   createReactElement(code) {
     let childElement;
-    let ScopeComponentClass = this.props.component.scopeClass || DefaultScopeComponent;
+    let { isUseScope, component } = this.props;
+    let ScopeComponentClass = isUseScope ?
+        (component.scopeClass || DefaultScopeComponent) :
+        EmptyScopeComponent;
+
     try {
       childElement = React.createElement(ScopeComponentClass, { _childrenCode: code });
     } catch (err) {
@@ -189,8 +194,10 @@ ComponentRenderer.propTypes = {
   componentInfo: PropTypes.object,
   maxContainerWidth: PropTypes.string,
   options: PropTypes.object,
-  isScreenSmall: PropTypes.bool
+  isScreenSmall: PropTypes.bool,
+  isUseScope: PropTypes.bool
 };
 ComponentRenderer.defaultProps = {
-  maxContainerWidth: '100%'
+  maxContainerWidth: '100%',
+  isUseScope: true
 };
