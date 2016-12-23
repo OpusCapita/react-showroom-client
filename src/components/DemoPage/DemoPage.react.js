@@ -23,7 +23,7 @@ class DemoPage extends Component {
         maxContainerWidth: (query.maxContainerWidth) || '40%',
         isShowContainerBorders: false,
         isContentCentered: query.forceCentering === 'true',
-        isUseScope: true
+        isUseScope: typeof query.isUseScope === 'undefined' ? true : query.isUseScope
       }
     };
     this.handleHistoryPopState = this.handleHistoryPopState.bind(this);
