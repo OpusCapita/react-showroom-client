@@ -85,7 +85,8 @@ module.exports = {
         include: [
           path.join(__dirname, 'src'),
           path.join(__dirname, 'www')
-        ]
+        ],
+        plugins: ['transform-runtime']
       }
     ]
   }
