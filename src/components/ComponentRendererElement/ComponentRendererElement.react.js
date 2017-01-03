@@ -4,7 +4,7 @@ import './ComponentRendererElement.less';
 export default
 class ComponentRendererElement extends Component {
   componentWillMount(nextProps) {
-    this._oldStyles = Array.from(document.head.getElementsByTagName('style'));
+    this._oldStyles = [].slice.call(document.head.getElementsByTagName('style'));
   }
 
   componentWillUpdate(nextProps) {
@@ -22,7 +22,7 @@ class ComponentRendererElement extends Component {
   }
 
   render() {
-    this._newStyles = Array.from(document.head.getElementsByTagName('style'));
+    this._newStyles = [].slice.call(document.head.getElementsByTagName('style'));
     return this.props.element || null;
   }
 }
