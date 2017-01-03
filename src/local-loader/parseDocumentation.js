@@ -1,6 +1,7 @@
 'use strict';
 
 let markdownToAst = require('markdown-to-ast');
+let fill = require('lodash/fill');
 
 function getSectionIndexRange(ast, headerName) {
   let targetHeaderIndex = ast.children.reduce((result, branch, index) => {
@@ -20,7 +21,7 @@ function getSectionIndexRange(ast, headerName) {
 
   let countOfSections = nextHeaderIndex - targetHeaderIndex;
   if (countOfSections > 0) {
-    return Array.apply(null, Array(countOfSections)).map((el, i) => i + targetHeaderIndex);
+    return fill(countOfSections, '').map((el, i) => i + targetHeaderIndex);
   }
   return [];
 }
