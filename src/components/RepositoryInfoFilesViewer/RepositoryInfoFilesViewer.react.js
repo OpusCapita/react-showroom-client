@@ -3,6 +3,7 @@ import './RepositoryInfoFilesViewer.less';
 import SimpleFullScreenModal from '../SimpleFullScreenModal';
 import Markdown from 'react-remarkable';
 import agent from 'superagent';
+import find from 'lodash/find';
 
 class RepositoryInfoFilesViewer extends Component {
   constructor(props) {
@@ -35,11 +36,13 @@ class RepositoryInfoFilesViewer extends Component {
     }
     Object.keys(files).map(infoName => {
       let fileNames = files[infoName];
-      fileNames.find(fileName => {
-        let fileUrl = this.getFileUrl(packageJson, repositoryUrl, fileName);
-        this.tryGetFile(fileUrl, infoName, this.setInfoContent.bind(this));
+      find(
+        fileNames,
+        fileName => {
+          let fileUrl = this.getFileUrl(packageJson, repositoryUrl, fileName);
+          this.tryGetFile(fileUrl, infoName, this.setInfoContent.bind(this));
+        });
       });
-    });
   }
 
   setInfoContent(infoName, content) {

@@ -7,6 +7,7 @@ import Rcslider from 'rc-slider';
 import ToolApplicationHeader from '../ToolApplicationHeader';
 import queryString from 'query-string';
 import { spring, Motion } from 'react-motion';
+import find from 'lodash/find';
 
 export default
 class DemoPage extends Component {
@@ -223,8 +224,10 @@ class DemoPage extends Component {
       </div>
     ) : null;
 
-    let componentPackage =
-      packagesInfo.find(packageInfo => packageInfo.info.name === currentComponentInfo.package) || {};
+    let componentPackage = find(
+      packagesInfo,
+      packageInfo => packageInfo.info.name === currentComponentInfo.package
+    ) || {};
 
     let forceCenteringToggler = (
       <div
