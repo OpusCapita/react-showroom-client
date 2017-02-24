@@ -16,7 +16,6 @@
 <script src="/path/to/your/bundle.js"></script>
 ```
 
-
 * **Add scanning packages**
 
 **server.js**
@@ -43,6 +42,10 @@ let showroom = React.createElement(Showroom, {
 
 ReactDOM.render(showroom, element);
 ```
+
+On start it will find **\*.DOCUMENTATION.md** files in specified folder.
+
+Also it will find **\*.react.js** file for every **\*DOCUMENTATION.md**.
 
 ### Documentation File Example
 
