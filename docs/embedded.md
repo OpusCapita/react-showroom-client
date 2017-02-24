@@ -68,7 +68,7 @@ You can find it [**here**](./example.DOCUMENTATION.md)
 }
 ```
 
-* **We highly recommend to include [autoprefixer](https://github.com/postcss/autoprefixer) to your project:**
+* **We highly recommend to start use [autoprefixer](https://github.com/postcss/autoprefixer) in your projects:**
 
 ```
 npm install --save-dev postcss-loader autoprefixer
