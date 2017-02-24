@@ -13,6 +13,7 @@
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-with-addons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+ <script type="application/javascript" src="/path/to/your/bundle.js"></script>
 ```
 
 
