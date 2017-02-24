@@ -2,8 +2,7 @@
 
 ## Synopsis
 
-ClassificationGroupInput react component. The part of 
-[**jcatalog-react-reference-search**](http://buildserver.jcatalog.com/gitweb/?p=js-react-reference-search.git)
+ClassificationGroupInput react component. Provide possibility to search and select ClassificationGroups
 
 ### Props Reference
 
