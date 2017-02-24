@@ -176,7 +176,7 @@ class DemoPage extends Component {
       >
         {interpolatedStyle =>
           <div
-            className="demo-page__filter-sidebar"
+            className={`demo-page__filter-sidebar ${isMobileScreen ? 'demo-page__filter-sidebar--mobile' : ' '}`}
             style={{
               boxShadow: this.props.isScreenSmall ? '0 0 12px rgba(0, 0, 0, 0.65)' : '',
               transform: `translate(-${interpolatedStyle.x}%, 0)`
