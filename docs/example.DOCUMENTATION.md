@@ -18,8 +18,6 @@ ClassificationGroupInput react component. The part of
 | multiple | bool | Allows to select several elements. *Note*: if *true*, **value** must be array of objects. |
 | readOnly | bool | Disallows any interaction with the component. |
 | disabled | bool | Disallows any interaction with the component. |
-| serviceRegistry | func | ????? Hard to describe it. ????? |
-| selectedClassification | object | obj/str?????. |
 | onlyLeafCouldBeSelected | bool | Allows to select only leafs of classifications tree |
 
 ## Details
