@@ -42,7 +42,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Or you can again spent several hours/days :clock10: to `/dev/null`. 
 * **The choice is yours**.
 
-## Usage
+## How to use
 
 ### [Embedded](./docs/embedded.md)
 
