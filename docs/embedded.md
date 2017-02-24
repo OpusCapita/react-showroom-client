@@ -6,13 +6,11 @@
 
 **Modify files:**
 
-
 * **Choose appropriate version of `react` and `react-dom`**
 
 **demo-index.html**
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.16.0/polyfill.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-with-addons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
 ```
