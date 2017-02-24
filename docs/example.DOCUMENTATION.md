@@ -2,8 +2,7 @@
 
 ## Synopsis
 
-ClassificationGroupInput react component. The part of 
-[**jcatalog-react-reference-search**](http://buildserver.jcatalog.com/gitweb/?p=js-react-reference-search.git)
+ClassificationGroupInput react component. Provide possibility to search and select ClassificationGroups
 
 ### Props Reference
 
@@ -18,8 +17,6 @@ ClassificationGroupInput react component. The part of
 | multiple | bool | Allows to select several elements. *Note*: if *true*, **value** must be array of objects. |
 | readOnly | bool | Disallows any interaction with the component. |
 | disabled | bool | Disallows any interaction with the component. |
-| serviceRegistry | func | ????? Hard to describe it. ????? |
-| selectedClassification | object | obj/str?????. |
 | onlyLeafCouldBeSelected | bool | Allows to select only leafs of classifications tree |
 
 ## Details

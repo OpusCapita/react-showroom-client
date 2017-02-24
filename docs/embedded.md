@@ -6,17 +6,15 @@
 
 **Modify files:**
 
-
 * **Choose appropriate version of `react` and `react-dom`**
 
 **demo-index.html**
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.16.0/polyfill.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.15.2/react-with-addons.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.15.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-with-addons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="/path/to/your/bundle.js"></script>
 ```
-
 
 * **Add scanning packages**
 
@@ -45,6 +43,10 @@ let showroom = React.createElement(Showroom, {
 ReactDOM.render(showroom, element);
 ```
 
+On start it will find **\*.DOCUMENTATION.md** files in specified folder.
+
+Also it will find **\*.react.js** file for every **\*DOCUMENTATION.md**.
+
 ### Documentation File Example
 
 You can find it [**here**](./example.DOCUMENTATION.md)
@@ -66,7 +68,9 @@ You can find it [**here**](./example.DOCUMENTATION.md)
 }
 ```
 
-* **We highly recommend to include [autoprefixer](https://github.com/postcss/autoprefixer) to your project:**
+### Recomendations
+
+* **We highly recommend to start use [autoprefixer](https://github.com/postcss/autoprefixer) in your projects:**
 
 ```
 npm install --save-dev postcss-loader autoprefixer
