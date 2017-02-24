@@ -68,6 +68,8 @@ You can find it [**here**](./example.DOCUMENTATION.md)
 }
 ```
 
+### Recomendations
+
 * **We highly recommend to start use [autoprefixer](https://github.com/postcss/autoprefixer) in your projects:**
 
 ```
