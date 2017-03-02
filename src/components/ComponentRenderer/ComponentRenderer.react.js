@@ -5,6 +5,7 @@ import Documentation from '../Documentation';
 import DefaultScopeComponent from '../DefaultScopeComponent';
 import EmptyScopeComponent from '../EmptyScopeComponent';
 import CodeMirror from 'react-codemirror';
+import CompilationErrorContainer from '../CompilationErrorContainer';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
 import 'codemirror/mode/jsx/jsx';
@@ -82,8 +83,12 @@ class ComponentRenderer extends Component {
         EmptyScopeComponent;
 
     try {
+      /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
+      window._showroom ? window._showroom.codeCompilationError = null : window._showroom = {};
       childElement = React.createElement(ScopeComponentClass, { _childrenCode: code });
     } catch (err) {
+      /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
+      window._showroom ? window._showroom.codeCompilationError = err.message : window._showroom = {};
       console.log('ComponentRenderer - render error:', err);
       childElement = null;
     }
@@ -171,6 +176,7 @@ class ComponentRenderer extends Component {
               >
                 Reset code
               </div>
+              <CompilationErrorContainer />
             </div>
             <div
               style={{ width: (isHorizontalLayout || isMobileScreen) ? '100%' : '50%' }}
