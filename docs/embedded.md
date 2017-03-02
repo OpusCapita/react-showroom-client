@@ -55,6 +55,8 @@ You can find it [**here**](./example.DOCUMENTATION.md)
 
 * **Add to config these loaders:**
 
+`npm install --save-dev raw-loader@0.5.x json-loader@0.5.x`
+
 **webpack.development.config.js**
 
 ```js
@@ -73,7 +75,7 @@ You can find it [**here**](./example.DOCUMENTATION.md)
 * **We highly recommend to start use [autoprefixer](https://github.com/postcss/autoprefixer) in your projects:**
 
 ```
-npm install --save-dev postcss-loader autoprefixer
+npm install --save-dev postcss-loader@1.3.x autoprefixer@6.7.x
 ```
 
 **webpack.development.config.js**
