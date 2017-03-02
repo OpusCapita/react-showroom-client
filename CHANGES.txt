@@ -1,4 +1,68 @@
 
+Release 1.1.0 Thu Mar 02 2017 16:51:41 GMT+0300 (+03)
+=======================================================
+
+ - Updated minor version. Now it 1.1.0
+    
+    Implemented - display code compilation error (Kirill Volkovich <volkovich@scand.com>, Thu Mar 2 16:50:24 2017 +0300)
+ - Implemented - display code compilation error (Kirill Volkovich <volkovich@scand.com>, Thu Mar 2 16:44:47 2017 +0300)
+ - Updating to a version to  1.0.27 (Kirill Volkovich <volkovich@scand.com>, Thu Mar 2 13:27:46 2017 +0300)
+ - Merge branch 'master' of opuscapita.github.com:OpusCapitaBES/js-react-showroom-client (90f8803 b04337b, Kirill Volkovich <volkovich@scand.com>)
+ - Increased horizontal padding in component renderer
+    
+    Purpose - to be consistent with default bootstrap styles (Kirill Volkovich <volkovich@scand.com>, Thu Mar 2 13:20:34 2017 +0300)
+ - Update embedded.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 13:45:00 2017 +0300)
+ - Updating to a version to  1.0.26 (Kirill Volkovich <volkovich@scand.com>, Fri Feb 24 13:34:00 2017 +0300)
+ - Merge branch 'master' of opuscapita.github.com:OpusCapitaBES/js-react-showroom-client (734de6a 65c6fd8, Kirill Volkovich <volkovich@scand.com>)
+ - Changed styles of 'max-width' slider (Kirill Volkovich <volkovich@scand.com>, Fri Feb 24 13:25:30 2017 +0300)
+ - Fixed sidebar overlapping modal dialogs (Kirill Volkovich <volkovich@scand.com>, Fri Feb 24 13:24:58 2017 +0300)
+ - Update example.DOCUMENTATION.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 12:32:32 2017 +0300)
+ - Update example.DOCUMENTATION.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 12:02:52 2017 +0300)
+ - Update embedded.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 11:24:44 2017 +0300)
+ - Update embedded.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 11:24:15 2017 +0300)
+ - Update embedded.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 11:22:33 2017 +0300)
+ - Update embedded.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 10:47:33 2017 +0300)
+ - Update embedded.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 10:47:19 2017 +0300)
+ - Update README.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 10:40:30 2017 +0300)
+ - Update embedded.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 10:23:53 2017 +0300)
+ - Update embedded.md (Kirill Volkovich <kvolkovich-sc@users.noreply.github.com>, Fri Feb 24 10:19:55 2017 +0300)
+ - Added 'keywords' field to package.json (Kirill Volkovich <volkovich@scand.com>, Wed Feb 22 12:25:52 2017 +0300)
+ - Updating to a version to  1.0.25 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:47:51 2017 +0300)
+ - Array.prototype.find method usage replaced by lodash/find (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:46:35 2017 +0300)
+ - Updating to a version to  1.0.24 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:20:28 2017 +0300)
+ - Array.prototype.from method usage replaced by [].slice.call (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:18:57 2017 +0300)
+ - Updating to a version to  1.0.23 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:16:16 2017 +0300)
+ - Array.prototype.fill method usage replaced by lodash/fill (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:14:45 2017 +0300)
+ - Added dependency - lodash@4.17.4 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:12:27 2017 +0300)
+ - Updating to a version to  1.0.21 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:03:43 2017 +0300)
+ - Updating to a version to  1.0.20 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Tue Jan 3 17:02:52 2017 +0300)
+ - Updating to a version to  1.0.16 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 23 16:19:46 2016 +0300)
+ - Added babel plugin 'transform-runtime' (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 23 16:15:12 2016 +0300)
+ - Updating to a version to  1.0.15 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 23 13:40:17 2016 +0300)
+ - Fixed `useScope` feature bug (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 23 13:39:03 2016 +0300)
+ - Updating to a version to  1.0.14 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 23 13:02:12 2016 +0300)
+ - Fixed `useScope` feature bug (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 23 12:59:44 2016 +0300)
+ - Reduced font size of code in documentation view (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 23 12:56:49 2016 +0300)
+ - Updating to a version to  1.0.13 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 21 16:44:50 2016 +0300)
+ - Uglifying js code enabled (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 21 16:38:36 2016 +0300)
+ - Disable scope possibility added (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 21 16:35:25 2016 +0300)
+ - Merge pull request #1 from OpusCapitaBES/feature-fix-it
+    
+    Automatically generate tests from errors (2b6be79 b65279f, Kirill Volkovich <kirill.volkovich@jcatalog.com>)
+ - Component class wrapped by "fixIt" function.
+    
+    It allows to automatically generate tests from errors.
+    See more information here
+    https://github.com/MicheleBertoli/react-fix-it (kirillvolkovich <kirill.volkovich@jcatalog.com>, Mon Dec 19 13:41:20 2016 +0300)
+ - Added dependency "react-fix-it@0.2.0" (kirillvolkovich <kirill.volkovich@jcatalog.com>, Mon Dec 19 13:40:45 2016 +0300)
+ - Updating to a version to  1.0.12 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 16 16:34:11 2016 +0300)
+ - Removed uglifying js code for debug purposes (kirillvolkovich <kirill.volkovich@jcatalog.com>, Fri Dec 16 16:33:12 2016 +0300)
+ - Updating to a version to  1.0.11 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:58:59 2016 +0300)
+ - Fixed npm-package readme (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:58:03 2016 +0300)
+ - Fixed eslint config import (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:50:50 2016 +0300)
+ - Sorted dependencies (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:44:44 2016 +0300)
+ - Updating to a version to  1.0.10 (kirillvolkovich <kirill.volkovich@jcatalog.com>, Wed Dec 14 18:33:50 2016 +0300)
+
 Release 1.0.26 Thu Mar 02 2017 13:27:34 GMT+0300 (+03)
 =======================================================
 
