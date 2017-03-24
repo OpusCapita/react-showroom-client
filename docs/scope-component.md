@@ -4,88 +4,129 @@ In some situations you need a wrapper component.
 
 ### For example you want:
 
-* Use specific *contextTypes*.
-* Pass to props some value from parent state.
-* Use complex object value in property:
-
-**Container.react.js:**
-
-```js
-import UltraCell from '../cells/UltraCell.react';
-
-...
-render() {
-  return (
-    <div className="container">
-      <Table cellType={UltraCell}>
-    </div>
-  );
-}
-...
-```
+* Make other React component(s) available in documentation examples
+* Have parent with state to show some interactive cases
+* Have some *contextTypes*
 
 ### To do it you need:
 
-Create a 'Component'.SCOPE.react.js file. SCOPE file is just a wrapper component.
+Create a ComponentName.SCOPE.react.js file. SCOPE file is just a wrapper component.
+It's a little tricky. But it works =)
 
-**Component.SCOPE.react.js** **simple** example:
+### Examples
+
+#### Making other React component(s) available in documentation examples
+
+**Component.SCOPE.react.js**
 
 ```js
 import React from 'react';
 import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+import I18nContext from 'opuscapita-react-i18n/lib/I18nContext.react';
 
-// This @decorator add this._renderChildren() method.
+window.I18nContext = I18nContext; // Make I18nContext a global variable
+
+// This @showroomScopeDecorator modify React.Component prototype by adding _renderChildren() method.
+export default
 @showroomScopeDecorator
 class ComponentNameScope extends React.Component {
   render() {
     return (
       <div>
-        {this._renderChildren()} {/* You must call this method in any place of your JSX. */}
+        {this._renderChildren()} {/* You should call this method somewhere in your JSX. */}
       </div>
     );
   }
 }
-
-export default ComponentNameScope;
 ```
 
-**Component.SCOPE.react.js** **complex** example:
+Now you can use ```<I18nContext />``` in your examples
+
+**Component.DOCUMENTATION.md**
+
+```js
+<I18nContext>
+  <Component />
+</I18nContext>
+```
+
+#### Access to SCOPE methods and state
+
+**Component.SCOPE.react.js**
 
 ```js
 import React from 'react';
-import { I18nManager } from 'opuscapita-i18n';
-import UltraCell from '../cells/UltraCell.react';
 import { showroomScopeDecorator } from 'opuscapita-showroom-client';
 
-// This @decorator add this._renderChildren() method.
+export default
 @showroomScopeDecorator
 class ComponentNameScope extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      UltraCell,
       showModal: false
     }
   }
+  
+  toggleModal() {
+    this.setState({ showModal: !this.state.showModal });
+  }
+  
+  render() {
+    return (
+      <div>
+        {this._renderChildren()}
+      </div>
+    );
+  }
+}
+```
 
+Now you have access to parent SCOPE component by ```_scope``` variable.
+
+```_scope``` has some restrictions:
+
+**WORKS:**
+
+  * ```_scope.state```
+  * ```onClick={_scope.handleChildClick)}```
+  * ```onClick={_scope.handleChildClick.bind(_scope))}```
+  
+**DON'T WORKS**
+
+  * ```onClick={(event) => _scope.handleChildClick(event))}```
+
+**Component.DOCUMENTATION.md**
+
+```js
+  <Component
+    onClick={_scope.state.toggleModal.bind(_scope)}
+    showModal={_scope.state.showModal}
+  />
+```
+
+#### Adding some stuff to React context
+
+**Component.SCOPE.react.js**
+
+```js
+import React from 'react';
+import { I18nManager } from 'opuscapita-i18n';
+import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+
+// This @showroomScopeDecorator modify React.Component prototype by adding _renderChildren() method.
+export default
+@showroomScopeDecorator
+class ComponentNameScope extends React.Component {
   getChildContext() {
     return {
       i18n: new I18nManager(this.props.locale)
     };
   }
-
-  toggleModal() {
-    this.setState({
-      showModal: !this.state.toggleModal
-    });
-  }
-
+  
   render() {
     return (
       <div>
-        <button onClick={this.toggleModal.bind(this)}>
-          Toggle modal
-        </button>
         {this._renderChildren()} {/* You should call this method somewhere in your JSX. */}
       </div>
     );
@@ -95,8 +136,6 @@ class ComponentNameScope extends React.Component {
 ComponentNameScope.childContextTypes = {
   i18n: React.PropTypes.object.isRequired
 };
-
-export default ComponentNameScope;
 ```
 
 If you not specify SCOPE component, by default it provides **jcatalog-i18n** in context.
@@ -112,7 +151,3 @@ If you not specify SCOPE component, by default it provides **jcatalog-i18n** in 
 ```js
 <ComponentName cellType={_scope.state.UltraCell} />
 ```
-
-**IMPORTANT!!!**:
-If you want to add your components to global **Showroom** installation,
-your DOCUMENTATION and SCOPE files must be available in package folder. SCOPE files must be transpiled to ES5.
