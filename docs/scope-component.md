@@ -137,17 +137,3 @@ ComponentNameScope.childContextTypes = {
   i18n: React.PropTypes.object.isRequired
 };
 ```
-
-If you not specify SCOPE component, by default it provides **jcatalog-i18n** in context.
-
-### In documentation `_scope` variable is a ref to your SCOPE component:
-
-**Component.DOCUMENTATION.react.js**
-
-```js
-<ComponentName showModal={_scope.state.showModal} />
-```
-
-```js
-<ComponentName cellType={_scope.state.UltraCell} />
-```
