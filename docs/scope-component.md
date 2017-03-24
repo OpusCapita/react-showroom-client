@@ -52,7 +52,7 @@ Now you can use ```<I18nContext />``` in your examples
 
 #### Access to SCOPE methods and state
 
-**Component.SCOPE.react.js**
+*Component.SCOPE.react.js*
 
 ```js
 import React from 'react';
