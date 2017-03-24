@@ -17,7 +17,7 @@ It's a little tricky. But it works =)
 
 #### Making other React component(s) available in documentation examples
 
-**Component.SCOPE.react.js**
+*Component.SCOPE.react.js*
 
 ```js
 import React from 'react';
@@ -42,7 +42,7 @@ class ComponentNameScope extends React.Component {
 
 Now you can use ```<I18nContext />``` in your examples
 
-**Component.DOCUMENTATION.md**
+*Component.DOCUMENTATION.md*
 
 ```js
 <I18nContext>
@@ -86,17 +86,17 @@ Now you have access to parent SCOPE component by ```_scope``` variable.
 
 ```_scope``` has some restrictions:
 
-**WORKS:**
+**SUCCESS:**
 
   * ```_scope.state```
   * ```onClick={_scope.handleChildClick)}```
   * ```onClick={_scope.handleChildClick.bind(_scope))}```
   
-**DON'T WORKS**
+**FAIL**
 
   * ```onClick={(event) => _scope.handleChildClick(event))}```
 
-**Component.DOCUMENTATION.md**
+*Component.DOCUMENTATION.md*
 
 ```js
   <Component
@@ -107,7 +107,7 @@ Now you have access to parent SCOPE component by ```_scope``` variable.
 
 #### Adding some stuff to React context
 
-**Component.SCOPE.react.js**
+*Component.SCOPE.react.js*
 
 ```js
 import React from 'react';
