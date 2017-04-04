@@ -52,7 +52,7 @@ Component will be added to **src/client/components** directory
 
 Component is a directory includes:
 
-* <component_name>.DOCUMENTATION [file](./docs/example.DOCUMENTATION.md)
+* <component_name>.DOCUMENTATION.md [file](./docs/example.DOCUMENTATION.md)
 * <component_name>.react.js file with sceleton of component
 * <component_name>.less file with styles
 * index.js file with component export
