@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OPC 8 Buyside (Procurement Mode) Main Menu</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Local stylesheet -->
+		<link rel="stylesheet" href="../../../css/jcatalog-bootstrap-bundle.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="../../../css/jcatalog-bootstrap-extensions-bundle.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<!-- This ressource is replaced on most machines by bundle.less.css 
+			 stylesheet.css is included for jcatalog users who can not access bundle.less.css
+	    -->
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+
+			ul.dnd-enabled {
+				margin: 0 ;
+				padding: 0;
+				list-style: none;
+			}
+
+			ul.dnd-enabled li {
+				margin-bottom: 2px;
+			}
+
+
+			ul.dnd-enabled li a {
+				background: #F5F5F5;
+				padding: 3px 40px;
+				display: block;
+				font-size: 1.1em;
+				color: #000;
+				text-decoration: none;
+				position: relative;
+			}
+
+			ul.dnd-enabled li a:hover {
+				background: #eee;
+			}
+
+			ul.dnd-enabled li a span.icon {
+				display: block;
+				float: left;
+				position: absolute;
+				width: 30px;
+				border-right: 2px solid #fff;
+				top: 0px;
+				left: 0px;
+				bottom: 0px;
+				padding-top: 3px;
+				text-align: center;
+				color: #555;
+			}
+
+			ul.nav.nav-tabs div.pull-right {
+				margin-bottom: 11px;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+		<div class="navbar navbar-default navbar-main-menu"><!-- main nav -->
+			<div class="navbar-header pull-left">
+				<a class="navbar-brand" href="#">
+					<img src="../../../img/jc-logo-rgb.svg" style="height: 1.5em; margin-top: -.25em; margin-bottom: -.25em;">
+				</a>
+				<div class="navbar-popover collapse" id="main-menu">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">Catalog <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Search</a></li>        
+								<li><a href="#">Categories</a></li>
+								<li><a href="#">External Shops</a></li>
+								<li><a href="#">Suppliers</a></li>
+								<li><a href="#">Contracts</a></li>
+								<!--<li><a href="#">Quick Quote</a></li>-->
+								<!-- ##DEVNOTE## Quick Quote needs to be hidden in this menu in OPC Buyside Proc Mode -->
+							</ul>
+						</li>	
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Requests <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">Requisitions</li>
+								<li><a href="#">Requisition Status</a></li>
+								<li><a href="#">Order Process Overview</a></li>
+								<li><a href="#">Cart Import</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Approval</li>
+								<li><a href="#">Approve Requisition</a></li>
+								<li><a href="#">Overview of Approved Requisitions</a></li>
+								<li><a href="#">Show all Approvals</a></li>
+							</ul>
+						</li>	
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Purchase Order <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">Purchase Orders</li>
+								<li><a href="#">Purchase Order Status</a></li>
+								<li><a href="#">Cancel Purchase Order</a></li>
+								<li><a href="#">PO Confirmation</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Deliveries</li>
+								<li><a href="#">Goods Receipt</a></li>
+								<li><a href="#">Delivery Note</a></li>
+							</ul>
+						</li>	
+						<li><a href="#">Analysis</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Invoices <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">Invoice Administration</li>
+								<li><a href="#">Create Invoice / Credit Note</a></li>
+								<li><a href="#">Edit Invoice / Credit Note</a></li>
+								<li><a href="#">Invoice Verification</a></li>
+							</ul>
+						</li>	
+						<li><a href="#">Quick Quote</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="navbar-header pull-right">
+
+				<ul class="nav navbar-nav navbar-no-collapse navbar-right">
+					<li>
+						<button type="button" class="btn btn-default visible-sm visible-xs" data-toggle="collapse" data-target="#main-menu">
+							Menu
+						</button>
+					</li>
+					<li class="dropdown visible-sm visible-xs">
+						<a href="#" class="icon-nav-item">
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+							<span class="badge">7</span>
+						</a>
+					</li>
+					<li class="dropdown hidden-sm hidden-xs">
+						<a href="#" class="dropdown-toggle icon-nav-item" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+							<span class="badge">7</span>
+
+						</a>
+						<ul class="dropdown-menu cart-preview">
+							<button type="button" class="btn btn-primary btn-lg btn-block">Shopping Cart</button>
+							<table class="table search-results"><!-- search results -->
+								<tbody>
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img  src="../../img/demo-data/product-img-asusx-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+											</a>
+										</td>
+										<td class="text-right">
+											2.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												Asus X53SV-SO951V<br>
+												<small>Supplier AG</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>&euro;1,198.00</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img  src="../../img/demo-data/product-img-tplink-large.jpg" class="img-responsive" alt="Product Img Mbpro Large"></td>
+											</a>
+										</td>
+										<td class="text-right">
+											14.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												TP-Link 300Mbps Wireless USB Adapter<br>
+												<small>Supplier AG</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>209.86</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img  src="../../img/demo-data/product-img-mbpro-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+											</a>
+										</td>
+										<td class="text-right">
+											3.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												MacBook pro 13-inch: 2.4GHz with Retina display<br>
+												<small>Apple</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>3,897.00</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											&nbsp;
+										</td>
+										<td class="text-right">
+											<i>1.00</i>
+										</td>
+										<td>
+											<i><a href="#to-cart#">more item(s)</a></i>
+										</td>
+										<td>
+											&nbsp;
+										</td>
+									</tr><!-- /product -->
+									<tr class="total"><!-- total -->
+										<td colspan="5" class="text-right">
+											<small>Total price:</small> <b>&euro;5,344.42</b>
+										</td>
+									</tr><!-- /total -->
+								</tbody>
+								<tfoot></tfoot>
+							</table><!-- /search results-->
+						</ul>
+					</li>	
+					
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle icon-nav-item visible-sm visible-xs" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-user"></span>
+							<b class="caret hidden-sm hidden-xs"></b>
+						</a>
+						<a href="#" class="dropdown-toggle hidden-sm hidden-xs" data-toggle="dropdown">
+							Martin Hallmann <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header visible-sm visible-xs">Martin Hallmann</li>
+							<li><a href="#">User Details</a></li>
+							<li><a href="#">Change customer assignment</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Language</li>
+							<li><a href="#"><b>DE</b> Deutsch</a></li>
+							<li><a href="#"><b>EN</b> English</a></li>
+							<li><a href="#"><b>FR</b> Francais</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Shopping Lists</a></li>
+							<li><a href="#">Delegation</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Help</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>	
+					<li class="dropdown">
+						<a href="#" class="icon-nav-item dropdown-toggle" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-cog"></span>
+							<b class="caret hidden-sm hidden-xs"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Auto Goods Receipt</a></li>
+							<li class="divider"></li>
+							<li><a href="#">System Administration</a></li>
+							<li><a href="#">Customer Administration</a></li>
+							<li><a href="#">Setup</a></li>
+						</ul>
+					</li>	
+				</ul>
+
+
+			</div>
+
+		</div><!-- /main nav -->
+
+		<div class="container">
+
+			<div class="text-right pull-right">
+				<input type="submit" name="_action_cancelRfQFromDetails" value="Delete Questionnaire" class="btn btn-link" onclick="if (!confirm('Do you really want to delete this Questionnaire?')) {return false;}">
+			</div>
+			<h1>
+				#QuestionnaireShortDesc#
+			</h1>
+			<P class="lead">#LongDescription# goes here<br>
+				<span class="label label-default">ID00781234</span>
+			</p>
+			<div class="row">
+				<div class="col-sm-3"><!-- sidebar -->
+					<div class="accordion" id="accordion2">
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+									<h4>Create Item</h4>
+								</a>
+							</div>
+							<div id="collapseOne" class="accordion-body collapse in">
+								<div class="accordion-inner">
+									<ul class="dnd-enabled">
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-pencil-square-o"></span></span>
+												Text Input Field
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-paragraph"></span></span>
+												Paragraph Input Field
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-caret-square-o-down"></span></span>
+												Dropdown
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-calendar"></span></span>
+												DateTime Input Field
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-header"></span></span>
+												Heading
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-align-left"></span></span>
+												Static Text
+											</a>
+										</li>
+										<!--<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-picture-o"></span></span>
+												Static Image
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-download"></span></span>
+												File Download
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-upload"></span></span>
+												File Upload
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-info-circle"></span></span>
+												Callout
+											</a>
+										</li>-->
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-list-ul"></span></span>
+												Multiple Options
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="icon"><span class="fa fa-check-square-o"></span></span>
+												Multiple Choice
+											</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div><!-- /accordion-group -->
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+									<h4>Browse Questions</h4>
+								</a>
+							</div>
+							<div id="collapseTwo" class="accordion-body collapse">
+								<div class="accordion-inner">
+									2
+								</div>
+							</div>
+						</div><!-- /accordion-group -->
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+									<h4>Questionnaire Options</h4>
+								</a>
+							</div>
+							<div id="collapseThree" class="accordion-body collapse">
+								<div class="accordion-inner">
+									3
+								</div>
+							</div>
+						</div><!-- /accordion-group -->
+					</div>
+				</div><!--  /col-sm-3 /sidebar -->
+				<div class="col-sm-9">
+
+
+					<div id="q-item-1"><!-- Questionnaire Item Text Field -->
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<div class="text-right pull-right">
+								<a href="#q-item-1" data-toggle="tab" class="btn btn-sm btn-link remove-button">Delete</a>
+								<a href="#q-item-1-3" data-toggle="tab" class="btn btn-sm btn-primary save-button">Save</a>
+								<a href="#q-item-1-1" data-toggle="tab" class="btn btn-sm btn-default hide edit-button">Edit</a>
+							</div>
+							<li class="active"><a href="#q-item-1-1" data-toggle="tab"><span class="fa fa-pencil-square-o"></span> Text Input Field</a></li>
+							<li class=""><a href="#q-item-1-2" data-toggle="tab">Options</a></li>
+						</ul>
+						<br>
+						
+						<div id="q-item-1-tab-content" class="tab-content"> 
+							<div class="tab-pane active" id="q-item-1-1">
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input type="text" class="form-control" placeholder="State your question or field description" value="">
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-1-2">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" checked> Response Required
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">User has to reply to this field if checked.</p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="checkbox" autocomplete="off"> Validate Field Data
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">Field value is validated before submission. <i>(Toggle to set options)</i></p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-1-3">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label">#LabelFieldValue#</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="#LabelFieldValue#" value="">
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+
+
+							</div>
+
+						</div>
+						<hr>
+					</div><!-- /Questionnaire Item Text Field -->
+
+					<div id="q-item-2"><!-- Questionnaire Item Paragraph Field -->
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<div class="text-right pull-right">
+								<a href="#q-item-2" data-toggle="tab" class="btn btn-sm btn-link remove-button">Delete</a>
+								<a href="#q-item-2-3" data-toggle="tab" class="btn btn-sm btn-primary save-button">Save</a>
+								<a href="#q-item-2-1" data-toggle="tab" class="btn btn-sm btn-default hide edit-button">Edit</a>
+							</div>
+							<li class="active"><a href="#q-item-2-1" data-toggle="tab"><span class="fa fa-paragraph"></span> Paragraph Input Field</a></li>
+							<li class=""><a href="#q-item-2-2" data-toggle="tab">Options</a></li>
+						</ul>
+						<br>
+						
+						<div id="q-item-2-tab-content" class="tab-content"> 
+							<div class="tab-pane active" id="q-item-2-1">
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input type="text" class="form-control" placeholder="State your question or field description" value="">
+										</div>
+									</div><!-- /form-group -->
+
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-2-2">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" checked> Response Required
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">User has to reply to this field if checked.</p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="checkbox" autocomplete="off"> Validate Field Data
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">Field value is validated before submission. <i>(Toggle to set options)</i></p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+								</form>
+							</div>
+							<div class="tab-pane" id="q-item-2-3">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label">#LabelFieldValue#</label>
+										<div class="col-sm-9">
+											<textarea class="form-control" placeholder="#LabelFieldValue#"></textarea>
+
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+
+
+							</div>
+
+
+						</div>
+						<hr>
+					</div><!-- /Questionnaire Item Paragraph Field -->
+
+					<div id="q-item-3"><!-- Questionnaire Item Dropdown -->
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<div class="text-right pull-right">
+								<a href="#q-item-3" data-toggle="tab" class="btn btn-sm btn-link remove-button">Delete</a>
+								<a href="#q-item-3-3" data-toggle="tab" class="btn btn-sm btn-primary save-button">Save</a>
+								<a href="#q-item-3-1" data-toggle="tab" class="btn btn-sm btn-default hide edit-button">Edit</a>
+							</div>
+							<li class="active"><a href="#q-item-3-1" data-toggle="tab"><span class="fa fa-caret-square-o-down"></span> Dropdown</a></li>
+							<li class=""><a href="#q-item-3-2" data-toggle="tab">Options</a></li>
+						</ul>
+						<br>
+						
+						<div id="q-item-3-tab-content" class="tab-content"> 
+							<div class="tab-pane active" id="q-item-3-1">
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-12">
+												<input type="text" class="form-control" placeholder="State your question or field description" value="">
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">1.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">2.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-3-2">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" checked> Response Required
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">User has to reply to this field if checked.</p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="checkbox" autocomplete="off"> Validate Field Data
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">Field value is validated before submission. <i>(Toggle to set options)</i></p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+
+								</form>
+
+
+							</div>
+							<div class="tab-pane" id="q-item-3-3">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label">#LabelFieldValue#</label>
+										<div class="col-sm-9">
+											<select class="form-control">
+												<option>Option 1</option>
+												<option>Option 2</option>
+											</select>
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+
+
+							</div>
+
+
+						</div>
+						<hr>
+					</div><!-- /Questionnaire Item Dropdown -->
+
+
+					<div id="q-item-4"><!-- Questionnaire Item DateTime Field -->
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<div class="text-right pull-right">
+								<a href="#q-item-4" data-toggle="tab" class="btn btn-sm btn-link remove-button">Delete</a>
+								<a href="#q-item-4-3" data-toggle="tab" class="btn btn-sm btn-primary save-button">Save</a>
+								<a href="#q-item-4-1" data-toggle="tab" class="btn btn-sm btn-default hide edit-button">Edit</a>
+							</div>
+							<li class="active"><a href="#q-item-4-1" data-toggle="tab"><span class="fa fa-calendar"></span> DateTime Input Field</a></li>
+							<li class=""><a href="#q-item-4-2" data-toggle="tab">Options</a></li>
+						</ul>
+						<br>
+						
+						<div id="q-item-4-tab-content" class="tab-content"> 
+							<div class="tab-pane active" id="q-item-4-1">
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input type="text" class="form-control" placeholder="State your question or field description" value="">
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-4-2">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-4">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" checked> Response Required
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-4  -->
+										<div class="col-sm-8">
+											<p class="info">User has to reply to this field if checked.</p>
+										</div><!-- /col-sm-8  -->
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<div class="col-sm-4">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" checked> Date
+												</label>
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" checked> Time
+												</label>
+												<label class="btn btn-default">
+													<input type="checkbox" autocomplete="off" checked> Timespan
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-4  -->
+										<div class="col-sm-8">
+											<p class="info">Choose if date, time or timespan is selectable</p>
+										</div><!-- /col-sm-8  -->
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<div class="col-sm-4">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="checkbox" autocomplete="off"> Validate Field Data
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-4  -->
+										<div class="col-sm-8">
+											<p class="info">Field value is validated before submission. <i>(Toggle to set options)</i></p>
+										</div><!-- /col-sm-8  -->
+									</div><!-- /form-group -->
+
+
+								</form>
+
+
+							</div>
+							<div class="tab-pane" id="q-item-4-3">
+
+								<form class="form-horizontal">
+
+									<!-- DateTimePicker -->
+									<div class="form-group">
+										<label class="col-sm-3 control-label">#LabelFieldData#</label>
+										<div class="col-sm-5">
+											<div class="input-group input-group-datetime">
+												<input type="text" class="form-control input-date" placeholder="DD/MM/YYYY">
+												<span class="input-group-addon" id="sizing-addon1">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+												<input type="text" class="form-control input-time" placeholder="HH:MM">
+			 									<span class="input-group-addon" id="sizing-addon1">
+													<span class="glyphicon glyphicon-time"></span>
+												</span>
+											</div><!-- /input-group -->
+										</div>
+			 						</div><!-- /form-group -->
+
+
+								</form>
+
+
+
+							</div>
+
+						</div>
+						<hr>
+					</div><!-- /Questionnaire Item DateTime Field -->
+
+					<div id="q-item-5"><!-- Questionnaire Item Heading -->
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<div class="text-right pull-right">
+								<a href="#q-item-5" data-toggle="tab" class="btn btn-sm btn-link remove-button">Delete</a>
+								<a href="#q-item-5-3" data-toggle="tab" class="btn btn-sm btn-primary save-button">Save</a>
+								<a href="#q-item-5-1" data-toggle="tab" class="btn btn-sm btn-default hide edit-button">Edit</a>
+							</div>
+							<li class="active"><a href="#q-item-5-1" data-toggle="tab"><span class="fa fa-header"></span> Heading</a></li>
+							<li class=""><a href="#q-item-5-2" data-toggle="tab">Options</a></li>
+						</ul>
+						<br>
+						
+						<div id="q-item-5-tab-content" class="tab-content"> 
+							<div class="tab-pane active" id="q-item-5-1">
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<select class="form-control">
+												<option>Title</option>
+												<option>Section</option>
+												<option>Sub-Section</option>
+												<option>Fieldset</option>
+											</select>
+										</div>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="Enter your Heading text" value="">
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-5-2">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off"> Render as HTML
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">HTML tags will be rendered. Uncheck to strip HTML from text.</p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+
+								</form>
+
+
+							</div>
+							<div class="tab-pane" id="q-item-5-3">
+
+								<h2>#HeadingFieldData#</h2>
+
+
+
+							</div>
+
+						</div>
+						<hr>
+					</div><!-- /Questionnaire Item Heading -->
+
+
+					<div id="q-item-6"><!-- Questionnaire Item Static Text -->
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<div class="text-right pull-right">
+								<a href="#q-item-6" data-toggle="tab" class="btn btn-sm btn-link remove-button">Delete</a>
+								<a href="#q-item-6-3" data-toggle="tab" class="btn btn-sm btn-primary save-button">Save</a>
+								<a href="#q-item-6-1" data-toggle="tab" class="btn btn-sm btn-default hide edit-button">Edit</a>
+							</div>
+							<li class="active"><a href="#q-item-6-1" data-toggle="tab"><span class="fa fa-align-left"></span> Static Text</a></li>
+							<li class=""><a href="#q-item-6-2" data-toggle="tab">Options</a></li>
+						</ul>
+						<br>
+						
+						<div id="q-item-6-tab-content" class="tab-content"> 
+							<div class="tab-pane active" id="q-item-6-1">
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-12">
+											<textarea class="form-control" placeholder="Type in text paragraph"></textarea>
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-6-2">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off"> Render as HTML
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">HTML tags will be rendered. Uncheck to strip HTML from text.</p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+								</form>
+
+
+							</div>
+							<div class="tab-pane" id="q-item-6-3">
+
+								<p>
+									Pork chop sausage ham hock ground round, beef filet mignon kevin doner chicken short ribs kielbasa biltong hamburger. Kevin strip steak capicola jowl pork chop, frankfurter cupim ball tip. Fatback tongue pork chop kevin, brisket shoulder spare ribs ribeye kielbasa doner porchetta. Bacon pork belly rump pork loin shank pork chop turducken short ribs cupim spare ribs drumstick. Ham cupim shankle, ball tip leberkas turducken short ribs chicken boudin shoulder. Ham hock pork belly turkey frankfurter porchetta short ribs kevin ham brisket swine pig meatball corned beef boudin.
+								</p>
+
+
+							</div>
+
+						</div>
+						<hr>
+					</div><!-- /Questionnaire Item Static Text -->
+
+
+					<div id="q-item-7"><!-- Questionnaire Item Multiple Options -->
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<div class="text-right pull-right">
+								<a href="#q-item-7" data-toggle="tab" class="btn btn-sm btn-link remove-button">Delete</a>
+								<a href="#q-item-7-3" data-toggle="tab" class="btn btn-sm btn-primary save-button">Save</a>
+								<a href="#q-item-7-1" data-toggle="tab" class="btn btn-sm btn-default hide edit-button">Edit</a>
+							</div>
+							<li class="active"><a href="#q-item-7-1" data-toggle="tab"><span class="fa fa-list-ul"></span> Multiple Options</a></li>
+							<li class=""><a href="#q-item-7-2" data-toggle="tab">Options</a></li>
+						</ul>
+						<br>
+						
+						<div id="q-item-7-tab-content" class="tab-content"> 
+							<div class="tab-pane active" id="q-item-7-1">
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-12">
+												<input type="text" class="form-control" placeholder="State your question or field description" value="">
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">1.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">2.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">3.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">4.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-7-2">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" checked> Response Required
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">User has to reply to this field if checked.</p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="checkbox" autocomplete="off"> Validate Field Data
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">Field value is validated before submission. <i>(Toggle to set options)</i></p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+
+								</form>
+
+
+							</div>
+							<div class="tab-pane" id="q-item-7-3">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label">#LabelFieldValue#</label>
+										<div class="col-sm-9">
+											<table class="table table-bordered">
+													<tr>
+														<td>
+															<div class="radio">
+																<label><input type="radio" name="optradio">Option 1</label>
+															</div>
+														</td>
+														<td>
+															<div class="radio">
+																<label><input type="radio" name="optradio">Option 2</label>
+															</div>
+														</td>
+														<td>
+															<div class="radio">
+																<label><input type="radio" name="optradio">Option 3</label>
+															</div>
+														</td>
+														<td>
+															<div class="radio">
+																<label><input type="radio" name="optradio">Option 4</label>
+															</div>
+														</td>
+												</tbody>
+											</table>
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+
+
+							</div>
+
+						</div>
+						<hr>
+					</div><!-- /Questionnaire Item Multiple Options -->
+
+					<div id="q-item-8"><!-- Questionnaire Item Multiple Choice -->
+						<ul class="nav nav-tabs" data-tabs="tabs">
+							<div class="text-right pull-right">
+								<a href="#q-item-8" data-toggle="tab" class="btn btn-sm btn-link remove-button">Delete</a>
+								<a href="#q-item-8-3" data-toggle="tab" class="btn btn-sm btn-primary save-button">Save</a>
+								<a href="#q-item-8-1" data-toggle="tab" class="btn btn-sm btn-default hide edit-button">Edit</a>
+							</div>
+							<li class="active"><a href="#q-item-8-1" data-toggle="tab"><span class="fa fa-check-square-o"></span> Multiple Choice</a></li>
+							<li class=""><a href="#q-item-8-2" data-toggle="tab">Options</a></li>
+						</ul>
+						<br>
+						
+						<div id="q-item-8-tab-content" class="tab-content"> 
+							<div class="tab-pane active" id="q-item-8-1">
+								<form class="form-horizontal">
+
+
+									<div class="form-group">
+										<div class="col-sm-12">
+												<input type="text" class="form-control" placeholder="State your question or field description" value="">
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">1.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">2.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">3.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label">4.</label>
+
+										<div class="col-sm-3">
+											<input type="text" class="form-control" placeholder="Define option value" value="">
+										</div>
+										<div class="col-sm-6">
+											<input type="text" class="form-control" placeholder="Type in option description" value="">
+										</div>
+										<div class="col-sm-2 text-right">
+											<button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+											<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+										</div>
+									</div><!-- /form-group -->
+
+								</form>
+
+							</div>
+							<div class="tab-pane" id="q-item-8-2">
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default active">
+													<input type="checkbox" autocomplete="off" checked> Response Required
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">User has to reply to this field if checked.</p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+									<div class="form-group">
+										<div class="col-sm-3">
+											<div class="btn-group" data-toggle="buttons">
+												<label class="btn btn-default">
+													<input type="checkbox" autocomplete="off"> Validate Field Data
+												</label>
+											</div><!-- /btn-group -->
+										</div><!-- /col-sm-3  -->
+										<div class="col-sm-9">
+											<p class="info">Field value is validated before submission. <i>(Toggle to set options)</i></p>
+										</div><!-- /col-sm-9  -->
+									</div><!-- /form-group -->
+
+
+								</form>
+
+
+							</div>
+							<div class="tab-pane" id="q-item-8-3">
+
+
+								<form class="form-horizontal">
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label">#LabelFieldValue#</label>
+										<div class="col-sm-9">
+											<table class="table table-bordered">
+													<tr>
+														<td>
+															<div class="radio">
+																<label><input type="checkbox" name="optradio">Option 1</label>
+															</div>
+														</td>
+														<td>
+															<div class="radio">
+																<label><input type="checkbox" name="optradio">Option 2</label>
+															</div>
+														</td>
+														<td>
+															<div class="radio">
+																<label><input type="checkbox" name="optradio">Option 3</label>
+															</div>
+														</td>
+														<td>
+															<div class="radio">
+																<label><input type="checkbox" name="optradio">Option 4</label>
+															</div>
+														</td>
+												</tbody>
+											</table>
+										</div>
+									</div><!-- /form-group -->
+
+
+
+							</div>
+
+						</div>
+						<hr>
+					</div><!-- /Questionnaire Item Multiple Choice -->
+
+
+
+				</div><!-- /col-sm-9 -->
+			</div><!-- /row -->
+
+
+		</div><!-- /body -->
+
+
+	<footer>
+		<div class="container copyright text-center">&copy; 2001 &mdash; 2015 <a href="http://www.jcatalog.com/">jCatalog Software AG</a></div>
+	</footer>
+
+	</body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/jcatalog-bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('a.save-button').click(function() {
+				$(this).toggleClass('hide').next().toggleClass('hide');
+				$(this).parent().parent().find('li').hide();
+			});
+			$('a.edit-button').click(function() {
+				$(this).toggleClass('hide').prev().toggleClass('hide');
+				$(this).parent().parent().find('li').show().eq(0).addClass('active');
+			});
+			$('a.remove-button').click(function() {
+				$($(this).attr('href')).fadeOut(250);
+			});
+
+
+		});
+	</script>
+
+
+
+</html>

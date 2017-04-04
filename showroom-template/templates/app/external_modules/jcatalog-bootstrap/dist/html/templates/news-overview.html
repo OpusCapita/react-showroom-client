@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OPC 8 Buyside (Procurement Mode) Main Menu</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Local stylesheet -->
+		<link rel="stylesheet" href="../../css/stylesheet.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<!-- This ressource is replaced on most machines by bundle.less.css
+			 stylesheet.css is included for jcatalog users who can not access bundle.less.css
+	    -->
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-main-menu"><!-- main nav -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="../../img/jc-logo-rgb.svg" style="height: 1.5em; margin-top: -.25em; margin-bottom: -.25em;">
+				</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle active" data-toggle="dropdown">Catalog <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Search</a></li>
+							<li><a href="#">Categories</a></li>
+							<li><a href="#">External Shops</a></li>
+							<li><a href="#">Suppliers</a></li>
+							<li><a href="#">Contracts</a></li>
+							<!--<li><a href="#">Quick Quote</a></li>-->
+							<!-- ##DEVNOTE## Quick Quote needs to be hidden in this menu in OPC Buyside Proc Mode -->
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Requests <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">Requisitions</li>
+							<li><a href="#">Requisition Status</a></li>
+							<li><a href="#">Order Process Overview</a></li>
+							<li><a href="#">Cart Import</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Approval</li>
+							<li><a href="#">Approve Requisition</a></li>
+							<li><a href="#">Overview of Approved Requisitions</a></li>
+							<li><a href="#">Show all Approvals</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Purchase Order <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">Purchase Orders</li>
+							<li><a href="#">Purchase Order Status</a></li>
+							<li><a href="#">Cancel Purchase Order</a></li>
+							<li><a href="#">PO Confirmation</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Deliveries</li>
+							<li><a href="#">Goods Receipt</a></li>
+							<li><a href="#">Delivery Note</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Analysis</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Invoices <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">Invoice Administration</li>
+							<li><a href="#">Create Invoice / Credit Note</a></li>
+							<li><a href="#">Edit Invoice / Credit Note</a></li>
+							<li><a href="#">Invoice Verification</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Quick Quote</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle icon-nav-item" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+							<span class="badge">7</span>
+						</a>
+						<ul class="dropdown-menu cart-preview">
+							<button type="button" class="btn btn-primary btn-lg btn-block">Shopping Cart</button>
+							<table class="table search-results"><!-- search results -->
+								<tbody>
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img src="../../img/demo-data/product-img-asusx-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+											</a>
+										</td>
+										<td class="text-right">
+											2.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												Asus X53SV-SO951V<br>
+												<small>Supplier AG</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>&euro;1,198.00</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img src="../../img/demo-data/product-img-tplink-large.jpg" class="img-responsive" alt="Product Img Mbpro Large"></td>
+											</a>
+										</td>
+										<td class="text-right">
+											14.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												TP-Link 300Mbps Wireless USB Adapter<br>
+												<small>Supplier AG</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>209.86</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img src="../../img/demo-data/product-img-mbpro-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+											</a>
+										</td>
+										<td class="text-right">
+											3.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												MacBook pro 13-inch: 2.4GHz with Retina display<br>
+												<small>Apple</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>3,897.00</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											&nbsp;
+										</td>
+										<td class="text-right">
+											<i>1.00</i>
+										</td>
+										<td>
+											<i><a href="#to-cart#">more item(s)</a></i>
+										</td>
+										<td>
+											&nbsp;
+										</td>
+									</tr><!-- /product -->
+									<tr class="total"><!-- total -->
+										<td colspan="5" class="text-right">
+											<small>Total price:</small> <b>&euro;5,344.42</b>
+										</td>
+									</tr><!-- /total -->
+								</tbody>
+								<tfoot></tfoot>
+							</table><!-- /search results-->
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Martin Hallmann <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">User Details</a></li>
+							<li><a href="#">Change customer assignment</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Language</li>
+							<li><a href="#"><b>DE</b> Deutsch</a></li>
+							<li><a href="#"><b>EN</b> English</a></li>
+							<li><a href="#"><b>FR</b> Francais</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Shopping Lists</a></li>
+							<li><a href="#">Delegation</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Help</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="icon-nav-item dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>  <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Auto Goods Receipt</a></li>
+							<li class="divider"></li>
+							<li><a href="#">System Administration</a></li>
+							<li><a href="#">Customer Administration</a></li>
+							<li><a href="#">Setup</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!-- /main nav -->
+
+	<div class="container">
+
+		<!-- News Items -->
+		<h1>News 2014</h1>
+		<div class="row news-items same-height-items">
+			<div class="col-md-3 item">
+				<h4><small>July 25, 2014</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-22156135-man-working-with-modern-devices.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>June 13, 2014</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-4023633-request-for-quote.jpg" class="img-responsive">
+						Sending Suppliers Quote Requests Quickly, Using The Shopping Cart
+					</a>
+				</h4>
+				<p>
+					The Request for Quote module for quick enquiries complements the Online Product Catalog. Request for Quote allows purchasers to issue requests for quotations using the normal catalogue process in order to enquire for unplanned ad-hoc requirements or non-recurrin...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>May 28, 2014</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-16521182-support.jpg" class="img-responsive">
+						Key Category Requires More Attention
+					</a>
+				</h4>
+				<p>
+					Companies from all sectors have taken measures to improve their procurement processes. However, many of them have failed to pay attention to one key category: services. In average organisations, expenditure on services, e.g. temporary work and labour...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>April 6, 2014</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-20478056-customer-giving-car-keys-to-mechanic.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>March 25, 2014</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-22156135-man-working-with-modern-devices.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>February 13, 2014</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-4023633-request-for-quote.jpg" class="img-responsive">
+						Sending Suppliers Quote Requests Quickly, Using The Shopping Cart
+					</a>
+				</h4>
+				<p>
+					The Request for Quote module for quick enquiries complements the Online Product Catalog. Request for Quote allows purchasers to issue requests for quotations using the normal catalogue process in order to enquire for unplanned ad-hoc requirements or non-recurrin...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>January 28, 2014</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-16521182-support.jpg" class="img-responsive">
+						Key Category Requires More Attention
+					</a>
+				</h4>
+				<p>
+					Companies from all sectors have taken measures to improve their procurement processes. However, many of them have failed to pay attention to one key category: services. In average organisations, expenditure on services, e.g. temporary work and labour...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+		</div>
+		<h2>News 2013</h2>
+		<div class="row news-items same-height-items">
+			<div class="col-md-3 item">
+				<h4><small>December 6, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-20478056-customer-giving-car-keys-to-mechanic.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>Novemver 13, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-4023633-request-for-quote.jpg" class="img-responsive">
+						Sending Suppliers Quote Requests Quickly, Using The Shopping Cart
+					</a>
+				</h4>
+				<p>
+					The Request for Quote module for quick enquiries complements the Online Product Catalog. Request for Quote allows purchasers to issue requests for quotations using the normal catalogue process in order to enquire for unplanned ad-hoc requirements or non-recurrin...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>October 28, 2014</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-16521182-support.jpg" class="img-responsive">
+						Key Category Requires More Attention
+					</a>
+				</h4>
+				<p>
+					Companies from all sectors have taken measures to improve their procurement processes. However, many of them have failed to pay attention to one key category: services. In average organisations, expenditure on services, e.g. temporary work and labour...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>September 6, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-20478056-customer-giving-car-keys-to-mechanic.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>August 25, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-22156135-man-working-with-modern-devices.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>July 25, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-22156135-man-working-with-modern-devices.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>June 13, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-4023633-request-for-quote.jpg" class="img-responsive">
+						Sending Suppliers Quote Requests Quickly, Using The Shopping Cart
+					</a>
+				</h4>
+				<p>
+					The Request for Quote module for quick enquiries complements the Online Product Catalog. Request for Quote allows purchasers to issue requests for quotations using the normal catalogue process in order to enquire for unplanned ad-hoc requirements or non-recurrin...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>May 28, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-16521182-support.jpg" class="img-responsive">
+						Key Category Requires More Attention
+					</a>
+				</h4>
+				<p>
+					Companies from all sectors have taken measures to improve their procurement processes. However, many of them have failed to pay attention to one key category: services. In average organisations, expenditure on services, e.g. temporary work and labour...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>April 6, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-20478056-customer-giving-car-keys-to-mechanic.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>March 25, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-22156135-man-working-with-modern-devices.jpg" class="img-responsive">
+						Seamless Procurement Processes For Goods And Services
+					</a>
+				</h4>
+				<p>
+					Procurement Manager enables a direct integration of supplier catalogs. To provide for special requirements and configurable products being purchased in the same way as catalogue items, company-specific forms (Smart Forms) can be used. From requisitio...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>February 13, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-4023633-request-for-quote.jpg" class="img-responsive">
+						Sending Suppliers Quote Requests Quickly, Using The Shopping Cart
+					</a>
+				</h4>
+				<p>
+					The Request for Quote module for quick enquiries complements the Online Product Catalog. Request for Quote allows purchasers to issue requests for quotations using the normal catalogue process in order to enquire for unplanned ad-hoc requirements or non-recurrin...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+			<div class="col-md-3 item">
+				<h4><small>January 28, 2013</small><br>
+					<a href="#">
+						<img src="../../img/istockphoto-no-license/stock-photo-16521182-support.jpg" class="img-responsive">
+						Key Category Requires More Attention
+					</a>
+				</h4>
+				<p>
+					Companies from all sectors have taken measures to improve their procurement processes. However, many of them have failed to pay attention to one key category: services. In average organisations, expenditure on services, e.g. temporary work and labour...
+				</p>
+				<a href="#" class="btn btn-default btn-sm pull-right">Continue Reading</a>
+			</div>
+		</div>
+
+		<hr>
+		<!-- Service/Support Items -->
+		<div class="row">
+			<div class="col-md-4 text-center">
+				<a href="#">
+					<img src="../../img/istockphoto-no-license/stock-photo-21749889-sealing-the-perfect-deal.jpg" class="img-circle img-circle-bordered">
+					<h4>Customer Service</h4>
+				</a>
+				<p>
+					Short text describing what to expect from the customer service pages.
+				</p>
+			</div>
+			<div class="col-md-4 text-center">
+				<a href="#">
+					<img src="../../img/istockphoto-no-license/stock-photo-13846956-call-center-executive-wearing-a-headset-with-copyspace%20Kopie.jpg" class="img-circle img-circle-bordered">
+					<h4>Need Help?</h4>
+				</a>
+				<p>
+					If you cannot find what you are looking for, if you need general assistance in your purchasing effort, please contact the purchasing helpdesk via phone:<br>
+					<big><b><span class="glyphicon glyphicon-phone-alt"></span> +49 231 3967-0</b></big>
+				</p>
+			</div>
+			<div class="col-md-4 text-center">
+				<a href="#">
+					<img src="../../img/istockphoto-no-license/stock-photo-18547790-confused-woman%20Kopie.jpg" class="img-circle img-circle-bordered">
+					<h4>Cannot Find What You Need?</h4>
+				</a>
+				<p>
+					If you cannot find any matching products, please use free-text order tool, which will guide you through define your own product, service and/or vendor if applicable.
+				</p>
+			</div>
+		</div>
+
+	</div> <!-- /container -->
+
+	<footer>
+		<div class="container copyright text-center">&copy; 2001 &mdash; 2014 <a href="http://www.jcatalog.com/">jCatalog Software AG</a></div>
+	</footer>
+
+	</body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jcatalog-bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OPC 8 Shopping Cart</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+			<div class="navbar navbar-default navbar-main-menu"><!-- main nav -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="../../img/jc-logo-rgb.svg" style="height: 1.5em; margin-top: -.25em; margin-bottom: -.25em;">
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Categories</a></li>
+						<li><a href="#">External Shops</a></li>
+						<li><a href="#">Quick Entry</a></li>
+						<li><a href="#">Suppliers</a></li>
+						<li><a href="#">Contracts</a></li>
+						<li><a href="#">Product Suggestion</a></li>
+						<li><a href="#">Quick Quote</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-nav-item" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+								<span class="badge">7</span>
+							</a>
+							<ul class="dropdown-menu">
+								*preview cart here*
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Martin Hallmann <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">User Details</a></li>
+								<li><a href="#">Language</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Shopping Lists</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Help</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Logout</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="icon-nav-item dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>  <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Change customer assignment</a></li>
+								<li><a href="#">System Administration</a></li>
+								<li><a href="#">Customer Administration</a></li>
+								<li><a href="#">Setup</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!-- /main nav -->
+
+		<div class="container">
+
+
+			<!-- Searchbar -->
+			<form class="search-bar form-inline" role="form">
+				<div class="form-group">
+					<label class="sr-only" for="searchClassGrpSelectInst1">Select Category</label>
+					<div class="btn-group" id="searchClassGrpSelectInst1">
+						<button type="button" class="btn btn-default btn-lg dropdown-toggle btn-2rows" data-toggle="dropdown">
+							<small>Search in</small><br><b>Category</b> <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-wide" role="menu">
+							<li><a href="#">Search in all Categories</a></li>
+							<li class="wide">
+								<div class="row">
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Machine, device (for special applications)</a></li>
+											<li><a href="#">Equipment f. mining, metallurgical plant, rolling mill a. foundry</a></li>
+											<li><a href="#">Information, communication and media technology</a></li>
+											<li><a href="#">Packing material</a></li>
+											<li><a href="#">Tool</a></li>
+											<li><a href="#">Construction technology</a></li>
+											<li><a href="#">Machine element, fixing, mounting</a></li>
+											<li><a href="#">Office products, facilities and technics, papeterie</a></li>
+											<li><a href="#">Service</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Energy, extraction product, secondary raw materials and residues</a></li>
+											<li><a href="#">Electric engineering, automation, process control engineering</a></li>
+											<li><a href="#">Automotive technology</a></li>
+											<li><a href="#">Home economics, Home technolology</a></li>
+											<li><a href="#">Auxiliary supply, additive, formulation</a></li>
+											<li><a href="#">Polymers</a></li>
+											<li><a href="#">Laboratory material, Labatory technology</a></li>
+											<li><a href="#">Installation (complete)</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li><a href="#">Medicine, medical technology, life sience</a></li>
+											<li><a href="#">Semifinished products,materials</a></li>
+											<li><a href="#">Machine, apparatus</a></li>
+											<li><a href="#">Industrial piping</a></li>
+											<li><a href="#">Inorganic Chemicals</a></li>
+											<li><a href="#">Organic Chemicals</a></li>
+											<li><a href="#">Occupational safety, accident prevention</a></li>
+											<li><a href="#">Marketing</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li><a href="#" class="text-right"><b>Browse Categories <span class="glyphicon glyphicon-forward"></span></b></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="form-group" style="width: 67%;">
+					<label class="sr-only" for="searchInputInst1">Search Catalog for</label>
+					<input type="search" class="form-control input-lg" id="searchInputInst1" placeholder="Search for..">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="searchSubmitButtonInst1">Submit Search Query</label>
+					<button type="button" class="btn btn-primary btn-lg" id="searchSubmitButtonInst1"><span class="glyphicon glyphicon-search"></span> Search</button>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="searchExtendedSearchButtonInst1">Use Extendend Search</label>
+					<button type="button" class="btn btn-link" id="searchExtendedSearchButtonInst1">Extended Search</button>
+				</div>
+			</form>
+
+		<div class="row"><!-- shopping cart product list -->
+			<div class="col-md-12">
+
+				<nav class="navbar navbar-default navbar-sm" role="navigation"><!-- controls for shopping cart -->
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<form class="navbar-form navbar-right" role="search">
+							<button type="button" class="btn btn-link"><span class="glyphicon glyphicon-trash"></span> Empty</button>
+							<button type="button" class="btn btn-primary">Submit</button>
+						</form>
+					</div><!-- /.navbar-collapse -->
+				</nav><!-- /controls for shopping cart -->
+
+
+				<table class="table search-results shopping-cart"><!-- search results -->
+					<tbody>
+						<tr><!-- product -->
+							<td class="product-checkbox"><label class="checkbox" for="ch-01"><input type="checkbox" id="ch-01"/></label></td>
+							<td class="product-image">
+								<a href="#" class="product-detail-link product-image">
+									<img src="../../img/demo-data/product-img-asusx-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+								</a>
+							</td>
+							<td class="product-desc">
+								<a href="#" class="product-detail-link">
+									<h4>
+										Asus X53SV-SO951V<br>
+										<small>Supplier AG</small>
+									</h4>
+									<span class="label label-info">
+										Delivery due: May 15 2014
+									</span>
+								</a>
+							</td>
+							<td class="product-price">
+								<table class="price">
+									<tbody>
+										<tr>
+											<td>
+												<h4 class="price item-price">&euro;599.00</h4>
+											</td>
+											<td class="form">
+												<form class="form-inline" role="form">
+													<div class="form-group">
+														<input type="number" class="form-control" value="2"> <span class="uom">piece(s)</span>
+													</div>
+												</form>
+											</td>
+											<td>
+												<h4 class="price position-price">&euro;1,198.00</h4>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+							<td class="product-delete">
+								<button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+							</td>
+						</tr><!-- /product -->
+						<tr class="total"><!-- total -->
+							<td colspan="6" class="text-right">
+								<h4><small>Total price:</small> &euro;5,344.42</h4>
+								<!--<p>
+									<a href="">Order Text</a> | <a href="">Account Details</a>
+								</p>-->
+							</td>
+						</tr><!-- /total -->
+					</tbody>
+					<tfoot></tfoot>
+				</table><!-- /search results-->
+
+
+				<nav class="navbar navbar-default navbar-sm" role="navigation"><!-- controls for shopping cart -->
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<form class="navbar-form navbar-left" role="search">
+							<button type="button" class="btn btn-primary">Select All</button>
+							<div class="btn-group">
+							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							    Choose action.. <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu" role="menu">
+							    <li><a href="#">Copy</a></li>
+							    <li><a href="#">Import</a></li>
+							    <li><a href="#">RfQ</a></li>
+							    <li class="divider"></li>
+							    <li><a href="#">Save as Shopping List</a></li>
+							  </ul>
+							</div>
+						</form>
+						<form class="navbar-form navbar-right" role="search">
+							<button type="button" class="btn btn-link"><span class="glyphicon glyphicon-trash"></span> Empty</button>
+							<button type="button" class="btn btn-primary">Submit</button>
+						</form>
+					</div><!-- /.navbar-collapse -->
+				</nav><!-- /controls for shopping cart -->
+
+			</div>
+		</div><!-- /shopping cart product list -->
+
+	</div> <!-- /container -->
+
+	<footer>
+		<div class="container copyright text-center">&copy; 2001 &mdash; 2014 <a href="http://www.jcatalog.com/">jCatalog Software AG</a></div>
+	</footer>
+
+
+	</body>
+</html>

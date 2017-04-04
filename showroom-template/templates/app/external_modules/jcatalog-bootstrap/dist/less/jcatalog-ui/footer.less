@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 90px; /* !!! height of footer */
+}
+
+body.popup {
+  padding-bottom: 0; /* no footer -> no padding */
+}
+
+body.sellside{
+  padding-bottom: 300px;
+}
+
+footer {
+  margin: 0;
+  display: block;
+  color: #666;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer.sellside {
+  border-top: 3px solid #eee;
+}
+
+footer .copyright {
+  border-top: 1px solid #eee;
+  padding: 1em 0;
+}

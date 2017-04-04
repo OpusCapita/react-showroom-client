@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "no-unused-expressions": 0,
+    "import/no-extraneous-dependencies": 0
+  },
+  "env": {
+    "mocha": true,
+    "node": true,
+    "browser": true
+  }
+}

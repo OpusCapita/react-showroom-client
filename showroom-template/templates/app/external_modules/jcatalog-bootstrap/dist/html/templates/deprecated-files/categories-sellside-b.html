@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OPC 8 Sellside Categories</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		
+		
+	</head>
+	<body>
+
+	<div class="container">
+		<div class="row"><!-- header -->
+			<div class="col-md-3">
+				<img src="../../../img/jc-logo-rgb.svg" style="width: 100%; position: relative; margin-top: 2em;">
+			</div>
+			<div class="col-md-9">
+				<div class="navbar navbar-default navbar-main-menu navbar-sellside" role="navigation"><!-- main nav -->
+					<!--<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+						</a>
+					</div>-->
+					<div class="navbar-collapse collapse no-lr-margin no-lr-padding">
+						<ul class="nav navbar-nav no-left-margin">
+							<li><a href="#" class="no-left-padding">Service</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<span class="glyphicon glyphicon-shopping-cart"></span>
+									7 Items, <b>&euro;849,99</b>
+								</a>
+								<ul class="dropdown-menu">
+									*preview cart here*
+								</ul>
+							</li>	
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									Martin Hallmann <b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">User Details</a></li>
+									<li><a href="#">Language</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Shopping Lists</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Help</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Logout</a></li>
+								</ul>
+							</li>	
+							<li class="dropdown">
+								<a href="#" class="icon-nav-item dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>  <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">System Administration</a></li>
+									<li><a href="#">Setup</a></li>
+								</ul>
+							</li>	
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div><!-- /main nav -->
+				<!-- Searchbar -->
+				<form class="search-bar form-inline" role="form">
+					<div class="form-group">
+						<label class="sr-only" for="searchClassGrpSelectInst1">Select Category</label>
+						<div class="btn-group" id="searchClassGrpSelectInst1">
+							<button type="button" class="btn btn-default btn-lg dropdown-toggle btn-2rows" data-toggle="dropdown">
+								<small>Search in</small><br><b>Category</b> <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-wide" role="menu">
+								<li><a href="#">Search in all Categories</a></li>
+								<li class="wide">
+									<div class="row">
+										<div class="col-md-4">
+											<ul class="list-unstyled">
+												<li><a href="#">Machine, device (for special applications)</a></li>
+												<li><a href="#">Equipment f. mining, metallurgical plant, rolling mill a. foundry</a></li>
+												<li><a href="#">Information, communication and media technology</a></li>
+												<li><a href="#">Packing material</a></li>
+												<li><a href="#">Tool</a></li>
+												<li><a href="#">Construction technology</a></li>
+												<li><a href="#">Machine element, fixing, mounting</a></li>
+												<li><a href="#">Office products, facilities and technics, papeterie</a></li>
+												<li><a href="#">Service</a></li>
+											</ul>
+										</div>
+										<div class="col-md-4">
+											<ul class="list-unstyled">
+												<li><a href="#">Energy, extraction product, secondary raw materials and residues</a></li>
+												<li><a href="#">Electric engineering, automation, process control engineering</a></li>
+												<li><a href="#">Automotive technology</a></li>
+												<li><a href="#">Home economics, Home technolology</a></li>
+												<li><a href="#">Auxiliary supply, additive, formulation</a></li>
+												<li><a href="#">Polymers</a></li>
+												<li><a href="#">Laboratory material, Labatory technology</a></li>
+												<li><a href="#">Installation (complete)</a></li>
+											</ul>
+										</div>
+										<div class="col-md-4">
+											<ul class="list-unstyled">
+												<li><a href="#">Medicine, medical technology, life sience</a></li>
+												<li><a href="#">Semifinished products,materials</a></li>
+												<li><a href="#">Machine, apparatus</a></li>
+												<li><a href="#">Industrial piping</a></li>
+												<li><a href="#">Inorganic Chemicals</a></li>
+												<li><a href="#">Organic Chemicals</a></li>
+												<li><a href="#">Occupational safety, accident prevention</a></li>
+												<li><a href="#">Marketing</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li><a href="#" class="text-right"><b>Browse Categories <span class="glyphicon glyphicon-forward"></span></b></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group" style="width: 57%;">
+						<label class="sr-only" for="searchInputInst1">Search Catalog for</label>
+						<input type="search" class="form-control input-lg" id="searchInputInst1" placeholder="Search for..">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="searchSubmitButtonInst1">Submit Search Query</label>
+						<button type="button" class="btn btn-primary btn-lg" id="searchSubmitButtonInst1"><span class="glyphicon glyphicon-search"></span> Search</button>
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="searchExtendedSearchButtonInst1">Use Extendend Search</label>
+						<button type="button" class="btn btn-link no-right-padding" id="searchExtendedSearchButtonInst1">Extended Search</button>
+					</div>
+				</form>
+				
+			</div>
+		</div><!-- /header -->
+
+		<!-- #### Categories ########################################################## -->
+		<br>
+		
+		<div class="row">
+			<div class="col-md-6">
+				<h2><a href="#">Antiques</a></h2>
+				<div class="row"><!-- search results 2col layout -->
+				  <div class="col-md-5"><!-- search results sidebar: filters and facets -->
+
+					<div class="list-group">
+						<a href="#" class="list-group-item">Antiquities</a>
+						<a href="#" class="list-group-item">Architectural &amp; Garden</a>
+						<a href="#" class="list-group-item">Asian Antiques</a>
+						<a href="#" class="list-group-item">Books &amp; Manuscripts</a>
+						<a href="#" class="list-group-item">Decorative Arts</a>
+						<a href="#" class="list-group-item">Ethnographic</a>
+						<a href="#" class="list-group-item">Furniture</a>
+						<a href="#" class="list-group-item">Home &amp; Hearth</a>
+					</div>
+				  </div><!-- /search results sidebar: filters and facets -->
+				  <div class="col-md-7"><!-- search results main col: result list/grid -->
+			  
+					<table class="table search-results grid-view grid-sm grid-2" id="search-results"><!-- search results -->
+						<tbody>
+							<tr><!-- product -->
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-asusx-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+							</tr><!-- /product -->
+							<tr><!-- product -->
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-tplink-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+							</tr><!-- /product -->
+							<tr><!-- product -->
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-mbpro-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+							</tr><!-- /product -->
+							<tr><!-- product -->
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-jjdub-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+							</tr><!-- /product -->
+						</tbody>
+					</table><!-- /search results-->
+					<a href="#" class="btn btn-default pull-right">See all Products</a>
+				  </div><!-- /search results main col: result list/grid -->
+				</div><!-- /search results 2col layout -->
+			</div>
+			<div class="col-md-6">
+				<h2><a href="#">Art</a></h2>
+				<div class="row"><!-- search results 2col layout -->
+				  <div class="col-md-5"><!-- search results sidebar: filters and facets -->
+
+					<div class="list-group">
+						<a href="#" class="list-group-item">Direct from the Artist</a>
+						<a href="#" class="list-group-item">Art from Dealers &amp; Resellers</a>
+						<a href="#" class="list-group-item">Wholesale Lots</a>
+					</div>
+				  </div><!-- /search results sidebar: filters and facets -->
+				  <div class="col-md-7"><!-- search results main col: result list/grid -->
+			  
+					<table class="table search-results grid-view grid-sm grid-2" id="search-results"><!-- search results -->
+						<tbody>
+							<tr><!-- product -->
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-asusx-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+							</tr><!-- /product -->
+							<tr><!-- product -->
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-tplink-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+							</tr><!-- /product -->
+							<tr><!-- product -->
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-mbpro-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+							</tr><!-- /product -->
+							<tr><!-- product -->
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-jjdub-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+							</tr><!-- /product -->
+						</tbody>
+					</table><!-- /search results-->
+					<a href="#" class="btn btn-default pull-right">See all Products</a>
+				  </div><!-- /search results main col: result list/grid -->
+				</div><!-- /search results 2col layout -->
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-6">
+				<h2><a href="#">Baby</a></h2>
+				<div class="row"><!-- search results 2col layout -->
+				  <div class="col-md-5"><!-- search results sidebar: filters and facets -->
+
+					<div class="list-group">
+						<a href="#" class="list-group-item">Baby Gear</a>
+						<a href="#" class="list-group-item">Baby Safety &amp; Health</a>
+						<a href="#" class="list-group-item">Bathing &amp; Grooming</a>
+						<a href="#" class="list-group-item">Car Safety Seats</a>
+						<a href="#" class="list-group-item">Diapering</a>
+						<a href="#" class="list-group-item">Feeding</a>
+					</div>
+				  </div><!-- /search results sidebar: filters and facets -->
+				  <div class="col-md-7"><!-- search results main col: result list/grid -->
+			  
+					<table class="table search-results grid-view grid-sm grid-2" id="search-results"><!-- search results -->
+						<tbody>
+							<tr><!-- product -->
+								<td class="hidden"><input type="checkbox" /></td>
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-asusx-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+								<td>
+									<a href="#" class="product-detail-link">
+										Asus X53SV-SO951V<br>
+										<small>Hardware AG</small><br>
+								
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										(271)<br>
+										<span class="price">&euro;599.00</span>
+									</a>
+								</td>
+							</tr><!-- /product -->
+							<tr><!-- product -->
+								<td class="hidden"><input type="checkbox" /></td>
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-tplink-large.jpg" class="img-responsive" alt="Product Img Mbpro Large"></td>
+									</a>
+								<td>
+									<a href="#" class="product-detail-link">
+										TP-Link 300Mbps Wireless USB Adapter<br>
+										<small>Hardware AG</small><br>
+								
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star-empty"></span>
+										<span class="glyphicon glyphicon-star-empty"></span>
+										(15)<br>
+										<span class="price">&euro;14.99</span>
+									</a>
+								</td>
+							</tr><!-- /product -->
+						</tbody>
+					</table><!-- /search results-->
+					<a href="#" class="btn btn-default pull-right">See all Products</a>
+				  </div><!-- /search results main col: result list/grid -->
+				</div><!-- /search results 2col layout -->
+			</div>
+			<div class="col-md-6">
+				<h2><a href="#">Books</a></h2>
+				<div class="row"><!-- search results 2col layout -->
+				  <div class="col-md-5"><!-- search results sidebar: filters and facets -->
+
+					<div class="list-group">
+						<a href="#" class="list-group-item">Accessories</a>
+						<a href="#" class="list-group-item">Antiquarian &amp; Collectible</a>
+						<a href="#" class="list-group-item">Audiobooks</a>
+						<a href="#" class="list-group-item">Catalogs</a>
+					</div>
+				  </div><!-- /search results sidebar: filters and facets -->
+				  <div class="col-md-7"><!-- search results main col: result list/grid -->
+			  
+					<table class="table search-results grid-view grid-sm grid-2" id="search-results"><!-- search results -->
+						<tbody>
+							<tr><!-- product -->
+								<td class="hidden"><input type="checkbox" /></td>
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-asusx-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+									</a>
+								</td>
+								<td>
+									<a href="#" class="product-detail-link">
+										Asus X53SV-SO951V<br>
+										<small>Hardware AG</small><br>
+								
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										(271)<br>
+										<span class="price">&euro;599.00</span>
+									</a>
+								</td>
+							</tr><!-- /product -->
+							<tr><!-- product -->
+								<td class="hidden"><input type="checkbox" /></td>
+								<td class="product-picture">
+									<a href="#" class="product-detail-link">
+										<img src="../../../img/demo-data/product-img-tplink-large.jpg" class="img-responsive" alt="Product Img Mbpro Large"></td>
+									</a>
+								<td>
+									<a href="#" class="product-detail-link">
+										TP-Link 300Mbps Wireless USB Adapter<br>
+										<small>Hardware AG</small><br>
+								
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star-empty"></span>
+										<span class="glyphicon glyphicon-star-empty"></span>
+										(15)<br>
+										<span class="price">&euro;14.99</span>
+									</a>
+								</td>
+							</tr><!-- /product -->
+						</tbody>
+					</table><!-- /search results-->
+					<a href="#" class="btn btn-default pull-right">See all Products</a>
+				  </div><!-- /search results main col: result list/grid -->
+				</div><!-- /search results 2col layout -->
+			</div>
+		</div>
+
+
+<br>
+
+		<!-- #### /Categories ########################################################## -->
+
+
+
+
+		
+
+		<!-- #### Dev Notes ########################################################## -->
+
+		<!-- #### /Dev Notes ########################################################## -->
+	</div> <!-- /container -->
+<br>
+
+	<footer class="sellside">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h4>Help &amp; Service</h4>
+					<p>
+						<a href="#">About Us</a><br>
+						<a href="#">Privacy Policy</a><br>
+						<a href="#">Contact Us</a><br>
+						<a href="#">Shipping &amp; Returns</a><br>
+						<a href="#">Invoicing</a><br>
+						<a href="#">Secure Shopping</a><br>
+						<a href="#">Affiliates</a><br>
+						<a href="#">Group Sales</a><br>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h4>My Account</h4>
+					<p>
+						<a href="#">Change Account Details</a><br>
+						<a href="#">View Cart</a><br>
+						<a href="#">My Shopping List</a><br>
+						<a href="#">Track My Order</a><br>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h4>jCatalog Software AG</h4>
+					<p>
+						Lindemannstra&szlig;e 79<br>
+						44137 Dortmund<br>
+						Germany<br>
+						<br>
+						<span class="glyphicon glyphicon-earphone"></span> +49 231 39 67-0<br>
+						<span class="glyphicon glyphicon-print"></span> +49 231 39 67-100<br>
+						<a href="#">info@jcatalog.com</a>
+					</p>
+					<p>
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h4>Connect with us</h4>
+					<p>
+						<a href="#">Facebook</a>
+						<a href="#">Twitter</a>
+						<a href="#">Google+</a>
+					</p>
+					<form role="form">
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Newsletter</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter eMail address">
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="container copyright text-center">&copy; 2001 &mdash; 2014 <a href="http://www.jcatalog.com/">jCatalog Software AG</a></div>
+	</footer>
+
+
+	</body>
+</html>

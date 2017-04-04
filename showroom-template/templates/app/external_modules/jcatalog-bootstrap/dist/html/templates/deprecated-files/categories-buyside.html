@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OPC 8 Buyside (No Procurement) Main Menu )))</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-main-menu"><!-- main nav -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="../../../img/jc-logo-rgb.svg" style="height: 1.5em; margin-top: -.25em; margin-bottom: -.25em;">
+				</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Search</a></li>
+					<!--<li><a href="#">Categories</a></li>-->
+					<li><a href="#">External Shops</a></li>
+					<li><a href="#">Suppliers</a></li>
+					<li><a href="#">Contracts</a></li>
+					<li><a href="#">Analysis</a></li>
+					<li><a href="#">Quick Quote</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle icon-nav-item" data-toggle="dropdown">
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+							<span class="badge">7</span>
+						</a>
+						<ul class="dropdown-menu cart-preview">
+							<button type="button" class="btn btn-primary btn-lg btn-block">Shopping Cart</button>
+							<table class="table search-results"><!-- search results -->
+								<tbody>
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img src="../../../img/demo-data/product-img-asusx-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+											</a>
+										</td>
+										<td class="text-right">
+											2.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												Asus X53SV-SO951V<br>
+												<small>Supplier AG</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>&euro;1,198.00</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img src="../../../img/demo-data/product-img-tplink-large.jpg" class="img-responsive" alt="Product Img Mbpro Large"></td>
+											</a>
+										</td>
+										<td class="text-right">
+											14.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												TP-Link 300Mbps Wireless USB Adapter<br>
+												<small>Supplier AG</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>209.86</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											<a href="#" class="product-detail-link product-image">
+												<img src="../../../img/demo-data/product-img-mbpro-large.jpg" class="img-responsive" alt="Product Img Mbpro Large">
+											</a>
+										</td>
+										<td class="text-right">
+											3.00
+										</td>
+										<td>
+											<a href="#" class="product-detail-link">
+												MacBook pro 13-inch: 2.4GHz with Retina display<br>
+												<small>Apple</small>
+											</a>
+										</td>
+										<td>
+											<div class="price">
+												<b>3,897.00</b>
+											</div>
+										</td>
+									</tr><!-- /product -->
+									<tr><!-- product -->
+										<td>
+											&nbsp;
+										</td>
+										<td class="text-right">
+											<i>1.00</i>
+										</td>
+										<td>
+											<i><a href="#to-cart#">more item(s)</a></i>
+										</td>
+										<td>
+											&nbsp;
+										</td>
+									</tr><!-- /product -->
+									<tr class="total"><!-- total -->
+										<td colspan="5" class="text-right">
+											<small>Total price:</small> <b>&euro;5,344.42</b>
+										</td>
+									</tr><!-- /total -->
+								</tbody>
+								<tfoot></tfoot>
+							</table><!-- /search results-->
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Martin Hallmann <b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">User Details</a></li>
+							<li class="divider"></li>
+							<li class="dropdown-header">Language</li>
+							<li><a href="#"><b>DE</b> Deutsch</a></li>
+							<li><a href="#"><b>EN</b> English</a></li>
+							<li><a href="#"><b>FR</b> Francais</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Shopping Lists</a></li>
+							<li class="divider"></li>
+							<li><a href="#myModal1" data-toggle="modal" data-target="#myModal1">Customer: <b>jcat001</b></a></li>
+							<li><a href="#">Buying on behalf of:</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Help</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="icon-nav-item dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>  <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Change customer assignment</a></li>
+							<li><a href="#">System Administration</a></li>
+							<li><a href="#">Customer Administration</a></li>
+							<li><a href="#">Setup</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!-- /main nav -->
+
+	<div class="container">
+
+
+		<!-- Searchbar -->
+		<form class="search-bar form-inline" role="form">
+			<div class="form-group">
+				<label class="sr-only" for="searchClassGrpSelectInst1">Select Category</label>
+				<div class="btn-group" id="searchClassGrpSelectInst1">
+					<button type="button" class="btn btn-default btn-lg dropdown-toggle btn-2rows" data-toggle="dropdown">
+						<small>Search in</small><br><b>Category</b> <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-wide" role="menu">
+						<li><a href="#">Search in all Categories</a></li>
+						<li class="wide">
+							<div class="row">
+								<div class="col-md-4">
+									<ul class="list-unstyled">
+										<li><a href="#">Level 1 ClassGrps</a></li>
+										<li><a href="#">Equipment f. mining, metallurgical plant, rolling mill a. foundry</a></li>
+										<li><a href="#">Information, communication and media technology</a></li>
+										<li><a href="#">Packing material</a></li>
+										<li><a href="#">Tool</a></li>
+										<li><a href="#">Construction technology</a></li>
+										<li><a href="#">Machine element, fixing, mounting</a></li>
+										<li><a href="#">Office products, facilities and technics, papeterie</a></li>
+										<li><a href="#">Service</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="list-unstyled">
+										<li><a href="#">Energy, extraction product, secondary raw materials and residues</a></li>
+										<li><a href="#">Electric engineering, automation, process control engineering</a></li>
+										<li><a href="#">Automotive technology</a></li>
+										<li><a href="#">Home economics, Home technolology</a></li>
+										<li><a href="#">Auxiliary supply, additive, formulation</a></li>
+										<li><a href="#">Polymers</a></li>
+										<li><a href="#">Laboratory material, Labatory technology</a></li>
+										<li><a href="#">Installation (complete)</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="list-unstyled">
+										<li><a href="#">Medicine, medical technology, life sience</a></li>
+										<li><a href="#">Semifinished products,materials</a></li>
+										<li><a href="#">Machine, apparatus</a></li>
+										<li><a href="#">Industrial piping</a></li>
+										<li><a href="#">Inorganic Chemicals</a></li>
+										<li><a href="#">Organic Chemicals</a></li>
+										<li><a href="#">Occupational safety, accident prevention</a></li>
+										<li><a href="#">Marketing</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li><a href="#" class="text-right"><b>Browse Categories <span class="glyphicon glyphicon-forward"></span></b></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="form-group" style="width: 67%;">
+				<label class="sr-only" for="searchInputInst1">Search Catalog for</label>
+				<input type="search" class="form-control input-lg" id="searchInputInst1" placeholder="Search for..">
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="searchSubmitButtonInst1">Submit Search Query</label>
+				<button type="button" class="btn btn-primary btn-lg" id="searchSubmitButtonInst1"><span class="glyphicon glyphicon-search"></span> Search</button>
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="searchExtendedSearchButtonInst1">Use Extendend Search</label>
+				<button type="button" class="btn btn-link no-right-padding" href="#extended-search" data-toggle="collapse">Extended Search <span class="caret"></span></button>
+			</div>
+		</form>
+		<!-- Extended Search -->
+		<div class="collapse" id="extended-search">
+			<form action="" method="post" name="" class="form-horizontal" role="form" id="">
+				<h4><a href="#adv-search-1" data-toggle="collapse">Advanced Search <span class="caret"></span></a></h4>
+				<div class="row collapse in" id="adv-search-1">
+					<div class="col-md-6">
+						1
+					</div>
+					<div class="col-md-6">
+						2
+					</div>
+				</div>
+				<h4><a href="#adv-search-2" data-toggle="collapse">External Catalogs <span class="caret"></span></a></h4>
+				<div class="row collapse" id="adv-search-2">
+					<div class="col-md-12">
+						1
+					</div>
+				</div>
+				<h4><a href="#adv-search-3" data-toggle="collapse">Product Groups, Classifications and Attributes <span class="caret"></span></a></h4>
+				<div class="row collapse" id="adv-search-3">
+					<div class="col-md-12">
+						1
+					</div>
+				</div>
+				<div class="form-submit text-right">
+					<button class="btn btn-link">Clear</button>
+					<button class="btn btn-primary">Search</button>
+				</div>
+			</form>
+		</div>
+
+
+		<!-- #### Categories ########################################################## -->
+		<br>
+
+		<!-- ClassGrp Header Promo-Box -->
+		<a href="#" class="promo-box classgrp-header" style="background: url(../../img/carousel-img/3.jpg) center center no-repeat;">
+			<h1><span class="shadow">ClassGrp.ShortDesc</span></h1>
+			<p><span class="shadow">ClassGrp.LongDesc explains what the user can expect to find on this page and its sub-pages<span></p>
+			<span class="btn btn-primary btn-lg btn-action"><b>All Products</b><br><small>in ClassGrp.ShortDesc</small></span>
+		</a>
+		<br>
+
+		<!-- Child ClassGrps -->
+		<div class="row class-groups">
+			<div class="col-md-3">
+				<a href="#" class="item" style="background: url(../../img/istockphoto-no-license/stock-photo-15859900-mountainbike-couple-outdoors.jpg) center center no-repeat;">
+					<h3>
+						ClassGrp.ShortDesc<br>
+						<small>ClassGrp.LongDescription goes here</small>
+					</h3>
+				</a>
+				<a href="#">Antiquities</a><br>
+				<a href="#">Architectural &amp; Garden</a><br>
+				<a href="#">Asian Antiques</a><br>
+				<a href="#">Books &amp; Manuscripts</a><br>
+				<a href="#">Decorative Arts</a><br>
+				<a href="#">Ethnographic</a><br>
+				<a href="#">Furniture</a><br>
+				<a href="#">Home &amp; Hearth</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="item" style="background: url(../../img/istockphoto-no-license/stock-photo-16108517-happy-couple-camping.jpg) center center no-repeat;">
+					<h3>
+						Camping &amp; Outdoor<br>
+						<small>ClassGrp.LongDescription goes here</small>
+					</h3>
+				</a>
+				<a href="#">Direct from the Artist</a><br>
+				<a href="#">Art from Dealers &amp; Resellers</a><br>
+				<a href="#">Wholesale Lots</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="item" style="background: url(../../img/istockphoto-no-license/stock-photo-21813602-nothing-beats-living-a-healthy-lifestyle.jpg) center center no-repeat;">
+					<h3>
+						Fitness<br>
+						<small>ClassGrp.LongDescription goes here</small>
+					</h3>
+				</a>
+				<a href="#">Baby Gear</a><br>
+				<a href="#">Baby Safety &amp; Health</a><br>
+				<a href="#">Bathing &amp; Grooming</a><br>
+				<a href="#">Car Safety Seats</a><br>
+				<a href="#">Diapering</a><br>
+				<a href="#">Feeding</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="item" style="background: url(../../img/istockphoto-no-license/stock-photo-11878907-young-woman-enjoying-winter.jpg) center center no-repeat;">
+					<h3>
+						Winter Sports<br>
+						<small>ClassGrp.LongDescription goes here</small>
+					</h3>
+				</a>
+				<a href="#">Accessories</a><br>
+				<a href="#">Antiquarian &amp; Collectible</a><br>
+				<a href="#">Audiobooks</a><br>
+				<a href="#">Catalogs</a>
+			</div>
+		</div>
+		<div class="row class-groups">
+			<div class="col-md-3">
+				<a href="#" class="item" style="background: url(../../img/istockphoto-no-license/stock-photo-7229515-riding-girl.jpg) center center no-repeat;">
+					<h3>
+						Horseback Riding
+					</h3>
+				</a>
+				<a href="#">Agriculture &amp; Forestry</a><br>
+				<a href="#">Construction</a><br>
+				<a href="#">Electrical &amp; Test Equipment</a><br>
+				<a href="#">Fuel &amp; Energy</a><br>
+				<a href="#">Healthcare, Lab &amp; Life Science</a><br>
+				<a href="#">Heavy Equipment</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="item" style="background: url(../../img/istockphoto-no-license/stock-photo-4338337-couple-talking-on-tennis-court.jpg) center center no-repeat;">
+					<h3>
+						Tennis
+					</h3>
+				</a>
+				<a href="#">Binoculars &amp; Telescopes</a><br>
+				<a href="#">Camcorders</a><br>
+				<a href="#">Digital Cameras</a><br>
+				<a href="#">Camera &amp; Photo Accessories</a><br>
+				<a href="#">Digital Photo Frames</a><br>
+				<a href="#">Film Photography</a>
+				<a href="#">Flashes &amp; Flash Accessories</a><br>
+				<a href="#">Lenses &amp; Filters</a><br>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="item" style="background: url(../../img/istockphoto-no-license/stock-photo-7501868-golfing.jpg) center center no-repeat;">
+					<h3>
+						Golfing
+					</h3>
+				</a>
+				<a href="#">Antiquities</a><br>
+				<a href="#">Architectural &amp; Garden</a><br>
+				<a href="#">Asian Antiques</a><br>
+				<a href="#">Books &amp; Manuscripts</a><br>
+				<a href="#">Decorative Arts</a><br>
+				<a href="#">Ethnographic</a><br>
+				<a href="#">Furniture</a><br>
+				<a href="#">Home &amp; Hearth</a>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="item" style="background: url(../../img/istockphoto-no-license/stock-photo-24565863-sailing-crew-beating-to-windward-on-sailboat.jpg) center center no-repeat;">
+					<h3>
+						Yachting
+					</h3>
+				</a>
+				<a href="#">Cell Phones &amp; Smartphones</a><br>
+				<a href="#">Smart Watches</a><br>
+				<a href="#">Cell Phone Accessories</a><br>
+				<a href="#">Display Phones</a><br>
+				<a href="#">Phone Cards &amp; SIM Cards</a><br>
+			</div>
+		</div>
+
+		<a href="#" class="btn btn-primary btn-lg full-width">See all Products in ClassGrp.ShortDesc</a>
+
+<!--
+		<div class="row">
+			<div class="col-md-3">
+				<h4><a href="#">Antiques</a></h4>
+				<a href="#">Antiquities</a><br>
+				<a href="#">Architectural &amp; Garden</a><br>
+				<a href="#">Asian Antiques</a><br>
+				<a href="#">Books &amp; Manuscripts</a><br>
+				<a href="#">Decorative Arts</a><br>
+				<a href="#">Ethnographic</a><br>
+				<a href="#">Furniture</a><br>
+				<a href="#">Home &amp; Hearth</a>
+			</div>
+			<div class="col-md-3">
+				<h4><a href="#">Art</a></h4>
+				<a href="#">Direct from the Artist</a><br>
+				<a href="#">Art from Dealers &amp; Resellers</a><br>
+				<a href="#">Wholesale Lots</a>
+			</div>
+			<div class="col-md-3">
+				<h4><a href="#">Baby</a></h4>
+				<a href="#">Baby Gear</a><br>
+				<a href="#">Baby Safety &amp; Health</a><br>
+				<a href="#">Bathing &amp; Grooming</a><br>
+				<a href="#">Car Safety Seats</a><br>
+				<a href="#">Diapering</a><br>
+				<a href="#">Feeding</a>
+			</div>
+			<div class="col-md-3">
+				<h4><a href="#">Books</a></h4>
+				<a href="#">Accessories</a><br>
+				<a href="#">Antiquarian &amp; Collectible</a><br>
+				<a href="#">Audiobooks</a><br>
+				<a href="#">Catalogs</a>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-3">
+				<h4><a href="#">Business &amp; Industrial</a></h4>
+				<a href="#">Agriculture &amp; Forestry</a><br>
+				<a href="#">Construction</a><br>
+				<a href="#">Electrical &amp; Test Equipment</a><br>
+				<a href="#">Fuel &amp; Energy</a><br>
+				<a href="#">Healthcare, Lab &amp; Life Science</a><br>
+				<a href="#">Heavy Equipment</a>
+			</div>
+			<div class="col-md-3">
+				<h4><a href="#">Cameras &amp; Photo</a></h4>
+				<a href="#">Binoculars &amp; Telescopes</a><br>
+				<a href="#">Camcorders</a><br>
+				<a href="#">Digital Cameras</a><br>
+				<a href="#">Camera &amp; Photo Accessories</a><br>
+				<a href="#">Digital Photo Frames</a><br>
+				<a href="#">Film Photography</a>
+				<a href="#">Flashes &amp; Flash Accessories</a><br>
+				<a href="#">Lenses &amp; Filters</a><br>
+			</div>
+			<div class="col-md-3">
+				<h4><a href="#">Cell Phones &amp; Accessories</a></h4>
+				<a href="#">Cell Phones &amp; Smartphones</a><br>
+				<a href="#">Smart Watches</a><br>
+				<a href="#">Cell Phone Accessories</a>
+				<a href="#">Display Phones</a><br>
+				<a href="#">Phone Cards &amp; SIM Cards</a><br>
+			</div>
+			<div class="col-md-3">
+			</div>
+		</div>
+		</hr>
+
+-->
+
+		<!-- #### /Categories ########################################################## -->
+
+
+
+
+		<!-- #### Modals ########################################################## -->
+		<!-- Modals have to be the last visible elements on a page to get the correct z-index. -->
+
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Select Customer</h4>
+		      </div>
+		      <div class="modal-body">
+				<div class="list-group">
+				  <a href="#" class="list-group-item active">
+					jcat001
+				  </a>
+				  <a href="#" class="list-group-item">
+					Customer 2
+				  </a>
+				  <a href="#" class="list-group-item">
+					Customer 3
+				  </a>
+				  <a href="#" class="list-group-item">
+					Customer 4
+				  </a>
+				  <a href="#" class="list-group-item">
+					Customer 5
+				  </a>
+				  <a href="#" class="list-group-item">
+					Customer 6
+				  </a>
+				  <a href="#" class="list-group-item">
+					Customer 7
+				  </a>
+				  <a href="#" class="list-group-item">
+					Customer 8
+				  </a>
+				  <a href="#" class="list-group-item">
+					Customer 9
+				  </a>
+				</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Abort</button>
+		        <button type="button" class="btn btn-primary">Select</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- #### /Modals ########################################################## -->
+	</div> <!-- /container -->
+
+	<footer>
+		<div class="container copyright text-center">&copy; 2001 &mdash; 2014 <a href="http://www.jcatalog.com/">jCatalog Software AG</a></div>
+	</footer>
+
+	</body>
+</html>

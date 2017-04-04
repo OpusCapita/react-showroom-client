@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OPC 8 Buyside (No Procurement) Main Menu )))</title>
+		
+		<style type="text/css">
+		.sidebar {
+			position: fixed;
+			float: left;
+			height: 100%;
+			background: #333;
+			width: 25em;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			color: #aaa;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		
+		body {
+			background: #eee;
+		}
+		
+		.sidebar .logo {
+			display: block;
+			margin: 2em 4em;
+		}
+
+		.sidebar nav {
+			font-size: 1em;
+		}
+
+		.sidebar nav ul {
+			list-style: none;
+			padding: 0;
+		}
+		
+		.sidebar nav ul li p { 
+			padding: 0 14px 0 40px;
+			color: #aaa;
+			font-style: italic;
+		}
+		
+		
+		.sidebar nav ul li a {
+			text-decoration: none;
+			color: #bbb;
+			display: block;
+			padding: 7px 14px;
+			position: relative;
+			padding-left: 40px;
+			
+		}
+
+		.sidebar nav  ul  li  a img {
+			position: absolute;
+			margin-left: -25px;
+			margin-top: .25em;
+		}
+		
+		.sidebar nav ul li a.active,
+		.sidebar nav ul li a:hover,
+		.sidebar nav ul li a:active {
+			color: #fff;
+			background: #222;
+			border-left: 5px solid #369;
+			padding-left: 35px;
+			
+		}
+		
+		
+		.sidebar nav > ul > li > a {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+		
+		.icon-img {
+			height: 1em;
+			color: #fff;
+		}	
+		
+		.content {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			color: #000;
+			overflow-x: hidden;
+			overflow-y: auto;
+			margin-left: 30em;
+			position: relative;
+		}
+		
+		.content .container {
+			width: 100%;
+		}
+		
+		article {
+			clear: both;
+		}
+				
+		.slice {
+			position: relative;
+			float: left;
+			background: red;
+			-webkit-transform: perspective( 600px ) rotate(-45deg) rotateY( 45deg );			
+		}
+
+		.slice:before {
+			content: ' ';
+			display: block;
+			width: 500px;
+			height: 100%;
+			background: rgba(255,0,0,.5);
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			-webkit-transform: perspective( 600px ) rotateY( 89deg );			
+		}
+
+		
+		.slice:after {
+			content: ' ';
+			display: block;
+			width: 100%;
+			height: 10px;
+			background: blue;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			-webkit-transform: perspective( 600px ) rotateX( 89deg );			
+		}
+		
+		.slice iframe {
+			border: 0;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		
+		article {
+			position: relative;
+		}
+		
+		article iframe {
+			display: block;
+			width: 100%;
+			height: 100px;
+			background: #fff;
+			border: 2px solid #369;
+		}
+		
+		article label {
+			background: #369;
+			padding: 2px 5px;
+			color: #fff;
+			margin: 20px 0px 0px;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+			opacity: .35;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div class="sidebar">
+			<a class="logo" href="#"><img src="../img/jcui-collage/jc-logo.png" class="img-responsive"></a>
+			
+			<nav>
+				<ul>
+					<li>
+						<a href="#">
+							<img class="icon-img" src="../img/webbicons/elements-w.svg">
+							Elements
+						</a>
+						<p>All native HTML elements, some with classes</p>
+						<ul>
+							<li>
+								<a class="active" href="#">
+									<img class="icon-img" src="../img/webbicons/colors-w.svg">
+									Colors
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img class="icon-img" src="../img/webbicons/typography-w.svg">
+									Typography
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img class="icon-img" src="../img/webbicons/images-w.svg">
+									Images
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img class="icon-img" src="../img/webbicons/buttons-w.svg">
+									Buttons
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img class="icon-img" src="../img/webbicons/forms-w.svg">
+									Forms
+								</a>
+							</li>
+							<li>
+								<a href="#Tables">
+									<img class="icon-img" src="../img/webbicons/tables-w.svg">
+									Tables
+								</a>
+							</li>
+							<li>
+								<a href="#"></a>
+							</li>
+						</ul>
+					</li><!-- /Elements -->
+					<li>
+						<a href="#Components">
+							<img class="icon-img" src="../img/webbicons/components-w.svg">
+							Components
+						</a>
+						<p>HTML extensions made of HTML elements</p>
+						<ul>
+							<li>
+								<a href="#Callouts">Callouts</a>
+							</li>
+							<li>
+								<a href="#Collapsibles">Collapsibles</a>
+							</li>
+							<li>
+								<a href="#Datepicker">Datepicker</a>
+							</li>
+						</ul>
+					</li><!-- /Components -->
+					<li>
+						<a href="#">
+							<img class="icon-img" src="../img/webbicons/modules-w.svg">
+							Modules
+						</a>
+						<p>Constructs made of elements and components</p>
+					</li>
+					<li>
+						<a href="#">
+							<img class="icon-img" src="../img/webbicons/sections-w.svg">
+							Sections
+						</a>
+						<p>Layout sections on templatess</p>
+						<ul>
+							<li>
+								<a href="#">Page Headers</a>
+							</li>
+							<li>
+								<a href="#">Page Footers</a>
+							</li>
+							<li>
+								<a href="#">Sidebars</a>
+							</li>
+							<li>
+								<a href="#">Modals</a>
+							</li>
+							<li>
+								<a href="#"></a>
+							</li>
+							<li>
+								<a href="#"></a>
+							</li>
+							<li>
+								<a href="#"></a>
+							</li>
+						</ul>
+						
+					</li>
+					<li>
+						<a href="#">
+							<img class="icon-img" src="../img/webbicons/templates-w.svg">
+							Templates
+						</a>
+						<p>Example templates from OPC 8.0</p>
+					</li>
+				</ul>
+				<!-- /Example Pages -->
+			</nav>
+			
+		</div>
+		<div class="content">
+			<section class="container">
+				<h1>
+					jCatalog UI 8<br>
+					<small>UI Collage</small>
+				</h1>
+				<p>This document is structured in reference to Brad Frost's excellent Atomic Design concept</p>
+				<blockquote>We're not designing pages, we're designing systems of components. <cite>Stephen Hay</cite></blockquote>
+			</section>
+			<section class="container">
+				<h2>Elements</h2>
+				<article>
+					<h3>Colors</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Typography</h3>
+					<p></p>
+					<h4>Headlines</h4>
+					<p>
+						Every Page requires a <code>&lt;h1&gt;</code> containing the page title, and <code>&lt;h2&gt;</code> for each section, <code>&lt;h3&gt;</code> for ech sub-section, and so on.
+					</p>
+					<div class="row">
+						<div class="col-md-6">
+							<h5>My Page contains two consecutive topics, and the user will navigate to the first, then the second</h5>
+							<p>
+								You require a 1-column layout with <code>&lt;h1&gt;</code> Page Title and <code>&lt;h2&gt;</code> Section titles
+							</p>
+						</div>
+						<div class="col-md-6">
+							<h5>My Page contains two different topics, and the user navigates to either one or the other</h5>
+							<p>
+								You require a 2-column layout <b>without</b> <code>&lt;h1&gt;</code> but two <code>&lt;h2&gt;</code> section titles
+							</p>
+						</div>
+					</div>
+
+					
+				</article>
+				
+				<article>
+					<h3>Images</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Buttons</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Forms</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3 id="Tables">Tables</h3>
+					<p></p>
+
+          <iframe src="jcui-collage-examples/jcui8-table.html" style="height:250px;" /></iframe>
+          <a href="jcui-collage-examples/jcui8-table.html" target="_blank" class="btn btn-default">
+            Open in new Tab/Window
+          </a>
+				</article>
+				
+			</section>
+			<section class="container">
+				<h2 id="Components">Components</h2>
+				<article>
+					<h3 id="Callouts">Callouts/Messages</h3>
+					<p></p>
+					
+					<iframe src="jcui-collage-examples/jcui8-callout.html" style="height:250px;" /></iframe>
+					<a href="jcui-collage-examples/jcui8-callout.html" target="_blank" class="btn btn-default">
+						Open in new Tab/Window
+					</a>
+				</article>
+				
+				<article>
+					<h3 id="Collapsibles">Collapsibles</h3>
+					<p>Collapsibles are bound to a headline or button</p>
+
+					<iframe src="jcui-collage-examples/jcui8-collapse.html" style="height:250px;" /></iframe>
+					<a href="jcui-collage-examples/jcui8-collapse.html" target="_blank" class="btn btn-default">
+						Open in new Tab/Window
+					</a>
+				</article>
+
+				<article>
+					<h3 id="Datepicker">Datepicker</h3>
+          <iframe src="jcui-collage-examples/jcui8-datepicker.html" style="height:250px;" /></iframe>
+          <a href="jcui-collage-examples/jcui8-datepicker.html" target="_blank" class="btn btn-default">
+            Open in new Tab/Window
+          </a>
+				</article>
+
+				<article>
+					<h3></h3>
+					<p></p>
+				</article>
+				
+			</section>
+			<section class="container">
+				<h2>Modules</h2>
+				<article>
+					<h3>Login page</h3>
+					<p></p>
+          <iframe src="jcui-collage-examples/jcui8-login.html" style="height:250px;" /></iframe>
+          <a href="jcui-collage-examples/jcui8-login.html" target="_blank" class="btn btn-default">
+            Open in new Tab/Window
+          </a>
+				</article>
+				
+			</section>
+			<section class="container">
+				<h2>Sections</h2>
+				<article>
+					<h3>Page Headers</h3>
+					<p></p>
+					<h4>JCUI8 Header</h4>
+					<label>Responsive Menu Desktop Mode</label>
+					<iframe src="jcui-collage-examples/jcui8-menu.html" style="height:250px;" /></iframe>
+					<a href="jcui-collage-examples/jcui8-menu.html" target="_blank" class="btn btn-default">
+						Open in new Tab/Window
+					</a>
+					<br>
+					
+					<div class="row">
+						<div class=col-md-5>
+							<label>Responsive Menu Phone Portrait Mode</label>
+							<iframe src="jcui-collage-examples/jcui8-menu.html" style="width: 320px; height:480px;" /></iframe>
+							<a href="jcui-collage-examples/jcui8-menu.html" target="_blank" class="btn btn-default">
+								Open in new Tab/Window
+							</a>
+						</div>
+						<div class=col-md-7>
+							<label>Responsive Menu Phone Landscape Mode</label>
+							<iframe src="jcui-collage-examples/jcui8-menu.html" style="width: 480px; height:320px;" /></iframe>
+							<a href="jcui-collage-examples/jcui8-menu.html" target="_blank" class="btn btn-default">
+								Open in new Tab/Window
+							</a>
+						</div>
+					</div>
+					
+					<h4>OPC8 Sellside Header</h4>
+					<iframe src="" /></iframe>
+				</article>
+				
+				<article>
+					<h3>Page Footers</h3>
+					<p></p>
+					<h4>JCUI8 Footer</h4>
+					<iframe src="jcui-collage-examples/jcui8-footer.html" style="" /></iframe>
+					<a href="jcui-collage-examples/jcui8-footer.html" target="_blank" class="btn btn-default">
+						Open in new Tab/Window
+					</a>
+					
+					<h4>OPC8 Sellside Footer</h4>
+					<iframe src="" /></iframe>
+				</article>
+				
+				<article>
+					<h3>Sidebars</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Modals</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3></h3>
+					<p></p>
+				</article>
+				
+			</section>
+			<section class="container">
+				<h2>Templates</h2>
+				<article>
+					<h3>Homepage</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Search Results</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Detail Page</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Shopping Cart</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Admin Page</h3>
+					<p></p>
+				</article>
+				
+				<article>
+					<h3>Category Navigation</h3>
+					<p></p>
+				</article>
+				
+			</section>
+		</div>
+	</body>
+</html>

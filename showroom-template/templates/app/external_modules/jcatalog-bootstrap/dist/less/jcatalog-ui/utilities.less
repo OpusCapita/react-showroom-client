@@ -1,0 +1,133 @@
+// fixes ff bug: input-lg 2px additional height
+html.ff input.form-control.input-lg {
+  height: 46px;
+}
+
+
+textarea.textarea-resize-y {
+	resize: vertical;
+}
+
+.btn.btn-narrow {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.input-group-datetime {
+	width: 1px !important;
+}
+
+.input-date {
+	width: 9em !important;
+}
+
+.input-date {
+	width: 9em !important;
+}
+
+.input-group-datetime input.input-date {
+	width: 9em !important;
+	text-align: center;
+}
+
+.input-group-datetime input.input-time {
+	width: 6em !important;
+	text-align: center;
+}
+
+.input-group-datetime select.form-control {
+	width: auto;
+}
+
+input.input-price {
+	width: 7em !important;
+}
+
+.input-currency {
+	width: 3em !important;
+}
+
+table.table tr.dnd-enabled td {
+	position: relative;
+}
+
+table.table tr.dnd-enabled td:first-child {
+	padding-left: 1.5em;
+}
+
+.dnd-enabled {
+	transition: all .5s;
+}
+
+.drag-source {
+	opacity: .25;
+	transition: all .5s;
+}
+
+.drag-spawn {
+	opacity: 1;
+	animation-name: appear;
+	animation-duration: .75s;
+	animation-iteration-count: 1;
+	animation-delay: 0;
+	animation-play-state: running;
+}
+
+@-webkit-keyframes appear {
+	0%   { opacity: .25; background: rgba(46, 107, 153, 0.5); }
+	100% { opacity: 1; background: transparent;}
+}
+
+.prevent-selection {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.dnd-handle {
+	position: absolute;
+	background:
+		repeating-linear-gradient(
+				0deg,
+				#FFF,
+				#FFF 2px,
+				#CCC 2px,
+				#CCC 4px
+		);
+	top: 1em;
+	bottom: 1em;
+	left: 0px;
+	width: .5em;
+	cursor: -webkit-grab;
+}
+
+.drag-box {
+	transition: all .2s;
+	position: absolute;
+	border-radius: 2px;
+	padding: .2em .5em;
+	font-size: .8em;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	z-index: 2;
+}
+
+.drag-box:before {
+	display: block;
+	content: '';
+	background: #000;
+	position: absolute;
+	width: 500px;
+	height: 3px;
+	top: .73em;
+	overflow: hidden;
+	background: #000;
+	font-weight: bold;
+	z-index: -1;
+}
+
+

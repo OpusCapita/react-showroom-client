@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Lato";
+    font-weight: 300;
+    src: url(../fonts/Lato-Regular.woff);
+}
+@font-face {
+    font-family: "Lato";
+    font-weight: 200;
+    src: url(../fonts/Lato-Light.woff);
+}
+@font-face {
+    font-family: "Lato";
+    font-weight: 100;
+    src: url(../fonts/Lato-Hairline.woff);
+}
+html {
+    height: 100%;
+}
+body {
+    color: #333;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+}
+h1, h2, p {
+    text-align:center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+h1 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 100px;
+    font-weight: 100;
+}
+h2 {
+    font-size: 38px;
+    font-weight: 200;
+}
+a {
+    color: #2e6b99;
+    text-decoration: none;
+}
+a:hover {
+    color: #1c425e;
+    text-decoration: underline;
+}
+.not-found-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 35%;
+    margin: auto;
+}
