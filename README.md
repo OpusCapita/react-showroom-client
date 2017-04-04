@@ -8,9 +8,61 @@ Click gif image and press **Download** to zoom
 
 ![showroom-demo](./docs/demo.gif)
 
-## How to add to your project
 
-[See here](./docs/embedded.md)
+## Start new project in 2 minutes!
+
+We provide project template with preconfigured webpack, express and less and [postcss](https://github.com/postcss/postcss) for styles.
+
+Install template generator globally
+
+```
+yarn global add opuscapita-showroom-template
+# or
+npm install -g opuscapita-showroom-template
+```
+
+Create empty directory
+
+```
+mkdir my-react-project && cd my-react-project
+```
+
+Init project and ask several questions
+
+```
+showroom init
+```
+
+Install deps
+
+```
+yarn install
+# or
+npm install
+```
+
+Done :star2: :joy:
+
+```
+yarn start
+# or
+npm start
+```
+
+Add new component.
+
+```showroom add``` and specify component name
+
+Component is a directory includes:
+
+* <component_name>.DOCUMENTATION [file](./docs/example.DOCUMENTATION.md)
+* <component_name>.react.js file with sceleton of component
+* <component_name>.less file with styles
+* index.js file with component export
+
+## Add to existing project
+
+[See documentation here](./docs/embedded.md)
 
 ## Motivation to develop
 
