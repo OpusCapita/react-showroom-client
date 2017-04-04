@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-React based components catalog which provide a **documentation** and **live examples**.
+Awesome react based components catalog which provide you **markdown documentation** and **live examples**. :boom: 
 
 Click gif image and press **Download** to zoom
 
@@ -45,7 +45,7 @@ yarn start
 
 Open in browser: [http://localhost:3000](http://localhost:3000)
 
-Add new component.
+You can easilly add new component.
 
 ```showroom add``` and specify component name
 
