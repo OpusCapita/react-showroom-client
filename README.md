@@ -8,6 +8,10 @@ Click gif image and press **Download** to zoom
 
 ![showroom-demo](./docs/demo.gif)
 
+## How to add to your project
+
+[See here](./docs/embedded.md)
+
 ## Motivation to develop
 
 The fundamental ideas of ReactJS is **modularity** and **code reuse**.
