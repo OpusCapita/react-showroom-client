@@ -36,11 +36,8 @@ Because it we are using package.json.tmp files, which will renamed to package.js
 .gitignore file has same problem
 */
 function fixTmpFiles(directory) {
-  console.log('dir:', directory);
   let tmpFiles = fsUtils.findFilesByGlobs(directory, ['*.tmp', '.*.tmp']);
-  console.log('tmp', tmpFiles)
   tmpFiles.map(filePath => {
-    console.log('fp:', filePath);
     let newFilePath = filePath.replace(/\.tmp$/, '');
     fs.renameSync(filePath, newFilePath);
   });
