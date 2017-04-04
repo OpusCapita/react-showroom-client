@@ -4,7 +4,13 @@
 
 React based components catalog which provide a **documentation** and **live examples**.
 
+Click gif image and press **Download** to zoom
+
 ![showroom-demo](./docs/demo.gif)
+
+## How to add to your project
+
+[See here](./docs/embedded.md)
 
 ## Motivation to develop
 
