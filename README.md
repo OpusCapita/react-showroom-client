@@ -15,7 +15,7 @@ We provide project template with preconfigured webpack, express and less and [po
 Install template generator globally
 
 ```
-yarn global add opuscapita-showroom-template
+npm install -g opuscapita-showroom-template
 ```
 
 Create empty directory
@@ -33,13 +33,13 @@ showroom init
 Install deps
 
 ```
-yarn install
+npm install
 ```
 
 Done :star2: :joy:
 
 ```
-yarn start
+npm start
 ```
 
 Open in browser: [http://localhost:3000](http://localhost:3000)
