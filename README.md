@@ -126,6 +126,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 * Alexey Sergeev - [alexey.sergeev@jcatalog.com](alexey.sergeev@jcatalog.com)
 * Kirill Volkovich - [kirill.volkovich@jcatalog.com](kirill.volkovich@jcatalog.com)
+* We need YOU! :metal:
 
 ## License
 
