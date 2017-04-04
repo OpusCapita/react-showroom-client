@@ -12,7 +12,7 @@ Click gif image and press **Download** to zoom
 
 [Video](https://asciinema.org/a/03tnfqmrb6v2ywofq9u27lkh9)
 
-We provide project template with preconfigured webpack, express and less and [postcss](https://github.com/postcss/postcss) for styles.
+We provide project template with preconfigured webpack, babel, tests, etc. ([full overview](./showroom-template/README.md))
 
 Install template generator globally
 
