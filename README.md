@@ -9,7 +9,7 @@ Click gif image and press **Download** to zoom
 ![showroom-demo](./docs/demo.gif)
 
 
-## Start new project in 2 minutes!
+## [Start new project in 2 minutes!](https://asciinema.org/a/03tnfqmrb6v2ywofq9u27lkh9)
 
 We provide project template with preconfigured webpack, express and less and [postcss](https://github.com/postcss/postcss) for styles.
 
