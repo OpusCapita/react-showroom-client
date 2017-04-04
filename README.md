@@ -8,7 +8,6 @@ Click gif image and press **Download** to zoom
 
 ![showroom-demo](./docs/demo.gif)
 
-
 ## [Start new project in 2 minutes!](https://asciinema.org/a/03tnfqmrb6v2ywofq9u27lkh9)
 
 We provide project template with preconfigured webpack, express and less and [postcss](https://github.com/postcss/postcss) for styles.
@@ -61,6 +60,12 @@ Component is a directory includes:
 ## Add showroom to existing project
 
 [See documentation here](./docs/embedded.md)
+
+## See also
+
+* [Component documentation format](./docs/example.DOCUMENTATION.md)
+* [Scope component](./docs/scope-component.md)
+
 
 ## Motivation to develop
 
@@ -120,11 +125,6 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Change component properties and see what happenned **in realtime**
 * Change component **version** to see appropriate documentation
 * If you run it don't forget configure [this file](https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapitaBES/js-node-showroom-server/blob/master/README.md#what-this-goal-do)
-
-## See also
-
-* [Component documentation format](./docs/example.DOCUMENTATION.md)
-* [Scope component](./docs/scope-component.md)
 
 ## Contributors
 
