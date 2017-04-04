@@ -44,13 +44,19 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ## How to use
 
-### [Embedded](./docs/embedded.md)
+### Embedded
 
 * Developer-side variant
 * **Always write** the documentation :pencil:
 * Take care about other developers and others take care about you :tophat:
 
-### [Server application (on remote server)](https://github.com/OpusCapitaBES/js-node-showroom-server)
+[See how to install](./docs/embedded.md)
+
+### Server application
+
+> ! Now it require exposed components from `main` npm package file 
+
+[See how to install](https://github.com/OpusCapitaBES/js-node-showroom-server)
 
 * Browse components catalog
 * See usage code examples
