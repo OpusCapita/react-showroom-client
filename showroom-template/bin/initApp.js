@@ -59,4 +59,5 @@ module.exports = function(destinationDirectory) {
   });
 
   fixTmpFiles(destinationDirectory);
+  console.log('Showroom template successfully created. \n\t Please run `yarn install`, then `yarn start`');
 };
