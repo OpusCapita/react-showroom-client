@@ -4,7 +4,7 @@
 
 React based components catalog which provide a **documentation** and **live examples**.
 
-![showroom-demo](./docs/demo.png)
+![showroom-demo](./docs/demo.gif)
 
 ## Motivation to develop
 
