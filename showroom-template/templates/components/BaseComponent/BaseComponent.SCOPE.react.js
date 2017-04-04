@@ -5,7 +5,6 @@
 
 import React, { Component, PropTypes } from 'react';
 import { showroomScopeDecorator } from 'opuscapita-showroom-client';
-import I18nContext from 'opuscapita-react-i18n';
 
 
 @showroomScopeDecorator
