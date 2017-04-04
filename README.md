@@ -43,6 +43,8 @@ Done :star2: :joy:
 yarn start
 ```
 
+Open in browser: [http://localhost:3000](http://localhost:3000)
+
 Add new component.
 
 ```showroom add``` and specify component name
