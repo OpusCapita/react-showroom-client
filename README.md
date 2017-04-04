@@ -54,7 +54,7 @@ Component is a directory includes:
 * <component_name>.less file with styles
 * index.js file with component export
 
-## Add to existing project
+## Add showroom to existing project
 
 [See documentation here](./docs/embedded.md)
 
