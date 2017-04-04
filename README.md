@@ -47,6 +47,8 @@ Add new component.
 
 ```showroom add``` and specify component name
 
+Component will be added to **src/client/components** directory
+
 Component is a directory includes:
 
 * <component_name>.DOCUMENTATION [file](./docs/example.DOCUMENTATION.md)
