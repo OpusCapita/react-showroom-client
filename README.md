@@ -17,8 +17,6 @@ Install template generator globally
 
 ```
 yarn global add opuscapita-showroom-template
-# or
-npm install -g opuscapita-showroom-template
 ```
 
 Create empty directory
@@ -37,16 +35,12 @@ Install deps
 
 ```
 yarn install
-# or
-npm install
 ```
 
 Done :star2: :joy:
 
 ```
 yarn start
-# or
-npm start
 ```
 
 Add new component.
