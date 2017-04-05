@@ -1,10 +1,10 @@
 # OpusCapita Showroom
 
-If you interested in project development, please **star** it and send us **your** pull-requests!
-
 ## Synopsis
 
 Awesome react based components catalog which provide you **markdown documentation** and **live examples**. :boom: 
+
+If you interested in project development, please **star** it and send us **your** pull-requests!
 
 Click gif image and press **Download** to zoom
 
