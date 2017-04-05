@@ -1,4 +1,4 @@
-# Opuscapita react template
+# OpusCapita showroom template
 
 Preconfigured to OpusCapita defaults react project template
 
