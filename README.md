@@ -48,6 +48,8 @@ npm start
 
 Open in browser: [http://localhost:3000](http://localhost:3000)
 
+---
+
 You can easilly add new component.
 
 ```showroom add``` and specify component name
