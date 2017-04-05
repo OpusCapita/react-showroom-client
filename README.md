@@ -40,7 +40,7 @@ Install deps
 npm install
 ```
 
-Done :star2: :joy:
+Done :star2: Let's run it!
 
 ```
 npm start
