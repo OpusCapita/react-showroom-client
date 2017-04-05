@@ -6,8 +6,6 @@ Awesome react based components catalog which provide you **markdown documentatio
 
 If you interested in project development, please **star** it and send us **your** pull-requests!
 
-**Need help to integrate it to your open-source project? Create an issue or contact [us](https://github.com/OpusCapitaBES/js-react-showroom-client#contributors)** :innocent:
-
 Click gif image and press **Download** to zoom
 
 ![showroom-demo](./docs/demo.gif)
@@ -68,6 +66,8 @@ Component is a directory includes:
 ## Add showroom to existing project
 
 [See documentation here](./docs/embedded.md)
+
+**Need help to integrate it to your open-source project? Create an issue or contact [us](https://github.com/OpusCapitaBES/js-react-showroom-client#contributors)** :innocent:
 
 ## See also
 
