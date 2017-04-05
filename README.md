@@ -6,7 +6,7 @@ Awesome react based components catalog which provide you **markdown documentatio
 
 If you interested in project development, please **star** it and send us **your** pull-requests!
 
-**We can help to integrate it to your open-source project** :innocent:
+**Need help to integrate it to your open-source project? Create an issue or contact [us](https://github.com/OpusCapitaBES/js-react-showroom-client#contributors)** :innocent:
 
 Click gif image and press **Download** to zoom
 
