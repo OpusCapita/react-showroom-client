@@ -1,5 +1,7 @@
 # OpusCapita Showroom
 
+If you interested in project development, please **star** it and send us **your** pull-requests!
+
 ## Synopsis
 
 Awesome react based components catalog which provide you **markdown documentation** and **live examples**. :boom: 
@@ -67,7 +69,6 @@ Component is a directory includes:
 
 * [Component documentation format](./docs/example.DOCUMENTATION.md)
 * [Scope component](./docs/scope-component.md)
-
 
 ## Motivation to develop
 
