@@ -67,7 +67,7 @@ Component is a directory includes:
 
 [See documentation here](./docs/embedded.md)
 
-**Need help to integrate it to your open-source project? Create an issue or contact [us](https://github.com/OpusCapitaBES/js-react-showroom-client#contributors)** :innocent:
+**Need help with integration to your open-source project? Create an issue or contact [us](https://github.com/OpusCapitaBES/js-react-showroom-client#contributors)** :innocent:
 
 ## See also
 
