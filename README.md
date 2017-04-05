@@ -115,6 +115,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Developer-side variant
 * **Always write** the documentation :pencil:
 * Take care about other developers and others take care about you :tophat:
+* [react-fix-it](https://github.com/MicheleBertoli/react-fix-it)
 
 [See how to install](./docs/embedded.md)
 
