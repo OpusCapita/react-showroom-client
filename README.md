@@ -6,6 +6,8 @@ Awesome react based components catalog which provide you **markdown documentatio
 
 If you interested in project development, please **star** it and send us **your** pull-requests!
 
+**We can help to integrate it to your open-source project** :innocent:
+
 Click gif image and press **Download** to zoom
 
 ![showroom-demo](./docs/demo.gif)
