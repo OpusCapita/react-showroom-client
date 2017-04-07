@@ -1,4 +1,4 @@
-# Opuscapita react template
+# OpusCapita showroom template
 
 Preconfigured to OpusCapita defaults react project template
 
@@ -8,8 +8,8 @@ Preconfigured to OpusCapita defaults react project template
 
 ## Global commands
 
-* ```recapita init``` - create project skeleton in empty folder
-* ```recapita add``` - add new react component. Includes styles, unit-test, [showroom](https://github.com/OpusCapitaBES/js-react-showroom-client) specific files
+* ```showroom init``` - create project skeleton in empty folder
+* ```showroom add``` - add new react component. Includes styles, unit-test, [showroom](https://github.com/OpusCapitaBES/js-react-showroom-client) specific files
 
 ## Template commands
 

@@ -2,21 +2,24 @@
 
 ## Synopsis
 
-React based components catalog which provide a **documentation** and **live examples**.
+Awesome react based components catalog which provide you **markdown documentation** and **live examples**. :boom: 
+
+If you interested in project development, please **star** it and send us **your** pull-requests!
 
 Click gif image and press **Download** to zoom
 
 ![showroom-demo](./docs/demo.gif)
 
-
 ## Start new project in 2 minutes!
 
-We provide project template with preconfigured webpack, express and less and [postcss](https://github.com/postcss/postcss) for styles.
+[Video](https://asciinema.org/a/03tnfqmrb6v2ywofq9u27lkh9)
+
+We have preconfigured project template with  webpack, babel, tests, etc. ([full overview](./showroom-template/README.md))
 
 Install template generator globally
 
 ```
-yarn global add opuscapita-showroom-template
+npm install -g opuscapita-showroom-template
 ```
 
 Create empty directory
@@ -34,16 +37,20 @@ showroom init
 Install deps
 
 ```
-yarn install
+npm install
 ```
 
-Done :star2: :joy:
+Done :star2: Let's run it!
 
 ```
-yarn start
+npm start
 ```
 
-Add new component.
+Open in browser: [http://localhost:3000](http://localhost:3000)
+
+---
+
+You can easilly add new component.
 
 ```showroom add``` and specify component name
 
@@ -51,7 +58,7 @@ Component will be added to **src/client/components** directory
 
 Component is a directory includes:
 
-* <component_name>.DOCUMENTATION [file](./docs/example.DOCUMENTATION.md)
+* [<component_name>.DOCUMENTATION.md](./docs/example.DOCUMENTATION.md)
 * <component_name>.react.js file with sceleton of component
 * <component_name>.less file with styles
 * index.js file with component export
@@ -59,6 +66,13 @@ Component is a directory includes:
 ## Add showroom to existing project
 
 [See documentation here](./docs/embedded.md)
+
+**Need help with integration to your open-source project? Create an issue or contact [us](https://github.com/OpusCapitaBES/js-react-showroom-client#contributors)** :innocent:
+
+## See also
+
+* [Component documentation format](./docs/example.DOCUMENTATION.md)
+* [Scope component](./docs/scope-component.md)
 
 ## Motivation to develop
 
@@ -103,6 +117,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Developer-side variant
 * **Always write** the documentation :pencil:
 * Take care about other developers and others take care about you :tophat:
+* [react-fix-it](https://github.com/MicheleBertoli/react-fix-it)
 
 [See how to install](./docs/embedded.md)
 
@@ -119,16 +134,11 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Change component **version** to see appropriate documentation
 * If you run it don't forget configure [this file](https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapitaBES/js-node-showroom-server/blob/master/README.md#what-this-goal-do)
 
-## See also
-
-* [Component documentation format](./docs/example.DOCUMENTATION.md)
-* [Scope component](./docs/scope-component.md)
-
 ## Contributors
 
 * Alexey Sergeev - [alexey.sergeev@jcatalog.com](alexey.sergeev@jcatalog.com)
 * Kirill Volkovich - [kirill.volkovich@jcatalog.com](kirill.volkovich@jcatalog.com)
-* We need YOU! :metal:
+* Contributing are welcome. We need YOU! :metal:
 
 ## License
 
