@@ -1,3 +1,7 @@
+### Component Name
+
+__jcatalog-react-app_component-name--uppercamel-case__
+
 ### Synopsis
 
 __jcatalog-react-app_component-name--uppercamel-case__ is 
@@ -14,12 +18,3 @@ __jcatalog-react-app_component-name--uppercamel-case__ is
 ```
 <__jcatalog-react-app_component-name--uppercamel-case__ />
 ```
-
-### Component Name
-
-__jcatalog-react-app_component-name--uppercamel-case__
-
-### License
-
-Licensed by © 2017 OpusCapita
-
