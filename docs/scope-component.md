@@ -1,4 +1,4 @@
-## SCOPE Component
+## Scope Component
 
 In some situations you need a wrapper component.
 
@@ -10,25 +10,25 @@ In some situations you need a wrapper component.
 
 ### To do it you need:
 
-Create a ComponentName.SCOPE.react.js file. SCOPE file is just a wrapper component.
+Create a ComponentName.scope.js file. "Scope" file is just a wrapper component.
 It's a little tricky. But it works =)
 
 ### Examples
 
 #### Making other React component(s) available in documentation examples
 
-*Component.SCOPE.react.js*
+*Component.scope.js*
 
 ```js
 import React from 'react';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
-import I18nContext from 'opuscapita-react-i18n/lib/I18nContext.react';
+import { showroomScope } from 'opuscapita-showroom-client';
+import I18nContext from 'opuscapita-react-i18n/lib/I18nContext';
 
 window.I18nContext = I18nContext; // Make I18nContext a global variable
 
-// This @showroomScopeDecorator modify React.Component prototype by adding _renderChildren() method.
+// This @showroomScope decorator modify React.Component prototype by adding _renderChildren() method.
 export default
-@showroomScopeDecorator
+@showroomScope
 class ComponentNameScope extends React.Component {
   render() {
     return (
@@ -42,7 +42,7 @@ class ComponentNameScope extends React.Component {
 
 Now you can use ```<I18nContext />``` in your examples
 
-*Component.DOCUMENTATION.md*
+*Component.react.md*
 
 ```js
 <I18nContext>
@@ -50,16 +50,16 @@ Now you can use ```<I18nContext />``` in your examples
 </I18nContext>
 ```
 
-#### Access to SCOPE methods and state
+#### Access to _scope object methods and state
 
-*Component.SCOPE.react.js*
+*Component.env.js*
 
 ```js
 import React from 'react';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+import { showroomScope } from 'opuscapita-showroom-client';
 
 export default
-@showroomScopeDecorator
+@showroomScope
 class ComponentNameScope extends React.Component {
   constructor(props) {
     super(props);
@@ -82,7 +82,7 @@ class ComponentNameScope extends React.Component {
 }
 ```
 
-Now you have access to parent SCOPE component by ```_scope``` variable.
+Now you have access to parent scope component by ```_scope``` variable.
 
 ```_scope``` has some restrictions:
 
@@ -96,7 +96,7 @@ Now you have access to parent SCOPE component by ```_scope``` variable.
 
   * ```onClick={(event) => _scope.handleChildClick(event))}```
 
-*Component.DOCUMENTATION.md*
+*Component.react.md*
 
 ```js
   <Component
@@ -107,16 +107,16 @@ Now you have access to parent SCOPE component by ```_scope``` variable.
 
 #### Adding some stuff to React context
 
-*Component.SCOPE.react.js*
+*Component.scope.js*
 
 ```js
 import React from 'react';
 import { I18nManager } from 'opuscapita-i18n';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+import { showroomScope } from 'opuscapita-showroom-client';
 
-// This @showroomScopeDecorator modify React.Component prototype by adding _renderChildren() method.
+// This @showroomScope decorator modify React.Component prototype by adding _renderChildren() method.
 export default
-@showroomScopeDecorator
+@showroomScope
 class ComponentNameScope extends React.Component {
   getChildContext() {
     return {

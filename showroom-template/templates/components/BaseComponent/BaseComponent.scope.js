@@ -1,13 +1,13 @@
 /*
-   What is a SCOPE file. See documentation here:
+   What is a "scope" file. See documentation here:
    https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/docs/scope-component.md
 */
 
 import React, { Component, PropTypes } from 'react';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+import { showroomScope } from 'opuscapita-showroom-client';
 
 
-@showroomScopeDecorator
+@showroomScope
 export default
 class __jcatalog-react-app_component-name--uppercamel-case__Scope extends Component {
   constructor(props) {

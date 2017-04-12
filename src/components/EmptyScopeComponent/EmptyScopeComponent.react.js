@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import showroomScopeDecorator from '../../decorators/showroomScopeDecorator';
+import showroomScope from '../../decorators/showroomScope';
 
-@showroomScopeDecorator
+@showroomScope
 class EmptyScopeComponent extends Component {
   render = () => (<div>{this._renderChildren()}</div>);
 }

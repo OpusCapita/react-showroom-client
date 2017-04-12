@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { I18nManager } from 'opuscapita-i18n';
-import showroomScopeDecorator from '../../decorators/showroomScopeDecorator';
+import showroomScope from '../../decorators/showroomScope';
 
 const formatPatterns = {
   en: {
@@ -21,7 +21,7 @@ const formatPatterns = {
   }
 };
 
-@showroomScopeDecorator
+@showroomScope
 class DefaultScopeComponent extends Component {
   getChildContext() {
     if (!this.context.i18n) {

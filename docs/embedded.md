@@ -43,13 +43,13 @@ let showroom = React.createElement(Showroom, {
 ReactDOM.render(showroom, element);
 ```
 
-On start it will find **\*.DOCUMENTATION.md** files in specified folder.
+On start it will find **\*.react.md** files in specified folder.
 
-Also it will find **\*.react.js** file for every **\*DOCUMENTATION.md**.
+Also it will find **\*.react.js** file for every **\*react.md**.
 
 ### Documentation File Example
 
-You can find it [**here**](./example.DOCUMENTATION.md)
+You can find it [**here**](./example.react.md)
 
 ### Edit your webpack config
 

@@ -17,7 +17,7 @@ target => {
       console.log('Showroom scope decorator - transpiling code error:', err);
     }
 
-    /* Use '_scope' keyword in DOCUMENTATION file when want get access to SCOPE component.
+    /* Use '_scope' keyword in react.md file when want get access to "Scope" component.
        For example - '<ModalContainer showModal={ _scope.state.showModal } />'
        For code 'this.state.a' After transpiling finish, result code is 'undefined.state.a'.
        Because 'undefined' is an frequently occurring word, we use '_scope' */

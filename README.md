@@ -58,7 +58,7 @@ Component will be added to **src/client/components** directory
 
 Component is a directory includes:
 
-* [<component_name>.DOCUMENTATION.md](./docs/example.DOCUMENTATION.md)
+* [<component_name>.react.md](./docs/example.react.md)
 * <component_name>.react.js file with sceleton of component
 * <component_name>.less file with styles
 * index.js file with component export
@@ -71,7 +71,7 @@ Component is a directory includes:
 
 ## See also
 
-* [Component documentation format](./docs/example.DOCUMENTATION.md)
+* [Component documentation format](./docs/example.react.md)
 * [Scope component](./docs/scope-component.md)
 
 ## Motivation to develop
