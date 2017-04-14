@@ -235,8 +235,8 @@ class DemoPage extends Component {
           demo-page__options-item-btn
           ${options.isContentCentered ? 'demo-page__options-item-btn--active' : ' '}
         `}
-         onClick={this.handleToggleForceCentering.bind(this)}
-         style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
+        onClick={this.handleToggleForceCentering.bind(this)}
+        style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
       >
         Force Centering
       </div>
@@ -248,8 +248,8 @@ class DemoPage extends Component {
           demo-page__options-item-btn
           ${options.isUseScope ? 'demo-page__options-item-btn--active' : ' '}
         `}
-         onClick={this.handleToggleUseScope.bind(this)}
-         style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
+        onClick={this.handleToggleUseScope.bind(this)}
+        style={{ paddingLeft: isMobileScreen ? '12px' : '0' }}
       >
         Use scope
       </div>

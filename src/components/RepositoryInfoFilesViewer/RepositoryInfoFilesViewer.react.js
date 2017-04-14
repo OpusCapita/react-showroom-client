@@ -42,7 +42,7 @@ class RepositoryInfoFilesViewer extends Component {
           let fileUrl = this.getFileUrl(packageJson, repositoryUrl, fileName);
           this.tryGetFile(fileUrl, infoName, this.setInfoContent.bind(this));
         });
-      });
+    });
   }
 
   setInfoContent(infoName, content) {

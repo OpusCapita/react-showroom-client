@@ -83,11 +83,13 @@ class ComponentRenderer extends Component {
         EmptyScopeComponent;
 
     try {
-      /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
+      /* XXX It will be reimplemented in more reactive way when scope component will be removed */
+      // eslint-disable-next-line no-unused-expressions
       window._showroom ? window._showroom.codeCompilationError = null : window._showroom = {};
       childElement = React.createElement(ScopeComponentClass, { _childrenCode: code });
     } catch (err) {
-      /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
+      /* XXX It will be reimplemented in more reactive way when scope component will be removed */
+      // eslint-disable-next-line no-unused-expressions
       window._showroom ? window._showroom.codeCompilationError = err.message : window._showroom = {};
       console.log('ComponentRenderer - render error:', err);
       childElement = null;
