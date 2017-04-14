@@ -85,7 +85,7 @@ You should't rewrite same things every time.
 
 > As you start to build **large libraries of components**, you'll appreciate this **explicitness** and **modularity**, and with **code reuse**, your lines of code will start to shrink. :)
 
-O.K., **ReactJS creators** :+1: We are sure you are clever men.
+O.K., **ReactJS creators** :+1: We are sure you are clever.
 We understand your ideas.
 But if we want to have a **large libraries of components** we must have a **easy way to organize and browse** this library.
 
