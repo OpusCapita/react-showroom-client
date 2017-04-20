@@ -1,4 +1,10 @@
 
+Release 2.0.0-beta.1 Thu Apr 20 2017 12:54:14 GMT+0300 (+03)
+=======================================================
+
+ - Update README.md. Fix image url (Kirill Volkovich <volkovich@scand.com>, Thu Apr 20 12:53:18 2017 +0300)
+ - Updating to a version to  2.0.0-beta.1 (Kirill Volkovich <volkovich@scand.com>, Thu Apr 20 12:51:18 2017 +0300)
+
 Release 2.0.0-beta.0 Thu Apr 20 2017 12:51:08 GMT+0300 (+03)
 =======================================================
 
