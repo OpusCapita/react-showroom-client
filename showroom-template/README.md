@@ -16,6 +16,7 @@ Preconfigured to OpusCapita defaults react project template
 * ```npm start``` - start demopage
 * ```npm run lint``` - run code [lint](https://github.com/OpusCapitaBES/js-eslint-config)
 * ```npm run publish-release``` - patch package version and publish release
+* ```npm run docs-build``` - build static docs
 
 ## Stuff:
 
