@@ -6,6 +6,7 @@
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
     "lint": "eslint src",
     "npm-build": "rimraf ./lib && webpack --config ./webpack.production.config",
+    "docs-build": "rm -rf lib docs/* && webpack --config ./webpack.docs.config.js && cp -R lib/* docs && cp www/index.html docs",
     "publish-release": "npm run npm-build && npm-publish --release",
     "start": "node www/index"
   },
