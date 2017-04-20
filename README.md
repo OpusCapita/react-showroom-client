@@ -8,7 +8,7 @@ If you interested in project development, please **star** it and send us **your*
 
 Click gif image and press **Download** to zoom
 
-![showroom-demo](https://github.com/OpusCapitaBES/js-react-showroom-client/blob/b955ed1ef738cfb9988fe6a5616d2356facef4d2/docs/demo.gif)
+![showroom-demo](https://raw.githubusercontent.com/OpusCapitaBES/js-react-showroom-client/b955ed1ef738cfb9988fe6a5616d2356facef4d2/docs/demo.gif)
 
 ## Start new project in 2 minutes!
 
