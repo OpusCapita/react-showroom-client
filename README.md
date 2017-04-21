@@ -1,7 +1,4 @@
-# OpusCapita Showroom
-
-![badge-npm](https://img.shields.io/npm/v/opuscapita-showroom-client.svg)
-![badge-github-starts](https://img.shields.io/github/stars/OpusCapitaBES/js-react-showroom-client.svg?style=social&label=Star&link=https://github.com/OpusCapitaBES/js-react-showroom-client/stargazers&link=https://github.com/OpusCapitaBES/js-react-showroom-client/stargazers)
+# OpusCapita Showroom ![badge-npm](https://img.shields.io/npm/v/opuscapita-showroom-client.svg) ![badge-github-starts](https://img.shields.io/github/stars/OpusCapitaBES/js-react-showroom-client.svg?style=social&label=Star&link=https://github.com/OpusCapitaBES/js-react-showroom-client/stargazers&link=https://github.com/OpusCapitaBES/js-react-showroom-client/stargazers)
 
 ## Synopsis
 
