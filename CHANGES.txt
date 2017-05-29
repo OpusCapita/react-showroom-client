@@ -1,4 +1,10 @@
 
+Release 2.0.0-beta.2 Mon May 29 2017 16:38:17 GMT+0300 (+03)
+=======================================================
+
+ - Update README.md (Kirill Volkovich <volkovich@scand.com>, Thu Apr 20 13:49:30 2017 +0300)
+ - Updating to a version to  2.0.0-beta.2 (Kirill Volkovich <volkovich@scand.com>, Thu Apr 20 12:54:23 2017 +0300)
+
 Release 2.0.0-beta.1 Thu Apr 20 2017 12:54:14 GMT+0300 (+03)
 =======================================================
 
