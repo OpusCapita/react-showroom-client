@@ -136,8 +136,11 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ## Contributors
 
-* Alexey Sergeev - [alexey.sergeev@jcatalog.com](alexey.sergeev@jcatalog.com)
-* Kirill Volkovich - [kirill.volkovich@jcatalog.com](kirill.volkovich@jcatalog.com)
+|                                                                                  |                                                      |
+| ------------------------------                                                   | :----------------------                              |
+| <img src="https://avatars.githubusercontent.com/u/24603787?v=3" width="100px;"/> | [Alexey Sergeev](https://github.com/asergeev-sc)     |
+| <img src="https://avatars.githubusercontent.com/u/24652543?v=3" width="100px;"/> | [Kirill Volkovich](https://github.com/kvolkovich-sc) |
+
 * Contributing are welcome. We need YOU! :metal:
 
 ## License
