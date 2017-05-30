@@ -2,7 +2,7 @@
 
 **Install required packages**
 
-`npm install --save-dev -E postcss-loader raw-loader opuscapita-showroom-client opuscapita-showroom-server`
+`npm install --save-dev -E postcss-loader raw-loader opuscapita-showroom-client@1.1.0 opuscapita-showroom-server@1.1.0`
 
 **Modify files:**
 
