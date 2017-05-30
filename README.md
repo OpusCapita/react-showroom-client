@@ -136,9 +136,9 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ## Contributors
 
-| <img src="https://avatars.githubusercontent.com/u/24603787?v=3" width="100px;"/> | [Alexey Sergeev](https://github.com/asergeev-sc)     |
+| <img src="https://avatars.githubusercontent.com/u/24603787?v=3" width="100px;"/> | [**Alexey Sergeev**](https://github.com/asergeev-sc)     |
 | :---: | :---: |
-| <img src="https://avatars.githubusercontent.com/u/24652543?v=3" width="100px;"/> | [Kirill Volkovich](https://github.com/kvolkovich-sc) |
+| <img src="https://avatars.githubusercontent.com/u/24652543?v=3" width="100px;"/> | [**Kirill Volkovich**](https://github.com/kvolkovich-sc) |
 
 Contributing are welcome. We need YOU! :metal:
 
