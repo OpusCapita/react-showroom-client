@@ -2,8 +2,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const packageVersion = require('./package.json').version;
-let host = require('./clientConfig').host;
-let port = require('./clientConfig').port;
+let host = require('./.env').host;
+let port = require('./.env').port;
 
 module.exports = {
   entry: path.resolve(__dirname, './www/index-page.js'),

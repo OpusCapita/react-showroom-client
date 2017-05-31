@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import Showroom from 'opuscapita-showroom-client';
 import '../external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less';
 import '../external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less';
+import env from '../.env';
+
+window._showroom.env = env;
 
 let element = document.getElementById('main');
 let showroom = React.createElement(Showroom, {
