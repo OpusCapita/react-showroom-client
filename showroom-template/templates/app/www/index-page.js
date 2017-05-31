@@ -5,7 +5,7 @@ import '../external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bund
 import '../external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less';
 import env from '../.env';
 
-window._showroom.env = env;
+window._showroom = { ...(window._showroom || {}), env };
 
 let element = document.getElementById('main');
 let showroom = React.createElement(Showroom, {
