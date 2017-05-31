@@ -1,6 +1,6 @@
 {
   "name": "@opuscapita/react-showroom-template",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Start write new project with no effort.",
   "main": "index.js",
   "bin": {
