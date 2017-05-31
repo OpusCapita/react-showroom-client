@@ -3,9 +3,9 @@
 const compression = require('compression');
 const express = require('express');
 const fs = require('fs');
-const host = require('../.env').host;
+const host = require('../.env').HOST;
 const path = require('path');
-const port = require('../.env').port;
+const port = require('../.env').PORT;
 const webpack = require('webpack');
 const compiler = webpack(require('../webpack.development.config'));
 
