@@ -297,7 +297,7 @@ class DemoPage extends Component {
               repositoryUrl={
                 componentPackage.info &&
                 componentPackage.info.repository &&
-                componentPackage.info.repository.url
+                (componentPackage.info.repository.url || componentPackage.info.repository)
               }
               gitHead={componentPackage.info && componentPackage.info.gitHead}
               isMobileScreen={isMobileScreen}
