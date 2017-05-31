@@ -8,6 +8,11 @@
     "showroom-add": "bin/addComponent.js",
     "showroom-init": "bin/initApp.js"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "OpusCapitaBES/js-react-showroom-client",
   "dependencies": {
     "fs-extra": "0.30.0",
     "globule": "1.0.0",

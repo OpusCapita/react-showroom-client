@@ -1,5 +1,5 @@
 /*
-  This component generated automatically by 'recapita' package
+  This component generated automatically by 'opuscapita-showroom-template' package
   Remove it from real project
 */
 

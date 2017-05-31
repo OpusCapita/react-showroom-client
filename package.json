@@ -18,17 +18,15 @@
   "license": "Apache-2.0",
   "main": "lib/index.js",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "keywords": [
     "react",
     "documentation",
     "markdown"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/OpusCapitaBES/js-react-showroom-client.git"
-  },
+  "repository": "OpusCapitaBES/js-react-showroom-client",
   "devDependencies": {
     "autoprefixer": "6.4.1",
     "babel-cli": "6.5.1",
