@@ -4,16 +4,16 @@ DemoComponent of react application generator.
 
 ### Props Reference
 
-| Name                          | Type                  | Description                                                |
-| ------------------------------|:----------------------| -----------------------------------------------------------|
-| label | string | Label of button |
-| onClick | func | Callback fired on button click |
+| Name                           | Type                    | Description                                                 |
+| ------------------------------ | :---------------------- | ----------------------------------------------------------- |
+| label                          | string                  | Label of button                                             |
+| onClick                        | func                    | Callback fired on button click                              |
 
 ### Code Example
 
 ```
 <DemoComponent 
-  label="DemoComponent"
+  label={`App running on ${_showroom.env.HOST}:${_showroom.env.PORT}}
   onClick={() => { console.log('Welcome to showroom') }}
 />
 ```
