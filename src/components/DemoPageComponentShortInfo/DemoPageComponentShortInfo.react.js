@@ -20,7 +20,7 @@ class DemoPageComponentShortInfo extends Component {
   render() {
     let { isMobileScreen, gitHead } = this.props;
     let repositoryUrl = this.prepareGitRepoUrl(this.props.repositoryUrl);
-    let repositoryLogo = /.*github.*/i.test('github') ? svgGithub : svgGit;
+    let repositoryLogo = /.*github.*/i.test(repositoryUrl) ? svgGithub : svgGit;
     let repositoryLink = repositoryUrl ? (
       <a
         title="Go to project repository"
