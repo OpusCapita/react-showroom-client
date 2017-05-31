@@ -1,27 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import './Documentation.less';
 import Markdown from 'react-remarkable';
-import hljs from 'highlight.js';
 
 export default
 class Documentation extends Component {
   static propTypes = {
     markdown: PropTypes.string
   };
-
-  highlightCode(str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(lang, str).value;
-      } catch (err) {} // eslint-disable-line no-empty
-    }
-
-    try {
-      return hljs.highlightAuto(str).value;
-    } catch (err) {} // eslint-disable-line no-empty
-
-    return '';
-  }
 
   render() {
     let { isMobileScreen, isHorizontalLayout } = this.props;
@@ -43,8 +28,7 @@ class Documentation extends Component {
           options={{
             html: true,
             linkify: true,
-            breaks: true,
-            highlight: this.highlightCode
+            breaks: true
           }}
         />
       </div>

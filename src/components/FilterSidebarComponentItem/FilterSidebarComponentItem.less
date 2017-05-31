@@ -6,19 +6,21 @@
   &:hover {
     cursor: pointer;
     color: #fff;
-    background-color: lighten(#EC6608, 20%);
+    background-color: lighten(#e70, 20%);
   }
 }
 
 .filter-sidebar-component-item--current {
   color: #fff;
-  background-color: #EC6608;
+  background-color: #e70;
 }
 
 .filter-sidebar-component-item__name {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  align-items: center;
+  display: inline-flex;
 }
 
 .filter-sidebar-component-item__version {
@@ -29,8 +31,9 @@
 }
 
 .filter-sidebar-component-item__version-select {
+  align-items: center;
+  display: inline-flex;
   border: none;
-  border-radius: 2px;
   color: #000;
   padding: 0 8px;
   text-align-last: right;
