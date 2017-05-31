@@ -2,7 +2,7 @@
 
 **Install required packages**
 
-`npm install --save-dev -E postcss-loader raw-loader opuscapita-showroom-client@1.1.0 opuscapita-showroom-server@1.1.0`
+`npm install --save-dev -E postcss-loader raw-loader opuscapita-showroom-client@1.1.3 opuscapita-showroom-server@1.1.0`
 
 **Modify files:**
 
@@ -68,6 +68,32 @@ You can find it [**here**](./example.DOCUMENTATION.md)
   test: /\.json$/,
   loader: 'json-loader'
 }
+```
+
+### Environment variables
+
+Create **.env.js** file
+
+```
+'use strict';
+
+module.exports = {
+    HOST: process.env.HOST ? process.env.HOST : 'localhost',
+    PORT: process.env.PORT ? process.env.PORT : 3000
+};
+```
+
+Add to **index-page.js**
+
+```
+import env from '../.env';
+window._showroom = { ...(window._showroom || {}), env };
+```
+
+Then in your <react-component-name>.DOCUMENTATION.md file:
+
+```
+<MyComponent serviceRegistry={`${_showroom.env.HOST}:${_showroom.env.PORT}`}/>
 ```
 
 ### Recomendations
