@@ -84,11 +84,19 @@ class ComponentRenderer extends Component {
 
     try {
       /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
-      window._showroom ? window._showroom.codeCompilationError = null : window._showroom = {};
+      if (window._showroom) {
+        window._showroom.codeCompilationError = null;
+      } else {
+        window._showroom = {};
+      }
       childElement = React.createElement(ScopeComponentClass, { _childrenCode: code });
     } catch (err) {
       /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
-      window._showroom ? window._showroom.codeCompilationError = err.message : window._showroom = {};
+      if (window._showroom) {
+        window._showroom.codeCompilationError = err.message;
+      } else {
+        window._showroom = {};
+      }
       console.log('ComponentRenderer - render error:', err);
       childElement = null;
     }

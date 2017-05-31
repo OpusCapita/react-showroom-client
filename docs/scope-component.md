@@ -21,8 +21,8 @@ It's a little tricky. But it works =)
 
 ```js
 import React from 'react';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
-import I18nContext from 'opuscapita-react-i18n/lib/I18nContext.react';
+import { showroomScopeDecorator } from '@opuscapita/react-showroom-client';
+import I18nContext from '@opuscapita/react-i18n/lib/I18nContext.react';
 
 window.I18nContext = I18nContext; // Make I18nContext a global variable
 
@@ -56,7 +56,7 @@ Now you can use ```<I18nContext />``` in your examples
 
 ```js
 import React from 'react';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+import { showroomScopeDecorator } from '@opuscapita/react-showroom-client';
 
 export default
 @showroomScopeDecorator
@@ -67,11 +67,11 @@ class ComponentNameScope extends React.Component {
       showModal: false
     }
   }
-  
+
   toggleModal() {
     this.setState({ showModal: !this.state.showModal });
   }
-  
+
   render() {
     return (
       <div>
@@ -91,7 +91,7 @@ Now you have access to parent SCOPE component by ```_scope``` variable.
   * ```_scope.state```
   * ```onClick={_scope.handleChildClick)}```
   * ```onClick={_scope.handleChildClick.bind(_scope))}```
-  
+
 **FAIL**
 
   * ```onClick={(event) => _scope.handleChildClick(event))}```
@@ -111,8 +111,8 @@ Now you have access to parent SCOPE component by ```_scope``` variable.
 
 ```js
 import React from 'react';
-import { I18nManager } from 'opuscapita-i18n';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+import { I18nManager } from '@opuscapita/i18n';
+import { showroomScopeDecorator } from '@opuscapita/react-showroom-client';
 
 // This @showroomScopeDecorator modify React.Component prototype by adding _renderChildren() method.
 export default
@@ -123,7 +123,7 @@ class ComponentNameScope extends React.Component {
       i18n: new I18nManager(this.props.locale)
     };
   }
-  
+
   render() {
     return (
       <div>

@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import './CompilationErrorContainer.less';
 
 /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
@@ -9,19 +9,19 @@ class CompilationErrorContainer extends Component {
     this.state = { error: window._showroom.codeCompilationError };
   }
 
+  componentWillMount() {
+    window._showroom = { codeCompilationError: null };
+  }
+
   componentWillReceiveProps() {
     setTimeout(() => {
       this.setState({ error: window._showroom.codeCompilationError });
     }, 300);
   }
 
-  componentWillMount() {
-    window._showroom = { codeCompilationError: null };
-  }
-
   render() {
     let { error } = this.state;
-    if(!error) {
+    if (!error) {
       return null;
     }
     return (

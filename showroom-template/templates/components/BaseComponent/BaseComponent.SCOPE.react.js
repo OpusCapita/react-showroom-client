@@ -1,10 +1,10 @@
 /*
    What is a SCOPE file. See documentation here:
-   https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/docs/scope-component.md
+   https://github.com/OpusCapita/react-showroom-client/blob/master/docs/scope-component.md
 */
 
 import React, { Component, PropTypes } from 'react';
-import { showroomScopeDecorator } from 'opuscapita-showroom-client';
+import { showroomScopeDecorator } from '@opuscapita/react-showroom-client';
 
 
 @showroomScopeDecorator

@@ -10,10 +10,18 @@ target => {
         { presets: ['es2015', 'react', 'stage-0'] }
       ).code;
       /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
-      window._showroom ? window._showroom.codeCompilationError = null : window._showroom = {};
+      if (window._showroom) {
+        window._showroom.codeCompilationError = null;
+      } else {
+        window._showroom = {};
+      }
     } catch (err) {
       /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
-      window._showroom ? window._showroom.codeCompilationError = err.message : window._showroom = {};
+      if (window._showroom) {
+        window._showroom.codeCompilationError = err.message;
+      } else {
+        window._showroom = {};
+      }
       console.log('Showroom scope decorator - transpiling code error:', err);
     }
 
@@ -27,10 +35,18 @@ target => {
     try {
       compiledCode = eval(transpiledCode); // eslint-disable-line no-eval
       /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
-      window._showroom ? window._showroom.codeCompilationError = null : window._showroom = {};
+      if (window._showroom) {
+        window._showroom.codeCompilationError = null;
+      } else {
+        window._showroom = {};
+      }
     } catch (err) {
       /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
-      window._showroom ? window._showroom.codeCompilationError = err.message : window._showroom = {};
+      if (window._showroom) {
+        window._showroom.codeCompilationError = err.message;
+      } else {
+        window._showroom = {};
+      }
     }
 
     return compiledCode;

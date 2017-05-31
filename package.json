@@ -1,7 +1,7 @@
 {
-  "name": "opuscapita-showroom-client",
+  "name": "@opuscapita/react-showroom-client",
   "version": "1.1.4",
-  "description": "React components catalog component.",
+  "description": "React components catalog component",
   "scripts": {
     "link-mode": "webpack --watch --config ./webpack.link.config.js",
     "lint": "eslint src",
@@ -11,7 +11,7 @@
     "publish-snapshot": "npm run npm-publish",
     "start": "node www/index"
   },
-  "homepage": "https://github.com/OpusCapitaBES/js-react-showroom-client",
+  "homepage": "https://github.com/OpusCapita/react-showroom-client",
   "files": [
     "lib"
   ],
@@ -26,8 +26,10 @@
     "documentation",
     "markdown"
   ],
-  "repository": "OpusCapitaBES/js-react-showroom-client",
+  "repository": "OpusCapita/react-showroom-client",
   "devDependencies": {
+    "@opuscapita/i18n": "1.0.13",
+    "@opuscapita/npm-scripts": "1.0.8",
     "autoprefixer": "6.4.1",
     "babel-cli": "6.5.1",
     "babel-core": "6.4.0",
@@ -42,7 +44,6 @@
     "babel-register": "6.16.3",
     "babel-standalone": "6.14.0",
     "compression": "1.6.2",
-    "cross-env": "1.0.7",
     "css-loader": "0.21.0",
     "eslint": "3.10.2",
     "eslint-config-opuscapita": "1.0.1",
@@ -57,8 +58,6 @@
     "lodash": "4.17.4",
     "markdown-to-ast": "3.4.0",
     "mkdirp": "0.5.1",
-    "opuscapita-i18n": "1.0.6",
-    "opuscapita-npm-scripts": "1.0.5",
     "path": "0.12.7",
     "postcss-loader": "0.13.0",
     "query-string": "4.2.3",

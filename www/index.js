@@ -28,6 +28,7 @@ var serverOptions = {
     aggregateTimeout: 300,
     poll: true
   },
+  noInfo: true,
   headers: {'Access-Control-Allow-Origin': '*'},
   stats: {colors: true}
 };

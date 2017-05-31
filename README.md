@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-Awesome react based components catalog which provide you **markdown documentation** and **live examples**. :boom: 
+Awesome react based components catalog which provide you **markdown documentation** and **live examples**. :boom:
 
 If you interested in project development, please **star** it and send us **your** pull-requests!
 
@@ -19,7 +19,7 @@ We have preconfigured project template with  webpack, babel, tests, etc. ([full 
 Install template generator globally
 
 ```
-npm install -g opuscapita-showroom-template
+npm install -g @opuscapita/react-showroom-template
 ```
 
 Create empty directory
@@ -67,7 +67,7 @@ Component is a directory includes:
 
 [See documentation here](./docs/embedded.md)
 
-**Need help with integration to your open-source project? Create an issue or contact [us](https://github.com/OpusCapitaBES/js-react-showroom-client#contributors)** :innocent:
+**Need help with integration to your open-source project? Create an issue or contact [us](https://github.com/OpusCapita/react-showroom-client#contributors)** :innocent:
 
 ## See also
 
@@ -96,18 +96,18 @@ But if we want to have a **large libraries of components** we must have a **easy
 * **Twitter Bootstrap/React Bootstrap** don't solve the problem. It have a good looking **typography** and a simple for use **grid system**. It have only a little number of basic components like buttons and inputs.
 
   For example if you have a vertical split-screen, default **bootstrap grid system** based on **html media-queries** became useless.     Media-queries reacts on **main viewport size** changes, but with split-screen we have two virtual viewports. **Simple react component** tracking size of specified `DOMNode` can solve the problem. If we can't find at http://npmjs.com we can write it themselves and reuse in future.
-  
+
 * There are lot of good-written **third-party** components. But they can't cover all use-cases. The problem of most of them:
 
   Written by different people with a different methodology of development and styles organization (style conflicts are not a rarity)
-  
+
   We can't change them when met a limitations of **API**
 
 **~~Allen Carr~~ The easy way to start organize a libraries:**
 
 * Spent several hours/days creating a component? Spend 30 more minutes to put your component in a library and write simple documentation with a code example.
 * Next time you or your teammate wont't have to rewrite it again.
-* Or you can spend several hours/days :clock10: to `/dev/null` again. 
+* Or you can spend several hours/days :clock10: to `/dev/null` again.
 * **The choice is yours**.
 
 ## How to use
@@ -123,16 +123,16 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ### Server application
 
-> ! Now it require exposed components from `main` npm package file 
+> ! Now it require exposed components from `main` npm package file
 
-[See how to install](https://github.com/OpusCapitaBES/js-node-showroom-server)
+[See how to install](https://github.com/OpusCapita/react-showroom-server)
 
 * Browse components catalog
 * See usage code examples
 * See **API** documentation
 * Change component properties and see what happenned **in realtime**
 * Change component **version** to see appropriate documentation
-* If you run it don't forget configure [this file](https://github.com/OpusCapitaBES/js-react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapitaBES/js-node-showroom-server/blob/master/README.md#what-this-goal-do)
+* If you run it don't forget configure [this file](https://github.com/OpusCapita/react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapita/react-showroom-server/blob/master/README.md#what-this-goal-do)
 
 ## Contributors
 

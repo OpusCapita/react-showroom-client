@@ -9,12 +9,12 @@ Preconfigured to OpusCapita defaults react project template
 ## Global commands
 
 * ```showroom init``` - create project skeleton in empty folder
-* ```showroom add``` - add new react component. Includes styles, unit-test, [showroom](https://github.com/OpusCapitaBES/js-react-showroom-client) specific files
+* ```showroom add``` - add new react component. Includes styles, unit-test, [showroom](https://github.com/OpusCapita/react-showroom-client) specific files
 
 ## Template commands
 
 * ```npm start``` - start demopage
-* ```npm run lint``` - run code [lint](https://github.com/OpusCapitaBES/js-eslint-config)
+* ```npm run lint``` - run code [lint](https://github.com/OpusCapita/eslint-config)
 * ```npm run publish-release``` - patch package version and publish release
 
 ## Stuff:
@@ -23,13 +23,13 @@ Preconfigured to OpusCapita defaults react project template
 
 * [babel](https://babeljs.io/) - JavaScript compiler
 * [webpack 2](https://webpack.js.org/concepts/) - modern bundler
-* [opuscapita-npm-scripts](https://github.com/OpusCapitaBES/js-npm-scripts) - unified release/build approach for npm package and grails plugin from npm packages
+* [opuscapita-npm-scripts](https://github.com/OpusCapita/npm-scripts) - unified release/build approach for npm package and grails plugin from npm packages
 * [eslint](http://eslint.org/) - code-style checker
-* [opuscapita-eslint-config](https://github.com/OpusCapitaBES/js-eslint-config) - OpusCapita code-style config
+* [opuscapita-eslint-config](https://github.com/OpusCapita/eslint-config) - OpusCapita code-style config
 
 ### Demo and documentation
 
-* [opuscapita-showroom](https://github.com/OpusCapitaBES/js-react-showroom-client)
+* [opuscapita-showroom](https://github.com/OpusCapita/react-showroom-client)
 
 ### Testing
 

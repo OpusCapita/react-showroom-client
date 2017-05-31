@@ -1,6 +1,6 @@
 {
-  "name": "opuscapita-showroom-template",
-  "version": "1.2.3",
+  "name": "@opuscapita/react-showroom-template",
+  "version": "1.2.4",
   "description": "Start write new project with no effort.",
   "main": "index.js",
   "bin": {
@@ -12,7 +12,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "OpusCapitaBES/js-react-showroom-client",
+  "repository": "OpusCapita/react-showroom-client",
   "dependencies": {
     "fs-extra": "0.30.0",
     "globule": "1.0.0",
