@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import './DemoPageComponentShortInfo.less';
 import RepositoryInfoFilesViewer from '../RepositoryInfoFilesViewer';
-const svgGit = require('!!raw-loader!./../img/git-logo.svg');
-const svgGithub = require('!!raw-loader!../img/github-logo.svg');
+const svgGit = require('!!raw-loader!../../img/git-logo.svg');
+const svgGithub = require('!!raw-loader!../../img/github-logo.svg');
 
 export default
 class DemoPageComponentShortInfo extends Component {
