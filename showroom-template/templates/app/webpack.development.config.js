@@ -42,6 +42,9 @@ module.exports = {
     modules: ['node_modules'],
     extensions: ['.json', '.js']
   },
+  resolveLoader: {
+    moduleExtensions: ['-loader']
+  },
   module: {
     rules: [
       {
