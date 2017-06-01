@@ -21,6 +21,9 @@ const formatPatterns = {
   }
 };
 
+const host = (_showroom && _showroom.env && _showroom.env.HOST) || '';
+const port = (_showroom && _showroom.env && _showroom.env.PORT) || 3000;
+
 @showroomScopeDecorator
 class DefaultScopeComponent extends Component {
   getChildContext() {
@@ -29,7 +32,7 @@ class DefaultScopeComponent extends Component {
     }
     return {
       i18n: this.context.i18n,
-      serviceRegistry: serviceName => ({ url: 'http://localhost:3000' })
+      serviceRegistry: serviceName => ({ url: `http://${host}:${port}` })
     };
   }
 
