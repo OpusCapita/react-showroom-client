@@ -1,13 +1,20 @@
 import React, { Component, PropTypes } from 'react';
 import './DemoPageComponentShortInfo.less';
 import RepositoryInfoFilesViewer from '../RepositoryInfoFilesViewer';
-let svgGitLogoContent = require('!!raw-loader!./git-logo.svg');
+const svgGit = require('!!raw-loader!../../img/git-logo.svg');
+const svgGithub = require('!!raw-loader!../../img/github-logo.svg');
 
 export default
 class DemoPageComponentShortInfo extends Component {
   prepareGitRepoUrl(url) {
     if (!url) {
       return '';
+    }
+
+    // TODO Improve regex-s
+    const shouldConvertToGithubUrl = !(/.*gitweb.*/.test(url) || /.*github.*/.test(url));
+    if(shouldConvertToGithubUrl) {
+      return `https://github.com/${url}`;
     }
     return url.
       replace(/^git[+]/gi, '').
@@ -19,11 +26,12 @@ class DemoPageComponentShortInfo extends Component {
   render() {
     let { isMobileScreen, gitHead } = this.props;
     let repositoryUrl = this.prepareGitRepoUrl(this.props.repositoryUrl);
+    let repositoryLogo = /.*github.*/i.test(repositoryUrl) ? svgGithub : svgGit;
     let repositoryLink = repositoryUrl ? (
       <a
         title="Go to project repository"
         className="demo-page-component-short-info__git-logo"
-        dangerouslySetInnerHTML={{ __html: svgGitLogoContent }}
+        dangerouslySetInnerHTML={{ __html: repositoryLogo }}
         target="_blank"
         href={repositoryUrl}
       />

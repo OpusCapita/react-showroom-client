@@ -97,7 +97,7 @@ class DemoPage extends Component {
   setQueryStringParam(name, value) {
     let prevQueryString = this.parseQueryParameters();
     let nextQueryString = queryString.stringify({ ...prevQueryString, [name]: value });
-    history.pushState({}, '', `${location.origin}${location.path || ''}?${nextQueryString}`);
+    history.pushState({}, '', `${location.origin}${location.pathname || ''}?${nextQueryString}`);
   }
 
   getComponent(componentInfo) {
@@ -297,7 +297,7 @@ class DemoPage extends Component {
               repositoryUrl={
                 componentPackage.info &&
                 componentPackage.info.repository &&
-                componentPackage.info.repository.url
+                (componentPackage.info.repository.url || componentPackage.info.repository)
               }
               gitHead={componentPackage.info && componentPackage.info.gitHead}
               isMobileScreen={isMobileScreen}
