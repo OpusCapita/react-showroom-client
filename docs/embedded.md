@@ -2,7 +2,7 @@
 
 **Install required packages**
 
-`npm install --save-dev -E postcss-loader raw-loader @opuscapita/react-showroom-client@1.1.4 @opuscapita/react-showroom-server@1.1.1`
+`npm install --save-dev -E postcss-loader raw-loader @opuscapita/react-showroom-client@1.2.10 @opuscapita/react-showroom-server@1.2.0`
 
 **Modify files:**
 
