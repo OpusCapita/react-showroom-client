@@ -57,7 +57,6 @@ class DemoPage extends Component {
 
   handleHistoryPopState(event) {
     this.initCurrentComponentId();
-    this.initOptions();
   }
 
   parseQueryParameters() {
