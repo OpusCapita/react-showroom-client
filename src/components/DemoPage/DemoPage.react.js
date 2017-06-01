@@ -260,7 +260,7 @@ class DemoPage extends Component {
       if (componentPackage.info.repository.url) {
         repositoryUrl = componentPackage.info.repository.url;
       } else if(componentPackage.info.repository) {
-        repositoryUrl = 'https://github.com' + componentPackage.info.repository;
+        repositoryUrl = 'https://github.com/' + componentPackage.info.repository;
       }
     };
 
