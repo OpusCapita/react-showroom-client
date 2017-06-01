@@ -146,7 +146,7 @@ Contributing are welcome. We need YOU! :metal:
 
 #### How to start
 
-`npm start` npm script of `@opuscapita/react-showroom-client` can confuse if you want to contribute to showroom. Use this npm goal only when you start showroom in server variant.
+`npm start` npm script of `@opuscapita/react-showroom-client` can confuse if you want to contribute to showroom. Use this npm goal only to start showroom in server variant.
 
 More prefered way is: run `npm link`, then `npm run link-mode`;
 
