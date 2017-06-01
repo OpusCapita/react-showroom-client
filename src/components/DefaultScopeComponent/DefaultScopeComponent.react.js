@@ -21,8 +21,8 @@ const formatPatterns = {
   }
 };
 
-const host = (_showroom && _showroom.env && _showroom.env.HOST) || '';
-const port = (_showroom && _showroom.env && _showroom.env.PORT) || 3000;
+const host = (window._showroom && window._showroom.env && window._showroom.env.HOST) || '';
+const port = (window._showroom && window._showroom.env && window._showroom.env.PORT) || 3000;
 
 @showroomScopeDecorator
 class DefaultScopeComponent extends Component {
