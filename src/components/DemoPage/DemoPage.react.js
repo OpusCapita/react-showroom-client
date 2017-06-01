@@ -255,6 +255,11 @@ class DemoPage extends Component {
       </div>
     );
 
+    let repositoryUrl = null;
+    if (componentPackage.info && componentPackage.info.repository) {
+      repositoryUrl = componentPackage.info.repository.url || componentPackage.info.repository;
+    };
+
     return (
       <div
         className="row demo-page"
@@ -294,11 +299,7 @@ class DemoPage extends Component {
               packageJson={componentPackage.info}
               componentName={currentComponentInfo && currentComponentInfo.name}
               version={currentComponentInfo && currentComponentInfo.version}
-              repositoryUrl={
-                componentPackage.info &&
-                componentPackage.info.repository &&
-                (componentPackage.info.repository.url || componentPackage.info.repository)
-              }
+              repositoryUrl={repositoryUrl}
               gitHead={componentPackage.info && componentPackage.info.gitHead}
               isMobileScreen={isMobileScreen}
             />

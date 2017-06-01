@@ -11,11 +11,6 @@ class DemoPageComponentShortInfo extends Component {
       return '';
     }
 
-    // TODO Improve regex-s
-    const shouldConvertToGithubUrl = !(/.*gitweb.*/.test(url) || /.*github.*/.test(url));
-    if(shouldConvertToGithubUrl) {
-      return `https://github.com/${url}`;
-    }
     return url.
       replace(/^git[+]/gi, '').
       replace(/^git\:\/\//gi, '//').
