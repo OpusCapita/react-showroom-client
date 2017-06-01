@@ -134,6 +134,26 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Change component **version** to see appropriate documentation
 * If you run it don't forget configure [this file](https://github.com/OpusCapita/react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapita/react-showroom-server/blob/master/README.md#what-this-goal-do)
 
+### Contributing guide
+
+#### How to start
+
+`npm start` npm script of `@opuscapita/react-showroom-client` can confuse if you want to contribute to showroom. Use this npm goal only when you start showroom in server variant.
+
+More prefered way is: run `npm link`, then `npm run link-mode`;
+
+Install [showroom-template](https://github.com/OpusCapita/react-showroom-client/tree/master/showroom-template) separately.
+
+Before run showroom-template's `npm start` run `npm link @opuscapita/react-showroom-client`. After that you can change showroom's source-code and see result.
+
+> If you need more info about contribution - please create an [issue](https://github.com/OpusCapita/react-showroom-client/issues).
+
+```
+npm link && npm run link-mode
+```
+
+then run
+
 ## Contributors
 
 | <img src="https://avatars.githubusercontent.com/u/24603787?v=3" width="100px;"/> | [**Alexey Sergeev**](https://github.com/asergeev-sc)     |
