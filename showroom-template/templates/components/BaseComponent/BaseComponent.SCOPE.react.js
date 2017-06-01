@@ -6,7 +6,6 @@
 import React, { Component, PropTypes } from 'react';
 import { showroomScopeDecorator } from '@opuscapita/react-showroom-client';
 
-
 @showroomScopeDecorator
 export default
 class __jcatalog-react-app_component-name--uppercamel-case__Scope extends Component {

@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import './__jcatalog-react-app_component-name--uppercamel-case__.less';
 
+const propTypes = {};
+const defaultProps = {};
+
 export default
 class __jcatalog-react-app_component-name--uppercamel-case__ extends Component {
   constructor(props) {
@@ -16,7 +19,5 @@ class __jcatalog-react-app_component-name--uppercamel-case__ extends Component {
   }
 }
 
-__jcatalog-react-app_component-name--uppercamel-case__.propTypes = {
-};
-__jcatalog-react-app_component-name--uppercamel-case__.defaultProps = {
-};
+__jcatalog-react-app_component-name--uppercamel-case__.propTypes = propTypes;
+__jcatalog-react-app_component-name--uppercamel-case__.defaultProps = defaultProps;

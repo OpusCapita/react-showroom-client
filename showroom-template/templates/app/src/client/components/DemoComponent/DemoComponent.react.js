@@ -6,6 +6,16 @@
 import React, { Component, PropTypes } from 'react';
 import './DemoComponent.less';
 
+const propTypes = {
+  label: PropTypes.string,
+  onClick: PropTypes.func
+};
+
+const defaultProps = {
+  onClick: () => {},
+  label: 'Give me back my label!'
+};
+
 export default
 class DemoComponent extends Component {
   constructor(props) {
@@ -51,11 +61,5 @@ class DemoComponent extends Component {
   }
 }
 
-DemoComponent.propTypes = {
-  label: PropTypes.string,
-  onClick: PropTypes.func
-};
-DemoComponent.defaultProps = {
-  onClick: () => {},
-  label: 'Give me back my label!'
-};
+DemoComponent.propTypes = propTypes;
+DemoComponent.defaultProps = defaultProps;
