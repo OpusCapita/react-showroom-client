@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Showroom from 'opuscapita-showroom-client';
+import Showroom from '@opuscapita/react-showroom-client';
 import '../external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-bundle.less';
 import '../external_modules/jcatalog-bootstrap/dist/less/jcatalog-bootstrap-extensions-bundle.less';
 import env from '../.env';
