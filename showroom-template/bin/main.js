@@ -25,7 +25,7 @@ function initCli() {
       alexey.sergeev@jcatalog.com,
       kirill.volkovich@jcatalog.com
       \n
-      opuscapita-react-template@${version}
+      @opuscapita/react-showroom-template@${version}
     `)
     .usage(`\nUsage:
       init - empty OpusCapita react application will be created in working directory

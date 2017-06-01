@@ -4,7 +4,7 @@ Preconfigured to OpusCapita defaults react project template
 
 ## Installation
 
-```npm install -g opuscapita-react-template```
+```npm install -g @opuscapita/react-showroom-template```
 
 ## Global commands
 
