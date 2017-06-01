@@ -21,7 +21,7 @@ const formatPatterns = {
   }
 };
 
-const host = (window._showroom && window._showroom.env && window._showroom.env.HOST) || '';
+const host = (window._showroom && window._showroom.env && window._showroom.env.HOST) || 'localhost';
 const port = (window._showroom && window._showroom.env && window._showroom.env.PORT) || '3000';
 
 @showroomScopeDecorator
