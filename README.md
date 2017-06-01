@@ -12,7 +12,7 @@ Click gif image and press **Download** to zoom
 
 ## Start new project in 2 minutes!
 
-[Video](https://asciinema.org/a/03tnfqmrb6v2ywofq9u27lkh9)
+[Video](https://asciinema.org/a/dcif1setlofg8epuacvz0k0o9)
 
 We have preconfigured project template with  webpack, babel, tests, etc. ([full overview](./showroom-template/README.md))
 
@@ -146,7 +146,7 @@ Contributing are welcome. We need YOU! :metal:
 
 #### How to start
 
-`npm start` npm script of `@opuscapita/react-showroom-client` can confuse if you want to contribute to showroom. Use this npm goal only when you start showroom in server variant.
+`npm start` npm script of `@opuscapita/react-showroom-client` can confuse if you want to contribute to showroom. Use this npm goal only to start showroom in server variant.
 
 More prefered way is: run `npm link`, then `npm run link-mode`;
 
