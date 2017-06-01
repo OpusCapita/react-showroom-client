@@ -24,12 +24,12 @@ class FilterSidebar extends Component {
 
   filterComponentsLists(componentsInfo, filterText) {
     return componentsInfo.filter(component => {
-      return fuzzysearch(filterText.toLowerCase(), component.name.toLowerCase())
-    })
+      return fuzzysearch(filterText.toLowerCase(), component.name.toLowerCase());
+    });
   }
 
   handleFilterInputChange(e) {
-    this.setState({ filterInputValue: e.target.value })
+    this.setState({ filterInputValue: e.target.value });
   }
 
   collapseBy(list, by) {
@@ -42,7 +42,6 @@ class FilterSidebar extends Component {
     if (!this.props.hideOnOutsideClick) {
       return false;
     }
-    event.preventDefault();
     let hasParent = (node, parent) => {
       if (node.parentNode) {
         return node.parentNode === parent || hasParent(node.parentNode, parent);
