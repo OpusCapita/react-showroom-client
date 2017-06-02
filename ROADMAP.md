@@ -4,7 +4,7 @@
 
 * Remove dependence on webpack configs.
 
-  * We can hide all setup config into showroom iteself. Therefore all steps of this [file](https://github.com/OpusCapita/react-showroom-client/blob/d6984d1011ebc3ae83cca068e2349b41b0f9113e/docs/embedded.md) can be removed.
+  * According to [@asergeev-sc](https://github.com/asergeev-sc) initial setup described in this [document](https://github.com/OpusCapita/react-showroom-client/blob/d6984d1011ebc3ae83cca068e2349b41b0f9113e/docs/embedded.md) looks too complicated. We can move all these steps into showroom iteself.
   * Components are exported in CommonJS module **dev.index.js** :
   
     ```
