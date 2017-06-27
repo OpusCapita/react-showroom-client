@@ -4,6 +4,8 @@
 
 Awesome react based components catalog which provide you **markdown documentation** and **live examples**. :boom:
 
+545fc3d70d5b07e5f919537030cb3ffa5a147724
+
 If you interested in project development, please **star** it and send us **your** pull-requests!
 
 ![showroom-demo](./docs/demo.gif)
