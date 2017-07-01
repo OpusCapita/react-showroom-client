@@ -2,9 +2,9 @@
 
 ## Synopsis
 
-Awesome react based components catalog which provide you **markdown documentation** and **live examples**. :boom:
+Awesome react based components catalog which provides you with **markdown documentation** and **live examples**. :boom:
 
-If you interested in project development, please **star** it and send us **your** pull-requests!
+If you're interested in project development, please **star** it and send us **your** pull-requests!
 
 ![showroom-demo](./docs/demo.gif)
 
@@ -15,11 +15,11 @@ If you interested in project development, please **star** it and send us **your*
 * [@opuscapita/react-svg](https://opuscapita.github.io/react-svg/?currentComponentId=%40opuscapita%2Freact-svg%2F1.0.4%2FSVGIconsPreviewer&showSidebar=true)
 * [opuscapita-react-dates](https://github.com/OpusCapita/react-dates)
 
-## Start new project in 2 minutes!
+## Start a new project in 2 minutes!
 
 [Video](https://asciinema.org/a/dcif1setlofg8epuacvz0k0o9)
 
-We have preconfigured project template with  webpack, babel, tests, etc. ([full overview](./showroom-template/README.md))
+We have preconfigured a project template with  webpack, babel, tests, etc. ([full overview](./showroom-template/README.md))
 
 Install template generator globally
 
@@ -27,13 +27,13 @@ Install template generator globally
 npm install -g @opuscapita/react-showroom-template
 ```
 
-Create empty directory
+Create an empty directory
 
 ```
 mkdir my-react-project && cd my-react-project
 ```
 
-Init project and ask several questions
+Init a project and ask several questions
 
 ```
 showroom init
@@ -55,13 +55,13 @@ Open in browser: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-You can easilly add new component.
+You can easilly add a new component.
 
 ```showroom add``` and specify component name
 
 Component will be added to **src/client/components** directory
 
-Component is a directory includes:
+Component is a directory that includes:
 
 * [<component_name>.DOCUMENTATION.md](./docs/example.DOCUMENTATION.md)
 * <component_name>.react.js file with sceleton of component
@@ -94,21 +94,21 @@ O.K., **ReactJS creators** :+1: We are sure you are clever.
 We understand your ideas.
 But if we want to have a **large libraries of components** we must have a **easy way to organize and browse** this library.
 
-* Facebook have [thousands](https://facebook.github.io/react/docs/composition-vs-inheritance.html#so-what-about-inheritance)  of components.
+* Facebook has [thousands](https://facebook.github.io/react/docs/composition-vs-inheritance.html#so-what-about-inheritance)  of components.
 
-* In contrast - now we **have no** common **UI** composable pieces which allow developers to construct complex **busines logic** components fast with modern user interface for a better user experience. **Happy customer => happy seller**
+* In contrast - now we **have no** common **UI** composable pieces which allows developers to construct complex **busines logic** components fast with modern user interface for a better user experience. **Happy customer => happy seller**
 
-* **Twitter Bootstrap/React Bootstrap** don't solve the problem. It have a good looking **typography** and a simple for use **grid system**. It have only a little number of basic components like buttons and inputs.
+* **Twitter Bootstrap/React Bootstrap** don't solve the problem. It has a good looking **typography** and a simple for use **grid system**. It has only a little number of basic components like buttons and inputs.
 
   For example if you have a vertical split-screen, default **bootstrap grid system** based on **html media-queries** became useless.     Media-queries reacts on **main viewport size** changes, but with split-screen we have two virtual viewports. **Simple react component** tracking size of specified `DOMNode` can solve the problem. If we can't find at http://npmjs.com we can write it themselves and reuse in future.
 
-* There are lot of good-written **third-party** components. But they can't cover all use-cases. The problem of most of them:
+* There are lots of good-written **third-party** components. But they can't cover all use-cases. The problem of most of them:
 
   Written by different people with a different methodology of development and styles organization (style conflicts are not a rarity)
 
   We can't change them when met a limitations of **API**
 
-**~~Allen Carr~~ The easy way to start organize a libraries:**
+**~~Allen Carr~~ The easy way to start organizing libraries:**
 
 * Spent several hours/days creating a component? Spend 30 more minutes to put your component in a library and write simple documentation with a code example.
 * Next time you or your teammate wont't have to rewrite it again.
@@ -128,12 +128,12 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ### Server application
 
-> ! Now it require exposed components from `main` npm package file
+> ! Now it requires exposed components from `main` npm package file
 
 [See how to install](https://github.com/OpusCapita/react-showroom-server)
 
 * Browse components catalog
-* See usage code examples
+* See code usage examples
 * See **API** documentation
 * Change component properties and see what happenned **in realtime**
 * Change component **version** to see appropriate documentation
@@ -145,7 +145,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 | :---: | :---: |
 | <img src="https://avatars.githubusercontent.com/u/24652543?v=3" width="100px;"/> | [**Kirill Volkovich**](https://github.com/kvolkovich-sc) |
 
-Contributing are welcome. We need YOU! :metal:
+Contributing is welcome. We need YOU! :metal:
 
 ### Contributing guide
 
@@ -157,7 +157,7 @@ More prefered way is: run `npm link`, then `npm run link-mode`;
 
 Install [showroom-template](https://github.com/OpusCapita/react-showroom-client/tree/master/showroom-template) separately.
 
-Before run showroom-template's `npm start` run `npm link @opuscapita/react-showroom-client`. After that you can change showroom's source-code and see result.
+Before running showroom-template's `npm start` run `npm link @opuscapita/react-showroom-client`. After that you can change showroom's source-code and see result.
 
 > If you need more info about contribution - please create an [issue](https://github.com/OpusCapita/react-showroom-client/issues).
 
