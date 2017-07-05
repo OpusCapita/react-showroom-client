@@ -55,7 +55,7 @@ Open in browser: [http://localhost:3000](http://localhost:3000)
 
 ---
 
-You can easilly add a new component.
+You can easily add a new component.
 
 ```showroom add``` and specify component name
 
@@ -64,7 +64,7 @@ Component will be added to **src/client/components** directory
 Component is a directory that includes:
 
 * [<component_name>.DOCUMENTATION.md](./docs/example.DOCUMENTATION.md)
-* <component_name>.react.js file with sceleton of component
+* <component_name>.react.js file with skeleton of component
 * <component_name>.less file with styles
 * index.js file with component export
 
@@ -82,7 +82,7 @@ Component is a directory that includes:
 ## Motivation to develop
 
 The fundamental ideas of ReactJS is **modularity** and **code reuse**.
-You should't rewrite same things every time.
+You shouldn't rewrite same things every time.
 
 [What ReactJS creators say about it:](https://facebook.github.io/react/docs/thinking-in-react.html)
 
@@ -96,7 +96,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 * Facebook has [thousands](https://facebook.github.io/react/docs/composition-vs-inheritance.html#so-what-about-inheritance)  of components.
 
-* In contrast - now we **have no** common **UI** composable pieces which allows developers to construct complex **busines logic** components fast with modern user interface for a better user experience. **Happy customer => happy seller**
+* In contrast - now we **have no** common **UI** composable pieces which allows developers to construct complex **business logic** components fast with modern user interface for a better user experience. **Happy customer => happy seller**
 
 * **Twitter Bootstrap/React Bootstrap** don't solve the problem. It has a good looking **typography** and a simple for use **grid system**. It has only a little number of basic components like buttons and inputs.
 
@@ -111,7 +111,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 **~~Allen Carr~~ The easy way to start organizing libraries:**
 
 * Spent several hours/days creating a component? Spend 30 more minutes to put your component in a library and write simple documentation with a code example.
-* Next time you or your teammate wont't have to rewrite it again.
+* Next time you or your teammate won't have to rewrite it again.
 * Or you can spend several hours/days :clock10: to `/dev/null` again.
 * **The choice is yours**.
 
@@ -135,7 +135,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Browse components catalog
 * See code usage examples
 * See **API** documentation
-* Change component properties and see what happenned **in realtime**
+* Change component properties and see what happened **in real-time**
 * Change component **version** to see appropriate documentation
 * If you run it don't forget configure [this file](https://github.com/OpusCapita/react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapita/react-showroom-server/blob/master/README.md#what-this-goal-do)
 
@@ -153,7 +153,7 @@ Contributing is welcome. We need YOU! :metal:
 
 `npm start` npm script of `@opuscapita/react-showroom-client` can confuse if you want to contribute to showroom. Use this npm goal only to start showroom in server variant.
 
-More prefered way is: run `npm link`, then `npm run link-mode`;
+More preferred way is: run `npm link`, then `npm run link-mode`;
 
 Install [showroom-template](https://github.com/OpusCapita/react-showroom-client/tree/master/showroom-template) separately.
 
