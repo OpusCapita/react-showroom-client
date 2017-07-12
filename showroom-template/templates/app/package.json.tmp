@@ -8,7 +8,7 @@
     "lint": "eslint src/client",
     "publish-release": "npm run npm-build && npm-publish --release",
     "prepublish": "npm run build",
-    "start": "node www/index",
+    "start": "showroom-scan && node www/index",
     "test": "mocha --compilers js:babel-core/register --require ignore-styles --require ./test/setup.js --recursive src/**/*.spec.js"
   },
   "author": {
