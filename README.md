@@ -1,4 +1,4 @@
-# OpusCapita Showroom
+# OpusCapita Showroom ![badge-npm-version](https://img.shields.io/npm/v/@opuscapita/react-showroom-client.svg) ![badge-license](https://img.shields.io/github/license/OpusCapita/react-showroom-client.svg)
 
 ## Synopsis
 
