@@ -1,4 +1,10 @@
-# OpusCapita Showroom ![badge-npm-version](https://img.shields.io/npm/v/@opuscapita/react-showroom-client.svg) ![badge-license](https://img.shields.io/github/license/OpusCapita/react-showroom-client.svg)
+# OpusCapita Showroom 
+
+[![CircleCI Status](https://circleci.com/gh/OpusCapita/react-showroom-client/tree/master.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/OpusCapita/react-showroom-client)
+![badge-npm-version](https://img.shields.io/npm/v/@opuscapita/react-showroom-client.svg) 
+![badge-license](https://img.shields.io/github/license/OpusCapita/react-showroom-client.svg)
+[![NPM Downloads](https://img.shields.io/npm/dm/@opuscapita/react-showroom-clien.svg)](https://npmjs.org/package/@opuscapita/react-showroom-clien)
+
 
 ## Synopsis
 
