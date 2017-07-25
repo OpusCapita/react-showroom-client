@@ -2,6 +2,8 @@
 
 rm -rf .gh-pages-tmp lib  &&
 mkdir .gh-pages-tmp &&
+
+showroom-scan src &&
 node node_modules/webpack/bin/webpack.js --config ./webpack.docs.config.js &&
 cp -R lib/* .gh-pages-tmp &&
 cp -R www/index.html .gh-pages-tmp &&

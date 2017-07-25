@@ -18,11 +18,16 @@
 
 * **Add scanning packages**
 
-**server.js**
+**package.json**
 
 ```js
-let componentsRoot = path.resolve(__dirname, '../../client/components');
-require('@opuscapita/react-showroom-server').makeLocalScan(componentsRoot);
+...
+"scripts": {
+  ...
+  start: "showroom-scan && ..."
+  ...
+}
+...
 ```
 
 **index-page.js**

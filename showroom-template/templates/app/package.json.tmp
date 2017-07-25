@@ -8,7 +8,7 @@
     "lint": "eslint src/client",
     "publish-release": "npm run npm-build && npm-publish --release",
     "prepublish": "npm run build",
-    "start": "node www/index",
+    "start": "showroom-scan && node www/index",
     "test": "mocha --compilers js:babel-core/register --require ignore-styles --require ./test/setup.js --recursive src/**/*.spec.js"
   },
   "author": {
@@ -54,7 +54,7 @@
     "nodemon": "^1.11.0",
     "@opuscapita/npm-scripts": "1.0.8",
     "@opuscapita/react-showroom-client": "^1.2.10",
-    "@opuscapita/react-showroom-server": "^1.2.0",
+    "@opuscapita/react-showroom-server": "^1.3.0",
     "postcss-loader": "^1.3.3",
     "postcss-modules": "^0.6.4",
     "raw-loader": "^0.5.1",
