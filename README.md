@@ -16,10 +16,10 @@ If you're interested in project development, please **star** it and send us **yo
 
 ## Live demos
 
-* [@opuscapita/react-buttons](https://opuscapita.github.io/react-buttons/?currentComponentId=%40opuscapita%2Freact-buttons%2F1.0.13%2FTitledButton&showSidebar=false)
-* [@opuscapita/react-rich-editors](https://opuscapita.github.io/react-rich-editors/?currentComponentId=opuscapita-react-rich-editors%2F1.0.9%2FRichEditor&maxContainerWidth=61%25&showSidebar=true)
-* [@opuscapita/react-svg](https://opuscapita.github.io/react-svg/?currentComponentId=%40opuscapita%2Freact-svg%2F1.0.4%2FSVGIconsPreviewer&showSidebar=true)
-* [@opuscapita/react-dates](https://opuscapita.github.io/react-dates/?currentComponentId=%40opuscapita%2Freact-dates%2F0.3.0-beta.2%2FDateRangeInput&showSidebar=true)
+* [@opuscapita/react-buttons](https://opuscapita.github.io/react-buttons/)
+* [@opuscapita/react-rich-editors](https://opuscapita.github.io/react-rich-editors/)
+* [@opuscapita/react-svg](https://opuscapita.github.io/react-svg/)
+* [@opuscapita/react-dates](https://opuscapita.github.io/react-dates/)
 
 ## Start a new project in 2 minutes!
 
