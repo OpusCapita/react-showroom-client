@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Types from 'prop-types';
 import less from 'less';
 
@@ -27,7 +27,7 @@ class StyleCompiler extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(this.props.styleString !== nextProps.styleString) {
+    if (this.props.styleString !== nextProps.styleString) {
       this.compileStyle(nextProps.styleString);
     }
   }
@@ -47,13 +47,12 @@ class StyleCompiler extends Component {
   }
 
   updateStyleTag(compiledStyle) {
-    let css = this.props.compiledStyle;
     let head = document.head || document.getElementsByTagName('head')[0];
 
     let styleElement = document.createElement('style');
     styleElement.type = 'text/css';
 
-    if (styleElement.styleSheet){
+    if (styleElement.styleSheet) {
       styleElement.styleSheet.cssText = compiledStyle;
     } else {
       this.removeStyleElement();
@@ -65,8 +64,8 @@ class StyleCompiler extends Component {
   }
 
   compileStyle(styleString, type) {
-    less.render(styleString)
-      .then(
+    less.render(styleString).
+      then(
         ({ css }) => {
           this.updateStyleTag(css);
           this.props.onChange(css);
@@ -80,10 +79,6 @@ class StyleCompiler extends Component {
   }
 
   render() {
-    const {
-      compiledStyle
-    } = this.state;
-
     return null;
   }
 }
