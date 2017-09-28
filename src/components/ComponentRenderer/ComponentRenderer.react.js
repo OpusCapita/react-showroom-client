@@ -7,7 +7,7 @@ import DefaultScopeComponent from '../DefaultScopeComponent';
 import EmptyScopeComponent from '../EmptyScopeComponent';
 import CodeMirror from 'react-codemirror';
 import CompilationErrorContainer from '../CompilationErrorContainer';
-import StylesEditor from '../StylesEditor';
+// import StylesEditor from '../StylesEditor';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
 import 'codemirror/mode/jsx/jsx';
@@ -124,9 +124,9 @@ class ComponentRenderer extends Component {
       relatedFile => relatedFile.name === 'readme'
     )[0].content;
 
-    let componentStyles = component.styles;
 
     // TODO - add stylesEditor
+    // let componentStyles = component.styles;
     let stylesEditorElement = null;
     // let stylesEditorElement = componentStyles ? (
     //   <div className="component-renderer__showroom-styles-editor">
