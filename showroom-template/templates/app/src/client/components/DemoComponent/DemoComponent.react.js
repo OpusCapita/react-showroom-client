@@ -3,7 +3,9 @@
   Remove it from real project
 */
 
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import './DemoComponent.less';
 
 const propTypes = {

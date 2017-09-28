@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import './DemoPageComponentShortInfo.less';
 import RepositoryInfoFilesViewer from '../RepositoryInfoFilesViewer';
 const svgGit = require('!!raw-loader!../../img/git-logo.svg');

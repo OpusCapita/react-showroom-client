@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import './ComponentRendered.less';
 import ComponentRendererElement from '../ComponentRendererElement';
 import Documentation from '../Documentation';
@@ -124,11 +125,14 @@ class ComponentRenderer extends Component {
     )[0].content;
 
     let componentStyles = component.styles;
-    let stylesEditorElement = componentStyles ? (
-      <div className="component-renderer__showroom-styles-editor">
-        <StylesEditor initialRawStyles={componentStyles} />
-      </div>
-    ) : null;
+
+    // TODO - add stylesEditor
+    let stylesEditorElement = null;
+    // let stylesEditorElement = componentStyles ? (
+    //   <div className="component-renderer__showroom-styles-editor">
+    //     <StylesEditor initialRawStyles={componentStyles} />
+    //   </div>
+    // ) : null;
 
     return (
       <div

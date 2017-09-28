@@ -1,10 +1,11 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import './DemoPage.less';
 import ComponentRenderer from '../ComponentRenderer';
 import FilterSidebar from '../FilterSidebar';
 import DemoPageComponentShortInfo from '../DemoPageComponentShortInfo';
 import Rcslider from 'rc-slider';
 import ToolApplicationHeader from '../ToolApplicationHeader';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import { spring, Motion } from 'react-motion';
 import find from 'lodash/find';
