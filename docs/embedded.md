@@ -75,32 +75,6 @@ You can find it [**here**](./example.DOCUMENTATION.md)
 }
 ```
 
-### Environment variables
-
-Create **.env.js** file
-
-```
-'use strict';
-
-module.exports = {
-    HOST: process.env.HOST ? process.env.HOST : 'localhost',
-    PORT: process.env.PORT ? process.env.PORT : 3000
-};
-```
-
-Add to **index-page.js**
-
-```
-import env from '../.env';
-window._showroom = { ...(window._showroom || {}), env };
-```
-
-Then in your <react-component-name>.DOCUMENTATION.md file:
-
-```
-<MyComponent serviceRegistry={`${_showroom.env.HOST}:${_showroom.env.PORT}`}/>
-```
-
 ### Recomendations
 
 * **We highly recommend to start use [autoprefixer](https://github.com/postcss/autoprefixer) in your projects:**
