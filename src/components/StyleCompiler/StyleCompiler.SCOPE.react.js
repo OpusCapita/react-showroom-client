@@ -24,10 +24,3 @@ class StyleCompilerScope extends Component {
     );
   }
 }
-
-StyleCompilerScope.contextTypes = {
-  i18n: PropTypes.object
-};
-StyleCompilerScope.childContextTypes = {
-  i18n: PropTypes.object
-};

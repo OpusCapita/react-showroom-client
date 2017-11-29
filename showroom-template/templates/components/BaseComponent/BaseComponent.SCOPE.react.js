@@ -23,10 +23,3 @@ class __jcatalog-react-app_component-name--uppercamel-case__Scope extends Compon
     );
   }
 }
-
-__jcatalog-react-app_component-name--uppercamel-case__Scope.contextTypes = {
-  i18n: PropTypes.object
-};
-__jcatalog-react-app_component-name--uppercamel-case__Scope.childContextTypes = {
-  i18n: PropTypes.object
-};

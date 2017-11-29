@@ -24,10 +24,3 @@ class StylesEditorScope extends Component {
     );
   }
 }
-
-StylesEditorScope.contextTypes = {
-  i18n: PropTypes.object
-};
-StylesEditorScope.childContextTypes = {
-  i18n: PropTypes.object
-};
