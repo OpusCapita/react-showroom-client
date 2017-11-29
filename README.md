@@ -122,8 +122,6 @@ But if we want to have a **large libraries of components** we must have a **easy
 * **The choice is yours**.
 * Take care about other developers and others take care about you :tophat:
 
-## [Installation](./docs/embedded.md)
-
 ## Contributors
 
 | <img src="https://avatars.githubusercontent.com/u/24603787?v=3" width="100px;"/> | [**Alexey Sergeev**](https://github.com/asergeev-sc)     |
