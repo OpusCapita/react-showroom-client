@@ -19,7 +19,7 @@ class DemoPage extends Component {
       showSidebar: (query.showSidebar === 'true') && !props.isScreenSmall,
       packagesInfo: [],
       componentsInfo: [],
-      currentComponentId: '',
+      currentComponentName: '',
       currentComponent: null,
       options: {
         maxContainerWidth: (query.maxContainerWidth) || '40%',
@@ -39,7 +39,7 @@ class DemoPage extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.componentsInfo !== prevState.componentsInfo) {
-      this.initCurrentComponentId();
+      this.initCurrentComponentName();
     }
   }
 
@@ -48,16 +48,16 @@ class DemoPage extends Component {
     window.removeEventListener('popstate', this.handleHistoryPopState);
   }
 
-  initCurrentComponentId() {
-    let idFromQueryString = queryString.parse(location.search).currentComponentId;
-    let id = idFromQueryString ?
-      idFromQueryString :
-      (this.state.componentsInfo[0] && this.state.componentsInfo[0].id);
-    this.handleComponentSelection(this.state.componentsInfo, id || 0);
+  initCurrentComponentName() {
+    let componentNameFromQueryString = queryString.parse(location.search).currentComponentName;
+    let name = componentNameFromQueryString ?
+      componentNameFromQueryString :
+      (this.state.componentsInfo[0] && this.state.componentsInfo[0].name);
+    this.handleComponentSelection(this.state.componentsInfo, name || 0);
   }
 
   handleHistoryPopState(event) {
-    this.initCurrentComponentId();
+    this.initCurrentComponentName();
   }
 
   parseQueryParameters() {
@@ -72,16 +72,16 @@ class DemoPage extends Component {
 
   getCurrentComponentInfo() {
     return this.state.componentsInfo.filter(componentInfo =>
-      componentInfo.id === this.state.currentComponentId
-    )[0]
+      componentInfo.name === this.state.currentComponentName
+    )[0];
   }
 
   getComponentsInfo() {
     this.props.loader.getComponentsInfo(data => {
       let preparedComponentsInfo = this.prepareComponentsInfo(data);
-      let idFromQueryString = queryString.parse(location.search).currentComponentId;
-      let id = idFromQueryString || preparedComponentsInfo[0].id;
-      this.handleComponentSelection(preparedComponentsInfo, id);
+      let componentNameFromQueryString = queryString.parse(location.search).currentComponentName;
+      let name = componentNameFromQueryString || preparedComponentsInfo[0].name;
+      this.handleComponentSelection(preparedComponentsInfo, name);
       this.setState({ componentsInfo: preparedComponentsInfo });
     });
   }
@@ -106,8 +106,9 @@ class DemoPage extends Component {
 
   onComponentReady(componentData) {
     let componentInfo = this.state.componentsInfo.filter(
-      componentInfo => componentInfo.id === this.state.currentComponentId
+      componentInfo => componentInfo.name === this.state.currentComponentName
     )[0];
+
     this.setState({ currentComponent: { ...componentData, componentInfo } });
   }
 
@@ -137,14 +138,14 @@ class DemoPage extends Component {
     });
   }
 
-  handleComponentSelection(componentsInfo, id) {
-    let componentInfo = componentsInfo.filter(info => info.id === id)[0];
-    this.setState({ currentComponentId: id });
+  handleComponentSelection(componentsInfo, componentName) {
+    let componentInfo = componentsInfo.filter(info => info.name === componentName)[0];
+    this.setState({ currentComponentName: componentInfo.name });
     /* this._getComponentTimeout: ugly hack to resolve problems with component selection with synchronous loaders.
     *   if you fix it in normal way, don't forget to remove timeout clear within componentWillUnmount.
     *   Not 0 because IE */
     this._getComponentTimeout = setTimeout(() => this.getComponent(componentInfo), 16);
-    this.setQueryStringParam('currentComponentId', id);
+    this.setQueryStringParam('currentComponentName', componentName);
   }
 
   handleContainerWidthChange(value) {

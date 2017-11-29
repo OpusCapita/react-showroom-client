@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import './FilterSidebar.less';
 import fuzzysearch from 'fuzzysearch';
-import FilterSidebarComponentItem from '../FilterSidebarComponentItem';
 
 export default
 class FilterSidebar extends Component {
@@ -55,12 +54,18 @@ class FilterSidebar extends Component {
     return false;
   }
 
+  handleComponentSelection = (componentName) => {
+    this.props.onComponentChange(componentName);
+  }
+
   render() {
+    let { currentComponent } = this.props;
     let preparedComponentsList = this.filterComponentsLists(this.props.componentsInfo, this.state.filterInputValue);
     preparedComponentsList = this.collapseBy(preparedComponentsList, 'name');
     preparedComponentsList = preparedComponentsList.sort(
       (component1, component2) => component1.name > component2.name ? 1 : -1
     );
+
     return (
       <div
         ref={container => { this._container = container }}
@@ -78,13 +83,18 @@ class FilterSidebar extends Component {
         <div className="filter-sidebar__components-list-wrapper">
           <ul className="filter-sidebar__components-list">
             {preparedComponentsList.map((component, index) => (
-              <FilterSidebarComponentItem
+              <li
                 key={index}
-                currentComponent={this.props.currentComponent}
-                component={component}
-                componentsInfo={this.props.componentsInfo}
-                onComponentChange={this.props.onComponentChange}
-              />
+                onClick={() => this.handleComponentSelection(component.name)}
+                className={`
+                  filter-sidebar__components-list-item
+                  ${currentComponent && (currentComponent.name === component.name) ? 'filter-sidebar__component-list-item--current' : ''}
+                `}
+              >
+                <div className="filter-sidebar__component-list-item-name">
+                  {component.name}
+                </div>
+              </li>
             ))}
           </ul>
         </div>

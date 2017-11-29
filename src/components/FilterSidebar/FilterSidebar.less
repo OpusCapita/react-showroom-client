@@ -27,3 +27,28 @@
   padding: 0;
   list-style: none;
 }
+
+.filter-sidebar__components-list-item {
+  font-size: 16px;
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: lighten(#e70, 20%);
+  }
+}
+
+.filter-sidebar__component-list-item--current {
+  color: #fff;
+  background-color: #e70;
+}
+
+.filter-sidebar__component-list-item-name {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+  display: inline-flex;
+}
