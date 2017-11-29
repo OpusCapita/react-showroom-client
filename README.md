@@ -120,14 +120,7 @@ But if we want to have a **large libraries of components** we must have a **easy
 * Next time you or your teammate won't have to rewrite it again.
 * Or you can spend several hours/days :clock10: to `/dev/null` again.
 * **The choice is yours**.
-
-## How to use
-
-* **Always write** the documentation :pencil:
 * Take care about other developers and others take care about you :tophat:
-* [react-fix-it](https://github.com/MicheleBertoli/react-fix-it)
-
-[See how to install](./docs/embedded.md)
 
 ## Contributors
 
