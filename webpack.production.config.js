@@ -9,11 +9,6 @@ delete config.devtool;
 delete config.watch;
 delete config.output.publicPath;
 config.plugins = config.plugins.concat([
-  new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': '"production"'
-    }
-  }),
   new webpack.optimize.DedupePlugin(),
   new webpack.optimize.UglifyJsPlugin({
     compressor: {
