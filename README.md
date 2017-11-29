@@ -123,27 +123,11 @@ But if we want to have a **large libraries of components** we must have a **easy
 
 ## How to use
 
-### Embedded
-
-* Developer-side variant
 * **Always write** the documentation :pencil:
 * Take care about other developers and others take care about you :tophat:
 * [react-fix-it](https://github.com/MicheleBertoli/react-fix-it)
 
 [See how to install](./docs/embedded.md)
-
-### Server application
-
-> ! Now it requires exposed components from `main` npm package file
-
-[See how to install](https://github.com/OpusCapita/react-showroom-server)
-
-* Browse components catalog
-* See code usage examples
-* See **API** documentation
-* Change component properties and see what happened **in real-time**
-* Change component **version** to see appropriate documentation
-* If you run it don't forget configure [this file](https://github.com/OpusCapita/react-showroom-client/blob/master/serverConfig.js) accordingly [showroom-server host and port configuration](https://github.com/OpusCapita/react-showroom-server/blob/master/README.md#what-this-goal-do)
 
 ## Contributors
 
