@@ -88,7 +88,11 @@ class FilterSidebar extends Component {
                 onClick={() => this.handleComponentSelection(component.name)}
                 className={`
                   filter-sidebar__components-list-item
-                  ${currentComponent && (currentComponent.name === component.name) ? 'filter-sidebar__component-list-item--current' : ''}
+                  ${
+                    currentComponent && (currentComponent.name === component.name) ?
+                    'filter-sidebar__component-list-item--current' :
+                    ''
+                  }
                 `}
               >
                 <div className="filter-sidebar__component-list-item-name">
