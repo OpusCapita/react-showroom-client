@@ -9,13 +9,22 @@ class ToolApplicationHeader extends Component {
     return (
       <div className="tool-application-header">
         <div className="row">
-          <div className="col-md-6 tool-application-header__title-container">
-            <div
-              title="OpusCapita logo"
-              className="tool-application-header__company-logo"
-              dangerouslySetInnerHTML={{ __html: svgLogoContent }}
-            />
-            <h1 className="tool-application-header__title">{this.props.applicationName}</h1>
+          <div
+            className="col-md-6 tool-application-header__title-container"
+          >
+            <a
+              target="_blank"
+              title="Go to Showroom repository"
+              href="https://github.com/OpusCapita/react-showroom-client"
+              className="tool-application-header__link"
+            >
+              <div
+                title="OpusCapita logo"
+                className="tool-application-header__company-logo"
+                dangerouslySetInnerHTML={{ __html: svgLogoContent }}
+              />
+              <h1 className="tool-application-header__title">{this.props.applicationName}</h1>
+            </a>
           </div>
           <div className="col-md-6" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
             <div className="tool-application-header__contacts">
