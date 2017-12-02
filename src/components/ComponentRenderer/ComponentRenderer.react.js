@@ -5,7 +5,7 @@ import ComponentRendererElement from '../ComponentRendererElement';
 import Documentation from '../Documentation';
 import DefaultScopeComponent from '../DefaultScopeComponent';
 import EmptyScopeComponent from '../EmptyScopeComponent';
-import CodeMirror from 'react-codemirror';
+import CodeMirror from 'kvolkovich-sc-react-codemirror';
 import CompilationErrorContainer from '../CompilationErrorContainer';
 // import StylesEditor from '../StylesEditor';
 import 'codemirror/lib/codemirror.css';

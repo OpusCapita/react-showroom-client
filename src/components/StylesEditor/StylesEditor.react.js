@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Types from 'prop-types';
 import StyleCompiler from '../StyleCompiler';
-import CodeMirror from 'react-codemirror';
+import CodeMirror from 'kvolkovich-sc-react-codemirror';
 import 'codemirror/mode/css/css';
 
 const propTypes = {
