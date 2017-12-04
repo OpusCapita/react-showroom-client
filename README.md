@@ -16,6 +16,7 @@ If you're interested in project development, please **star** it and send us **yo
 
 ## Live demos
 
+* [OpusCapita filemanager](http://opuscapita-filemanager-demo.azurewebsites.net)
 * [@opuscapita/react-buttons](https://opuscapita.github.io/react-buttons/)
 * [@opuscapita/react-rich-editors](https://opuscapita.github.io/react-rich-editors/)
 * [@opuscapita/react-svg](https://opuscapita.github.io/react-svg/)
