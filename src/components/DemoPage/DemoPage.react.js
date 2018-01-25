@@ -278,8 +278,8 @@ class DemoPage extends Component {
                 applicationName="Showroom"
                 repositoryUrl="https://github.com/OpusCapita/react-showroom-client"
                 contacts={[
-                  { name: 'alexey.sergeev@jcatalog.com', email: 'alexey.sergeev@jcatalog.com' },
-                  { name: 'kirill.volkovich@jcatalog.com', email: 'kirill.volkovich@jcatalog.com' }
+                  { name: 'alexey.sergeev@opuscapita.com', email: 'alexey.sergeev@opuscapita.com' },
+                  { name: 'kirill.volkovich@opuscapita.com', email: 'kirill.volkovich@opuscapita.com' }
                 ]}
               />
             </div>

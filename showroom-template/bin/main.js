@@ -22,8 +22,8 @@ function doAddComponent(directory) {
 function initCli() {
   return yargs
     .epilog(`Have questions? Contact us:
-      alexey.sergeev@jcatalog.com,
-      kirill.volkovich@jcatalog.com
+      alexey.sergeev@opuscapita.com,
+      kirill.volkovich@opuscapita.com
       \n
       @opuscapita/react-showroom-template@${version}
     `)
