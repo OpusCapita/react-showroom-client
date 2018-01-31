@@ -25,6 +25,10 @@ target => {
       console.log('Showroom scope decorator - transpiling code error:', err);
     }
 
+    if (typeof transpiledCode === 'undefined') {
+      return;
+    }
+
     /* Use '_scope' keyword in DOCUMENTATION file when want get access to SCOPE component.
        For example - '<ModalContainer showModal={ _scope.state.showModal } />'
        For code 'this.state.a' After transpiling finish, result code is 'undefined.state.a'.
