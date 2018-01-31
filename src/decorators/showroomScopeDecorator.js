@@ -53,6 +53,6 @@ target => {
       }
     }
 
-    return compiledCode;
+    return compiledCode; // eslint-disable-line consistent-return
   };
 };
