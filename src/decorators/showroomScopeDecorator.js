@@ -26,7 +26,7 @@ target => {
     }
 
     if (typeof transpiledCode === 'undefined') {
-      return;
+      return; // eslint-disable-line consistent-return
     }
 
     /* Use '_scope' keyword in DOCUMENTATION file when want get access to SCOPE component.
