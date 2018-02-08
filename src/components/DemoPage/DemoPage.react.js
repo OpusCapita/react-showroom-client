@@ -201,7 +201,7 @@ class DemoPage extends Component {
         onClick={() => this.handleToggleSidebar.call(this)}
         type="button"
       >
-        SIDEBAR
+        COMPONENTS
       </button>
     );
 
