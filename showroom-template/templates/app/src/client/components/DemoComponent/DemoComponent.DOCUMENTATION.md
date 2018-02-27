@@ -13,7 +13,7 @@ DemoComponent of react application generator.
 
 ```
 <DemoComponent 
-  label={`App running on ${env.HOST}:${env.PORT}`}
+  label={`Demo component`}
   onClick={() => { console.log('Welcome to showroom') }}
 />
 ```
