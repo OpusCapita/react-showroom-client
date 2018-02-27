@@ -48,7 +48,7 @@ module.exports = function(destinationDirectory) {
   let sourceDirectory = config.templates.appBase;
   fse.copySync(sourceDirectory, destinationDirectory);
 
-  let filesToModify = fsUtils.findFilesByGlobs(destinationDirectory, ['**/*', '!external_modules/**/*']);
+  let filesToModify = fsUtils.findFilesByGlobs(destinationDirectory, ['**/*']);
 
   filesToModify.map(file => {
     if(!fs.statSync(file).isDirectory()) {
