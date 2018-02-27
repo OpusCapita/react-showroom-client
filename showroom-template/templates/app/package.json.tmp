@@ -8,7 +8,7 @@
     "lint": "eslint src/client",
     "publish-release": "npm run npm-build && npm-publish --release",
     "prepublish": "npm run build",
-    "start": "showroom-scan && node www/index",
+    "start": "showroom-scan src && node www/index",
     "test": "rimraf ./.nyc_output ./coverage && cross-env nyc mocha --recursive \"src/**/*.spec.js\" --require ignore-styles"
   },
   "author": {
