@@ -16,7 +16,7 @@ If you're interested in project development, please **star** it and send us **yo
 
 ## Live demos
 
-* [OpusCapita filemanager](https://opuscapita-mk8s-cluster-1.westeurope.cloudapp.azure.com/filemanager/master/?currentComponentName=FileManager&maxContainerWidth=100%25&showSidebar=false)
+* [OpusCapita filemanager](https://demo.core.dev.opuscapita.com/filemanager/master/?currentComponentName=FileManager&maxContainerWidth=100%25&showSidebar=false)
 * [@opuscapita/react-buttons](https://opuscapita.github.io/react-buttons/)
 * [@opuscapita/react-rich-editors](https://opuscapita.github.io/react-rich-editors/)
 * [@opuscapita/react-svg](https://opuscapita.github.io/react-svg/)
