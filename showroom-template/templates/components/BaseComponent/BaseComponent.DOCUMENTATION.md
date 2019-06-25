@@ -21,5 +21,5 @@ __jcatalog-react-app_component-name--uppercamel-case__
 
 ### License
 
-Licensed by © 2017 OpusCapita
+None
 

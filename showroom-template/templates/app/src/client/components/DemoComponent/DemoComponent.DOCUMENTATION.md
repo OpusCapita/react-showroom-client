@@ -24,5 +24,5 @@ DemoComponent
 
 ### License
 
-Licensed by © 2017 OpusCapita
+None
 
