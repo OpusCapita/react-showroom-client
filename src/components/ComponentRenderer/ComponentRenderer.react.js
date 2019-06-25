@@ -16,6 +16,35 @@ import fixIt from 'react-fix-it';
 
 window.React = React;
 
+class ScopeErrorHandler extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch = (error, info) => {
+    // Skip
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.children != prevProps.children) {
+      this.setState({ hasError: false });
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div style={{ color: '#f00' }}>JSX render error</div>
+    }
+
+    return this.props.children;
+  }
+}
+
 export default
 class ComponentRenderer extends Component {
   constructor(props) {
@@ -91,7 +120,11 @@ class ComponentRenderer extends Component {
       } else {
         window._showroom = {};
       }
-      childElement = React.createElement(ScopeComponentClass, { _childrenCode: code });
+      childElement = (
+        <ScopeErrorHandler>
+          {React.createElement(ScopeComponentClass, { _childrenCode: code })}
+        </ScopeErrorHandler>
+      );
     } catch (err) {
       /* TO-DO It will be reimplemented in more reactive way when scope component will be removed */
       if (window._showroom) {
