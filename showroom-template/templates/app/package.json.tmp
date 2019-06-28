@@ -28,7 +28,7 @@
     "@opuscapita/npm-scripts": "1.0.8",
     "@opuscapita/opuscapita-ui": "^1.0.2-beta.4",
     "@opuscapita/react-showroom-client": "1.3.0-beta.10",
-    "@opuscapita/react-showroom-server": "1.3.1",
+    "@opuscapita/react-showroom-server": "1.4.1",
     "autoprefixer": "6.7.6",
     "babel-cli": "6.23.0",
     "babel-core": "6.23.1",
